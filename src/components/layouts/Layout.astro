@@ -19,9 +19,6 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
   <title>{title}</title>
   <meta name="description" content={description} />
   
-  /* ==================== */
-  <!-- SEO FOUNDATION -->
-  /* ==================== */
   
   <!-- Canonical URL -->
   {canonical && <link rel="canonical" href={canonical} />}
@@ -67,13 +64,6 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="AI loan origination, private lending, underwriting automation, loan processing software, mortgage technology" />
   
-  /* ==================== */
-  <!-- PERFORMANCE OPTIMIZATION -->
-  /* ==================== */
-  
-  <!-- Umami Analytics -->
-  <script 
-    defer 
     src="https://umami-mentyx.vercel.app/script.js" 
     data-website-id="3f78a151-168b-4b15-817c-be7f3bce1166">
   </script>
@@ -450,12 +440,7 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
   <Header />
 
   <slot />
-
   <Footer />
-
-  /* ==================== */
-  <!-- CONTACT MODAL - WEB3FORMS -->
-  /* ==================== */
 
   <!-- Contact Modal -->
   <div class="modal" id="contactModal">
