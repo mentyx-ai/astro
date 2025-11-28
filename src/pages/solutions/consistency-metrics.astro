@@ -1,0 +1,1500 @@
+---
+// /src/pages/solutions/consistency-metrics.astro
+import Layout from '../../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="Consistency Metrics - Standardized Underwriting | Mentyx.ai"
+  description="Ensure consistent underwriting standards across all affiliates. Track approval rates, decision times, and risk distribution for better oversight."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 20v-6M6 20V10M18 20V4"/>
+        </svg>
+        <span>Oversight</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-gradient">Consistency</span>
+        <span class="title-white">Metrics</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Standardized underwriting across all affiliates. Track approval rates, decision times, and risk distribution to ensure every loan meets your standards.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions/multi-affiliate-dashboard" class="btn btn-secondary btn-lg">
+          View HQ Dashboard
+        </a>
+      </div>
+
+      <!-- Stats Grid - Enhanced -->
+      <div class="hero-stats-enhanced">
+        <div class="stat-item-enhanced">
+          <div class="stat-value">94.3%</div>
+          <div class="stat-label">Policy Compliance</div>
+          <div class="stat-trend positive">+2.1% YoY</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item-enhanced">
+          <div class="stat-value">±4.2%</div>
+          <div class="stat-label">Approval Variance</div>
+          <div class="stat-trend positive">-1.8% vs Q3</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item-enhanced">
+          <div class="stat-value">2.3 days</div>
+          <div class="stat-label">Avg Decision Time</div>
+          <div class="stat-trend warning">+0.4 days</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item-enhanced">
+          <div class="stat-value">68.7%</div>
+          <div class="stat-label">Portfolio LTV</div>
+          <div class="stat-trend neutral">In Range</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Standardized Underwriting Oversight</h2>
+      <p class="section-subtitle">Monitor and maintain consistency across all lending affiliates</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Approval Rate Tracking</h3>
+        <p class="feature-description">
+          Monitor approval rates by affiliate, loan officer, and property type. Spot outliers and ensure consistent decision-making across your organization.
+        </p>
+        <ul class="feature-list">
+          <li>Affiliate vs affiliate comparison</li>
+          <li>Loan officer performance tracking</li>
+          <li>Property type approval analysis</li>
+          <li>Historical trend monitoring</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Decision Time Analytics</h3>
+        <p class="feature-description">
+          Track average decision times across affiliates. Identify bottlenecks and ensure all borrowers receive timely responses regardless of location.
+        </p>
+        <ul class="feature-list">
+          <li>Average time per decision stage</li>
+          <li>Affiliate response time comparison</li>
+          <li>SLA compliance monitoring</li>
+          <li>Bottleneck identification</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20V10"/>
+            <path d="M18 20V4"/>
+            <path d="M6 20v-4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Risk Distribution Analysis</h3>
+        <p class="feature-description">
+          Compare risk score distributions across affiliates. Ensure all teams are applying the same underwriting standards to similar loan profiles.
+        </p>
+        <ul class="feature-list">
+          <li>LTV/LTC distribution by affiliate</li>
+          <li>Risk score comparison charts</li>
+          <li>Exception rate tracking</li>
+          <li>Risk appetite compliance</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Policy Compliance Scoring</h3>
+        <p class="feature-description">
+          Automated scoring of underwriting policy compliance. Track how often affiliates deviate from standard procedures and why.
+        </p>
+        <ul class="feature-list">
+          <li>Automated policy adherence scoring</li>
+          <li>Exception documentation tracking</li>
+          <li>Compliance rate by affiliate</li>
+          <li>Audit trail for all deviations</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Underwriter Performance</h3>
+        <p class="feature-description">
+          Compare individual underwriter performance against company standards. Identify training opportunities and best practices.
+        </p>
+        <ul class="feature-list">
+          <li>Individual vs team averages</li>
+          <li>Decision accuracy scoring</li>
+          <li>Portfolio performance tracking</li>
+          <li>Training need identification</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Drift Detection Alerts</h3>
+        <p class="feature-description">
+          Automatic alerts when affiliate metrics drift from company standards. Proactive notifications before small issues become big problems.
+        </p>
+        <ul class="feature-list">
+          <li>Real-time metric monitoring</li>
+          <li>Customizable alert thresholds</li>
+          <li>Email & Slack notifications</li>
+          <li>Escalation workflows</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Portfolio Quality Comparison</h3>
+        <p class="feature-description">
+          Compare portfolio performance across affiliates. Track defaults, delinquencies, and returns to validate underwriting consistency.
+        </p>
+        <ul class="feature-list">
+          <li>Default rate comparison</li>
+          <li>Delinquency tracking</li>
+          <li>ROI by affiliate analysis</li>
+          <li>Performance attribution</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Benchmarking & Reporting</h3>
+        <p class="feature-description">
+          Generate compliance reports for investors and management. Show how consistent underwriting drives better portfolio performance.
+        </p>
+        <ul class="feature-list">
+          <li>Executive summary reports</li>
+          <li>Investor compliance documentation</li>
+          <li>Regulatory reporting templates</li>
+          <li>Custom date range analysis</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Visual Compliance Chart Section -->
+<section class="visual-section">
+  <div class="container">
+    <div class="visual-grid">
+      <div class="visual-content">
+        <h2 class="visual-title">Real-Time Policy Compliance</h2>
+        <p class="visual-description">
+          Monitor compliance across all affiliates with instant visibility into policy adherence, exception rates, and underwriting consistency.
+        </p>
+        <div class="visual-features">
+          <div class="visual-feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Automated compliance scoring</span>
+          </div>
+          <div class="visual-feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Real-time drift detection</span>
+          </div>
+          <div class="visual-feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Proactive alert notifications</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="visual-chart">
+        <div class="compliance-chart">
+          <div class="chart-header">
+            <span>Policy Compliance by Affiliate</span>
+            <span class="chart-period">Current Quarter</span>
+          </div>
+          <div class="chart-bars">
+            <div class="chart-bar">
+              <div class="bar-label">Low Tide Capital</div>
+              <div class="bar-track">
+                <div class="bar-fill high" style="width: 96%"></div>
+              </div>
+              <div class="bar-value high">96%</div>
+            </div>
+            <div class="chart-bar">
+              <div class="bar-label">Bluegrass Lending</div>
+              <div class="bar-track">
+                <div class="bar-fill medium" style="width: 92%"></div>
+              </div>
+              <div class="bar-value medium">92%</div>
+            </div>
+            <div class="chart-bar">
+              <div class="bar-label">Vegas Hard Money</div>
+              <div class="bar-track">
+                <div class="bar-fill low" style="width: 85%"></div>
+              </div>
+              <div class="bar-value low">85%</div>
+            </div>
+            <div class="chart-bar">
+              <div class="bar-label">Atlanta Bridge</div>
+              <div class="bar-track">
+                <div class="bar-fill high" style="width: 95%"></div>
+              </div>
+              <div class="bar-value high">95%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Metrics Dashboard Section -->
+<section class="dashboard-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Live Consistency Metrics</h2>
+      <p class="section-subtitle">Real-time monitoring of underwriting standards across all affiliates</p>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card primary">
+        <div class="metric-icon-small">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div class="metric-value">72%</div>
+        <div class="metric-label">Overall Approval Rate</div>
+        <div class="metric-trend positive">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+            <polyline points="17 6 23 6 23 12"/>
+          </svg>
+          +2% vs last month
+        </div>
+        <div class="metric-range">
+          <span class="range-low">Low: 65%</span>
+          <span class="range-high">High: 78%</span>
+        </div>
+      </div>
+
+      <div class="metric-card secondary">
+        <div class="metric-icon-small">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="metric-value">2.1 days</div>
+        <div class="metric-label">Avg Decision Time</div>
+        <div class="metric-trend warning">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+            <polyline points="17 18 23 18 23 12"/>
+          </svg>
+          +0.3 days vs target
+        </div>
+        <div class="metric-range">
+          <span class="range-low">Fastest: 1.2 days</span>
+          <span class="range-high">Slowest: 3.8 days</span>
+        </div>
+      </div>
+
+      <div class="metric-card accent">
+        <div class="metric-icon-small">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <div class="metric-value">68%</div>
+        <div class="metric-label">Avg Loan-to-Value</div>
+        <div class="metric-trend neutral">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          Within policy range
+        </div>
+        <div class="metric-range">
+          <span class="range-low">Policy: 65-75%</span>
+          <span class="range-high">Current: 68%</span>
+        </div>
+      </div>
+
+      <div class="metric-card highlight">
+        <div class="metric-icon-small">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <div class="metric-value">94%</div>
+        <div class="metric-label">Policy Compliance</div>
+        <div class="metric-trend positive">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+            <polyline points="17 6 23 6 23 12"/>
+          </svg>
+          +3% vs last quarter
+        </div>
+        <div class="metric-range">
+          <span class="range-low">Current: 94%</span>
+          <span class="range-high">Target: 95%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="affiliate-comparison">
+      <div class="comparison-header-section">
+        <h3 class="comparison-title">Affiliate Performance Comparison</h3>
+        <div class="comparison-subtitle">4 affiliates • Updated 5 min ago</div>
+      </div>
+      
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="th affiliate-col">Affiliate</div>
+          <div class="th">Approval Rate</div>
+          <div class="th">Decision Time</div>
+          <div class="th">Avg LTV</div>
+          <div class="th">Compliance</div>
+        </div>
+        
+        <div class="table-row best">
+          <div class="td affiliate-col">
+            <div class="affiliate-badge best">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              Low Tide Capital
+            </div>
+          </div>
+          <div class="td">
+            <span class="value-badge positive">75%</span>
+          </div>
+          <div class="td">
+            <span class="value-badge positive">1.8 days</span>
+          </div>
+          <div class="td">
+            <span class="value-badge">67%</span>
+          </div>
+          <div class="td">
+            <span class="compliance-badge high">96%</span>
+          </div>
+        </div>
+        
+        <div class="table-row">
+          <div class="td affiliate-col">
+            <div class="affiliate-badge">Bluegrass Lending</div>
+          </div>
+          <div class="td">
+            <span class="value-badge">70%</span>
+          </div>
+          <div class="td">
+            <span class="value-badge">2.4 days</span>
+          </div>
+          <div class="td">
+            <span class="value-badge">69%</span>
+          </div>
+          <div class="td">
+            <span class="compliance-badge medium">92%</span>
+          </div>
+        </div>
+        
+        <div class="table-row warning">
+          <div class="td affiliate-col">
+            <div class="affiliate-badge warning">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              Vegas Hard Money
+            </div>
+          </div>
+          <div class="td">
+            <span class="value-badge">68%</span>
+          </div>
+          <div class="td">
+            <span class="value-badge negative">3.1 days</span>
+          </div>
+          <div class="td">
+            <span class="value-badge negative">72%</span>
+          </div>
+          <div class="td">
+            <span class="compliance-badge low">85%</span>
+          </div>
+        </div>
+        
+        <div class="table-row">
+          <div class="td affiliate-col">
+            <div class="affiliate-badge">Atlanta Bridge</div>
+          </div>
+          <div class="td">
+            <span class="value-badge positive">74%</span>
+          </div>
+          <div class="td">
+            <span class="value-badge">2.0 days</span>
+          </div>
+          <div class="td">
+            <span class="value-badge">66%</span>
+          </div>
+          <div class="td">
+            <span class="compliance-badge high">95%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why Consistency Matters</h2>
+      <p class="section-subtitle">Standardized underwriting drives better outcomes across your organization</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">01</div>
+        <h3>Better Portfolio Performance</h3>
+        <p>Consistent underwriting standards lead to more predictable loan performance and reduced default rates across all affiliates.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">02</div>
+        <h3>Investor Confidence</h3>
+        <p>Demonstrate standardized processes to investors. Show that every loan meets the same rigorous standards regardless of originating affiliate.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">03</div>
+        <h3>Risk Management</h3>
+        <p>Identify affiliates drifting from standards before it impacts portfolio quality. Proactive risk management beats reactive problem-solving.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">04</div>
+        <h3>Scalable Growth</h3>
+        <p>Add new affiliates confidently knowing you can maintain underwriting standards. Scale your lending operation without sacrificing quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready for Consistent Underwriting?</h2>
+      <p class="cta-subtitle">See how Mentyx ensures every affiliate meets your standards</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions/multi-affiliate-dashboard" class="btn btn-secondary btn-lg">
+          View HQ Dashboard
+        </a>
+        <a href="/solutions" class="btn btn-tertiary btn-lg">
+          View All Solutions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .btn-tertiary {
+    background: rgba(15, 23, 42, 0.8);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-tertiary:hover {
+    background: rgba(15, 23, 42, 1);
+    border-color: rgba(6, 182, 212, 0.5);
+    color: #22d3ee;
+  }
+
+  .hero-stats-enhanced {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 40px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .stat-item-enhanced {
+    text-align: center;
+    flex: 1;
+  }
+
+  .stat-item-enhanced .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-item-enhanced .stat-label {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .stat-item-enhanced .stat-trend {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    display: inline-block;
+  }
+
+  .stat-item-enhanced .stat-trend.positive {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  .stat-item-enhanced .stat-trend.warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  .stat-item-enhanced .stat-trend.neutral {
+    background: rgba(107, 114, 128, 0.15);
+    color: #9ca3af;
+    border: 1px solid rgba(107, 114, 128, 0.3);
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Visual Compliance Section */
+  .visual-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .visual-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+  }
+
+  .visual-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin: 0 0 32px 0;
+  }
+
+  .visual-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .visual-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+  }
+
+  .visual-feature svg {
+    color: #06b6d4;
+    flex-shrink: 0;
+  }
+
+  .compliance-chart {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .compliance-chart:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  }
+
+  .chart-header span:first-child {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .chart-period {
+    color: #64748b;
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+
+  .chart-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chart-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .bar-label {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-weight: 500;
+    width: 140px;
+    flex-shrink: 0;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 12px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+
+  .bar-fill.high {
+    background: linear-gradient(90deg, #10b981, #22c55e);
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  }
+
+  .bar-fill.medium {
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+  }
+
+  .bar-fill.low {
+    background: linear-gradient(90deg, #ef4444, #f87171);
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+  }
+
+  .bar-value {
+    font-size: 0.875rem;
+    font-weight: 700;
+    width: 50px;
+    text-align: right;
+  }
+
+  .bar-value.high {
+    color: #10b981;
+  }
+
+  .bar-value.medium {
+    color: #f59e0b;
+  }
+
+  .bar-value.low {
+    color: #ef4444;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .feature-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    color: #cbd5e1;
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  /* Dashboard Section */
+  .dashboard-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+
+  .metric-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    padding: 32px 28px;
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .metric-card:hover::before {
+    opacity: 1;
+  }
+
+  .metric-card:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2);
+  }
+
+  .metric-card.primary::before {
+    background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+  }
+
+  .metric-card.secondary::before {
+    background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 100%);
+  }
+
+  .metric-card.accent::before {
+    background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
+  }
+
+  .metric-card.highlight::before {
+    background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+  }
+
+  .metric-icon-small {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    transition: all 0.3s ease;
+  }
+
+  .metric-card:hover .metric-icon-small {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .metric-value {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .metric-label {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .metric-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding: 6px 12px;
+    border-radius: 9999px;
+  }
+
+  .metric-trend.positive {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+  }
+
+  .metric-trend.warning {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+  }
+
+  .metric-trend.neutral {
+    color: #6b7280;
+    background: rgba(107, 114, 128, 0.1);
+  }
+
+  .metric-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8125rem;
+    color: #64748b;
+    padding-top: 16px;
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+  }
+
+  .range-low, .range-high {
+    font-weight: 500;
+  }
+
+  /* Affiliate Comparison */
+  .affiliate-comparison {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .affiliate-comparison:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .comparison-header-section {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .comparison-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+  }
+
+  .comparison-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  .comparison-table {
+    display: grid;
+    gap: 2px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .table-header {
+    display: grid;
+    grid-template-columns: 200fr 120fr 120fr 100fr 120fr;
+    background: rgba(15, 23, 42, 0.8);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .th {
+    padding: 16px 20px;
+    color: #06b6d4;
+    text-align: left;
+  }
+
+  .th.affiliate-col {
+    padding-left: 24px;
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 200fr 120fr 120fr 100fr 120fr;
+    background: rgba(15, 23, 42, 0.6);
+    transition: all 0.2s ease;
+  }
+
+  .table-row:hover {
+    background: rgba(15, 23, 42, 0.9);
+  }
+
+  .table-row.best {
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+  }
+
+  .table-row.warning {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+  }
+
+  .td {
+    padding: 20px;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+  }
+
+  .td.affiliate-col {
+    padding-left: 24px;
+  }
+
+  .affiliate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.9375rem;
+  }
+
+  .affiliate-badge.best {
+    color: #10b981;
+  }
+
+  .affiliate-badge.warning {
+    color: #f59e0b;
+  }
+
+  .affiliate-badge svg {
+    flex-shrink: 0;
+  }
+
+  .value-badge {
+    padding: 6px 14px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #cbd5e1;
+  }
+
+  .value-badge.positive {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: #10b981;
+  }
+
+  .value-badge.negative {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+  }
+
+  .compliance-badge {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+
+  .compliance-badge.high {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+  }
+
+  .compliance-badge.medium {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+  }
+
+  .compliance-badge.low {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+  }
+
+  /* Benefits Section */
+  .benefits-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .benefit-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .benefit-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .benefit-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 968px) {
+    .table-header, .table-row {
+      grid-template-columns: 150fr 100fr 100fr 80fr 100fr;
+    }
+
+    .visual-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats-enhanced {
+      flex-direction: column;
+      gap: 24px;
+      padding: 24px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .visual-title {
+      font-size: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .table-header {
+      display: none;
+    }
+
+    .table-row {
+      display: flex;
+      flex-direction: column;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+      gap: 12px;
+    }
+
+    .td {
+      padding: 0;
+      justify-content: space-between;
+    }
+
+    .td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: #64748b;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .td.affiliate-col::before {
+      display: none;
+    }
+
+    .affiliate-badge {
+      width: 100%;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+      margin-bottom: 8px;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+</Layout>

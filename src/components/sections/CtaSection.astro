@@ -1,0 +1,161 @@
+---
+// src/components/CtaSection.astro
+---
+
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-content" data-aos="fade-up">
+      
+      <h2 class="cta-heading">
+        Ready to Transform Your <span class="gradient-text">Lending Process?</span>
+      </h2>
+      
+      <p class="cta-description">
+        Join leading private lenders who are already using AI to close loans faster and smarter.
+      </p>
+
+      <div class="cta-buttons">
+        <button class="btn btn-primary btn-lg" id="ctaScheduleCall">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Schedule a Call
+        </button>
+        <button class="btn btn-secondary btn-lg" id="ctaContactSales">
+          Contact Sales
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* CTA SECTION SPECIFIC STYLES */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+    padding: 100px 0;
+  }
+
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--blue-400) 0%, var(--cyan-400) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-description {
+    font-size: 1.375rem;
+    color: var(--slate-300);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+  }
+
+  .btn-lg {
+    padding: 16px 32px;
+    font-size: 1.125rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--blue-500) 0%, var(--cyan-500) 100%);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid var(--slate-700);
+    color: var(--slate-300);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(30, 41, 59, 1);
+    border-color: var(--blue-500);
+    color: white;
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .cta-section {
+      padding: 80px 0;
+    }
+    
+    .cta-heading {
+      font-size: 2.5rem;
+    }
+    
+    .cta-description {
+      font-size: 1.125rem;
+      margin-bottom: 32px;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn {
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+      padding: 14px 28px;
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // CTA Section Button Handlers
+  document.getElementById('ctaScheduleCall')?.addEventListener('click', () => {
+    window.open('https://calendly.com/contact-mentyx/30min', '_blank');
+  });
+
+  document.getElementById('ctaContactSales')?.addEventListener('click', () => {
+    const modal = document.getElementById('contactModal');
+    if (modal) {
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+  });
+</script>

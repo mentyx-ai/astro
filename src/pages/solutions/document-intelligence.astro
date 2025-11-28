@@ -1,0 +1,805 @@
+---
+// /src/pages/solutions/document-intelligence.astro
+import Layout from '../../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="Document Intelligence - AI OCR for Real Estate Loans | Mentyx.ai"
+  description="AI extracts data from credit reports, appraisals, bank statements, and tax returns for fix & flip, bridge, and DSCR loans. 2-3 days to same-day review."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <span>Origination</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-gradient">Document</span>
+        <span class="title-white">Intelligence</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        AI reads credit reports, appraisals, bank statements, and tax returns—extracting every data point your underwriters need for fix & flip, bridge, and DSCR loans.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/platform" class="btn btn-secondary btn-lg">
+          View Platform
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">2-3 days</div>
+          <div class="stat-label">To Same-Day Review</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">9 Docs</div>
+          <div class="stat-label">Standard Checklist</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">95%+</div>
+          <div class="stat-label">Extraction Accuracy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Reads Every Document Type</h2>
+      <p class="section-subtitle">Built specifically for private real estate lending</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Credit Reports (Tri-Merge)</h3>
+        <p class="feature-description">
+          Extracts credit scores, tradelines, payment history, and derogatory marks from Experian, TransUnion, and Equifax reports automatically.
+        </p>
+        <ul class="feature-list">
+          <li>FICO score extraction</li>
+          <li>Debt-to-income calculations</li>
+          <li>Late payment detection</li>
+          <li>Collections & bankruptcies</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Appraisals & BPOs</h3>
+        <p class="feature-description">
+          Reads appraisal reports to extract property value, comparable sales, condition ratings, and ARV estimates for fix & flip deals.
+        </p>
+        <ul class="feature-list">
+          <li>As-is value extraction</li>
+          <li>ARV (After Repair Value)</li>
+          <li>Comp sales data</li>
+          <li>Property condition notes</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Bank Statements</h3>
+        <p class="feature-description">
+          Analyzes 2-12 months of bank statements to calculate average balances, identify NSFs, and verify liquidity for down payment and reserves.
+        </p>
+        <ul class="feature-list">
+          <li>Average daily balance</li>
+          <li>NSF/overdraft detection</li>
+          <li>Large deposit flags</li>
+          <li>Liquidity verification</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Tax Returns (1040, Schedule E)</h3>
+        <p class="feature-description">
+          Extracts AGI, rental income from Schedule E, and business income for DSCR loans. Calculates total income for qualification.
+        </p>
+        <ul class="feature-list">
+          <li>AGI extraction</li>
+          <li>Schedule E rental income</li>
+          <li>K-1 partnership income</li>
+          <li>Multi-year income trends</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Purchase & Sale Agreements</h3>
+        <p class="feature-description">
+          Reads PSA contracts to verify purchase price, closing date, earnest money deposit, and any seller concessions or contingencies.
+        </p>
+        <ul class="feature-list">
+          <li>Purchase price extraction</li>
+          <li>Closing date</li>
+          <li>Earnest money amount</li>
+          <li>Contingency detection</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11H3v10h18V11h-6"/>
+            <rect x="7" y="3" width="10" height="8" rx="2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Contractor Bids & Rehab Budgets</h3>
+        <p class="feature-description">
+          Extracts line-item costs from contractor estimates—roofing, HVAC, kitchen, bath. Totals rehab budget for LTC calculations.
+        </p>
+        <ul class="feature-list">
+          <li>Line-item cost extraction</li>
+          <li>Total budget calculation</li>
+          <li>Scope of work summary</li>
+          <li>Contractor info capture</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="9" y1="21" x2="9" y2="9"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Rent Rolls & Lease Agreements</h3>
+        <p class="feature-description">
+          For DSCR loans, reads rent rolls and leases to verify monthly rental income, lease terms, and tenant occupancy for cash flow analysis.
+        </p>
+        <ul class="feature-list">
+          <li>Monthly rent extraction</li>
+          <li>Lease term dates</li>
+          <li>Security deposit amounts</li>
+          <li>Tenant information</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Missing Doc Detection</h3>
+        <p class="feature-description">
+          Compares uploaded documents against the 9-document checklist. Flags missing items and auto-sends reminder emails to borrowers.
+        </p>
+        <ul class="feature-list">
+          <li>Checklist validation</li>
+          <li>Missing item alerts</li>
+          <li>Auto-reminder emails</li>
+          <li>Document completeness score</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why Document AI Matters</h2>
+      <p class="section-subtitle">From 2-3 days to same-day underwriting</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">01</div>
+        <h3>No More Manual Data Entry</h3>
+        <p>Underwriters spend 60% of their time reading docs and typing numbers into spreadsheets. AI does this in seconds, freeing them to focus on actual credit decisions.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">02</div>
+        <h3>Catch Errors Before Funding</h3>
+        <p>AI flags mismatches—purchase price on PSA doesn't match appraisal, bank balance insufficient for down payment, credit score below minimum. Fix issues early.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">03</div>
+        <h3>Close More Deals</h3>
+        <p>Faster document review means faster decisions. Beat competitors who take 3-5 days. Borrowers choose lenders who can close in 7-10 days instead of 30.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">04</div>
+        <h3>Scale Without Hiring</h3>
+        <p>Go from 50 loans/month to 150 without adding underwriters. AI handles the doc review gruntwork, your team handles exceptions and final decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Document Workflow Section -->
+<section class="workflow-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">From upload to underwriting in minutes</p>
+    </div>
+
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="step-number">1</div>
+        <h3>Borrower Uploads Documents</h3>
+        <p>Via portal or email. AI accepts PDFs, scanned images, even photos from phone cameras.</p>
+      </div>
+      
+      <div class="workflow-arrow">→</div>
+      
+      <div class="workflow-step">
+        <div class="step-number">2</div>
+        <h3>AI Identifies Document Type</h3>
+        <p>Automatically classifies: "This is a credit report. This is an appraisal. This is a bank statement."</p>
+      </div>
+      
+      <div class="workflow-arrow">→</div>
+      
+      <div class="workflow-step">
+        <div class="step-number">3</div>
+        <h3>Extracts Key Data Points</h3>
+        <p>Pulls credit score, property value, bank balance, income—all the numbers underwriters need.</p>
+      </div>
+      
+      <div class="workflow-arrow">→</div>
+      
+      <div class="workflow-step">
+        <div class="step-number">4</div>
+        <h3>Validates & Flags Issues</h3>
+        <p>Checks for missing docs, inconsistencies, red flags. Creates underwriting summary with highlights.</p>
+      </div>
+      
+      <div class="workflow-arrow">→</div>
+      
+      <div class="workflow-step">
+        <div class="step-number">5</div>
+        <h3>Underwriter Reviews</h3>
+        <p>Opens pre-populated deal summary. All data extracted, organized, and ready for human review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">See Document AI in Action</h2>
+      <p class="cta-subtitle">Watch us extract data from a real credit report in 10 seconds</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions/ai-underwriting" class="btn btn-secondary btn-lg">
+          See AI Underwriting
+        </a>
+        <a href="/solutions" class="btn btn-tertiary btn-lg">
+          View All Solutions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .btn-tertiary {
+    background: rgba(15, 23, 42, 0.8);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-tertiary:hover {
+    background: rgba(15, 23, 42, 1);
+    border-color: rgba(6, 182, 212, 0.5);
+    color: #22d3ee;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .feature-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    color: #cbd5e1;
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  /* Benefits Section */
+  .benefits-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .benefit-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .benefit-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .benefit-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Workflow Section */
+  .workflow-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .workflow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .workflow-step {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    min-width: 200px;
+    max-width: 220px;
+    transition: all 0.3s ease;
+  }
+
+  .workflow-step:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateY(-4px);
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 auto 16px;
+  }
+
+  .workflow-step h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+  }
+
+  .workflow-step p {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .workflow-arrow {
+    font-size: 2rem;
+    color: #06b6d4;
+    font-weight: 300;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .workflow-arrow {
+      transform: rotate(90deg);
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+</Layout>

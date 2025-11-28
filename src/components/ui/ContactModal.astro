@@ -1,0 +1,285 @@
+---
+// ContactModal.astro
+---
+
+<!-- Contact Modal -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Get in Touch</h2>
+    <p>Tell us about your lending operations and we'll show you how Mentyx can help</p>
+    
+    <!-- Web3Forms Integration -->
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+      <input type="hidden" name="access_key" value="668cabdc-9057-4e2a-8995-2a2e8ec13aaf">
+      <input type="hidden" name="subject" value="New Contact Form Submission - Mentyx.ai">
+      <input type="hidden" name="from_name" value="Mentyx.ai Website">
+      
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input 
+          type="text" 
+          id="name"
+          name="name"
+          placeholder="John Smith" 
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="email">Work Email *</label>
+        <input 
+          type="email" 
+          id="email"
+          name="email"
+          placeholder="john@company.com" 
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="company">Company Name *</label>
+        <input 
+          type="text" 
+          id="company"
+          name="company"
+          placeholder="Your Company" 
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number (Optional)</label>
+        <input 
+          type="tel" 
+          id="phone"
+          name="phone"
+          placeholder="+1 (555) 123-4567"
+        >
+      </div>
+      <div class="form-group">
+        <label for="message">How can we help? (Optional)</label>
+        <textarea 
+          id="message"
+          name="message"
+          placeholder="Tell us about your current loan origination process..." 
+          rows="4"
+        ></textarea>
+      </div>
+      <div class="form-status" id="formStatus"></div>
+      <button type="submit" class="btn btn-primary btn-block">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-loader" style="display: none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" opacity="0.25"/>
+            <path d="M12 2a10 10 0 0 1 10 10" opacity="0.75"/>
+          </svg>
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<style>
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-content {
+    background: rgba(30, 41, 59, 0.95);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid var(--slate-700);
+  }
+
+  .close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--slate-400);
+  }
+
+  .contact-form {
+    margin-top: 32px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    color: var(--slate-300);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--slate-700);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue-500);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--slate-500);
+  }
+
+  .btn-block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Form Status Messages */
+  .form-status {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    display: none;
+  }
+
+  .form-status.success {
+    display: block;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+  }
+
+  .form-status.error {
+    display: block;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+  }
+
+  /* Button Loader */
+  .btn-loader svg {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+  // Contact Modal functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('contactModal');
+    const closeBtn = document.querySelector('.close');
+    const contactForm = document.getElementById('contactForm');
+    
+    // Close modal
+    closeBtn?.addEventListener('click', function() {
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close modal on outside click
+    window.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Form submission - Web3Forms Integration
+    contactForm?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = this;
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoader = submitBtn.querySelector('.btn-loader');
+      const statusDiv = document.getElementById('formStatus');
+      
+      // Basic validation
+      const name = formData.get('name')?.toString().trim();
+      const email = formData.get('email')?.toString().trim();
+      const company = formData.get('company')?.toString().trim();
+      
+      if (!name || !email || !company) {
+        statusDiv.className = 'form-status error';
+        statusDiv.textContent = 'Please fill in all required fields (*)';
+        statusDiv.style.display = 'block';
+        return;
+      }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        statusDiv.className = 'form-status error';
+        statusDiv.textContent = 'Please enter a valid email address';
+        statusDiv.style.display = 'block';
+        return;
+      }
+      
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      btnLoader.style.display = 'inline-block';
+      statusDiv.style.display = 'none';
+      
+      try {
+        // Submit to Web3Forms
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          statusDiv.className = 'form-status success';
+          statusDiv.innerHTML = '<strong>✓ Message sent successfully!</strong><br>We\'ll get back to you within 24 hours.';
+          statusDiv.style.display = 'block';
+          
+          form.reset();
+          
+          setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            statusDiv.style.display = 'none';
+          }, 2000);
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+        
+      } catch (error) {
+        statusDiv.className = 'form-status error';
+        statusDiv.textContent = 'Something went wrong. Please try again or email us directly at contact@mentyx.ai';
+        statusDiv.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+      }
+    });
+  });
+</script>

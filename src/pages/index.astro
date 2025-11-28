@@ -1,0 +1,402 @@
+---
+// Layout
+import Layout from '../components/layouts/Layout.astro';
+
+// UI Components
+import Button from '../components/ui/Button.astro';
+import ContactModal from '../components/ui/ContactModal.astro';
+import ExitPopup from '../components/ui/ExitPopup.astro';
+
+// Section Components  
+import Hero from '../components/sections/Hero.astro';
+import ClientLogos from '../components/sections/ClientLogos.astro';
+import ProblemSection from '../components/sections/ProblemSection.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import FeaturesSection from '../components/sections/FeaturesSection.astro';
+import SecuritySection from '../components/sections/SecuritySection.astro';
+import TestimonialsSection from '../components/sections/TestimonialsSection.astro';
+import InsightsSection from '../components/sections/InsightsSection.astro';
+import LendersSection from '../components/sections/LendersSection.astro';
+import FaqSection from '../components/sections/FaqSection.astro';
+import CtaSection from '../components/sections/CtaSection.astro';
+---
+
+<Layout 
+  title="Mentyx.ai - AI-Powered Loan Origination Platform"
+  description="Automate manual underwriting with Mentyx.ai. Reduce 30-day loan processes to minutes using AI-powered loan origination for private lenders and financial institutions."
+  canonical="https://mentyx.ai"
+>
+  
+  <Hero />
+  <ClientLogos />
+  <ProblemSection />
+  <HowItWorks />
+  <FeaturesSection />
+  <SecuritySection />
+  <TestimonialsSection />
+  <InsightsSection />
+  <LendersSection />
+  <FaqSection />
+  <CtaSection />
+
+  <ExitPopup />
+  <ContactModal />
+
+</Layout>
+
+<style>
+  /* ================================
+     CSS VARIABLES - FIXED
+     ================================ */
+  :root {
+    /* Slate colors */
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    
+    /* Blue colors */
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+    
+    /* Cyan colors */
+    --cyan-300: #67e8f9;
+    --cyan-400: #22d3ee;
+    --cyan-500: #06b6d4;
+    
+    /* Red colors */
+    --red-300: #fca5a5;
+    --rose-200: #fecaca;
+    
+    /* Purple colors */
+    --purple-500: #a855f7;
+    
+    /* Green colors */
+    --green-500: #22c55e;
+  }
+
+  /* ================================
+     GLOBAL STYLES
+     ================================ */
+
+  /* Base styles */
+  body {
+    background-color: #0f172a;
+    color: white;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Button styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    padding: 16px 32px;
+    font-size: 1.125rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--blue-500) 0%, var(--cyan-500) 100%);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid var(--slate-700);
+    color: var(--slate-300);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(30, 41, 59, 1);
+    border-color: var(--blue-500);
+    color: white;
+  }
+
+  .btn-block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  /* ================================
+     CLEAN WAVE BACKGROUND
+     ================================ */
+
+  /* Main gentle wave layer */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    background: 
+      radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+    animation: smoothWave 18s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes smoothWave {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    33% {
+      transform: translate(-2%, 3%);
+    }
+    66% {
+      transform: translate(2%, -2%);
+    }
+  }
+
+  /* Secondary wave layer */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: 
+      radial-gradient(ellipse at 50% 30%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
+    animation: smoothWave 24s ease-in-out infinite reverse;
+    pointer-events: none;
+    filter: blur(40px);
+  }
+
+  /* Subtle shimmer on gradient text */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      90deg,
+      var(--blue-400) 0%,
+      var(--cyan-400) 25%,
+      var(--blue-300) 50%,
+      var(--cyan-400) 75%,
+      var(--blue-400) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 8s linear infinite;
+  }
+
+  /* Smooth hover effects on cards */
+  .stat-card,
+  .step-card,
+  .security-card,
+  .insight-card,
+  .lender-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stat-card:hover,
+  .step-card:hover,
+  .security-card:hover,
+  .insight-card:hover,
+  .lender-card:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Section heading styles */
+  .section-heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 24px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .section-heading.centered {
+    text-align: center;
+  }
+
+  .text-red {
+    color: var(--red-300);
+  }
+
+  .section-lead {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--slate-300);
+  }
+
+  .section-lead.centered {
+    text-align: center;
+  }
+
+  .section-description {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 64px;
+    color: var(--slate-400);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-description.centered {
+    text-align: center;
+  }
+
+  /* Badge Wrapper */
+  .badge-wrapper {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .badge-center {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    color: var(--cyan-400);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  /* Rose highlight for emphasis text */
+  .rose-highlight {
+    color: var(--rose-200);
+    font-weight: 700;
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .section {
+      padding: 60px 0;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+    }
+
+    body::before,
+    body::after {
+      animation-duration: 25s;
+    }
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script>
+  // Performance monitoring
+  window.addEventListener('load', function() {
+    if ('performance' in window) {
+      const navTiming = performance.getEntriesByType('navigation')[0];
+      console.log('🚀 Page loaded in:', navTiming.loadEventEnd - navTiming.navigationStart + 'ms');
+    }
+  });
+
+  // ================================
+  // GLOBAL FUNCTIONALITY
+  // ================================
+  
+  // Video button
+  document.getElementById('playVideo')?.addEventListener('click', function() {
+    alert('Video demo coming soon! Click "Schedule a Call" to book a personalized demo.');
+  });
+
+  // Open modal function (can be called from any component)
+  window.openContactModal = function() {
+    const modal = document.getElementById('contactModal');
+    if (modal) {
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  // Calendly function
+  window.openCalendly = function() {
+    window.open('https://calendly.com/contact-mentyx/30min', '_blank');
+  };
+
+  // Button event handlers for components that might not have their own scripts
+  document.addEventListener('DOMContentLoaded', function() {
+    // Hero Section - Schedule Call Button (Calendly)
+    document.getElementById('heroScheduleCall')?.addEventListener('click', function() {
+      window.openCalendly();
+    });
+
+    // Hero Section - Email Us Button (Modal)
+    document.getElementById('heroEmailUs')?.addEventListener('click', function() {
+      window.openContactModal();
+    });
+
+    // CTA Section - Schedule a Call Button (Calendly)
+    document.getElementById('ctaScheduleCall')?.addEventListener('click', function() {
+      window.openCalendly();
+    });
+
+    // CTA Section - Contact Sales Button (Modal)
+    document.getElementById('ctaContactSales')?.addEventListener('click', function() {
+      window.openContactModal();
+    });
+
+    // Workflow CTA Button (Modal)
+    document.getElementById('workflowCTA')?.addEventListener('click', function() {
+      window.openContactModal();
+    });
+  });
+</script>

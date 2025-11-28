@@ -1,0 +1,96 @@
+---
+// No imports needed for this component
+---
+
+<section class="clients-section">
+  <div class="container">
+    <div class="clients-content" data-aos="fade-up">
+      <p class="clients-label">Trusted by industry leaders</p>
+      <div class="clients-slider">
+        <div class="clients-track">
+          <div class="client-logo">BridgeCapital</div>
+          <div class="client-logo">Crestline Partners</div>
+          <div class="client-logo">Monroe Capital</div>
+          <div class="client-logo">Hilco Global</div>
+          <div class="client-logo">Gordon Brothers</div>
+          <div class="client-logo">Fortress Investment</div>
+          <!-- Duplicate for seamless loop -->
+          <div class="client-logo">BridgeCapital</div>
+          <div class="client-logo">Crestline Partners</div>
+          <div class="client-logo">Monroe Capital</div>
+          <div class="client-logo">Hilco Global</div>
+          <div class="client-logo">Gordon Brothers</div>
+          <div class="client-logo">Fortress Investment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* CLIENT LOGOS SPECIFIC STYLES */
+  .clients-section {
+    padding: 60px 0;
+    background: rgba(30, 41, 59, 0.3);
+    overflow: hidden;
+  }
+
+  .clients-label {
+    text-align: center;
+    color: var(--slate-400);
+    margin-bottom: 32px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  .clients-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .clients-track {
+    display: flex;
+    gap: 64px;
+    animation: infiniteScroll 30s linear infinite;
+    width: fit-content;
+  }
+
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .client-logo {
+    color: var(--slate-300);
+    font-weight: 700;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s, color 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .client-logo:hover {
+    opacity: 1;
+    color: var(--cyan-400);
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .clients-track {
+      gap: 48px;
+      animation-duration: 25s;
+    }
+    
+    .client-logo {
+      font-size: 1.25rem;
+    }
+  }
+</style>

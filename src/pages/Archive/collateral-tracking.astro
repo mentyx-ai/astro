@@ -1,0 +1,668 @@
+---
+// /src/pages/solutions/collateral-tracking.astro
+import Layout from '../../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="Collateral Tracking System - Monitor Asset Values | Mentyx.ai"
+  description="Real-time collateral monitoring and valuation tracking to protect your lending portfolio. Automated alerts, compliance monitoring, and risk management."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <span>Asset Management</span>
+      </div>
+      
+      <h1 class="hero-title">
+        Intelligent Collateral Tracking
+      </h1>
+      
+      <p class="hero-subtitle">
+        Monitor asset values in real-time, automate compliance checks, and protect your portfolio with AI-powered collateral management and risk monitoring.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/#platform" class="btn btn-secondary btn-lg">
+          View Platform
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">Real-Time</div>
+          <div class="stat-label">Valuation Updates</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">90%</div>
+          <div class="stat-label">Risk Reduction</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Compliance Coverage</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Comprehensive Collateral Management</h2>
+      <p class="section-subtitle">Everything you need to track, value, and protect your secured assets</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Real-Time Valuation</h3>
+        <p class="feature-description">
+          Continuous monitoring of collateral values with automated updates from multiple data sources and market feeds.
+        </p>
+        <ul class="feature-list">
+          <li>Live market data integration</li>
+          <li>Automated appraisal updates</li>
+          <li>Multi-source validation</li>
+          <li>Historical value tracking</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Automated Alerts</h3>
+        <p class="feature-description">
+          Instant notifications when collateral values fall below thresholds or compliance requirements aren't met.
+        </p>
+        <ul class="feature-list">
+          <li>LTV threshold monitoring</li>
+          <li>Value depreciation alerts</li>
+          <li>Insurance expiration tracking</li>
+          <li>Lien position monitoring</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Multi-Asset Support</h3>
+        <p class="feature-description">
+          Track diverse collateral types from real estate and equipment to securities, inventory, and receivables.
+        </p>
+        <ul class="feature-list">
+          <li>Real estate properties</li>
+          <li>Equipment & machinery</li>
+          <li>Securities & investments</li>
+          <li>Inventory & receivables</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Document Management</h3>
+        <p class="feature-description">
+          Centralized repository for appraisals, insurance policies, UCC filings, and all collateral documentation.
+        </p>
+        <ul class="feature-list">
+          <li>Digital document storage</li>
+          <li>Version control & audit trails</li>
+          <li>Expiration tracking</li>
+          <li>E-signature integration</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Compliance Monitoring</h3>
+        <p class="feature-description">
+          Ensure regulatory compliance with automated checks for insurance requirements, lien priorities, and documentation.
+        </p>
+        <ul class="feature-list">
+          <li>Insurance coverage verification</li>
+          <li>UCC filing monitoring</li>
+          <li>Title search tracking</li>
+          <li>Regulatory reporting</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4"/>
+            <path d="M12 16h.01"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Risk Assessment</h3>
+        <p class="feature-description">
+          AI-powered risk scoring that analyzes collateral quality, market conditions, and borrower performance.
+        </p>
+        <ul class="feature-list">
+          <li>Automated risk scoring</li>
+          <li>Concentration analysis</li>
+          <li>Market trend analysis</li>
+          <li>Predictive depreciation</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Third-Party Integration</h3>
+        <p class="feature-description">
+          Connect with appraisers, insurance providers, title companies, and valuation services seamlessly.
+        </p>
+        <ul class="feature-list">
+          <li>Appraisal vendor network</li>
+          <li>Insurance API integration</li>
+          <li>Title company connections</li>
+          <li>Market data feeds</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18"/>
+            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Portfolio Analytics</h3>
+        <p class="feature-description">
+          Comprehensive reporting and analytics on collateral performance, concentration, and portfolio health.
+        </p>
+        <ul class="feature-list">
+          <li>Collateral concentration reports</li>
+          <li>LTV trend analysis</li>
+          <li>Coverage ratio tracking</li>
+          <li>Custom dashboards</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why Choose Mentyx Collateral Tracking</h2>
+      <p class="section-subtitle">Protect your portfolio with intelligent asset monitoring</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">01</div>
+        <h3>Minimize Loss Exposure</h3>
+        <p>Early warning alerts and real-time monitoring help you identify and address collateral deficiencies before they become losses.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">02</div>
+        <h3>Ensure Compliance</h3>
+        <p>Automated compliance checks and documentation tracking ensure you meet all regulatory requirements without manual oversight.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">03</div>
+        <h3>Reduce Manual Work</h3>
+        <p>Eliminate 70% of manual collateral tracking tasks with automated valuations, alerts, and reporting.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">04</div>
+        <h3>Make Better Decisions</h3>
+        <p>Data-driven insights into collateral quality and portfolio concentration enable smarter lending decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Protect Your Portfolio?</h2>
+      <p class="cta-subtitle">See how Mentyx helps lenders track and manage collateral with confidence</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/#platform" class="btn btn-secondary btn-lg">
+          Explore Platform
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: white;
+    margin: 0 0 24px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .feature-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    color: #cbd5e1;
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  /* Benefits Section */
+  .benefits-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .benefit-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .benefit-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .benefit-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+</Layout>

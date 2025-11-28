@@ -1,0 +1,735 @@
+---
+// src/pages/demo.astro
+import Layout from '../components/layouts/Layout.astro';
+---
+
+<Layout title="Schedule a Demo – Mentyx.ai">
+  <!-- Hero Section -->
+  <section class="demo-hero">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up">
+        <div class="trust-badge">
+          Schedule Your Demo
+        </div>
+        <h1>
+          See Mentyx in <span class="gradient-text">Action</span>
+        </h1>
+        <p class="hero-description">
+          Book a personalized 12-minute walkthrough and discover how AI can transform your loan origination process
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <div class="demo-layout">
+        
+        <!-- Form Section -->
+        <div class="demo-form-container" data-aos="fade-up">
+          <div class="form-card">
+            <h2>Tell us about yourself</h2>
+            
+            <form id="demoForm" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="668cabdc-9057-4e2a-8995-2a2e8ec13aaf">
+              <input type="hidden" name="subject" value="New Demo Request - Mentyx.ai">
+              <input type="hidden" name="from_name" value="Mentyx.ai Demo Page">
+              
+              <!-- Name Row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">First Name *</label>
+                  <input 
+                    type="text" 
+                    id="firstName"
+                    name="firstName" 
+                    class="form-input" 
+                    placeholder="John" 
+                    required 
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Last Name *</label>
+                  <input 
+                    type="text" 
+                    id="lastName"
+                    name="lastName" 
+                    class="form-input" 
+                    placeholder="Smith" 
+                    required 
+                  />
+                </div>
+              </div>
+
+              <!-- Contact Row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" class="form-label">Work Email *</label>
+                  <input 
+                    type="email" 
+                    id="email"
+                    name="email" 
+                    class="form-input" 
+                    placeholder="john@company.com" 
+                    required 
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    id="phone"
+                    name="phone" 
+                    class="form-input" 
+                    placeholder="+1 (555) 000-0000" 
+                  />
+                </div>
+              </div>
+
+              <!-- Company Info -->
+              <div class="form-group">
+                <label for="company" class="form-label">Company Name *</label>
+                <input 
+                  type="text" 
+                  id="company"
+                  name="company" 
+                  class="form-input" 
+                  placeholder="Acme Lending Corp" 
+                  required 
+                />
+              </div>
+
+              <!-- Company Size -->
+              <div class="form-group">
+                <label for="companySize" class="form-label">Company Size *</label>
+                <select id="companySize" name="companySize" class="form-select" required>
+                  <option value="">Select team size</option>
+                  <option value="1-10">1-10 employees</option>
+                  <option value="11-50">11-50 employees</option>
+                  <option value="51-200">51-200 employees</option>
+                  <option value="201-500">201-500 employees</option>
+                  <option value="500+">500+ employees</option>
+                </select>
+              </div>
+
+              <!-- Lending Focus -->
+              <div class="form-group">
+                <label for="lendingType" class="form-label">Primary Lending Focus *</label>
+                <select id="lendingType" name="lendingType" class="form-select" required>
+                  <option value="">Select lending type</option>
+                  <option value="bridge">Bridge Loans</option>
+                  <option value="commercial">Commercial Real Estate</option>
+                  <option value="corporate">Corporate Lending</option>
+                  <option value="hard-money">Hard Money</option>
+                  <option value="equipment">Equipment Finance</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Loan Volume -->
+              <div class="form-group">
+                <label for="volume" class="form-label">Monthly Loan Volume</label>
+                <select id="volume" name="volume" class="form-select">
+                  <option value="">Select volume range</option>
+                  <option value="<1M">Less than $1M</option>
+                  <option value="1-5M">$1M - $5M</option>
+                  <option value="5-10M">$5M - $10M</option>
+                  <option value="10-50M">$10M - $50M</option>
+                  <option value="50M+">$50M+</option>
+                </select>
+              </div>
+
+              <!-- Challenge -->
+              <div class="form-group">
+                <label for="challenge" class="form-label">What's your biggest challenge?</label>
+                <textarea 
+                  id="challenge"
+                  name="challenge" 
+                  class="form-textarea" 
+                  rows="3" 
+                  placeholder="Tell us what you'd like to improve in your loan origination process..."
+                ></textarea>
+              </div>
+
+              <!-- Consent -->
+              <div class="form-group">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="consent" name="consent" required />
+                  <label for="consent">
+                    I agree to receive product updates and marketing communications from Mentyx.ai
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
+                <span class="btn-text">Schedule My Demo</span>
+                <span class="btn-loader">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" opacity="0.25"/>
+                    <path d="M12 2a10 10 0 0 1 10 10" opacity="0.75"/>
+                  </svg>
+                </span>
+              </button>
+
+              <p class="form-footer">
+                By submitting this form, you agree to our 
+                <a href="/privacy-policy" class="form-link">Privacy Policy</a> and 
+                <a href="/terms-of-service" class="form-link">Terms of Service</a>
+              </p>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message">
+              <div class="success-content">
+                <div class="success-icon">🎉</div>
+                <h3>Demo Scheduled!</h3>
+                <p>Thank you! We'll contact you within 24 hours to schedule your personalized demo.</p>
+                <p class="success-email">Check your email at <span id="userEmail"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="demo-sidebar" data-aos="fade-up" data-aos-delay="200">
+          <div class="sidebar-card">
+            <h3>What to Expect</h3>
+            
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="benefit-content">
+                  <div class="benefit-title">12-Minute Walkthrough</div>
+                  <div class="benefit-description">Personalized demo tailored to your lending focus</div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </div>
+                <div class="benefit-content">
+                  <div class="benefit-title">Live Q&A</div>
+                  <div class="benefit-description">Ask questions specific to your workflow</div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="1" x2="12" y2="23"/>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                </div>
+                <div class="benefit-content">
+                  <div class="benefit-title">ROI Calculation</div>
+                  <div class="benefit-description">See potential time and cost savings</div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div class="benefit-content">
+                  <div class="benefit-title">No Commitment</div>
+                  <div class="benefit-description">Just a conversation to see if we're a fit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Join Leading Lenders</h3>
+            <p class="sidebar-text">
+              50+ forward-thinking lenders are already using Mentyx to close loans faster and smarter
+            </p>
+            <div class="stats-list">
+              <div class="stat-item">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>60% faster decisions</span>
+              </div>
+              <div class="stat-item">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>90% fewer document errors</span>
+              </div>
+              <div class="stat-item">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>$2B+ in loans processed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card text-center">
+            <p class="sidebar-text">Questions before booking?</p>
+            <a href="mailto:contact@mentyx.ai" class="contact-email">
+              contact@mentyx.ai
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Demo Page Specific Styles */
+  .demo-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .demo-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .demo-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 100px;
+  }
+
+  .demo-form-container {
+    width: 100%;
+  }
+
+  .sidebar-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid var(--slate-700);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-card:hover {
+    border-color: var(--blue-500);
+    transform: translateY(-2px);
+  }
+
+  .sidebar-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .sidebar-text {
+    color: var(--slate-400);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .benefit-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan-400);
+    flex-shrink: 0;
+  }
+
+  .benefit-content {
+    flex: 1;
+  }
+
+  .benefit-title {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+    font-size: 0.9375rem;
+  }
+
+  .benefit-description {
+    color: var(--slate-400);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--slate-300);
+    font-size: 0.875rem;
+  }
+
+  .stat-item svg {
+    color: var(--cyan-400);
+    flex-shrink: 0;
+  }
+
+  .contact-email {
+    color: var(--cyan-400);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .contact-email:hover {
+    color: var(--cyan-300);
+  }
+
+  /* Form Styles */
+  .form-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid var(--slate-700);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .form-card:hover {
+    border-color: var(--blue-500);
+  }
+
+  .form-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: white;
+    text-align: center;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--slate-300);
+    font-size: 0.875rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--slate-700);
+    border-radius: 12px;
+    color: white;
+    font-size: 0.9375rem;
+    transition: all 0.3s;
+    font-family: inherit;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--blue-500);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .form-input:hover,
+  .form-select:hover,
+  .form-textarea:hover {
+    border-color: var(--slate-600);
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: var(--slate-500);
+  }
+
+  .form-select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2306b6d4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+  }
+
+  .form-select option {
+    background: #0f172a;
+    color: white;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .checkbox-wrapper input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--cyan-400);
+  }
+
+  .checkbox-wrapper label {
+    font-size: 0.8125rem;
+    color: var(--slate-400);
+    line-height: 1.4;
+    cursor: pointer;
+  }
+
+  .btn-block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-footer {
+    text-align: center;
+    color: var(--slate-500);
+    font-size: 0.75rem;
+    margin-top: 16px;
+  }
+
+  .form-link {
+    color: var(--cyan-400);
+    text-decoration: none;
+  }
+
+  .form-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Success Message */
+  .success-message {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    display: none;
+  }
+
+  .success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+    margin-bottom: 8px;
+  }
+
+  .success-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cyan-400);
+    margin: 0;
+  }
+
+  .success-content p {
+    color: var(--slate-300);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .success-email {
+    color: var(--slate-400);
+    font-size: 0.875rem;
+  }
+
+  .success-email span {
+    color: var(--cyan-300);
+    font-weight: 600;
+  }
+
+  /* Button Loader */
+  .btn-loader {
+    display: none;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 968px) {
+    .demo-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .demo-sidebar {
+      position: static;
+      order: 2;
+    }
+
+    .demo-form-container {
+      order: 1;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .demo-hero {
+      padding-top: 100px;
+      min-height: 50vh;
+    }
+
+    .form-card {
+      padding: 24px;
+    }
+
+    .sidebar-card {
+      padding: 24px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-card {
+      padding: 20px;
+    }
+
+    .sidebar-card {
+      padding: 20px;
+    }
+
+    .benefit-item {
+      gap: 12px;
+    }
+
+    .benefit-icon {
+      width: 36px;
+      height: 36px;
+    }
+  }
+</style>
+
+<script>
+  // Form submission handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('demoForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoader = submitBtn.querySelector('.btn-loader');
+    const successMessage = document.getElementById('successMessage');
+    const userEmail = document.getElementById('userEmail');
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        btnText.textContent = 'Scheduling...';
+        btnLoader.style.display = 'inline-block';
+        submitBtn.disabled = true;
+        
+        try {
+          const formData = new FormData(form);
+          
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Show success message
+            userEmail.textContent = formData.get('email');
+            form.style.display = 'none';
+            successMessage.style.display = 'block';
+            
+            // Redirect to Calendly after 2 seconds
+            setTimeout(() => {
+              window.open('https://calendly.com/contact-mentyx/30min', '_blank');
+            }, 2000);
+            
+          } else {
+            throw new Error('Form submission failed');
+          }
+          
+        } catch (error) {
+          console.error('Form error:', error);
+          alert('Something went wrong. Please email us directly at contact@mentyx.ai');
+          
+          // Reset button state
+          btnText.textContent = 'Schedule My Demo';
+          btnLoader.style.display = 'none';
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  });
+</script>

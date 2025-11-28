@@ -1,0 +1,929 @@
+---
+// /src/pages/solutions/decision-engine.astro
+import Layout from '../../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="Decision Engine - Automated Loan Approvals | Mentyx.ai"
+  description="Automated approve/decline decisions for fix & flip, bridge, and DSCR loans. Custom rule builder, exception workflows, instant decisions."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6m0 6v6"/>
+          <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/>
+          <path d="M1 12h6m6 0h6"/>
+          <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"/>
+        </svg>
+        <span class="ai-badge">AI Underwriting</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-gradient">Decision</span>
+        <span class="title-white">Engine</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Automated approve/decline decisions based on your exact credit policy. 70% of clean deals auto-approved, underwriters focus on exceptions.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/platform" class="btn btn-secondary btn-lg">
+          View Platform
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">70%</div>
+          <div class="stat-label">Auto-Approved</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">Seconds</div>
+          <div class="stat-label">Decision Time</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Policy Compliance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Your Credit Policy, Automated</h2>
+      <p class="section-subtitle">Build rules once, apply consistently forever</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M2 12h20"/>
+            <circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Visual Rule Builder</h3>
+        <p class="feature-description">
+          Drag-and-drop interface to build approval logic. "IF LTV ≤70% AND credit score ≥650 AND experience >3 years THEN auto-approve."
+        </p>
+        <ul class="feature-list">
+          <li>No-code rule creation</li>
+          <li>IF/THEN/ELSE logic</li>
+          <li>Multiple conditions per rule</li>
+          <li>Rule priority ordering</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Tiered Decision Logic</h3>
+        <p class="feature-description">
+          Create multiple tiers—Tier A (auto-approve), Tier B (conditional), Tier C (decline). Each tier has different rate pricing and terms.
+        </p>
+        <ul class="feature-list">
+          <li>3+ pricing tiers</li>
+          <li>Tier-specific rates</li>
+          <li>LTV/LTC thresholds per tier</li>
+          <li>Automatic tier assignment</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Borrower Type Rules</h3>
+        <p class="feature-description">
+          Different rules for first-time flippers vs. experienced investors. Looser criteria for repeat borrowers with good payment history.
+        </p>
+        <ul class="feature-list">
+          <li>Experience-based rules</li>
+          <li>Repeat borrower bonuses</li>
+          <li>First-time restrictions</li>
+          <li>Track record weighting</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Property-Specific Rules</h3>
+        <p class="feature-description">
+          Set different LTV limits by property type—single-family vs. multi-unit, urban vs. rural, condition, and neighborhood.
+        </p>
+        <ul class="feature-list">
+          <li>Property type rules</li>
+          <li>Location-based criteria</li>
+          <li>Condition thresholds</li>
+          <li>Market tier adjustments</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Exception Handling</h3>
+        <p class="feature-description">
+          When deal doesn't meet auto-approve criteria, route to underwriter with flagged issues. Underwriter can override with reason code.
+        </p>
+        <ul class="feature-list">
+          <li>Auto-route exceptions</li>
+          <li>Flag specific issues</li>
+          <li>Manual override capability</li>
+          <li>Override reason tracking</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Condition Templates</h3>
+        <p class="feature-description">
+          Pre-built condition templates for common scenarios—"If DSCR below 1.25 require additional 3 months reserves" or "If first flip require contractor experience letter."
+        </p>
+        <ul class="feature-list">
+          <li>Reusable condition templates</li>
+          <li>Auto-apply conditions</li>
+          <li>Custom condition builder</li>
+          <li>Borrower notification</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Testing & Simulation</h3>
+        <p class="feature-description">
+          Test new rules against historical loans before deploying. See how many past deals would have been approved under new criteria.
+        </p>
+        <ul class="feature-list">
+          <li>Backtest on history</li>
+          <li>Impact analysis</li>
+          <li>A/B testing</li>
+          <li>Safe rule deployment</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Decision Audit Trail</h3>
+        <p class="feature-description">
+          Every decision logged with exact rules that triggered. Full compliance trail for regulators showing why loan was approved or declined.
+        </p>
+        <ul class="feature-list">
+          <li>Complete decision logs</li>
+          <li>Rule-by-rule breakdown</li>
+          <li>Timestamps & users</li>
+          <li>Export for audits</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Decision Flow Section -->
+<section class="flow-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How Decisions Flow</h2>
+      <p class="section-subtitle">From application to approval in seconds</p>
+    </div>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-number">1</div>
+        <h3>Rules Evaluate</h3>
+        <p>AI runs all rules against application data—checks LTV, credit score, experience, property type, liquidity.</p>
+      </div>
+      
+      <div class="flow-arrow">→</div>
+      
+      <div class="flow-step flow-approve">
+        <div class="step-number">2A</div>
+        <h3>Auto-Approve (70%)</h3>
+        <p>Meets all criteria: "Approved for $250K at 9.5% rate, 70% LTV, 12-month term. Send commitment letter."</p>
+      </div>
+      
+      <div class="flow-arrow">↓</div>
+      
+      <div class="flow-step flow-conditional">
+        <div class="step-number">2B</div>
+        <h3>Conditional (20%)</h3>
+        <p>Close but needs conditions: "Conditional approval pending additional 2 months reserves + personal guarantee."</p>
+      </div>
+      
+      <div class="flow-arrow">↓</div>
+      
+      <div class="flow-step flow-decline">
+        <div class="step-number">2C</div>
+        <h3>Auto-Decline (10%)</h3>
+        <p>Fails hard stops: "Declined - LTV 78% exceeds max 75%. Does not meet lending criteria."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why Automate Decisions</h2>
+      <p class="section-subtitle">Speed, consistency, and scale</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">01</div>
+        <h3>Same-Day Approvals</h3>
+        <p>Clean deals approved in seconds, not days. Borrowers get instant commitment letters. Beat competitors still doing manual underwriting that takes 3-5 days.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">02</div>
+        <h3>Perfect Policy Compliance</h3>
+        <p>Every decision follows your exact credit policy, every time. No more "John approves at 72% LTV but policy says 70%." Rules enforced automatically.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">03</div>
+        <h3>Scale Without Adding Staff</h3>
+        <p>Go from 50 loans/month to 200 without hiring more underwriters. AI handles the routine approvals, humans handle exceptions and edge cases.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">04</div>
+        <h3>Better Borrower Experience</h3>
+        <p>Investors get instant feedback—approved with rate, declined with reason, or conditional with specific requirements. No more "we'll get back to you in 3 days."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Example Rules Section -->
+<section class="examples-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Example Decision Rules</h2>
+      <p class="section-subtitle">Real scenarios from private lenders</p>
+    </div>
+
+    <div class="examples-grid">
+      <div class="example-card">
+        <h3>Tier A - Auto Approve (70% LTV, 9.5%)</h3>
+        <div class="rule-code">
+          IF:<br/>
+          &nbsp;&nbsp;• LTV ≤ 70%<br/>
+          &nbsp;&nbsp;• Credit Score ≥ 650<br/>
+          &nbsp;&nbsp;• Experience ≥ 3 completed flips<br/>
+          &nbsp;&nbsp;• Liquidity ≥ 15% of loan<br/>
+          &nbsp;&nbsp;• Property: Single-family, A/B neighborhood<br/>
+          THEN:<br/>
+          &nbsp;&nbsp;→ AUTO-APPROVE at 9.5% rate
+        </div>
+      </div>
+
+      <div class="example-card">
+        <h3>Tier B - Conditional (75% LTV, 10.5%)</h3>
+        <div class="rule-code">
+          IF:<br/>
+          &nbsp;&nbsp;• LTV 70-75%<br/>
+          &nbsp;&nbsp;• Credit Score 620-649<br/>
+          &nbsp;&nbsp;• Experience 1-2 flips OR first-timer<br/>
+          &nbsp;&nbsp;• Liquidity 10-15%<br/>
+          THEN:<br/>
+          &nbsp;&nbsp;→ CONDITIONAL at 10.5% rate<br/>
+          &nbsp;&nbsp;→ Require: Personal guarantee + 3 months reserves
+        </div>
+      </div>
+
+      <div class="example-card">
+        <h3>Auto-Decline (Hard Stops)</h3>
+        <div class="rule-code">
+          IF ANY:<br/>
+          &nbsp;&nbsp;• LTV &gt; 75%<br/>
+          &nbsp;&nbsp;• Credit Score &lt; 580<br/>
+          &nbsp;&nbsp;• DSCR &lt; 1.0 (rentals)<br/>
+          &nbsp;&nbsp;• Liquidity &lt; 10%<br/>
+          &nbsp;&nbsp;• ARV ratio &gt; 200%<br/>
+          &nbsp;&nbsp;• Property in flood zone + no insurance<br/>
+          THEN:<br/>
+          &nbsp;&nbsp;→ AUTO-DECLINE with specific reason
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">See Decision Engine Live</h2>
+      <p class="cta-subtitle">Watch us build your credit policy in the visual rule builder</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions/risk-scoring" class="btn btn-secondary btn-lg">
+          See Risk Scoring
+        </a>
+        <a href="/solutions" class="btn btn-tertiary btn-lg">
+          View All Solutions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* AI Badge Animation */
+  .ai-badge {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: violetPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes violetPulse {
+    0%, 100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.85;
+      filter: brightness(1.3);
+    }
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(167, 139, 250, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 9999px;
+    color: #a78bfa;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .btn-tertiary {
+    background: rgba(15, 23, 42, 0.8);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-tertiary:hover {
+    background: rgba(15, 23, 42, 1);
+    border-color: rgba(6, 182, 212, 0.5);
+    color: #22d3ee;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(139, 92, 246, 0.2);
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.1) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a78bfa;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .feature-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    color: #cbd5e1;
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #a78bfa;
+    font-weight: bold;
+  }
+
+  /* Decision Flow Section */
+  .flow-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .flow-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .flow-step {
+    background: rgba(15, 23, 42, 0.8);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 20px;
+    padding: 32px 28px;
+    text-align: center;
+    min-width: 240px;
+    max-width: 280px;
+    transition: all 0.3s ease;
+  }
+
+  .flow-step:hover {
+    transform: translateY(-4px);
+  }
+
+  .flow-approve {
+    border-color: rgba(34, 197, 94, 0.5);
+  }
+
+  .flow-conditional {
+    border-color: rgba(251, 191, 36, 0.5);
+  }
+
+  .flow-decline {
+    border-color: rgba(239, 68, 68, 0.5);
+  }
+
+  .step-number {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 auto 20px;
+  }
+
+  .flow-step h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .flow-step p {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .flow-arrow {
+    font-size: 2.5rem;
+    color: #a78bfa;
+    font-weight: 300;
+    align-self: center;
+  }
+
+  /* Benefits Section */
+  .benefits-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .benefit-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .benefit-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .benefit-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Examples Section */
+  .examples-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+
+  .example-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .example-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: translateY(-4px);
+  }
+
+  .example-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 20px 0;
+  }
+
+  .rule-code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 3px solid #a78bfa;
+    line-height: 1.8;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .features-grid, .examples-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .flow-arrow {
+      transform: rotate(90deg);
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+</Layout>

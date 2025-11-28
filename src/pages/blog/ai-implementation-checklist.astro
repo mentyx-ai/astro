@@ -1,0 +1,1125 @@
+---
+// /src/pages/blog/ai-implementation-checklist.astro
+import Layout from '../../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="AI Implementation Checklist: 45-Point Guide for Lending Platforms | Mentyx"
+  description="Complete 45-point checklist covering data migration, team training, workflow mapping, and go-live preparation. Includes timeline estimates and best practices."
+  canonical="https://mentyx.ai/blog/ai-implementation-checklist"
+>
+
+<article>
+  <header class="article-header">
+    <div class="container">
+      <a href="/blog" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5"/>
+          <path d="M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Blog
+      </a>
+
+      <div class="article-meta">
+        <span class="badge resource">RESOURCE</span>
+        <span class="article-date">March 20, 2025</span>
+        <span class="read-time">15 min read</span>
+      </div>
+
+      <h1 class="article-title">
+        AI Implementation Checklist: <span class="highlight">45-Point Guide</span> for Lending Platforms
+      </h1>
+
+      <p class="article-subtitle">
+        Complete checklist covering data migration, team training, workflow mapping, and go-live preparation. Includes timeline estimates and best practices.
+      </p>
+
+      <div class="author-section">
+        <div class="author-avatar">MT</div>
+        <div class="author-info">
+          <h4>Mentyx Implementation Team</h4>
+          <p>Professional Services & Customer Success</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="article-content">
+    <div class="container">
+      <div class="content-body">
+        
+        <h2>Your Roadmap to Successful AI Implementation</h2>
+        
+        <p>
+          Implementing AI-powered document processing and risk analysis requires careful planning across multiple dimensions. This comprehensive 45-point checklist has been refined through 50+ successful implementations with lenders ranging from $50M to $5B in assets.
+        </p>
+
+        <p>
+          Each section includes estimated timelines, resource requirements, and common pitfalls to avoid. Use this as your master checklist to ensure nothing gets missed during your AI transformation journey.
+        </p>
+
+        <div class="checklist-highlight">
+          <div class="checklist-stats">
+            <div class="stat">
+              <div class="stat-number">45</div>
+              <div class="stat-label">Action Items</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">6-10</div>
+              <div class="stat-label">Weeks Timeline</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Success Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Phase 1: Pre-Implementation Planning (Week 1)</h2>
+
+        <div class="checklist-section">
+          <h3>Stakeholder Alignment & Goals</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Define success metrics</strong>
+                <p>Specific KPIs for accuracy, speed, cost reduction, and capacity improvement</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Identify executive sponsor</strong>
+                <p>Senior leader responsible for budget approval and organizational change</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Form implementation team</strong>
+                <p>Cross-functional team with representatives from underwriting, operations, IT, and compliance</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Establish communication plan</strong>
+                <p>Weekly status updates, stakeholder meetings, and team training schedules</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>Technical Assessment</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Inventory current systems</strong>
+                <p>List all loan origination, document management, and servicing systems</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Assess integration requirements</strong>
+                <p>APIs, data formats, authentication methods for system connections</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Review security & compliance</strong>
+                <p>Data encryption, access controls, audit trails, and regulatory requirements</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Evaluate IT infrastructure</strong>
+                <p>Network capacity, firewall configurations, and performance requirements</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Phase 2: Data & Document Preparation (Weeks 1-2)</h2>
+
+        <div class="checklist-section">
+          <h3>Document Analysis</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Catalog document types</strong>
+                <p>Bank statements, tax returns, appraisals, title reports, credit reports, etc.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Analyze document formats</strong>
+                <p>PDF, scanned images, digital uploads, and their quality variations</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Identify data extraction points</strong>
+                <p>Specific fields to extract from each document type with validation rules</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Gather sample documents</strong>
+                <p>100+ representative documents per type for AI model training</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>Data Migration Planning</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Map data fields</strong>
+                <p>Match existing system fields to AI extraction outputs</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Plan data validation</strong>
+                <p>Rules for cross-checking extracted data against existing systems</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Establish data quality standards</strong>
+                <p>Acceptable accuracy thresholds and error handling procedures</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Create backup strategy</strong>
+                <p>Procedures for data backup and disaster recovery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Phase 3: Workflow Design (Weeks 2-3)</h2>
+
+        <div class="checklist-section">
+          <h3>Process Mapping</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Document current workflows</strong>
+                <p>Step-by-step processes for loan application through funding</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Identify automation opportunities</strong>
+                <p>Tasks suitable for AI automation vs. those requiring human review</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Design future state workflows</strong>
+                <p>Optimized processes incorporating AI-powered automation</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Define exception handling</strong>
+                <p>Procedures for low-confidence extractions and complex cases</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>Role & Responsibility Definition</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Update job descriptions</strong>
+                <p>Revised roles focusing on analysis vs. data entry</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Define approval workflows</strong>
+                <p>Clear escalation paths and decision authority matrices</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Establish quality control</strong>
+                <p>Process for ongoing monitoring and accuracy validation</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Create performance metrics</strong>
+                <p>Individual and team KPIs aligned with AI implementation goals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Phase 4: System Configuration (Weeks 3-5)</h2>
+
+        <div class="checklist-section">
+          <h3>AI Model Training</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Upload training documents</strong>
+                <p>Provide diverse sample documents for each document type</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Validate extraction accuracy</strong>
+                <p>Review and correct AI outputs to improve model performance</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Set confidence thresholds</strong>
+                <p>Define accuracy levels for automated vs. manual processing</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Configure business rules</strong>
+                <p>Underwriting criteria, risk scoring, and decisioning logic</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>Integration Setup</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Configure API connections</strong>
+                <p>Set up secure connections between AI platform and existing systems</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Test data synchronization</strong>
+                <p>Verify real-time data flow and error handling between systems</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Implement security protocols</strong>
+                <p>Encryption, access controls, and audit logging configurations</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Set up monitoring & alerts</strong>
+                <p>System health monitoring, performance metrics, and error notifications</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Phase 5: Team Training & Change Management (Weeks 5-6)</h2>
+
+        <div class="checklist-section">
+          <h3>Training Program Development</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Create training materials</strong>
+                <p>User guides, video tutorials, and quick reference cards</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Schedule training sessions</strong>
+                <p>Role-based training for underwriters, processors, and managers</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Conduct hands-on workshops</strong>
+                <p>Practical exercises using test data and simulated scenarios</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Establish super user program</strong>
+                <p>Identify and train power users for ongoing support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>Change Management</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Communicate benefits & timeline</strong>
+                <p>Clear messaging about AI impact on roles and processes</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Address team concerns</strong>
+                <p>Open forums for questions and feedback about the changes</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Establish support channels</strong>
+                <p>Help desk, super user network, and escalation procedures</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Create feedback mechanism</strong>
+                <p>Process for collecting and acting on user suggestions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Phase 6: Testing & Validation (Weeks 6-7)</h2>
+
+        <div class="checklist-section">
+          <h3>System Testing</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Conduct unit testing</strong>
+                <p>Test individual components and integration points</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Perform end-to-end testing</strong>
+                <p>Complete workflow testing with sample loan scenarios</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Validate data accuracy</strong>
+                <p>Compare AI extractions against manual verification results</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Test performance & scalability</strong>
+                <p>Load testing with concurrent users and document volumes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>User Acceptance Testing</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Recruit test users</strong>
+                <p>Representative sample from each user role and experience level</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Create test scenarios</strong>
+                <p>Realistic loan scenarios covering common and edge cases</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Collect user feedback</strong>
+                <p>Structured feedback on usability, workflow, and system performance</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Address identified issues</strong>
+                <p>Prioritize and resolve bugs, usability problems, and gaps</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Phase 7: Go-Live & Optimization (Weeks 8-10)</h2>
+
+        <div class="checklist-section">
+          <h3>Deployment Planning</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Choose deployment strategy</strong>
+                <p>Big bang, phased rollout, or parallel run approach</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Create rollback plan</strong>
+                <p>Procedures for reverting to previous systems if needed</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Schedule go-live date</strong>
+                <p>Select optimal timing considering business cycles and resource availability</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Prepare support team</strong>
+                <p>Staff help desk and super users for launch support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>Post-Implementation Review</h3>
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Monitor system performance</strong>
+                <p>Track accuracy, processing times, and user adoption metrics</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Conduct post-implementation review</strong>
+                <p>Assess success against original goals and identify improvement opportunities</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Plan ongoing optimization</strong>
+                <p>Schedule regular reviews and continuous improvement initiatives</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="checklist-checkbox checked"></div>
+              <div class="checklist-content">
+                <strong>Celebrate success</strong>
+                <p>Recognize team contributions and share implementation benefits</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-guide">
+          <h2>Implementation Timeline Guide</h2>
+          <div class="timeline">
+            <div class="timeline-phase">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Week 1: Planning & Assessment</h4>
+                <p>Stakeholder alignment, technical assessment, team formation</p>
+              </div>
+            </div>
+            <div class="timeline-phase">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Weeks 2-3: Design & Preparation</h4>
+                <p>Workflow design, document analysis, data migration planning</p>
+              </div>
+            </div>
+            <div class="timeline-phase">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Weeks 4-5: Configuration</h4>
+                <p>AI model training, system integration, security setup</p>
+              </div>
+            </div>
+            <div class="timeline-phase">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Weeks 6-7: Testing & Training</h4>
+                <p>User acceptance testing, team training, change management</p>
+              </div>
+            </div>
+            <div class="timeline-phase">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Weeks 8-10: Go-Live & Optimization</h4>
+                <p>Deployment, monitoring, post-implementation review</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="download-section">
+          <div class="download-card">
+            <div class="download-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <div class="download-content">
+              <h3>Download Complete Checklist</h3>
+              <p>Get the printable PDF version with additional resources, templates, and detailed instructions for each phase.</p>
+              <a href="/downloads/ai-implementation-checklist.pdf" class="btn btn-primary btn-lg" download>
+                Download Checklist PDF
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</article>
+
+<style>
+  /* Container */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Article Header */
+  .article-header {
+    padding: 160px 0 80px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    margin-bottom: 32px;
+    transition: gap 0.3s;
+  }
+
+  .back-link:hover {
+    gap: 12px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .badge.resource {
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: #a855f7;
+  }
+
+  .article-date,
+  .read-time {
+    color: #64748b;
+    font-size: 0.9375rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: white;
+  }
+
+  .article-title .highlight {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .article-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .author-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(59, 130, 246, 0.15);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+  }
+
+  .author-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .author-info h4 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .author-info p {
+    color: #64748b;
+    font-size: 0.9375rem;
+  }
+
+  /* Article Content */
+  .article-content {
+    padding: 80px 0;
+    background: #0f172a;
+  }
+
+  .content-body {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-body h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin: 64px 0 32px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .content-body h2:first-child {
+    margin-top: 0;
+  }
+
+  .content-body h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 40px 0 24px;
+  }
+
+  .content-body h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #06b6d4;
+    margin: 24px 0 16px;
+  }
+
+  .content-body p {
+    margin-bottom: 24px;
+  }
+
+  .content-body strong {
+    color: #06b6d4;
+    font-weight: 700;
+  }
+
+  /* Checklist Highlight */
+  .checklist-highlight {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 48px 0;
+    text-align: center;
+  }
+
+  .checklist-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Checklist Sections */
+  .checklist-section {
+    margin: 48px 0;
+  }
+
+  .checklist-section h3 {
+    color: #06b6d4;
+    font-size: 1.375rem;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    border-left: 4px solid #06b6d4;
+  }
+
+  .checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .checklist-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .checklist-item:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+  }
+
+  .checklist-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: rgba(34, 197, 94, 0.15);
+    border: 2px solid #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .checklist-checkbox.checked::after {
+    content: '✓';
+    color: #22c55e;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .checklist-content {
+    flex: 1;
+  }
+
+  .checklist-content strong {
+    color: white;
+    font-size: 1.125rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .checklist-content p {
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Timeline Guide */
+  .timeline-guide {
+    margin: 64px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+  }
+
+  .timeline-guide h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    border: none;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+  }
+
+  .timeline-phase {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .timeline-phase:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-marker {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border: 4px solid #0f172a;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .timeline-content {
+    flex: 1;
+    padding-bottom: 8px;
+  }
+
+  .timeline-content h4 {
+    color: white;
+    margin: 0 0 8px 0;
+    font-size: 1.125rem;
+  }
+
+  .timeline-content p {
+    color: #94a3b8;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  /* Download Section */
+  .download-section {
+    margin: 80px 0 40px;
+  }
+
+  .download-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    padding: 48px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .download-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .download-content h3 {
+    color: white;
+    font-size: 1.75rem;
+    margin: 0 0 16px 0;
+  }
+
+  .download-content p {
+    color: #94a3b8;
+    font-size: 1.125rem;
+    margin: 0 0 32px 0;
+    max-width: 500px;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-title {
+      font-size: 2rem;
+    }
+
+    .article-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .content-body {
+      font-size: 1rem;
+    }
+
+    .checklist-stats {
+      gap: 40px;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+    }
+
+    .checklist-item {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .checklist-checkbox {
+      align-self: flex-start;
+    }
+
+    .timeline::before {
+      left: 17px;
+    }
+
+    .timeline-phase {
+      gap: 16px;
+    }
+
+    .download-card {
+      padding: 32px 24px;
+    }
+
+    .download-content h3 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+</Layout>

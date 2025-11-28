@@ -1,0 +1,1842 @@
+---
+// /src/pages/platform.astro
+import Layout from '../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="Platform Overview - Complete Lending Solution | Mentyx.ai"
+  description="Discover how Mentyx transforms private lending with AI-powered origination, intelligent underwriting, and multi-affiliate oversight in one unified platform."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        <span>Platform Overview</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-gradient">One Platform.</span><br/>
+        <span class="title-white">Complete Control.</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        From application to approval in hours, not days. Mentyx unifies borrower onboarding, AI-powered underwriting, and multi-affiliate oversight into a seamless lending platform built specifically for private lenders.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions" class="btn btn-secondary btn-lg">
+          View Solutions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section - ENHANCED WITH INTERACTIVE STEPS -->
+<section class="how-it-works-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How Mentyx Works</h2>
+      <p class="section-subtitle">A complete loan origination and underwriting platform designed for private lenders</p>
+    </div>
+
+    <!-- Step Navigation -->
+    <div class="step-navigation">
+      <button class="step-nav-btn active" data-step="0">
+        <span class="step-nav-number">01</span>
+        <span class="step-nav-label">Application</span>
+      </button>
+      <button class="step-nav-btn" data-step="1">
+        <span class="step-nav-number">02</span>
+        <span class="step-nav-label">Documents</span>
+      </button>
+      <button class="step-nav-btn" data-step="2">
+        <span class="step-nav-number">03</span>
+        <span class="step-nav-label">AI Analysis</span>
+      </button>
+      <button class="step-nav-btn" data-step="3">
+        <span class="step-nav-number">04</span>
+        <span class="step-nav-label">Decision</span>
+      </button>
+      <button class="step-nav-btn" data-step="4">
+        <span class="step-nav-number">05</span>
+        <span class="step-nav-label">Oversight</span>
+      </button>
+    </div>
+
+    <div class="workflow-container">
+      
+      <!-- Step 1 -->
+      <div class="workflow-step active" data-step-content="0">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="8.5" cy="7" r="4"/>
+              <polyline points="17 11 19 13 23 9"/>
+            </svg>
+          </div>
+          <div class="step-text">
+            <h3>Borrower Application</h3>
+            <p>Borrowers apply online or through your loan officers using mobile-friendly forms. Whether they're at a property showing or in their office, the application process is simple and fast.</p>
+            <ul class="step-features">
+              <li>Guided application for fix & flip, DSCR, and bridge loans</li>
+              <li>Smart form validation prevents incomplete submissions</li>
+              <li>Mobile-optimized for on-site applications</li>
+              <li>Automatic data validation and error checking</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-visual">
+          <div class="visual-card">
+            <div class="visual-header">Borrower Portal</div>
+            <div class="visual-body">
+              <div class="form-preview">
+                <div class="form-field">
+                  <div class="field-label">Loan Type</div>
+                  <div class="field-value">Fix & Flip</div>
+                </div>
+                <div class="form-field">
+                  <div class="field-label">Property Address</div>
+                  <div class="field-value">1234 Oak Street, Charleston, SC</div>
+                </div>
+                <div class="form-field">
+                  <div class="field-label">Purchase Price</div>
+                  <div class="field-value">$185,000</div>
+                </div>
+                <div class="form-field">
+                  <div class="field-label">ARV (After Repair Value)</div>
+                  <div class="field-value">$275,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14"/>
+          <path d="M19 12l-7 7-7-7"/>
+        </svg>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="workflow-step" data-step-content="1">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="step-text">
+            <h3>Document Intelligence</h3>
+            <p>AI extracts and validates data from credit reports, appraisals, purchase agreements, and financial documents. What used to take hours of manual review now happens in seconds.</p>
+            <ul class="step-features">
+              <li>OCR extraction from PDFs and images</li>
+              <li>Automatic data validation and cross-checking</li>
+              <li>Red flag identification (inconsistencies, missing info)</li>
+              <li>Structured data ready for underwriting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-visual">
+          <div class="visual-card">
+            <div class="visual-header">Document Processing</div>
+            <div class="visual-body">
+              <div class="doc-list">
+                <div class="doc-item complete">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Credit Report</span>
+                  <span class="doc-status">Extracted</span>
+                </div>
+                <div class="doc-item complete">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Appraisal</span>
+                  <span class="doc-status">Extracted</span>
+                </div>
+                <div class="doc-item processing">
+                  <div class="spinner"></div>
+                  <span>Purchase Agreement</span>
+                  <span class="doc-status">Processing</span>
+                </div>
+                <div class="doc-item pending">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                  </svg>
+                  <span>Rehab Budget</span>
+                  <span class="doc-status">Pending</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14"/>
+          <path d="M19 12l-7 7-7-7"/>
+        </svg>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="workflow-step" data-step-content="2">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16v-4"/>
+              <path d="M12 8h.01"/>
+            </svg>
+          </div>
+          <div class="step-text">
+            <h3>AI Underwriting Analysis</h3>
+            <p>Our AI engine analyzes every deal using your custom criteria, historical performance data, and industry benchmarks. It calculates metrics, identifies risks, and generates detailed summaries.</p>
+            <ul class="step-features">
+              <li>Instant calculation of LTV, LTC, ARV ratio, DSCR</li>
+              <li>Risk scoring based on your historical loan data</li>
+              <li>Automated red flag detection</li>
+              <li>Explainable decisions for compliance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-visual">
+          <div class="visual-card">
+            <div class="visual-header">AI Analysis Results</div>
+            <div class="visual-body">
+              <div class="metrics-grid">
+                <div class="metric-item good">
+                  <div class="metric-label">LTV</div>
+                  <div class="metric-value" data-value="68">0</div>
+                  <div class="metric-unit">%</div>
+                </div>
+                <div class="metric-item good">
+                  <div class="metric-label">LTC</div>
+                  <div class="metric-value" data-value="87">0</div>
+                  <div class="metric-unit">%</div>
+                </div>
+                <div class="metric-item warning">
+                  <div class="metric-label">ARV Ratio</div>
+                  <div class="metric-value" data-value="149">0</div>
+                  <div class="metric-unit">%</div>
+                </div>
+                <div class="metric-item good">
+                  <div class="metric-label">Experience</div>
+                  <div class="metric-value" data-value="8">0</div>
+                  <div class="metric-unit">yrs</div>
+                </div>
+              </div>
+              <div class="risk-flags">
+                <div class="flag warning">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                  <span>Rehab budget 15% above market comps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14"/>
+          <path d="M19 12l-7 7-7-7"/>
+        </svg>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="workflow-step" data-step-content="3">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div class="step-text">
+            <h3>Underwriter Decision</h3>
+            <p>Your underwriters review AI-prepared summaries, dive into specific documents when needed, and make informed decisions fast. The AI assists, but humans always have final control.</p>
+            <ul class="step-features">
+              <li>Pre-analyzed deals save 60% review time</li>
+              <li>One-click access to source documents</li>
+              <li>Custom decision workflows per loan type</li>
+              <li>Complete audit trail for compliance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-visual">
+          <div class="visual-card">
+            <div class="visual-header">Underwriter Cockpit</div>
+            <div class="visual-body">
+              <div class="decision-panel">
+                <div class="recommendation">
+                  <div class="rec-label">AI Recommendation</div>
+                  <div class="rec-badge approve">Approve with Conditions</div>
+                </div>
+                <div class="decision-actions">
+                  <button class="decision-btn approve">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    Approve
+                  </button>
+                  <button class="decision-btn conditional">Conditional</button>
+                  <button class="decision-btn decline">Decline</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14"/>
+          <path d="M19 12l-7 7-7-7"/>
+        </svg>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="workflow-step" data-step-content="4">
+        <div class="step-number">05</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+              <path d="M6 9h12v4H6z"/>
+            </svg>
+          </div>
+          <div class="step-text">
+            <h3>HQ Oversight & Consistency</h3>
+            <p>Parent companies see real-time performance across all affiliates. Monitor pipeline, ensure consistent underwriting standards, and scale operations with confidence.</p>
+            <ul class="step-features">
+              <li>Multi-affiliate dashboard with toggle views</li>
+              <li>Performance benchmarking across regions</li>
+              <li>Consistency metrics (approval rates, decision times)</li>
+              <li>Portfolio-level risk analytics</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-visual">
+          <div class="visual-card">
+            <div class="visual-header">HQ Dashboard</div>
+            <div class="visual-body">
+              <div class="affiliate-selector">
+                <div class="affiliate-tab active">All Affiliates</div>
+                <div class="affiliate-tab">Charleston</div>
+                <div class="affiliate-tab">Kentucky</div>
+                <div class="affiliate-tab">Vegas</div>
+              </div>
+              <div class="hq-metrics">
+                <div class="hq-metric">
+                  <div class="hq-metric-label">Active Pipeline</div>
+                  <div class="hq-metric-value">$47.2M</div>
+                </div>
+                <div class="hq-metric">
+                  <div class="hq-metric-label">Avg Decision Time</div>
+                  <div class="hq-metric-value">18 hrs</div>
+                </div>
+                <div class="hq-metric">
+                  <div class="hq-metric-label">Approval Rate</div>
+                  <div class="hq-metric-value">73%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section - NEW -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-content">
+      <div class="quote-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
+          <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+        </svg>
+      </div>
+      <blockquote class="testimonial-quote">
+        Mentyx cut our underwriting time from 3 days to 8 hours. The AI handles routine deals flawlessly, and our team can focus on complex cases that need human judgment. Best investment we've made in our lending operations.
+      </blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar">MC</div>
+        <div class="author-info">
+          <div class="author-name">Michael Chen</div>
+          <div class="author-title">VP of Operations, Redstone Lending Group</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Platform Architecture Section -->
+<section class="architecture-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Built for Private Lenders</h2>
+      <p class="section-subtitle">Purpose-built architecture that integrates with your existing systems</p>
+    </div>
+
+    <div class="architecture-content">
+      <div class="architecture-diagram">
+        <div class="arch-layer">
+          <div class="layer-title">Your Borrowers</div>
+          <div class="layer-boxes">
+            <div class="arch-box">Online Portal</div>
+            <div class="arch-box">Mobile App</div>
+            <div class="arch-box">Loan Officer</div>
+          </div>
+        </div>
+
+        <div class="arch-connector"></div>
+
+        <div class="arch-layer highlight">
+          <div class="layer-title">Mentyx Platform</div>
+          <div class="layer-boxes">
+            <div class="arch-box primary">Application</div>
+            <div class="arch-box primary">Document AI</div>
+            <div class="arch-box primary">Underwriting</div>
+            <div class="arch-box primary">HQ Dashboard</div>
+          </div>
+        </div>
+
+        <div class="arch-connector"></div>
+
+        <div class="arch-layer">
+          <div class="layer-title">Your Existing Systems</div>
+          <div class="layer-boxes">
+            <div class="arch-box">Loan Servicing</div>
+            <div class="arch-box">Credit Bureaus</div>
+            <div class="arch-box">Core Banking</div>
+            <div class="arch-box">Investors</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="architecture-features">
+        <div class="arch-feature">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <h3>Secure & Compliant</h3>
+          <p>Bank-grade security with SOC 2 compliance, end-to-end encryption, and full audit trails.</p>
+        </div>
+
+        <div class="arch-feature">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          <h3>API-First Design</h3>
+          <p>RESTful APIs connect seamlessly with loan servicing systems, credit bureaus, and third-party tools.</p>
+        </div>
+
+        <div class="arch-feature">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          <h3>Multi-Tenant by Design</h3>
+          <p>Perfect for parent companies with multiple lending affiliates. Each gets their own secure space.</p>
+        </div>
+
+        <div class="arch-feature">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+            <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+          </svg>
+          <h3>Real-Time Analytics</h3>
+          <p>Live dashboards track every metric that matters: pipeline, decision times, approval rates, and risk distribution.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Section - ENHANCED WITH PULSING STATUS -->
+<section class="integration-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Seamless Integration</h2>
+      <p class="section-subtitle">Mentyx sits at the front of your lending workflow, integrating with the tools you already use</p>
+    </div>
+
+    <div class="integration-grid">
+      <div class="integration-card">
+        <div class="integration-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3>Credit Bureaus</h3>
+        <p>Experian, Equifax, TransUnion</p>
+        <span class="integration-status">
+          <span class="status-dot active"></span>
+          Direct API
+        </span>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <h3>Loan Servicing</h3>
+        <p>Mortgage Automator, Nortridge, others</p>
+        <span class="integration-status">
+          <span class="status-dot active"></span>
+          Export/API
+        </span>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>CRM Systems</h3>
+        <p>Salesforce, HubSpot, custom CRMs</p>
+        <span class="integration-status">
+          <span class="status-dot active"></span>
+          Webhook/API
+        </span>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <h3>Valuation Services</h3>
+        <p>Third-party appraisal platforms</p>
+        <span class="integration-status">
+          <span class="status-dot active"></span>
+          Upload/API
+        </span>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <h3>Banking Partners</h3>
+        <p>Wire transfers, ACH, account verification</p>
+        <span class="integration-status">
+          <span class="status-dot active"></span>
+          Secure API
+        </span>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18"/>
+            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+          </svg>
+        </div>
+        <h3>Analytics Tools</h3>
+        <p>Export to Excel, BI tools, custom dashboards</p>
+        <span class="integration-status">
+          <span class="status-dot active"></span>
+          CSV/API
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Mentyx -->
+<section class="why-choose-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why Lenders Choose Mentyx</h2>
+      <p class="section-subtitle">Built specifically for private lending—not a generic LOS adapted for your needs</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-number">01</div>
+        <h3>Purpose-Built for Private Lending</h3>
+        <p>Designed from the ground up for fix & flip, bridge, and DSCR loans. We understand your business because it's all we do.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-number">02</div>
+        <h3>AI-Native Intelligence</h3>
+        <p>Machine learning isn't bolted on—it's baked into every workflow. Your system gets smarter with every loan you close.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-number">03</div>
+        <h3>Multi-Affiliate Architecture</h3>
+        <p>If you're a parent company with lending affiliates across regions, we're the only platform built specifically for your structure.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-number">04</div>
+        <h3>Fast Implementation</h3>
+        <p>Live in 60 days, not 12 months. We handle data migration, training, and integration—you focus on closing loans.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-number">05</div>
+        <h3>Transparent Pricing</h3>
+        <p>Per-affiliate subscription model that scales with you. No hidden fees, no surprise charges. Grow at your own pace.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-number">06</div>
+        <h3>White-Glove Support</h3>
+        <p>Dedicated success manager, ongoing training, and 24/7 technical support. We're invested in your growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Transform Your Lending Process?</h2>
+      <p class="cta-subtitle">See the platform in action with a personalized demo</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions" class="btn btn-secondary btn-lg">
+          Explore Solutions
+        </a>
+      </div>
+      <p class="cta-note">Average demo time: 20 minutes • No commitment required</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // INTERACTIVE WORKFLOW STEPS
+  let currentStep = 0;
+  const stepNavButtons = document.querySelectorAll('.step-nav-btn');
+  const workflowSteps = document.querySelectorAll('.workflow-step');
+  const workflowArrows = document.querySelectorAll('.workflow-arrow');
+  
+  function showStep(stepIndex) {
+    // Hide all steps and arrows
+    workflowSteps.forEach((step, index) => {
+      step.classList.remove('active');
+      step.style.display = 'none';
+    });
+    workflowArrows.forEach(arrow => {
+      arrow.style.display = 'none';
+    });
+    
+    // Show current step
+    workflowSteps[stepIndex].classList.add('active');
+    workflowSteps[stepIndex].style.display = 'grid';
+    
+    // Show arrow after current step if not last
+    if (stepIndex < workflowArrows.length) {
+      workflowArrows[stepIndex].style.display = 'flex';
+    }
+    
+    // Update navigation buttons
+    stepNavButtons.forEach((btn, index) => {
+      btn.classList.toggle('active', index === stepIndex);
+    });
+    
+    // Animate metrics if step 3 (AI Analysis)
+    if (stepIndex === 2) {
+      animateMetrics();
+    }
+  }
+  
+  // Navigation button click handlers
+  stepNavButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      currentStep = index;
+      showStep(currentStep);
+    });
+  });
+  
+  // Auto-rotate steps every 8 seconds
+  setInterval(() => {
+    currentStep = (currentStep + 1) % workflowSteps.length;
+    showStep(currentStep);
+  }, 8000);
+  
+  // Initialize - show first step
+  showStep(0);
+  
+  // ANIMATED METRICS
+  function animateMetrics() {
+    const metricValues = document.querySelectorAll('.metric-value');
+    metricValues.forEach(metric => {
+      const targetValue = parseInt(metric.getAttribute('data-value'));
+      if (targetValue) {
+        animateValue(metric, 0, targetValue, 1500);
+      }
+    });
+  }
+  
+  function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.textContent = value;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+  
+  // INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
+  const observerOptions = {
+    threshold: 0.3,
+    rootMargin: '0px 0px -100px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, observerOptions);
+  
+  // Observe elements for animation
+  document.querySelectorAll('.why-card, .arch-feature, .integration-card').forEach(el => {
+    observer.observe(el);
+  });
+  
+  // Smooth scroll for CTA buttons
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  /* How It Works Section - ENHANCED */
+  .how-it-works-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* STEP NAVIGATION - NEW */
+  .step-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+
+  .step-nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 20px;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+  }
+
+  .step-nav-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .step-nav-btn.active {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .step-nav-number {
+    font-size: 1.125rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .step-nav-label {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+
+  .step-nav-btn.active .step-nav-label {
+    color: #06b6d4;
+  }
+
+  .workflow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .workflow-step {
+    display: none;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .workflow-step.active {
+    display: grid;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.4;
+  }
+
+  .step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .step-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+  }
+
+  .step-text h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .step-text > p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+    font-size: 1.0625rem;
+  }
+
+  .step-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .step-features li {
+    color: #cbd5e1;
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .step-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  .step-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .visual-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .visual-header {
+    padding: 16px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    font-weight: 600;
+    color: #06b6d4;
+    font-size: 0.875rem;
+  }
+
+  .visual-body {
+    padding: 24px;
+  }
+
+  .form-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .field-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .field-value {
+    color: #e2e8f0;
+    font-size: 0.9375rem;
+    padding: 10px 14px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+  }
+
+  .doc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .doc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 8px;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+  }
+
+  .doc-item svg {
+    flex-shrink: 0;
+  }
+
+  .doc-item.complete svg {
+    color: #10b981;
+  }
+
+  .doc-item.processing {
+    border-color: rgba(251, 191, 36, 0.3);
+  }
+
+  .doc-item.pending {
+    opacity: 0.5;
+  }
+
+  .doc-item span:first-of-type {
+    flex: 1;
+  }
+
+  .doc-status {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(251, 191, 36, 0.2);
+    border-top-color: #fbbf24;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .metric-item {
+    padding: 16px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .metric-item.good {
+    border-color: rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.05);
+  }
+
+  .metric-item.warning {
+    border-color: rgba(251, 191, 36, 0.3);
+    background: rgba(251, 191, 36, 0.05);
+  }
+
+  .metric-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+  }
+
+  .metric-unit {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-left: 4px;
+  }
+
+  .risk-flags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .flag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+  }
+
+  .flag svg {
+    flex-shrink: 0;
+  }
+
+  .decision-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .recommendation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rec-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .rec-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .rec-badge.approve {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+  }
+
+  .decision-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .decision-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .decision-btn.approve {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+  }
+
+  .decision-btn.approve:hover {
+    background: rgba(16, 185, 129, 0.3);
+  }
+
+  .decision-btn.conditional {
+    background: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+
+  .decision-btn.conditional:hover {
+    background: rgba(251, 191, 36, 0.3);
+  }
+
+  .decision-btn.decline {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+  }
+
+  .decision-btn.decline:hover {
+    background: rgba(239, 68, 68, 0.3);
+  }
+
+  .affiliate-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 4px;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 8px;
+  }
+
+  .affiliate-tab {
+    flex: 1;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #64748b;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .affiliate-tab.active {
+    background: rgba(59, 130, 246, 0.2);
+    color: #06b6d4;
+  }
+
+  .hq-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .hq-metric {
+    padding: 16px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .hq-metric-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 8px;
+  }
+
+  .hq-metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .workflow-arrow {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    opacity: 0.3;
+  }
+
+  .workflow-arrow svg {
+    color: #06b6d4;
+  }
+
+  /* TESTIMONIAL SECTION - NEW */
+  .testimonial-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(6, 182, 212, 0.02) 100%);
+  }
+
+  .testimonial-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quote-icon {
+    display: inline-flex;
+    margin-bottom: 32px;
+    color: rgba(59, 130, 246, 0.3);
+  }
+
+  .testimonial-quote {
+    font-size: 1.75rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    font-weight: 500;
+    margin: 0 0 40px 0;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .author-avatar {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .author-info {
+    text-align: left;
+  }
+
+  .author-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .author-title {
+    font-size: 0.9375rem;
+    color: #64748b;
+  }
+
+  /* Architecture Section */
+  .architecture-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .architecture-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .architecture-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .arch-layer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .layer-title {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .layer-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .arch-box {
+    padding: 16px 20px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .arch-box.primary {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border-color: rgba(59, 130, 246, 0.4);
+    color: #06b6d4;
+    font-weight: 600;
+  }
+
+  .arch-box:hover {
+    transform: translateY(-2px);
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+
+  .arch-connector {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.4) 0%, rgba(6, 182, 212, 0.4) 100%);
+    margin: 0 auto;
+  }
+
+  .arch-layer.highlight {
+    padding: 24px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+  }
+
+  .architecture-features {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .arch-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.6s ease;
+  }
+
+  .arch-feature.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .arch-feature svg {
+    color: #06b6d4;
+  }
+
+  .arch-feature h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .arch-feature p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Integration Section - ENHANCED */
+  .integration-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .integration-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .integration-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .integration-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .integration-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+  }
+
+  .integration-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .integration-card p {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    margin: 0;
+    flex: 1;
+  }
+
+  .integration-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.75rem;
+    font-weight: 600;
+    align-self: flex-start;
+  }
+
+  /* PULSING STATUS DOT - NEW */
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.95);
+    }
+  }
+
+  /* Why Choose Section */
+  .why-choose-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+
+  .why-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .why-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .why-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .why-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .why-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .why-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .cta-note {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .workflow-step {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .architecture-content {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+
+    .step-navigation {
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .step-text h3 {
+      font-size: 1.375rem;
+    }
+
+    .testimonial-quote {
+      font-size: 1.25rem;
+    }
+
+    .testimonial-author {
+      flex-direction: column;
+    }
+
+    .author-info {
+      text-align: center;
+    }
+
+    .metrics-grid,
+    .hq-metrics {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .step-nav-btn {
+      min-width: 100px;
+      padding: 12px 16px;
+    }
+  }
+</style>
+
+</Layout>

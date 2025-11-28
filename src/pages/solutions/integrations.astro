@@ -1,0 +1,1097 @@
+---
+// /src/pages/solutions/integrations.astro
+import Layout from '../../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="Integrations - Connect Your Lending Stack | Mentyx.ai"
+  description="Seamlessly connect Mentyx with your existing lending ecosystem. Credit bureaus, servicing systems, banking partners, and more."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 17l4 4 4-4"/>
+          <path d="M12 12v9"/>
+          <path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/>
+        </svg>
+        <span>Oversight</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-gradient">Integrations</span>
+        <span class="title-white">& Connectivity</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Seamlessly connect Mentyx with your existing lending ecosystem. Credit bureaus, servicing systems, banking partners, and more—all working together.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/platform" class="btn btn-secondary btn-lg">
+          View Platform
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">50+</div>
+          <div class="stat-label">Pre-built Integrations</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">API-First</div>
+          <div class="stat-label">Architecture</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">1 Day</div>
+          <div class="stat-label">Average Setup</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Categories -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Connect Your Entire Lending Stack</h2>
+      <p class="section-subtitle">Pre-built integrations for every part of your lending workflow</p>
+    </div>
+
+    <div class="categories-grid">
+      <div class="category-card">
+        <div class="category-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <h3>Credit & Identity</h3>
+        <p>Pull credit reports, verify identities, and access financial data instantly.</p>
+        <div class="integration-logos">
+          <div class="logo-item">Experian</div>
+          <div class="logo-item">Equifax</div>
+          <div class="logo-item">TransUnion</div>
+          <div class="logo-item">Plaid</div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+          </svg>
+        </div>
+        <h3>Servicing & Payments</h3>
+        <p>Connect with your loan servicing systems and payment processors.</p>
+        <div class="integration-logos">
+          <div class="logo-item">Mortgage Automator</div>
+          <div class="logo-item">Nortridge</div>
+          <div class="logo-item">FICS</div>
+          <div class="logo-item">Dwolla</div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <h3>Banking & Treasury</h3>
+        <p>Automate wire transfers, account verification, and treasury management.</p>
+        <div class="integration-logos">
+          <div class="logo-item">JPMorgan</div>
+          <div class="logo-item">Bank of America</div>
+          <div class="logo-item">Wells Fargo</div>
+          <div class="logo-item">Silicon Valley Bank</div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Property & Valuation</h3>
+        <p>Access property data, valuations, and market intelligence.</p>
+        <div class="integration-logos">
+          <div class="logo-item">CoreLogic</div>
+          <div class="logo-item">Black Knight</div>
+          <div class="logo-item">Zillow</div>
+          <div class="logo-item">Regrid</div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>CRM & Marketing</h3>
+        <p>Sync borrower data with your CRM and marketing automation tools.</p>
+        <div class="integration-logos">
+          <div class="logo-item">Salesforce</div>
+          <div class="logo-item">HubSpot</div>
+          <div class="logo-item">Zapier</div>
+          <div class="logo-item">Mailchimp</div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <h3>Document & eSignature</h3>
+        <p>Automate document generation, e-signatures, and digital closings.</p>
+        <div class="integration-logos">
+          <div class="logo-item">DocuSign</div>
+          <div class="logo-item">Adobe Sign</div>
+          <div class="logo-item">Dropbox</div>
+          <div class="logo-item">Google Drive</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Built for Connectivity</h2>
+      <p class="section-subtitle">API-first architecture designed for seamless integration</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">RESTful API</h3>
+        <p class="feature-description">
+          Comprehensive REST API for bidirectional data sync. Real-time webhooks for instant notifications and event-driven workflows.
+        </p>
+        <ul class="feature-list">
+          <li>RESTful API design</li>
+          <li>Real-time webhooks</li>
+          <li>JSON request/response</li>
+          <li>OAuth 2.0 authentication</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Pre-built Connectors</h3>
+        <p class="feature-description">
+          50+ pre-built integrations with popular lending tools. One-click setup, no development required for common systems.
+        </p>
+        <ul class="feature-list">
+          <li>One-click setup</li>
+          <li>Configuration-based</li>
+          <li>Automatic updates</li>
+          <li>Vendor-supported</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Data Mapping Tools</h3>
+        <p class="feature-description">
+          Visual data mapping interface. Drag-and-drop field mapping between systems with transformation rules and validation.
+        </p>
+        <ul class="feature-list">
+          <li>Visual mapping interface</li>
+          <li>Field transformation</li>
+          <li>Data validation rules</li>
+          <li>Mapping templates</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Enterprise Security</h3>
+        <p class="feature-description">
+          Bank-grade security with SOC 2 compliance. End-to-end encryption, audit trails, and role-based access control.
+        </p>
+        <ul class="feature-list">
+          <li>SOC 2 Type II certified</li>
+          <li>End-to-end encryption</li>
+          <li>Audit trail logging</li>
+          <li>RBAC permissions</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Real-time Sync</h3>
+        <p class="feature-description">
+          Real-time data synchronization across all connected systems. No manual imports/exports, always up-to-date information.
+        </p>
+        <ul class="feature-list">
+          <li>Real-time data sync</li>
+          <li>Event-driven updates</li>
+          <li>Conflict resolution</li>
+          <li>Sync status monitoring</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Monitoring & Alerts</h3>
+        <p class="feature-description">
+          Comprehensive integration monitoring with alerting for failures, latency, or data quality issues.
+        </p>
+        <ul class="feature-list">
+          <li>Health monitoring</li>
+          <li>Performance metrics</li>
+          <li>Failure alerts</li>
+          <li>Data quality checks</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- API Examples Section -->
+<section class="api-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Developer-Friendly API</h2>
+      <p class="section-subtitle">Clean, well-documented API that developers love</p>
+    </div>
+
+    <div class="api-examples">
+      <div class="code-example">
+        <div class="code-header">
+          <span>Create Loan Application</span>
+          <span class="code-method post">POST</span>
+        </div>
+        <pre class="code-block"><code>{`POST /api/v1/applications
+Content-Type: application/json
+Authorization: Bearer your-api-key
+
+{
+  "borrower": {
+    "firstName": "Sarah",
+    "lastName": "Chen",
+    "email": "sarah@example.com"
+  },
+  "property": {
+    "address": "123 Main St",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701"
+  },
+  "loanDetails": {
+    "loanAmount": 250000,
+    "purchasePrice": 350000,
+    "rehabBudget": 75000
+  }
+}`}</code></pre>
+      </div>
+
+      <div class="code-example">
+        <div class="code-header">
+          <span>Webhook Notification</span>
+          <span class="code-method webhook">WEBHOOK</span>
+        </div>
+        <pre class="code-block"><code>{`POST your-webhook-url
+Content-Type: application/json
+
+{
+  "event": "application.approved",
+  "data": {
+    "applicationId": "app_12345",
+    "borrowerName": "Sarah Chen",
+    "loanAmount": 250000,
+    "approvedAt": "2024-01-15T10:30:00Z"
+  },
+  "signature": "abc123verification"
+}`}</code></pre>
+      </div>
+    </div>
+
+    <div class="api-features">
+      <div class="api-feature">
+        <div class="api-feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h4>Comprehensive Documentation</h4>
+        <p>Interactive API docs with code samples in multiple languages and live testing environment.</p>
+      </div>
+      <div class="api-feature">
+        <div class="api-feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+        </div>
+        <h4>SDKs & Libraries</h4>
+        <p>Official SDKs for JavaScript, Python, and .NET to accelerate integration development.</p>
+      </div>
+      <div class="api-feature">
+        <div class="api-feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+        </div>
+        <h4>Developer Support</h4>
+        <p>Dedicated developer support and technical account management for enterprise customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Implementation Section -->
+<section class="implementation-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Simple Implementation Process</h2>
+      <p class="section-subtitle">Get connected in days, not months</p>
+    </div>
+
+    <div class="implementation-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Discovery & Planning</h3>
+          <p>We analyze your current tech stack and identify integration points. Typically completed in 1-2 days.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Configuration & Setup</h3>
+          <p>Configure pre-built connectors or set up custom API integrations. Most setups complete in 2-3 days.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Testing & Validation</h3>
+          <p>Comprehensive testing of all data flows and integration points. Usually 1-2 days of validation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Go-Live & Support</h3>
+          <p>Activate integrations and provide ongoing support. Most customers go live within one week.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Connect Your Systems?</h2>
+      <p class="cta-subtitle">See how Mentyx integrates with your existing lending technology stack</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/api-docs" class="btn btn-secondary btn-lg">
+          View API Docs
+        </a>
+        <a href="/solutions" class="btn btn-tertiary btn-lg">
+          View All Solutions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .btn-tertiary {
+    background: rgba(15, 23, 42, 0.8);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-tertiary:hover {
+    background: rgba(15, 23, 42, 1);
+    border-color: rgba(6, 182, 212, 0.5);
+    color: #22d3ee;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Categories Section */
+  .categories-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+  }
+
+  .category-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .category-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+  }
+
+  .category-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin: 0 auto 24px;
+  }
+
+  .category-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .category-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+  }
+
+  .integration-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .logo-item {
+    padding: 6px 12px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 6px;
+    color: #06b6d4;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .feature-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    color: #cbd5e1;
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  /* API Section */
+  .api-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .api-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
+  .code-example {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    color: white;
+    font-weight: 600;
+  }
+
+  .code-method {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .code-method.post {
+    background: #22c55e;
+    color: white;
+  }
+
+  .code-method.webhook {
+    background: #8b5cf6;
+    color: white;
+  }
+
+  .code-block {
+    margin: 0;
+    padding: 20px;
+    background: #1e293b;
+    overflow-x: auto;
+  }
+
+  .code-block code {
+    color: #cbd5e1;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .api-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+  }
+
+  .api-feature {
+    text-align: center;
+    padding: 32px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+  }
+
+  .api-feature-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin: 0 auto 16px;
+  }
+
+  .api-feature h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .api-feature p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Implementation Section */
+  .implementation-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .implementation-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+  }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .step-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .step-content p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .categories-grid,
+    .features-grid,
+    .api-examples,
+    .api-features,
+    .implementation-steps {
+      grid-template-columns: 1fr;
+    }
+
+    .step {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .step-number {
+      align-self: center;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 20px;
+    }
+
+    .hero-section {
+      padding: 120px 0 60px;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+
+    .categories-grid,
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .category-card,
+    .feature-card {
+      padding: 24px;
+    }
+
+    .api-examples {
+      grid-template-columns: 1fr;
+    }
+
+    .code-block {
+      padding: 16px;
+    }
+
+    .code-block code {
+      font-size: 0.75rem;
+    }
+  }
+</style>
+
+</Layout>

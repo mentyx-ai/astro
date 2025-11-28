@@ -1,0 +1,868 @@
+---
+import Layout from '../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="ROI Calculator - Calculate Your Savings | Mentyx.ai"
+  description="Calculate potential savings with AI-powered loan origination. Input your current loan volume and processing time to see how much Mentyx.ai can save you."
+  canonical="https://mentyx.ai/roi-calculator"
+>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+          <span>Interactive Tool</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-gradient">ROI Calculator</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          See how much time and money you can save with Mentyx.ai. Input your current loan volume and processing time to get instant results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="calculator-section">
+    <div class="container">
+      <div class="calculator-grid">
+        
+        <!-- Input Panel -->
+        <div class="input-panel">
+          <h2 class="panel-title">Your Current Metrics</h2>
+          <p class="panel-subtitle">Enter your current loan origination metrics</p>
+
+          <form id="roiForm">
+            <div class="form-group">
+              <label for="monthlyLoans">
+                Monthly Loan Volume
+                <span class="help-text">Number of loans you process per month</span>
+              </label>
+              <input 
+                type="number" 
+                id="monthlyLoans" 
+                value="50" 
+                min="1" 
+                max="10000"
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="avgProcessingTime">
+                Average Processing Time (hours)
+                <span class="help-text">Hours from application to decision</span>
+              </label>
+              <input 
+                type="number" 
+                id="avgProcessingTime" 
+                value="48" 
+                min="1" 
+                max="1000"
+                step="0.5"
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="avgUnderwriterRate">
+                Underwriter Hourly Rate ($)
+                <span class="help-text">Average cost per hour for underwriting</span>
+              </label>
+              <input 
+                type="number" 
+                id="avgUnderwriterRate" 
+                value="75" 
+                min="10" 
+                max="500"
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="avgLoanValue">
+                Average Loan Value ($)
+                <span class="help-text">Average dollar amount per loan</span>
+              </label>
+              <input 
+                type="number" 
+                id="avgLoanValue" 
+                value="500000" 
+                min="10000" 
+                max="10000000"
+                step="10000"
+                required 
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Calculate Savings
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Results Panel -->
+        <div class="results-panel" id="resultsPanel">
+          <h2 class="panel-title">Your Potential Savings</h2>
+          <p class="panel-subtitle">Based on industry averages with Mentyx.ai</p>
+
+          <!-- Key Metrics -->
+          <div class="metrics-grid">
+            <div class="metric-card primary">
+              <div class="metric-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div class="metric-label">Annual Cost Savings</div>
+              <div class="metric-value" id="annualSavings">$0</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="metric-label">Time Saved Per Loan</div>
+              <div class="metric-value" id="timeSaved">0 hrs</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+              </div>
+              <div class="metric-label">Processing Speed Increase</div>
+              <div class="metric-value" id="speedIncrease">60%</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div class="metric-label">Error Reduction</div>
+              <div class="metric-value" id="errorReduction">90%</div>
+            </div>
+          </div>
+
+          <!-- Detailed Breakdown -->
+          <div class="breakdown-section">
+            <h3 class="breakdown-title">Detailed Breakdown</h3>
+            
+            <div class="breakdown-item">
+              <div class="breakdown-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 13l4 4L19 7"/>
+                </svg>
+                Current Monthly Cost
+              </div>
+              <div class="breakdown-value" id="currentCost">$0</div>
+            </div>
+
+            <div class="breakdown-item">
+              <div class="breakdown-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 13l4 4L19 7"/>
+                </svg>
+                With Mentyx.ai (Monthly)
+              </div>
+              <div class="breakdown-value highlight" id="newCost">$0</div>
+            </div>
+
+            <div class="breakdown-item">
+              <div class="breakdown-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 13l4 4L19 7"/>
+                </svg>
+                Monthly Savings
+              </div>
+              <div class="breakdown-value success" id="monthlySavings">$0</div>
+            </div>
+
+            <div class="breakdown-divider"></div>
+
+            <div class="breakdown-item">
+              <div class="breakdown-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 13l4 4L19 7"/>
+                </svg>
+                ROI Timeline
+              </div>
+              <div class="breakdown-value" id="roiTimeline">3-6 months</div>
+            </div>
+
+            <div class="breakdown-item">
+              <div class="breakdown-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 13l4 4L19 7"/>
+                </svg>
+                Annual Capacity Increase
+              </div>
+              <div class="breakdown-value" id="capacityIncrease">0 loans</div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="results-cta">
+            <p class="cta-text">Ready to achieve these savings?</p>
+            <button class="btn btn-primary" id="scheduleDemoBtn">
+              Schedule a Demo
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What's Included in Your Savings</h2>
+        <p class="section-subtitle">Mentyx.ai automates your entire loan origination workflow</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Document Intelligence</h3>
+          <p class="feature-description">Automatic extraction and validation of loan documents with 95%+ accuracy</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI Underwriting</h3>
+          <p class="feature-description">Instant risk analysis and automated decision recommendations</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Compliance Monitoring</h3>
+          <p class="feature-description">Automated compliance checks and complete audit trails</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Portfolio Analytics</h3>
+          <p class="feature-description">Real-time insights across your entire loan portfolio</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bottom-cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Start Saving Today</h2>
+        <p class="cta-subtitle">
+          See Mentyx.ai in action with a personalized demo tailored to your lending operation
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary btn-lg" id="scheduleDemoBtn2">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <a href="/platform" class="btn btn-secondary btn-lg">
+            Explore Platform
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  /* Base Styles */
+  main {
+    background: #0f172a;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 80px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 70% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0;
+  }
+
+  /* Calculator Section */
+  .calculator-section {
+    padding: 80px 0 120px;
+    background: #0f172a;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Input Panel */
+  .input-panel {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+    height: fit-content;
+  }
+
+  .panel-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+  }
+
+  .panel-subtitle {
+    color: #94a3b8;
+    margin: 0 0 32px 0;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .form-group label {
+    display: block;
+    color: white;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .help-text {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: #64748b;
+    margin-top: 4px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(30, 127, 229, 0.06);
+    border: 1px solid rgba(30, 127, 229, 0.25);
+    border-radius: 12px;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+
+  /* Results Panel */
+  .results-panel {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .metric-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  .metric-card.primary {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .metric-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 16px;
+  }
+
+  .metric-label {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+  }
+
+  .metric-value {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .metric-card.primary .metric-value {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5rem;
+  }
+
+  /* Breakdown */
+  .breakdown-section {
+    background: rgba(10, 16, 28, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+
+  .breakdown-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 20px 0;
+  }
+
+  .breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+  }
+
+  .breakdown-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+  }
+
+  .breakdown-label svg {
+    color: #06b6d4;
+  }
+
+  .breakdown-value {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .breakdown-value.highlight {
+    color: #06b6d4;
+  }
+
+  .breakdown-value.success {
+    color: #22c55e;
+  }
+
+  .breakdown-divider {
+    height: 1px;
+    background: rgba(59, 130, 246, 0.1);
+    margin: 16px 0;
+  }
+
+  /* Results CTA */
+  .results-cta {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .cta-text {
+    color: #cbd5e1;
+    font-size: 1.125rem;
+    margin: 0 0 20px 0;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.3s;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 20px;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .feature-description {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Bottom CTA */
+  .bottom-cta-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('roiForm');
+    const monthlyLoansInput = document.getElementById('monthlyLoans');
+    const avgProcessingTimeInput = document.getElementById('avgProcessingTime');
+    const avgUnderwriterRateInput = document.getElementById('avgUnderwriterRate');
+    const avgLoanValueInput = document.getElementById('avgLoanValue');
+
+    // Results elements
+    const annualSavingsEl = document.getElementById('annualSavings');
+    const timeSavedEl = document.getElementById('timeSaved');
+    const speedIncreaseEl = document.getElementById('speedIncrease');
+    const errorReductionEl = document.getElementById('errorReduction');
+    const currentCostEl = document.getElementById('currentCost');
+    const newCostEl = document.getElementById('newCost');
+    const monthlySavingsEl = document.getElementById('monthlySavings');
+    const roiTimelineEl = document.getElementById('roiTimeline');
+    const capacityIncreaseEl = document.getElementById('capacityIncrease');
+
+    // Calculate on form submit
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      calculateROI();
+    });
+
+    // Calculate in real-time as user types
+    [monthlyLoansInput, avgProcessingTimeInput, avgUnderwriterRateInput, avgLoanValueInput].forEach(input => {
+      input?.addEventListener('input', () => {
+        calculateROI();
+      });
+    });
+
+    // Initial calculation
+    calculateROI();
+
+    function calculateROI() {
+      // Get input values
+      const monthlyLoans = parseFloat(monthlyLoansInput?.value) || 0;
+      const avgProcessingTime = parseFloat(avgProcessingTimeInput?.value) || 0;
+      const avgUnderwriterRate = parseFloat(avgUnderwriterRateInput?.value) || 0;
+      const avgLoanValue = parseFloat(avgLoanValueInput?.value) || 0;
+
+      // Mentyx.ai improvements (based on industry data)
+      const TIME_REDUCTION = 0.60; // 60% faster
+      const ERROR_REDUCTION = 0.90; // 90% fewer errors
+
+      // Calculate current costs
+      const currentMonthlyHours = monthlyLoans * avgProcessingTime;
+      const currentMonthlyCost = currentMonthlyHours * avgUnderwriterRate;
+
+      // Calculate with Mentyx.ai
+      const newProcessingTime = avgProcessingTime * (1 - TIME_REDUCTION);
+      const newMonthlyHours = monthlyLoans * newProcessingTime;
+      const newMonthlyCost = newMonthlyHours * avgUnderwriterRate;
+
+      // Calculate savings
+      const monthlySavings = currentMonthlyCost - newMonthlyCost;
+      const annualSavings = monthlySavings * 12;
+      const timeSavedPerLoan = avgProcessingTime - newProcessingTime;
+
+      // Calculate capacity increase (how many more loans can be processed with same resources)
+      const capacityIncrease = Math.round((currentMonthlyHours / newProcessingTime) - monthlyLoans);
+
+      // Update display
+      if (annualSavingsEl) annualSavingsEl.textContent = `$${annualSavings.toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+      if (timeSavedEl) timeSavedEl.textContent = `${timeSavedPerLoan.toFixed(1)} hrs`;
+      if (speedIncreaseEl) speedIncreaseEl.textContent = `${(TIME_REDUCTION * 100).toFixed(0)}%`;
+      if (errorReductionEl) errorReductionEl.textContent = `${(ERROR_REDUCTION * 100).toFixed(0)}%`;
+      if (currentCostEl) currentCostEl.textContent = `$${currentMonthlyCost.toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+      if (newCostEl) newCostEl.textContent = `$${newMonthlyCost.toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+      if (monthlySavingsEl) monthlySavingsEl.textContent = `$${monthlySavings.toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+      if (capacityIncreaseEl) capacityIncreaseEl.textContent = `${capacityIncrease.toLocaleString('en-US')} loans`;
+
+      // Calculate ROI timeline (assuming typical implementation cost)
+      const typicalImplementationCost = 50000; // Typical startup cost
+      const monthsToROI = Math.ceil(typicalImplementationCost / monthlySavings);
+      if (roiTimelineEl) {
+        if (monthsToROI <= 6) {
+          roiTimelineEl.textContent = '3-6 months';
+        } else if (monthsToROI <= 12) {
+          roiTimelineEl.textContent = '6-12 months';
+        } else {
+          roiTimelineEl.textContent = '12+ months';
+        }
+      }
+    }
+
+    // Schedule Demo buttons
+    const demoButtons = document.querySelectorAll('#scheduleDemoBtn, #scheduleDemoBtn2');
+    demoButtons.forEach(btn => {
+      btn?.addEventListener('click', () => {
+        window.open('https://calendly.com/contact-mentyx/30min', '_blank', 'noopener,noreferrer');
+      });
+    });
+  });
+</script>
+
+</Layout>

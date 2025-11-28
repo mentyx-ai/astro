@@ -1,0 +1,30 @@
+---
+interface Props {
+  variant?: 'default' | 'blue' | 'cyan' | 'purple' | 'green';
+  hover?: boolean;
+  class?: string;
+}
+
+const { variant = 'default', hover = true, class: className = '' } = Astro.props;
+---
+
+<div class={`
+  card 
+  ${variant !== 'default' ? `stat-${variant}` : ''}
+  ${hover ? 'hover:transform hover:-translate-y-1' : ''}
+  ${className}
+`}>
+  <slot />
+</div>
+
+<style>
+  .stat-blue { border-color: rgba(59, 130, 246, 0.3); }
+  .stat-cyan { border-color: rgba(6, 182, 212, 0.3); }
+  .stat-purple { border-color: rgba(168, 85, 247, 0.3); }
+  .stat-green { border-color: rgba(34, 197, 94, 0.3); }
+  
+  .stat-blue:hover { border-color: var(--blue-500); }
+  .stat-cyan:hover { border-color: var(--cyan-500); }
+  .stat-purple:hover { border-color: var(--purple-500); }
+  .stat-green:hover { border-color: var(--green-500); }
+</style>

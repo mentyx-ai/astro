@@ -1,0 +1,1956 @@
+---
+// /src/pages/solutions/multi-affiliate-dashboard.astro
+import Layout from '../../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="Multi-Affiliate Dashboard - Cross-Entity Oversight | Mentyx.ai"
+  description="Centralized oversight for parent companies with multiple lending affiliates. Monitor performance, ensure consistency, and scale your lending operations."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        <span>Oversight</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-gradient">Multi-Affiliate</span>
+        <span class="title-white">Dashboard</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        See exactly where you're leaving money on the table. One dashboard that shows every affiliate's performance, identifies $1M+ in revenue opportunities, and tells you exactly what to fix.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/platform" class="btn btn-secondary btn-lg">
+          View Platform
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">One View</div>
+          <div class="stat-label">All Affiliates</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">$1M+</div>
+          <div class="stat-label">Revenue Opportunities</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">Real-Time</div>
+          <div class="stat-label">Performance Tracking</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Preview Section - ENHANCED -->
+<section class="dashboard-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Your Command Center for Multi-Affiliate Lending</h2>
+      <p class="section-subtitle">See everything. Control everything. Optimize everything.</p>
+    </div>
+
+    <div class="dashboard-layout">
+      <div class="dashboard-sidebar">
+        <div class="sidebar-header">
+          <h3>Your Affiliates</h3>
+          <div class="view-toggle">
+            <button class="toggle-btn active">List</button>
+            <button class="toggle-btn">Grid</button>
+          </div>
+        </div>
+        
+        <div class="affiliate-list">
+          <div class="affiliate-item active">
+            <div class="affiliate-avatar">LT</div>
+            <div class="affiliate-info">
+              <div class="affiliate-name">Low Tide Capital</div>
+              <div class="affiliate-stats">12 active • $3.2M</div>
+            </div>
+            <div class="affiliate-status status-healthy">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+          </div>
+          <div class="affiliate-item">
+            <div class="affiliate-avatar">BL</div>
+            <div class="affiliate-info">
+              <div class="affiliate-name">Bluegrass Lending</div>
+              <div class="affiliate-stats">18 active • $4.8M</div>
+            </div>
+            <div class="affiliate-status status-healthy">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+          </div>
+          <div class="affiliate-item">
+            <div class="affiliate-avatar">VF</div>
+            <div class="affiliate-info">
+              <div class="affiliate-name">Vegas Funding</div>
+              <div class="affiliate-stats">8 active • $2.1M</div>
+            </div>
+            <div class="affiliate-status status-warning">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+          </div>
+          <div class="affiliate-item">
+            <div class="affiliate-avatar">AL</div>
+            <div class="affiliate-info">
+              <div class="affiliate-name">Atlanta Lending</div>
+              <div class="affiliate-stats">6 active • $1.6M</div>
+            </div>
+            <div class="affiliate-status status-healthy">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+          <div class="quick-action-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="16"/>
+              <line x1="8" y1="12" x2="16" y2="12"/>
+            </svg>
+            Add Affiliate
+          </div>
+          <div class="quick-action-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Export Report
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-main">
+        <!-- Alert Banner -->
+        <div class="alert-banner">
+          <div class="alert-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="alert-content">
+            <strong>Action Needed:</strong> Vegas Funding approval rate dropped 17% this month. 
+            <a href="#" class="alert-link">Review underwriting →</a>
+          </div>
+        </div>
+
+        <!-- Top KPIs with visual indicators -->
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-primary">
+            <div class="kpi-header">
+              <div class="kpi-label">Total Portfolio</div>
+              <div class="kpi-change positive">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="18 15 12 9 6 15"/>
+                </svg>
+                12%
+              </div>
+            </div>
+            <div class="kpi-value">$11.7M</div>
+            <div class="kpi-detail">+$1.3M vs last month</div>
+            <div class="kpi-sparkline">
+              <svg width="100%" height="40" viewBox="0 0 200 40">
+                <polyline
+                  points="0,30 25,28 50,25 75,22 100,18 125,20 150,15 175,10 200,8"
+                  fill="none"
+                  stroke="url(#gradient1)"
+                  stroke-width="2"
+                />
+                <defs>
+                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <div class="kpi-label">Active Loans</div>
+              <div class="kpi-change positive">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="18 15 12 9 6 15"/>
+                </svg>
+                22%
+              </div>
+            </div>
+            <div class="kpi-value">44</div>
+            <div class="kpi-detail">+8 vs last month</div>
+          </div>
+
+          <div class="kpi-card kpi-warning">
+            <div class="kpi-header">
+              <div class="kpi-label">Delinquency Rate</div>
+              <div class="kpi-change negative">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+                0.3%
+              </div>
+            </div>
+            <div class="kpi-value">2.1%</div>
+            <div class="kpi-detail">Industry avg: 2.8%</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <div class="kpi-label">Avg Decision Time</div>
+              <div class="kpi-change positive">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="18 15 12 9 6 15"/>
+                </svg>
+                35%
+              </div>
+            </div>
+            <div class="kpi-value">1.4 days</div>
+            <div class="kpi-detail">Was 2.2 days last month</div>
+          </div>
+        </div>
+
+        <!-- Revenue Impact Card - NEW! -->
+        <div class="revenue-impact-card">
+          <div class="revenue-header">
+            <div class="revenue-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Potential Revenue Impact</h3>
+              <p>Based on current affiliate performance gaps</p>
+            </div>
+          </div>
+          <div class="revenue-opportunities">
+            <div class="revenue-opportunity">
+              <div class="opportunity-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                </svg>
+                If Vegas Funding matched Bluegrass approval rate (82% vs 65%)
+              </div>
+              <div class="opportunity-value">+$890K/year</div>
+            </div>
+            <div class="revenue-opportunity">
+              <div class="opportunity-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                </svg>
+                If all affiliates hit Bluegrass decision time (0.8 days)
+              </div>
+              <div class="opportunity-value">+23 loans/month</div>
+            </div>
+            <div class="revenue-opportunity">
+              <div class="opportunity-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                </svg>
+                If Low Tide improved to Bluegrass yield (15.8% vs 14.2%)
+              </div>
+              <div class="opportunity-value">+$51K/year</div>
+            </div>
+          </div>
+          <div class="total-opportunity">
+            <span>Total Opportunity:</span>
+            <strong>~$1.2M additional revenue/year</strong>
+          </div>
+        </div>
+
+        <!-- Performance Comparison with Visual Indicators - ENHANCED -->
+        <div class="performance-comparison">
+          <div class="comparison-header-row">
+            <h3>Affiliate Performance Comparison</h3>
+            <div class="comparison-filters">
+              <button class="filter-btn active">All Metrics</button>
+              <button class="filter-btn">Top Performers</button>
+              <button class="filter-btn">Need Attention</button>
+            </div>
+          </div>
+
+          <div class="comparison-table">
+            <div class="comparison-table-header">
+              <span>Affiliate</span>
+              <span>Approval Rate</span>
+              <span>Avg Decision Time</span>
+              <span>Portfolio Yield</span>
+              <span>Status</span>
+            </div>
+            
+            <div class="comparison-row best-performer">
+              <div class="affiliate-cell">
+                <div class="affiliate-mini-avatar">BL</div>
+                <span class="affiliate-name">Bluegrass Lending</span>
+                <span class="badge badge-success">Top Performer</span>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value">82%</div>
+                <div class="metric-bar">
+                  <div class="metric-bar-fill" style="width: 82%"></div>
+                </div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value positive">0.8 days</div>
+                <div class="metric-trend">-45% vs avg</div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value positive">15.8%</div>
+                <div class="metric-trend">+18% vs avg</div>
+              </div>
+              <div class="status-cell">
+                <div class="status-indicator status-excellent">Excellent</div>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="affiliate-cell">
+                <div class="affiliate-mini-avatar">LT</div>
+                <span class="affiliate-name">Low Tide Capital</span>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value">78%</div>
+                <div class="metric-bar">
+                  <div class="metric-bar-fill" style="width: 78%"></div>
+                </div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value">1.2 days</div>
+                <div class="metric-trend">-18% vs avg</div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value">14.2%</div>
+                <div class="metric-trend">+6% vs avg</div>
+              </div>
+              <div class="status-cell">
+                <div class="status-indicator status-good">Good</div>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="affiliate-cell">
+                <div class="affiliate-mini-avatar">AL</div>
+                <span class="affiliate-name">Atlanta Lending</span>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value">71%</div>
+                <div class="metric-bar">
+                  <div class="metric-bar-fill" style="width: 71%"></div>
+                </div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value">1.5 days</div>
+                <div class="metric-trend">+2% vs avg</div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value">12.9%</div>
+                <div class="metric-trend">-4% vs avg</div>
+              </div>
+              <div class="status-cell">
+                <div class="status-indicator status-fair">Fair</div>
+              </div>
+            </div>
+
+            <div class="comparison-row needs-attention">
+              <div class="affiliate-cell">
+                <div class="affiliate-mini-avatar">VF</div>
+                <span class="affiliate-name">Vegas Funding</span>
+                <span class="badge badge-warning">Needs Attention</span>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value negative">65%</div>
+                <div class="metric-bar">
+                  <div class="metric-bar-fill metric-bar-warning" style="width: 65%"></div>
+                </div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value negative">2.1 days</div>
+                <div class="metric-trend negative">+43% vs avg</div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-value negative">11.5%</div>
+                <div class="metric-trend negative">-14% vs avg</div>
+              </div>
+              <div class="status-cell">
+                <div class="status-indicator status-poor">Review Needed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insights & Recommendations - NEW! -->
+        <div class="insights-section">
+          <h3><span class="ai-text">AI</span> Insights & Recommendations</h3>
+          <div class="insights-grid">
+            <div class="insight-card insight-opportunity">
+              <div class="insight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="insight-content">
+                <div class="insight-label">Opportunity</div>
+                <div class="insight-text">Vegas Funding declining 35% more DSCR loans than group average. Consider training session.</div>
+              </div>
+              <button class="insight-action">Review Cases →</button>
+            </div>
+
+            <div class="insight-card insight-success">
+              <div class="insight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <div class="insight-content">
+                <div class="insight-label">Best Practice</div>
+                <div class="insight-text">Bluegrass Lending using <span class="ai-text">AI</span> pre-screening reduced decision time by 62%. Share across team?</div>
+              </div>
+              <button class="insight-action">Share Process →</button>
+            </div>
+
+            <div class="insight-card insight-alert">
+              <div class="insight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+              </div>
+              <div class="insight-content">
+                <div class="insight-label">Alert</div>
+                <div class="insight-text">Low Tide Capital has 3 loans >75 days old. Risk of increased delinquency.</div>
+              </div>
+              <button class="insight-action">View Loans →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Everything You Need to Manage Multiple Affiliates</h2>
+      <p class="section-subtitle">Built specifically for parent companies with lending affiliates</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Instant Affiliate Switching</h3>
+        <p class="feature-description">
+          Toggle between affiliates in one click. See each entity's complete pipeline, performance metrics, and active loans while maintaining strict data isolation.
+        </p>
+        <ul class="feature-list">
+          <li>One-click affiliate switching</li>
+          <li>Individual affiliate dashboards</li>
+          <li>Cross-affiliate comparison</li>
+          <li>Automatic data isolation</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Revenue Opportunity Alerts</h3>
+        <p class="feature-description">
+          AI automatically calculates how much revenue you're leaving on the table. See exactly what you'd earn if underperforming affiliates matched your top performers.
+        </p>
+        <ul class="feature-list">
+          <li>Automated revenue gap analysis</li>
+          <li>Performance-based projections</li>
+          <li>Specific improvement recommendations</li>
+          <li>Monthly opportunity tracking</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20V10"/>
+            <path d="M18 20V4"/>
+            <path d="M6 20v-4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Performance Benchmarking</h3>
+        <p class="feature-description">
+          Compare affiliates side-by-side on approval rates, decision times, yield, and efficiency. Instantly identify top performers and who needs help.
+        </p>
+        <ul class="feature-list">
+          <li>Visual performance comparison</li>
+          <li>Automated trend analysis</li>
+          <li>Best practice identification</li>
+          <li>Underperformer alerts</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Centralized Policy Control</h3>
+        <p class="feature-description">
+          Set underwriting policies once, enforce everywhere. Standardize risk thresholds, loan parameters, and approval workflows across all affiliates.
+        </p>
+        <ul class="feature-list">
+          <li>Central policy configuration</li>
+          <li>Automated policy enforcement</li>
+          <li>Exception tracking and approval</li>
+          <li>Policy version control</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">One-Click Reporting</h3>
+        <p class="feature-description">
+          Generate consolidated reports across all affiliates instantly. Investor updates, regulatory compliance, executive summaries — all in one click.
+        </p>
+        <ul class="feature-list">
+          <li>Consolidated portfolio reports</li>
+          <li>Investor reporting across entities</li>
+          <li>Regulatory compliance aggregation</li>
+          <li>Custom report templates</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Real-Time Alerts</h3>
+        <p class="feature-description">
+          Get notified the moment something needs attention: large loans, policy exceptions, performance drops, or compliance issues across any affiliate.
+        </p>
+        <ul class="feature-list">
+          <li>Cross-affiliate alerting</li>
+          <li>Policy exception notifications</li>
+          <li>Performance deviation alerts</li>
+          <li>Custom alert thresholds</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="use-cases-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Real Multi-Affiliate Scenarios</h2>
+      <p class="section-subtitle">How parent companies use the dashboard every day</p>
+    </div>
+
+    <div class="use-cases-grid">
+      <div class="use-case-card">
+        <div class="use-case-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <h3>Monday Morning Portfolio Review</h3>
+        <p>HQ executive logs in, sees Vegas has 65% approval rate vs company average of 74%. Dashboard shows they're declining 35% more DSCR loans. <strong>Identifies $890K revenue opportunity and schedules training for Vegas team.</strong></p>
+      </div>
+
+      <div class="use-case-card">
+        <div class="use-case-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20V10"/>
+            <path d="M18 20V4"/>
+            <path d="M6 20v-4"/>
+          </svg>
+        </div>
+        <h3>Best Practice Sharing</h3>
+        <p>Dashboard shows Bluegrass closing loans in 0.8 days vs company average of 1.5 days. <span class="ai-text">AI</span> insight reveals they're using automated pre-screening. <strong>HQ shares this process with all affiliates, cutting average decision time 40%.</strong></p>
+      </div>
+
+      <div class="use-case-card">
+        <div class="use-case-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Investor Reporting in 60 Seconds</h3>
+        <p>Capital partner asks for portfolio update across all entities. One click generates report: $11.7M total portfolio, 14.2% average yield, 2.1% delinquency rate. <strong>Professional reporting in seconds instead of days.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why Multi-Affiliate Management Matters</h2>
+      <p class="section-subtitle">The real impact on your business</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">01</div>
+        <h3>Find Hidden Revenue</h3>
+        <p>Most parent companies don't realize they're leaving $1M+ on the table because underperforming affiliates fly under the radar. Our dashboard quantifies exactly what you're missing.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">02</div>
+        <h3>Share What Works</h3>
+        <p>Your best affiliate has a secret sauce. Our <span class="ai-text">AI</span> finds it, quantifies it, and helps you share it across all teams. Turn your top performer into a blueprint for everyone.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">03</div>
+        <h3>Scale Without Chaos</h3>
+        <p>Add new affiliates in days, not months. Every new entity gets the same policies, same guardrails, same visibility. Growth doesn't have to mean losing control.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">04</div>
+        <h3>Catch Problems Early</h3>
+        <p>Real-time alerts mean you know about issues before they become disasters. Delinquency trending up? Approval rates dropping? You'll know immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">See Your $1M+ Revenue Opportunity</h2>
+      <p class="cta-subtitle">Schedule a demo and we'll show you exactly where you're leaving money on the table</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Schedule Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions/portfolio-reporting" class="btn btn-secondary btn-lg">
+          See Portfolio Reporting
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Dashboard Preview Section - ENHANCED */
+  .dashboard-preview {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .dashboard-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Sidebar */
+  .dashboard-sidebar {
+    background: rgba(15, 23, 42, 0.95);
+    border-right: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .sidebar-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .view-toggle {
+    display: flex;
+    gap: 4px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  .toggle-btn {
+    padding: 6px 12px;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-btn.active {
+    background: rgba(59, 130, 246, 0.2);
+    color: #06b6d4;
+  }
+
+  .affiliate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .affiliate-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .affiliate-item:hover {
+    background: rgba(59, 130, 246, 0.1);
+  }
+
+  .affiliate-item.active {
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .affiliate-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  .affiliate-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .affiliate-name {
+    font-weight: 600;
+    color: white;
+    font-size: 0.9375rem;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .affiliate-stats {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    margin-top: 2px;
+  }
+
+  .affiliate-status {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .status-healthy {
+    color: #22c55e;
+  }
+
+  .status-warning {
+    color: #f59e0b;
+  }
+
+  /* Quick Actions */
+  .quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+  }
+
+  .quick-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .quick-action-btn:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  /* Main Dashboard */
+  .dashboard-main {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* Alert Banner */
+  .alert-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 12px;
+  }
+
+  .alert-icon {
+    color: #f59e0b;
+    flex-shrink: 0;
+  }
+
+  .alert-content {
+    flex: 1;
+    color: #fbbf24;
+    font-size: 0.9375rem;
+  }
+
+  .alert-content strong {
+    color: #fcd34d;
+    font-weight: 600;
+  }
+
+  .alert-link {
+    color: #fcd34d;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+
+  .alert-link:hover {
+    text-decoration: underline;
+  }
+
+  /* KPI Grid - Enhanced */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .kpi-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .kpi-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .kpi-card.kpi-primary {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .kpi-card.kpi-warning {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.3);
+  }
+
+  .kpi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .kpi-label {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .kpi-change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+
+  .kpi-change.positive {
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+  }
+
+  .kpi-change.negative {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+  }
+
+  .kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  .kpi-detail {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+
+  .kpi-sparkline {
+    margin-top: 16px;
+    opacity: 0.6;
+  }
+
+  /* Revenue Impact Card - NEW! */
+  .revenue-impact-card {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    padding: 32px;
+  }
+
+  .revenue-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .revenue-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #22c55e;
+    flex-shrink: 0;
+  }
+
+  .revenue-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .revenue-header p {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    margin: 4px 0 0 0;
+  }
+
+  .revenue-opportunities {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .revenue-opportunity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 12px;
+  }
+
+  .opportunity-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+    flex: 1;
+  }
+
+  .opportunity-label svg {
+    color: #06b6d4;
+    flex-shrink: 0;
+  }
+
+  .opportunity-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #22c55e;
+    white-space: nowrap;
+  }
+
+  .total-opportunity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 12px;
+    font-size: 1.125rem;
+  }
+
+  .total-opportunity span {
+    color: #cbd5e1;
+  }
+
+  .total-opportunity strong {
+    color: #22c55e;
+    font-size: 1.375rem;
+  }
+
+  /* Performance Comparison - Enhanced */
+  .performance-comparison {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    padding: 32px;
+  }
+
+  .comparison-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .comparison-header-row h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .comparison-filters {
+    display: flex;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn.active {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: #06b6d4;
+  }
+
+  .filter-btn:hover:not(.active) {
+    background: rgba(59, 130, 246, 0.1);
+  }
+
+  .comparison-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .comparison-table-header {
+    display: grid;
+    grid-template-columns: 2.5fr 1.2fr 1.3fr 1.2fr 1fr;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 12px 12px 0 0;
+    font-weight: 600;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+  }
+
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 2.5fr 1.2fr 1.3fr 1.2fr 1fr;
+    gap: 16px;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.4);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+    align-items: center;
+  }
+
+  .comparison-row:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .comparison-row.best-performer {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 12px;
+    margin-bottom: 2px;
+  }
+
+  .comparison-row.needs-attention {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 12px;
+    margin-top: 2px;
+  }
+
+  .affiliate-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .affiliate-mini-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .affiliate-name {
+    font-weight: 600;
+    color: white;
+    font-size: 0.9375rem;
+  }
+
+  .badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+
+  .badge-success {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .badge-warning {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .metric-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .metric-value {
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .metric-value.positive {
+    color: #22c55e;
+  }
+
+  .metric-value.negative {
+    color: #ef4444;
+  }
+
+  .metric-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .metric-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+
+  .metric-bar-warning {
+    background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);
+  }
+
+  .metric-trend {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+
+  .metric-trend.negative {
+    color: #ef4444;
+  }
+
+  .status-cell {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .status-indicator {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .status-excellent {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .status-good {
+    background: rgba(59, 130, 246, 0.2);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .status-fair {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  .status-poor {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  /* Insights Section - NEW! */
+  .insights-section {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    padding: 32px;
+  }
+
+  .insights-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .insight-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .insight-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .insight-opportunity {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .insight-success {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .insight-alert {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.1) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .insight-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .insight-opportunity .insight-icon {
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .insight-success .insight-icon {
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .insight-alert .insight-icon {
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .insight-content {
+    flex: 1;
+  }
+
+  .insight-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .insight-opportunity .insight-label {
+    color: #06b6d4;
+  }
+
+  .insight-success .insight-label {
+    color: #22c55e;
+  }
+
+  .insight-alert .insight-label {
+    color: #ef4444;
+  }
+
+  .insight-text {
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .insight-action {
+    padding: 10px 16px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+  }
+
+  .insight-action:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .feature-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    color: #cbd5e1;
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  /* Use Cases Section */
+  .use-cases-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+
+  .use-case-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .use-case-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .use-case-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .use-case-card:hover .use-case-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  }
+
+  .use-case-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .use-case-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .use-case-card strong {
+    color: #06b6d4;
+    font-weight: 600;
+  }
+
+  /* Benefits Section */
+  .benefits-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .benefit-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .benefit-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .benefit-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* AI Text Animation */
+  .ai-text {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: violetPulse 2s ease-in-out infinite;
+    font-weight: inherit;
+  }
+
+  @keyframes violetPulse {
+    0%, 100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.85;
+      filter: brightness(1.3);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .dashboard-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .dashboard-sidebar {
+      border-right: none;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .kpi-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .insights-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-table-header,
+    .comparison-row {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .metric-bar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .kpi-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+</Layout>

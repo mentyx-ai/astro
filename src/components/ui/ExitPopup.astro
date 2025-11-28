@@ -1,0 +1,295 @@
+---
+// src/components/ui/ExitPopup.astro
+---
+
+<!-- SIMPLIFIED EXIT POPUP -->
+<div id="exit-popup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <button class="popup-close">&times;</button>
+    
+    <div class="popup-body">
+      <div class="popup-icon">🚀</div>
+      <h3>Wait! Get Our Free Lending Automation Guide</h3>
+      <p>Learn how top lenders reduce processing time by 85% with AI</p>
+      
+      <form class="popup-form" id="exitPopupForm">
+        <input type="hidden" name="access_key" value="668cabdc-9057-4e2a-8995-2a2e8ec13aaf" />
+        <input type="hidden" name="subject" value="Exit Popup Lead - Lending Guide" />
+        
+        <input type="email" name="email" placeholder="Your business email" required />
+        <button type="submit" class="btn btn-primary">Get Free Guide</button>
+      </form>
+      
+      <p class="popup-note">Free PDF • No spam • Unsubscribe anytime</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  #exit-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  #exit-popup.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .popup-content {
+    background: rgba(30, 41, 59, 0.95);
+    border: 1px solid var(--slate-700);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+
+  #exit-popup.active .popup-content {
+    transform: scale(1);
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--slate-400);
+    font-size: 24px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .popup-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  .popup-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan-400);
+    margin: 0 auto 24px;
+    font-size: 24px;
+  }
+
+  .popup-body h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: white;
+  }
+
+  .popup-body p {
+    color: var(--slate-300);
+    text-align: center;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .popup-form input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--slate-700);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .popup-form input:focus {
+    outline: none;
+    border-color: var(--blue-500);
+  }
+
+  .popup-form input::placeholder {
+    color: var(--slate-500);
+  }
+
+  .popup-note {
+    color: var(--slate-400);
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .popup-content {
+      padding: 32px 24px;
+    }
+  }
+</style>
+
+<script is:inline>
+  console.log('🚀 ExitPopup loaded - WITH PDF DOWNLOAD');
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const exitPopup = document.getElementById('exit-popup');
+    const closeBtn = document.querySelector('.popup-close');
+    const exitForm = document.getElementById('exitPopupForm');
+    let popupShown = false;
+
+    function showExitPopup() {
+      if (popupShown) return;
+      console.log('🔄 Showing exit popup');
+      
+      popupShown = true;
+      exitPopup.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideExitPopup() {
+      console.log('🔄 Hiding exit popup');
+      exitPopup.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Time trigger - 45 seconds
+    setTimeout(() => {
+      if (!popupShown) showExitPopup();
+    }, 45000);
+
+    // Scroll trigger - 75%
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = (scrollPosition / pageHeight) * 100;
+      
+      if (scrollPercentage >= 75 && !popupShown) {
+        showExitPopup();
+      }
+    });
+
+    // Close button
+    if (closeBtn) {
+      closeBtn.addEventListener('click', hideExitPopup);
+    }
+
+    // Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && exitPopup.classList.contains('active')) {
+        hideExitPopup();
+      }
+    });
+
+    // Outside click
+    exitPopup.addEventListener('click', function(e) {
+      if (e.target === exitPopup) {
+        hideExitPopup();
+      }
+    });
+
+    // Form submission
+    if (exitForm) {
+      exitForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        const userEmail = this.querySelector('input[name="email"]').value;
+        
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+          // First, submit to Web3Forms
+          const formData = new FormData(this);
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Trigger PDF download
+            const pdfUrl = '/downloads/executive-blueprint-lending-automation.pdf';
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.download = 'Executive-Blueprint-to-Lending-Automation.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show success message
+            this.innerHTML = `
+              <div style="text-align: center; padding: 2rem 0;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                <h4 style="color: white; margin-bottom: 0.5rem;">Guide Sent!</h4>
+                <p style="color: var(--slate-300); margin-bottom: 0.5rem;">Your PDF download has started</p>
+                <p style="color: var(--slate-400); font-size: 0.875rem;">Check your email (${userEmail}) for the guide</p>
+              </div>
+            `;
+            
+            setTimeout(hideExitPopup, 4000);
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          // Even if form submission fails, still provide the PDF download
+          const pdfUrl = '/downloads/executive-blueprint-lending-automation.pdf';
+          const link = document.createElement('a');
+          link.href = pdfUrl;
+          link.download = 'Executive-Blueprint-to-Lending-Automation.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          
+          // Show success message anyway
+          this.innerHTML = `
+            <div style="text-align: center; padding: 2rem 0;">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+              <h4 style="color: white; margin-bottom: 0.5rem;">Download Started!</h4>
+              <p style="color: var(--slate-300);">Your guide is downloading now</p>
+            </div>
+          `;
+          
+          setTimeout(hideExitPopup, 3000);
+        }
+      });
+    }
+
+    // Exit intent detection
+    document.addEventListener('mouseout', function(e) {
+      if (!e.relatedTarget && !popupShown) {
+        showExitPopup();
+      }
+    });
+  });
+</script>

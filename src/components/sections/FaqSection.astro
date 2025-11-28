@@ -1,0 +1,869 @@
+---
+// src/components/FaqSection.astro
+---
+
+<section class="section faq-section">
+  <div class="container">
+    
+    <div class="badge-wrapper" data-aos="fade-up">
+      <span class="badge-center">Got Questions?</span>
+    </div>
+    
+    <h2 class="section-heading centered" data-aos="fade-up" data-aos-delay="100">
+      Everything You Need to Know
+    </h2>
+    
+    <p class="section-subtitle centered" data-aos="fade-up" data-aos-delay="200">
+      Quick answers to common questions about AI-powered lending automation
+    </p>
+
+    <!-- FAQ Categories Tabs -->
+    <div class="faq-tabs" data-aos="fade-up" data-aos-delay="300">
+      <button class="faq-tab active" data-category="all">All Questions</button>
+      <button class="faq-tab" data-category="implementation">Implementation</button>
+      <button class="faq-tab" data-category="platform">Platform</button>
+      <button class="faq-tab" data-category="security">Security</button>
+      <button class="faq-tab" data-category="pricing">Pricing</button>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="faq-accordion" data-aos="fade-up" data-aos-delay="400">
+      
+      <!-- Implementation FAQs -->
+      <div class="faq-item" data-category="implementation">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </span>
+          <span>How quickly can we implement Mentyx?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Most lenders are live in 2-4 weeks.</strong> Here's the typical timeline:</p>
+          <ul>
+            <li><strong>Week 1:</strong> Discovery & configuration - map your workflows, loan types, and underwriting criteria</li>
+            <li><strong>Week 2:</strong> Data migration & integration - connect your existing systems and import historical data</li>
+            <li><strong>Week 3:</strong> Team training & testing - hands-on training for your team with real loan scenarios</li>
+            <li><strong>Week 4:</strong> Go-live & support - process your first live loans with dedicated support</li>
+          </ul>
+          <p class="faq-note">Need to move faster? We've deployed in as little as 1 week for urgent situations.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="implementation">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </span>
+          <span>Do we need to migrate all our historical loan data?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>It's optional but recommended.</strong> Migrating historical data allows our AI to:</p>
+          <ul>
+            <li>Train on your specific loan portfolio for more accurate risk scoring</li>
+            <li>Provide better benchmarking and portfolio analytics</li>
+            <li>Enable comprehensive reporting across your entire lending history</li>
+          </ul>
+          <p>We handle the entire migration process - you just need to provide data exports from your current system. Most lenders migrate 6-24 months of historical loans.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="implementation">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </span>
+          <span>How much training does our team need?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Minimal training required - most teams are productive within hours.</strong></p>
+          <p>We provide role-specific training:</p>
+          <ul>
+            <li><strong>Loan Officers (2 hours):</strong> Borrower portal, application intake, document upload</li>
+            <li><strong>Underwriters (4 hours):</strong> AI-assisted underwriting, risk scoring, decision workflows</li>
+            <li><strong>Managers (3 hours):</strong> Reporting, analytics, policy configuration</li>
+          </ul>
+          <p>All training includes live Q&A, recorded sessions for future reference, and ongoing support via Slack/email.</p>
+        </div>
+      </div>
+
+      <!-- Platform FAQs -->
+      <div class="faq-item" data-category="platform">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </span>
+          <span>Does Mentyx integrate with our existing systems?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Yes - we integrate with 50+ popular lending, accounting, and CRM platforms.</strong></p>
+          <p>Common integrations include:</p>
+          <ul>
+            <li><strong>Loan Servicing:</strong> Mortgage Automator, LendingWise, Nortridge, FICS</li>
+            <li><strong>Accounting:</strong> QuickBooks, Xero, NetSuite</li>
+            <li><strong>CRM:</strong> Salesforce, HubSpot, Zoho</li>
+            <li><strong>Banking:</strong> Plaid, Yodlee for bank verification</li>
+            <li><strong>Credit:</strong> Experian, Equifax, TransUnion</li>
+          </ul>
+          <p class="faq-note">Don't see your system? We offer custom API integration for enterprise clients.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="platform">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </span>
+          <span>What types of documents can the AI process?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Our AI extracts data from 100+ document types with 95%+ accuracy.</strong></p>
+          <p>Supported documents include:</p>
+          <ul>
+            <li><strong>Financial:</strong> Bank statements, tax returns (1040, 1120, 1065), P&L statements, balance sheets</li>
+            <li><strong>Credit:</strong> Credit reports (all 3 bureaus), FICO scores, payment histories</li>
+            <li><strong>Real Estate:</strong> Appraisals, purchase agreements, title reports, property inspections</li>
+            <li><strong>Identity:</strong> Driver's licenses, passports, articles of incorporation, operating agreements</li>
+            <li><strong>Loan Docs:</strong> Existing loan statements, payoff letters, term sheets</li>
+          </ul>
+          <p>The AI handles PDFs, scanned images, photos, and even handwritten forms.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="platform">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </span>
+          <span>How accurate is the AI risk scoring?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>95%+ accuracy on standard financial documents, improving to 98%+ after training on your data.</strong></p>
+          <p>Our AI risk scoring:</p>
+          <ul>
+            <li><strong>Learns from your decisions:</strong> The more loans you process, the better it predicts your approval patterns</li>
+            <li><strong>Flags outliers:</strong> Automatically identifies applications that fall outside your normal criteria</li>
+            <li><strong>Explainable results:</strong> Every score includes the specific factors that influenced it</li>
+            <li><strong>Human oversight:</strong> Final decisions always rest with your underwriting team</li>
+          </ul>
+          <p class="faq-note">Accuracy metrics are tracked in real-time on your analytics dashboard.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="platform">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </span>
+          <span>What types of loans does Mentyx support?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>All asset-based lending products:</strong></p>
+          <ul>
+            <li><strong>Real Estate:</strong> Fix & flip, bridge loans, hard money, DSCR, construction, ground-up, cash-out refi</li>
+            <li><strong>Commercial:</strong> Equipment financing, invoice factoring, merchant cash advances, inventory financing</li>
+            <li><strong>Specialty:</strong> Cannabis lending, crypto-backed loans, litigation finance, royalty financing</li>
+            <li><strong>Multi-Family:</strong> Small balance apartment loans, workforce housing, value-add multifamily</li>
+          </ul>
+          <p>If you lend against an asset (not consumer income), Mentyx supports it. Custom loan types can be configured during implementation.</p>
+        </div>
+      </div>
+
+      <!-- Security FAQs -->
+      <div class="faq-item" data-category="security">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </span>
+          <span>How secure is our data on Mentyx?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Bank-grade security with SOC 2 Type II compliance.</strong></p>
+          <p>Security measures include:</p>
+          <ul>
+            <li><strong>Encryption:</strong> AES-256 encryption at rest, TLS 1.3 in transit</li>
+            <li><strong>Access Control:</strong> Multi-factor authentication (MFA), role-based permissions, IP whitelisting</li>
+            <li><strong>Infrastructure:</strong> AWS GovCloud hosting, redundant backups, 99.9% uptime SLA</li>
+            <li><strong>Monitoring:</strong> 24/7 security monitoring, automated threat detection, intrusion prevention</li>
+            <li><strong>Compliance:</strong> SOC 2 Type II, GDPR compliant, annual penetration testing</li>
+          </ul>
+          <p class="faq-note">We maintain complete audit trails of all data access and system changes.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="security">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+            </svg>
+          </span>
+          <span>Do you maintain audit trails for compliance?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Yes - complete audit trails for every action and decision.</strong></p>
+          <p>We track and log:</p>
+          <ul>
+            <li>All user actions (who did what, when)</li>
+            <li>Document access and modifications</li>
+            <li>Underwriting decisions and overrides</li>
+            <li>Policy changes and approvals</li>
+            <li>System configuration changes</li>
+            <li>Data exports and report generation</li>
+          </ul>
+          <p>Audit logs are immutable, timestamped, and retained for 7 years. Perfect for regulatory exams and investor due diligence.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="security">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </span>
+          <span>Can we host Mentyx on our own servers?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Yes - we offer on-premise and private cloud deployment for enterprise clients.</strong></p>
+          <p>Deployment options:</p>
+          <ul>
+            <li><strong>SaaS (Standard):</strong> Hosted by Mentyx on AWS, fastest implementation</li>
+            <li><strong>Private Cloud:</strong> Dedicated AWS instance in your VPC, full data isolation</li>
+            <li><strong>On-Premise:</strong> Installed on your infrastructure, complete control</li>
+          </ul>
+          <p>On-premise and private cloud require enterprise licenses. Contact us for custom deployment options.</p>
+        </div>
+      </div>
+
+      <!-- Pricing FAQs -->
+      <div class="faq-item" data-category="pricing">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </span>
+          <span>How is Mentyx priced?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Flexible pricing based on your loan volume and feature needs.</strong></p>
+          <p>Pricing models:</p>
+          <ul>
+            <li><strong>Per-loan:</strong> Pay only for loans processed (best for &lt;50 loans/month)</li>
+            <li><strong>Monthly subscription:</strong> Flat fee based on user count and volume (best for 50-200 loans/month)</li>
+            <li><strong>Enterprise:</strong> Custom pricing for high-volume lenders (200+ loans/month)</li>
+          </ul>
+          <p>All plans include unlimited document processing, API access, and standard support. No hidden fees or long-term contracts.</p>
+          <p class="faq-note">Schedule a demo for a personalized quote based on your needs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="pricing">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </span>
+          <span>Is there a free trial available?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>We offer personalized proof-of-concepts tailored to your specific use case.</strong></p>
+          <p>Rather than a generic trial, we provide:</p>
+          <ul>
+            <li><strong>Custom demo:</strong> See Mentyx configured with your loan types and workflows</li>
+            <li><strong>Pilot program:</strong> Process 10-20 of your real loans through the platform</li>
+            <li><strong>ROI analysis:</strong> Calculate exact time and cost savings based on your data</li>
+          </ul>
+          <p>This approach ensures you see real value before committing. Schedule a demo to get started.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="pricing">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </span>
+          <span>What's the typical ROI and payback period?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Average ROI is 340% in the first year, with 3-6 month payback period.</strong></p>
+          <p>Savings come from:</p>
+          <ul>
+            <li><strong>Labor reduction:</strong> 60% less time per loan = fewer underwriters needed as you scale</li>
+            <li><strong>Error prevention:</strong> 90% fewer document errors = less rework and compliance issues</li>
+            <li><strong>Speed wins:</strong> Faster decisions = more deals won vs competitors</li>
+            <li><strong>Scale efficiency:</strong> Handle 2-3x volume without adding headcount</li>
+          </ul>
+          <p>Use our <a href="/roi-calculator" class="inline-link">ROI calculator</a> to see your specific savings potential.</p>
+        </div>
+      </div>
+
+      <!-- General FAQs -->
+      <div class="faq-item" data-category="all">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+            </svg>
+          </span>
+          <span>What kind of support do you provide?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Dedicated support via email, Slack, and phone.</strong></p>
+          <p>Support tiers:</p>
+          <ul>
+            <li><strong>Standard (included):</strong> Email/Slack support, 24-hour response time, knowledge base access</li>
+            <li><strong>Priority:</strong> Phone support, 4-hour response time, dedicated account manager</li>
+            <li><strong>Enterprise:</strong> 24/7 support, 1-hour response time, dedicated Slack channel, quarterly business reviews</li>
+          </ul>
+          <p>All customers get free implementation support, training, and ongoing platform updates.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="all">
+        <button class="faq-question">
+          <span class="faq-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </span>
+          <span>Can Mentyx handle our loan volume as we grow?</span>
+          <span class="faq-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p><strong>Absolutely - our platform scales from 10 to 10,000+ loans per month.</strong></p>
+          <p>We currently power lenders processing:</p>
+          <ul>
+            <li>$50M to $2B+ in annual loan volume</li>
+            <li>3 to 500+ team members</li>
+            <li>Single office to multi-state operations with 20+ affiliates</li>
+          </ul>
+          <p>Our infrastructure auto-scales based on your volume, so you never outgrow the platform.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Still Have Questions CTA -->
+    <div class="faq-cta" data-aos="fade-up" data-aos-delay="500">
+      <h3>Still have questions?</h3>
+      <p>Schedule a call with our team to get personalized answers</p>
+      <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary">
+        Schedule a Call
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14"/>
+          <path d="M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* FAQ SECTION SPECIFIC STYLES */
+  .faq-section {
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    padding: 120px 0;
+    position: relative;
+  }
+
+  .faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .badge-wrapper {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .badge-center {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    color: #06b6d4;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .section-heading.centered {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .section-subtitle.centered {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 64px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* FAQ Tabs */
+  .faq-tabs {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .faq-tab {
+    padding: 12px 24px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 12px;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Inter, sans-serif;
+  }
+
+  .faq-tab:hover,
+  .faq-tab.active {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: #06b6d4;
+  }
+
+  /* FAQ Accordion */
+  .faq-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-item {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .faq-item.active {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  }
+
+  .faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 28px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Inter, sans-serif;
+  }
+
+  .faq-question:hover {
+    color: #06b6d4;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+  }
+
+  .faq-arrow {
+    margin-left: auto;
+    flex-shrink: 0;
+    color: #64748b;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .faq-arrow {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    padding: 0 28px;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 0 28px 28px 84px;
+  }
+
+  .faq-answer p {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0 0 16px 0;
+  }
+
+  .faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-answer strong {
+    color: white;
+    font-weight: 600;
+  }
+
+  .faq-answer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+
+  .faq-answer ul:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-answer li {
+    color: #cbd5e1;
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .faq-answer li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  .faq-note {
+    background: rgba(59, 130, 246, 0.08);
+    border-left: 3px solid rgba(59, 130, 246, 0.4);
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+    margin-top: 16px;
+  }
+
+  .inline-link {
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+    transition: border-color 0.3s;
+  }
+
+  .inline-link:hover {
+    border-bottom-color: #06b6d4;
+  }
+
+  /* FAQ CTA */
+  .faq-cta {
+    text-align: center;
+    margin-top: 80px;
+    padding: 48px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 24px;
+  }
+
+  .faq-cta h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .faq-cta p {
+    font-size: 1.125rem;
+    color: #94a3b8;
+    margin: 0 0 32px 0;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .faq-section {
+      padding: 80px 0;
+    }
+    
+    .section-heading.centered {
+      font-size: 2.5rem;
+    }
+
+    .section-subtitle.centered {
+      font-size: 1.125rem;
+      margin-bottom: 48px;
+    }
+    
+    .badge-center {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+
+    .faq-tabs {
+      gap: 8px;
+      margin-bottom: 48px;
+    }
+
+    .faq-tab {
+      padding: 10px 16px;
+      font-size: 0.875rem;
+    }
+
+    .faq-question {
+      font-size: 1rem;
+      padding: 20px;
+      gap: 12px;
+    }
+
+    .faq-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 20px 20px 20px;
+    }
+
+    .faq-answer p {
+      font-size: 0.9375rem;
+    }
+
+    .faq-cta {
+      padding: 32px 24px;
+      margin-top: 64px;
+    }
+
+    .faq-cta h3 {
+      font-size: 1.5rem;
+    }
+
+    .faq-cta p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    const faqTabs = document.querySelectorAll('.faq-tab');
+
+    // Accordion functionality
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all items
+        faqItems.forEach(i => i.classList.remove('active'));
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Tab filtering
+    faqTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const category = tab.dataset.category;
+        
+        // Update active tab
+        faqTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Filter FAQ items
+        faqItems.forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        // Close all items when switching tabs
+        faqItems.forEach(i => i.classList.remove('active'));
+      });
+    });
+  });
+</script>

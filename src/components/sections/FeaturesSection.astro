@@ -1,0 +1,226 @@
+---
+// src/components/FeaturesSection.astro
+---
+
+<section class="section features-section">
+  <div class="container">
+    
+    <div class="badge-wrapper" data-aos="fade-up">
+      <span class="badge-center">Powerful Features</span>
+    </div>
+    
+    <h2 class="section-heading centered" data-aos="fade-up" data-aos-delay="100">
+      Everything You Need in One Platform
+    </h2>
+    
+    <p class="section-description centered" data-aos="fade-up" data-aos-delay="200">
+      Comprehensive tools designed specifically for asset-based lending
+    </p>
+
+    <!-- Features Grid - 6 Items -->
+    <div class="features-grid">
+      
+      <div class="security-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Automated Risk Scoring</h3>
+        <p>AI-powered risk assessment with customizable scoring models and real-time analysis</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"/>
+            <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </div>
+        <h3>Custom Decision Rules</h3>
+        <p>Build and modify underwriting criteria without technical help or coding</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3>Collaborative Review</h3>
+        <p>Multi-level approval workflows with role-based access and audit trails</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3>Portfolio Analytics</h3>
+        <p>Real-time portfolio monitoring with advanced reporting and risk insights</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3>Document Intelligence</h3>
+        <p>Automatic extraction and validation of data from financial documents</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3>Instant Funding Decisioning</h3>
+        <p>Streamlined approval process with automated compliance checks and real-time decisions</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* FEATURES SECTION SPECIFIC STYLES */
+  .features-section {
+    background: rgba(30, 41, 59, 0.3);
+    padding: 100px 0;
+  }
+
+  .badge-wrapper {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .badge-center {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    color: var(--cyan-400);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .section-heading.centered {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+
+  .section-description.centered {
+    text-align: center;
+    font-size: 1.375rem;
+    color: var(--slate-400);
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 64px;
+  }
+
+  .security-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid var(--slate-700);
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.3s;
+    text-align: left;
+  }
+
+  .security-card:hover {
+    border-color: var(--blue-500);
+    transform: translateY(-4px);
+  }
+
+  .security-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan-400);
+    margin-bottom: 20px;
+  }
+
+  .security-card h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+  }
+
+  .security-card p {
+    color: var(--slate-400);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .features-section {
+      padding: 60px 0;
+    }
+    
+    .section-heading.centered {
+      font-size: 2.5rem;
+    }
+    
+    .section-description.centered {
+      font-size: 1.125rem;
+      margin-bottom: 60px;
+    }
+    
+    .badge-center {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+    
+    .features-grid {
+      gap: 24px;
+      margin-top: 48px;
+    }
+    
+    .security-card {
+      padding: 24px;
+    }
+    
+    .security-icon {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px;
+    }
+    
+    .security-card h3 {
+      font-size: 1.25rem;
+    }
+    
+    .security-card p {
+      font-size: 1rem;
+    }
+  }
+</style>

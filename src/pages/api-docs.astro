@@ -1,0 +1,1778 @@
+---
+// /src/pages/api-docs.astro
+import Layout from '../components/layouts/Layout.astro';
+---
+
+<Layout 
+  title="API Documentation - Developer Resources | Mentyx.ai"
+  description="Complete API documentation for Mentyx.ai platform. RESTful API, webhooks, authentication, and integration guides for developers."
+>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+        <span>Developer Resources</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="title-gradient">API</span>
+        <span class="title-white">Documentation</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Complete developer documentation for integrating with the Mentyx.ai lending platform. RESTful API, webhooks, SDKs, and code examples.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#get-started" class="btn btn-primary btn-lg">
+          Get Started
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-secondary btn-lg">
+          Request API Key
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">REST</div>
+          <div class="stat-label">API Architecture</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">OAuth 2.0</div>
+          <div class="stat-label">Authentication</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">JSON</div>
+          <div class="stat-label">Request/Response</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Start Section -->
+<section class="quickstart-section" id="get-started">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Quick Start Guide</h2>
+      <p class="section-subtitle">Get up and running with the Mentyx API in minutes</p>
+    </div>
+
+    <div class="quickstart-grid">
+      <div class="quickstart-step">
+        <div class="step-number">1</div>
+        <h3>Get Your API Key</h3>
+        <p>Request access to the Mentyx API and receive your authentication credentials.</p>
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="step-link">Request Access →</a>
+      </div>
+
+      <div class="quickstart-step">
+        <div class="step-number">2</div>
+        <h3>Make Your First Request</h3>
+        <p>Test the API with a simple GET request to verify your credentials work.</p>
+        <div class="code-snippet">
+          <code>{`curl https://api.mentyx.ai/v1/health \\
+  -H "Authorization: Bearer YOUR_API_KEY"`}</code>
+        </div>
+      </div>
+
+      <div class="quickstart-step">
+        <div class="step-number">3</div>
+        <h3>Explore the Endpoints</h3>
+        <p>Browse our comprehensive endpoint documentation and start building your integration.</p>
+        <a href="#endpoints" class="step-link">View Endpoints →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Authentication Section -->
+<section class="auth-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Authentication</h2>
+      <p class="section-subtitle">Secure your API requests with OAuth 2.0</p>
+    </div>
+
+    <div class="auth-grid">
+      <div class="auth-content">
+        <h3>OAuth 2.0 Bearer Token</h3>
+        <p>All API requests must include a valid bearer token in the Authorization header. Tokens are issued per environment (sandbox/production) and should be kept secure.</p>
+        
+        <div class="auth-steps">
+          <div class="auth-step">
+            <h4>1. Request API Credentials</h4>
+            <p>Contact our team to receive your client ID and secret for the sandbox environment.</p>
+          </div>
+          <div class="auth-step">
+            <h4>2. Exchange for Access Token</h4>
+            <p>Use your credentials to obtain a bearer token via the /oauth/token endpoint.</p>
+          </div>
+          <div class="auth-step">
+            <h4>3. Include in All Requests</h4>
+            <p>Add the Authorization header with your bearer token to every API call.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-example">
+        <div class="code-header">
+          <span>Authentication Example</span>
+          <span class="code-method post">POST</span>
+        </div>
+        <pre class="code-block"><code>{`POST /oauth/token
+Content-Type: application/json
+
+{
+  "client_id": "your_client_id",
+  "client_secret": "your_client_secret",
+  "grant_type": "client_credentials"
+}
+
+Response:
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIs...",
+  "token_type": "bearer",
+  "expires_in": 3600
+}`}</code></pre>
+
+        <div class="code-header mt">
+          <span>Using the Token</span>
+        </div>
+        <pre class="code-block"><code>{`GET /v1/applications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
+Content-Type: application/json`}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Endpoints Section -->
+<section class="endpoints-section" id="endpoints">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">API Endpoints</h2>
+      <p class="section-subtitle">Complete reference for all available endpoints</p>
+    </div>
+
+    <!-- Endpoints Navigation -->
+    <div class="endpoints-nav">
+      <button class="endpoint-nav-btn active" data-category="applications">Applications</button>
+      <button class="endpoint-nav-btn" data-category="borrowers">Borrowers</button>
+      <button class="endpoint-nav-btn" data-category="documents">Documents</button>
+      <button class="endpoint-nav-btn" data-category="underwriting">Underwriting</button>
+      <button class="endpoint-nav-btn" data-category="webhooks">Webhooks</button>
+    </div>
+
+    <!-- Applications Endpoints -->
+    <div class="endpoint-category active" data-category="applications">
+      
+      <!-- Create Application -->
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method post">POST</span>
+            <span class="path">/v1/applications</span>
+          </div>
+          <div class="endpoint-description">Create a new loan application</div>
+        </div>
+
+        <div class="endpoint-body">
+          <div class="endpoint-section">
+            <h4>Request Body</h4>
+            <pre class="code-block"><code>{`{
+  "borrower": {
+    "firstName": "Sarah",
+    "lastName": "Chen",
+    "email": "sarah@example.com",
+    "phone": "+1-555-123-4567",
+    "ssn": "XXX-XX-1234"
+  },
+  "property": {
+    "address": "123 Main St",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701",
+    "propertyType": "single_family"
+  },
+  "loanDetails": {
+    "loanAmount": 250000,
+    "loanType": "fix_and_flip",
+    "purchasePrice": 350000,
+    "rehabBudget": 75000,
+    "arv": 525000
+  }
+}`}</code></pre>
+          </div>
+
+          <div class="endpoint-section">
+            <h4>Response (201 Created)</h4>
+            <pre class="code-block"><code>{`{
+  "id": "app_1a2b3c4d5e6f",
+  "status": "submitted",
+  "borrower": {
+    "id": "bwr_9z8y7x6w5v4u",
+    "firstName": "Sarah",
+    "lastName": "Chen",
+    "email": "sarah@example.com"
+  },
+  "loanDetails": {
+    "loanAmount": 250000,
+    "loanType": "fix_and_flip",
+    "ltv": 71.43,
+    "ltc": 86.67
+  },
+  "createdAt": "2024-01-15T10:30:00Z",
+  "updatedAt": "2024-01-15T10:30:00Z"
+}`}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Get Application -->
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method get">GET</span>
+            <span class="path">/v1/applications/&#123;id&#125;</span>
+          </div>
+          <div class="endpoint-description">Retrieve an application by ID</div>
+        </div>
+
+        <div class="endpoint-body">
+          <div class="endpoint-section">
+            <h4>Path Parameters</h4>
+            <table class="params-table">
+              <tr>
+                <td class="param-name">id</td>
+                <td class="param-type">string</td>
+                <td class="param-desc">Application ID (e.g., app_1a2b3c4d5e6f)</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="endpoint-section">
+            <h4>Response (200 OK)</h4>
+            <pre class="code-block"><code>{`{
+  "id": "app_1a2b3c4d5e6f",
+  "status": "underwriting",
+  "borrower": { ... },
+  "property": { ... },
+  "loanDetails": { ... },
+  "underwriting": {
+    "riskScore": 42,
+    "ltv": 71.43,
+    "dscr": null,
+    "creditScore": 720
+  },
+  "timeline": [
+    {
+      "status": "submitted",
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    {
+      "status": "underwriting",
+      "timestamp": "2024-01-15T14:22:00Z"
+    }
+  ]
+}`}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- List Applications -->
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method get">GET</span>
+            <span class="path">/v1/applications</span>
+          </div>
+          <div class="endpoint-description">List all applications with optional filters</div>
+        </div>
+
+        <div class="endpoint-body">
+          <div class="endpoint-section">
+            <h4>Query Parameters</h4>
+            <table class="params-table">
+              <tr>
+                <td class="param-name">status</td>
+                <td class="param-type">string</td>
+                <td class="param-desc">Filter by status: submitted, underwriting, approved, declined</td>
+              </tr>
+              <tr>
+                <td class="param-name">limit</td>
+                <td class="param-type">integer</td>
+                <td class="param-desc">Number of results per page (default: 20, max: 100)</td>
+              </tr>
+              <tr>
+                <td class="param-name">offset</td>
+                <td class="param-type">integer</td>
+                <td class="param-desc">Pagination offset (default: 0)</td>
+              </tr>
+              <tr>
+                <td class="param-name">createdAfter</td>
+                <td class="param-type">datetime</td>
+                <td class="param-desc">Filter applications created after this date (ISO 8601)</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="endpoint-section">
+            <h4>Response (200 OK)</h4>
+            <pre class="code-block"><code>{`{
+  "data": [
+    {
+      "id": "app_1a2b3c4d5e6f",
+      "status": "approved",
+      "borrower": { ... },
+      "loanAmount": 250000
+    },
+    ...
+  ],
+  "pagination": {
+    "total": 145,
+    "limit": 20,
+    "offset": 0,
+    "hasMore": true
+  }
+}`}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Update Application -->
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method patch">PATCH</span>
+            <span class="path">/v1/applications/&#123;id&#125;</span>
+          </div>
+          <div class="endpoint-description">Update an existing application</div>
+        </div>
+
+        <div class="endpoint-body">
+          <div class="endpoint-section">
+            <h4>Request Body (Partial Update)</h4>
+            <pre class="code-block"><code>{`{
+  "loanDetails": {
+    "rehabBudget": 85000,
+    "arv": 550000
+  }
+}`}</code></pre>
+          </div>
+
+          <div class="endpoint-section">
+            <h4>Response (200 OK)</h4>
+            <pre class="code-block"><code>{`{
+  "id": "app_1a2b3c4d5e6f",
+  "status": "underwriting",
+  "loanDetails": {
+    "loanAmount": 250000,
+    "rehabBudget": 85000,
+    "arv": 550000,
+    "ltc": 88.33
+  },
+  "updatedAt": "2024-01-15T16:45:00Z"
+}`}</code></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Borrowers Endpoints -->
+    <div class="endpoint-category" data-category="borrowers">
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method post">POST</span>
+            <span class="path">/v1/borrowers</span>
+          </div>
+          <div class="endpoint-description">Create a new borrower profile</div>
+        </div>
+      </div>
+
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method get">GET</span>
+            <span class="path">/v1/borrowers/&#123;id&#125;</span>
+          </div>
+          <div class="endpoint-description">Retrieve borrower details and loan history</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documents Endpoints -->
+    <div class="endpoint-category" data-category="documents">
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method post">POST</span>
+            <span class="path">/v1/documents/upload</span>
+          </div>
+          <div class="endpoint-description">Upload documents for an application</div>
+        </div>
+      </div>
+
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method get">GET</span>
+            <span class="path">/v1/documents/&#123;id&#125;</span>
+          </div>
+          <div class="endpoint-description">Retrieve document metadata and download URL</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Underwriting Endpoints -->
+    <div class="endpoint-category" data-category="underwriting">
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method post">POST</span>
+            <span class="path">/v1/underwriting/analyze</span>
+          </div>
+          <div class="endpoint-description">Run AI underwriting analysis on an application</div>
+        </div>
+      </div>
+
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method get">GET</span>
+            <span class="path">/v1/underwriting/&#123;applicationId&#125;</span>
+          </div>
+          <div class="endpoint-description">Get underwriting results and risk scores</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Webhooks Endpoints -->
+    <div class="endpoint-category" data-category="webhooks">
+      <div class="endpoint-card">
+        <div class="endpoint-header">
+          <div class="endpoint-title">
+            <span class="method post">POST</span>
+            <span class="path">/v1/webhooks</span>
+          </div>
+          <div class="endpoint-description">Register a webhook endpoint</div>
+        </div>
+
+        <div class="endpoint-body">
+          <div class="endpoint-section">
+            <h4>Request Body</h4>
+            <pre class="code-block"><code>{`{
+  "url": "https://yourdomain.com/webhooks",
+  "events": [
+    "application.created",
+    "application.approved",
+    "application.declined",
+    "document.uploaded"
+  ],
+  "description": "Production webhook endpoint"
+}`}</code></pre>
+          </div>
+
+          <div class="endpoint-section">
+            <h4>Webhook Payload Example</h4>
+            <pre class="code-block"><code>{`POST https://yourdomain.com/webhooks
+Content-Type: application/json
+X-Mentyx-Signature: sha256=abc123...
+
+{
+  "event": "application.approved",
+  "timestamp": "2024-01-15T14:30:00Z",
+  "data": {
+    "applicationId": "app_1a2b3c4d5e6f",
+    "borrowerName": "Sarah Chen",
+    "loanAmount": 250000,
+    "approvalTerms": {
+      "rate": 9.5,
+      "term": 12,
+      "ltv": 71.43
+    }
+  }
+}`}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SDKs Section -->
+<section class="sdks-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Official SDKs</h2>
+      <p class="section-subtitle">Pre-built libraries to accelerate your integration</p>
+    </div>
+
+    <div class="sdks-grid">
+      <div class="sdk-card">
+        <div class="sdk-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+          </svg>
+        </div>
+        <h3>JavaScript / Node.js</h3>
+        <p>Official JavaScript SDK with TypeScript support for Node.js and browser environments.</p>
+        <div class="sdk-install">
+          <code>npm install @mentyx/sdk</code>
+        </div>
+        <a href="#" class="sdk-link">View Documentation →</a>
+      </div>
+
+      <div class="sdk-card">
+        <div class="sdk-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+          </svg>
+        </div>
+        <h3>Python</h3>
+        <p>Python SDK with async support and comprehensive type hints for modern Python applications.</p>
+        <div class="sdk-install">
+          <code>pip install mentyx-sdk</code>
+        </div>
+        <a href="#" class="sdk-link">View Documentation →</a>
+      </div>
+
+      <div class="sdk-card">
+        <div class="sdk-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.834 8.101a13.912 13.912 0 01-13.643 11.72a10.105 10.105 0 01-1.994-.12a6.111 6.111 0 01-5.082-5.761a5.934 5.934 0 011.595-4.192a5.56 5.56 0 011.382-1.21a.243.243 0 00-.021-.41a7.07 7.07 0 01-1.637-1.665a8.18 8.18 0 01-1.32-5.26a.197.197 0 01.098-.17a.202.202 0 01.212-.014c.23.104.464.21.679.319a.513.513 0 00.031.014a6.61 6.61 0 012.639 2.11a5.08 5.08 0 011.031 2.377a.199.199 0 00.289.159a5.472 5.472 0 012.196-.577a7.117 7.117 0 014.456 1.683a.204.204 0 00.252.013a.197.197 0 00.098-.17a5.85 5.85 0 01.82-3.53a4.28 4.28 0 013.308-2.103a.198.198 0 01.193.048a.2.2 0 01.065.189a5.257 5.257 0 01-.439 2.268a5.24 5.24 0 01-1.288 1.74a.228.228 0 00-.037.34a6.34 6.34 0 011.295 3.555"/>
+          </svg>
+        </div>
+        <h3>.NET / C#</h3>
+        <p>Fully async .NET SDK with strong typing and LINQ support for enterprise .NET applications.</p>
+        <div class="sdk-install">
+          <code>dotnet add package Mentyx.SDK</code>
+        </div>
+        <a href="#" class="sdk-link">View Documentation →</a>
+      </div>
+    </div>
+
+    <!-- Code Example -->
+    <div class="sdk-example">
+      <h3 class="sdk-example-title">Quick Example (JavaScript)</h3>
+      <div class="code-tabs">
+        <button class="code-tab active" data-lang="javascript">JavaScript</button>
+        <button class="code-tab" data-lang="python">Python</button>
+        <button class="code-tab" data-lang="csharp">C#</button>
+      </div>
+      
+      <div class="code-content active" data-lang="javascript">
+        <pre class="code-block"><code>{`import { Mentyx } from '@mentyx/sdk';
+
+const mentyx = new Mentyx({
+  apiKey: process.env.MENTYX_API_KEY
+});
+
+// Create a new application
+const application = await mentyx.applications.create({
+  borrower: {
+    firstName: 'Sarah',
+    lastName: 'Chen',
+    email: 'sarah@example.com'
+  },
+  property: {
+    address: '123 Main St',
+    city: 'Austin',
+    state: 'TX',
+    zipCode: '78701'
+  },
+  loanDetails: {
+    loanAmount: 250000,
+    loanType: 'fix_and_flip',
+    purchasePrice: 350000
+  }
+});
+
+console.log('Application created:', application.id);`}</code></pre>
+      </div>
+
+      <div class="code-content" data-lang="python">
+        <pre class="code-block"><code>{`from mentyx import Mentyx
+
+mentyx = Mentyx(api_key=os.environ['MENTYX_API_KEY'])
+
+# Create a new application
+application = mentyx.applications.create(
+    borrower={
+        'firstName': 'Sarah',
+        'lastName': 'Chen',
+        'email': 'sarah@example.com'
+    },
+    property={
+        'address': '123 Main St',
+        'city': 'Austin',
+        'state': 'TX',
+        'zipCode': '78701'
+    },
+    loan_details={
+        'loanAmount': 250000,
+        'loanType': 'fix_and_flip',
+        'purchasePrice': 350000
+    }
+)
+
+print(f'Application created: {application.id}')`}</code></pre>
+      </div>
+
+      <div class="code-content" data-lang="csharp">
+        <pre class="code-block"><code>{`using Mentyx.SDK;
+
+var mentyx = new Mentyx(
+    apiKey: Environment.GetEnvironmentVariable("MENTYX_API_KEY")
+);
+
+// Create a new application
+var application = await mentyx.Applications.CreateAsync(new CreateApplicationRequest
+{
+    Borrower = new Borrower
+    {
+        FirstName = "Sarah",
+        LastName = "Chen",
+        Email = "sarah@example.com"
+    },
+    Property = new Property
+    {
+        Address = "123 Main St",
+        City = "Austin",
+        State = "TX",
+        ZipCode = "78701"
+    },
+    LoanDetails = new LoanDetails
+    {
+        LoanAmount = 250000,
+        LoanType = LoanType.FixAndFlip,
+        PurchasePrice = 350000
+    }
+});
+
+Console.WriteLine($"Application created: {application.Id}");`}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Error Codes Section -->
+<section class="errors-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Error Codes</h2>
+      <p class="section-subtitle">Common error responses and how to handle them</p>
+    </div>
+
+    <div class="errors-grid">
+      <div class="error-card">
+        <div class="error-code">400</div>
+        <h4>Bad Request</h4>
+        <p>Invalid request parameters or malformed JSON. Check the error message for specific field validation errors.</p>
+      </div>
+
+      <div class="error-card">
+        <div class="error-code">401</div>
+        <h4>Unauthorized</h4>
+        <p>Invalid or missing API key. Ensure your Authorization header includes a valid bearer token.</p>
+      </div>
+
+      <div class="error-card">
+        <div class="error-code">403</div>
+        <h4>Forbidden</h4>
+        <p>Valid credentials but insufficient permissions for the requested resource or action.</p>
+      </div>
+
+      <div class="error-card">
+        <div class="error-code">404</div>
+        <h4>Not Found</h4>
+        <p>The requested resource does not exist. Verify the resource ID in your request.</p>
+      </div>
+
+      <div class="error-card">
+        <div class="error-code">429</div>
+        <h4>Rate Limit Exceeded</h4>
+        <p>Too many requests. Default limit is 100 requests/minute. Check the Retry-After header.</p>
+      </div>
+
+      <div class="error-card">
+        <div class="error-code">500</div>
+        <h4>Server Error</h4>
+        <p>Internal server error. Contact support if the issue persists with your request ID.</p>
+      </div>
+    </div>
+
+    <!-- Error Response Example -->
+    <div class="error-example">
+      <h4>Error Response Format</h4>
+      <pre class="code-block"><code>{`{
+  "error": {
+    "type": "validation_error",
+    "message": "Invalid request parameters",
+    "code": "INVALID_LOAN_AMOUNT",
+    "fields": {
+      "loanAmount": "Must be between $50,000 and $5,000,000"
+    },
+    "requestId": "req_abc123xyz",
+    "timestamp": "2024-01-15T10:30:00Z"
+  }
+}`}</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Support Section -->
+<section class="support-section">
+  <div class="container">
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <h3>Developer Support</h3>
+        <p>Get help from our technical team via email or dedicated Slack channel for enterprise customers.</p>
+        <a href="mailto:developers@mentyx.ai" class="support-link">developers@mentyx.ai</a>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <h3>Changelog</h3>
+        <p>Stay updated with API changes, new features, and deprecation notices in our changelog.</p>
+        <a href="/changelog" class="support-link">View Changelog →</a>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3>Status Page</h3>
+        <p>Check real-time API status, uptime history, and subscribe to incident notifications.</p>
+        <a href="https://status.mentyx.ai" class="support-link">status.mentyx.ai →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Start Building?</h2>
+      <p class="cta-subtitle">Request API access and start integrating with Mentyx today</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+          Request API Access
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/solutions/integrations" class="btn btn-secondary btn-lg">
+          View Integrations
+        </a>
+        <a href="/" class="btn btn-tertiary btn-lg">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .btn-tertiary {
+    background: rgba(15, 23, 42, 0.8);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-tertiary:hover {
+    background: rgba(15, 23, 42, 1);
+    border-color: rgba(6, 182, 212, 0.5);
+    color: #22d3ee;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Quick Start Section */
+  .quickstart-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .quickstart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+
+  .quickstart-step {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .quickstart-step:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .quickstart-step h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .quickstart-step p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+  }
+
+  .code-snippet {
+    background: #1e293b;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .code-snippet code {
+    color: #cbd5e1;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .step-link {
+    color: #06b6d4;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .step-link:hover {
+    color: #22d3ee;
+    gap: 8px;
+  }
+
+  /* Authentication Section */
+  .auth-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .auth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .auth-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .auth-content > p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 32px 0;
+    font-size: 1.125rem;
+  }
+
+  .auth-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .auth-step {
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+  }
+
+  .auth-step h4 {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+
+  .auth-step p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .auth-example {
+    position: sticky;
+    top: 100px;
+  }
+
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: white;
+    font-weight: 600;
+  }
+
+  .code-header.mt {
+    margin-top: 20px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .code-method {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .code-method.post {
+    background: #22c55e;
+    color: white;
+  }
+
+  .code-method.get {
+    background: #3b82f6;
+    color: white;
+  }
+
+  .code-method.patch {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .code-method.delete {
+    background: #ef4444;
+    color: white;
+  }
+
+  .code-method.webhook {
+    background: #8b5cf6;
+    color: white;
+  }
+
+  .code-block {
+    margin: 0;
+    padding: 20px;
+    background: #1e293b;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow-x: auto;
+  }
+
+  .code-block code {
+    color: #cbd5e1;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    white-space: pre;
+  }
+
+  /* Endpoints Section */
+  .endpoints-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .endpoints-nav {
+    display: flex;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    padding: 8px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+  }
+
+  .endpoint-nav-btn {
+    padding: 12px 24px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .endpoint-nav-btn.active {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+  }
+
+  .endpoint-nav-btn:hover:not(.active) {
+    background: rgba(59, 130, 246, 0.05);
+    color: #cbd5e1;
+  }
+
+  .endpoint-category {
+    display: none;
+  }
+
+  .endpoint-category.active {
+    display: block;
+  }
+
+  .endpoint-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .endpoint-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .endpoint-header {
+    padding: 24px 28px;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  }
+
+  .endpoint-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .method {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .method.get {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .method.post {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .method.patch {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  .method.delete {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .path {
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  .endpoint-description {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+  }
+
+  .endpoint-body {
+    padding: 28px;
+  }
+
+  .endpoint-section {
+    margin-bottom: 24px;
+  }
+
+  .endpoint-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .endpoint-section h4 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+  }
+
+  .params-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
+
+  .params-table tr {
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  }
+
+  .params-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .params-table td {
+    padding: 12px 0;
+    vertical-align: top;
+  }
+
+  .param-name {
+    color: #06b6d4;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-weight: 600;
+    width: 150px;
+  }
+
+  .param-type {
+    color: #8b5cf6;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.875rem;
+    width: 100px;
+  }
+
+  .param-desc {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  /* SDKs Section */
+  .sdks-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .sdks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
+  .sdk-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .sdk-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .sdk-icon {
+    color: #06b6d4;
+    margin-bottom: 20px;
+  }
+
+  .sdk-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+  }
+
+  .sdk-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+  }
+
+  .sdk-install {
+    background: #1e293b;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+  }
+
+  .sdk-install code {
+    color: #06b6d4;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.875rem;
+  }
+
+  .sdk-link {
+    color: #06b6d4;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .sdk-link:hover {
+    color: #22d3ee;
+  }
+
+  .sdk-example {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+  }
+
+  .sdk-example-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+  }
+
+  .code-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .code-tab {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .code-tab.active {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .code-tab:hover:not(.active) {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .code-content {
+    display: none;
+  }
+
+  .code-content.active {
+    display: block;
+  }
+
+  /* Errors Section */
+  .errors-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .errors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+
+  .error-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .error-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .error-code {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+
+  .error-card h4 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+  }
+
+  .error-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  .error-example {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    padding: 32px;
+  }
+
+  .error-example h4 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+  }
+
+  /* Support Section */
+  .support-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+
+  .support-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .support-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .support-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin: 0 auto 20px;
+  }
+
+  .support-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+  }
+
+  .support-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+  }
+
+  .support-link {
+    color: #06b6d4;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .support-link:hover {
+    color: #22d3ee;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .auth-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .auth-example {
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .quickstart-grid,
+    .sdks-grid,
+    .errors-grid,
+    .support-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .endpoints-nav {
+      overflow-x: scroll;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  // Endpoints navigation
+  document.addEventListener('DOMContentLoaded', function() {
+    const navButtons = document.querySelectorAll('.endpoint-nav-btn');
+    const categories = document.querySelectorAll('.endpoint-category');
+
+    navButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        
+        // Update active button
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Update active category
+        categories.forEach(cat => {
+          cat.classList.remove('active');
+          if (cat.getAttribute('data-category') === category) {
+            cat.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // Code tabs functionality
+    const codeTabs = document.querySelectorAll('.code-tab');
+    const codeContents = document.querySelectorAll('.code-content');
+
+    codeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const lang = tab.getAttribute('data-lang');
+        
+        // Update active tab
+        codeTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        // Update active content
+        codeContents.forEach(content => {
+          content.classList.remove('active');
+          if (content.getAttribute('data-lang') === lang) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+</Layout>

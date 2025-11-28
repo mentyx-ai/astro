@@ -1,0 +1,39 @@
+---
+// src/components/Button.astro - FIXED
+interface Props {
+  variant?: 'primary' | 'secondary';
+  size?: 'default' | 'lg';
+  href?: string;
+  type?: 'button' | 'submit';
+  block?: boolean;
+  class?: string;
+  id?: string;
+}
+
+const { 
+  variant = 'primary', 
+  size = 'default', 
+  href,
+  type = 'button',
+  block = false,
+  class: className = '',
+  id
+} = Astro.props;
+
+const Element = href ? 'a' : 'button';
+const attrs = href ? { href } : { type };
+---
+
+<Element 
+  {...attrs}
+  id={id}
+  class={`
+    btn 
+    btn-${variant} 
+    ${size === 'lg' ? 'btn-lg' : ''}
+    ${block ? 'btn-block' : ''}
+    ${className}
+  `}
+>
+  <slot />
+</Element>

@@ -1,0 +1,232 @@
+---
+// src/components/SecuritySection.astro
+---
+
+<section class="section security-section" id="platform">
+  <div class="container">
+    
+    <div class="badge-wrapper" data-aos="fade-up">
+      <span class="badge-center">Enterprise-Grade Protection</span>
+    </div>
+    
+    <h2 class="section-heading centered" data-aos="fade-up" data-aos-delay="100">
+      Bank-grade security, built in
+    </h2>
+    
+    <p class="section-description centered" data-aos="fade-up" data-aos-delay="200">
+      Bank-grade encryption, full audit trails, and compliance that scales with your growth
+    </p>
+
+    <!-- Security Features Grid -->
+    <div class="security-grid">
+      
+      <div class="security-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h3>End-to-end encryption (AES-256)</h3>
+        <p>Data encrypted in transit and at rest</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Role-based access & multi-tenant</h3>
+        <p>Granular permissions for every user and team</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h3>Full audit logs & version history</h3>
+        <p>Track every change, decision, and action</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>GDPR & SOC 2-ready architecture</h3>
+        <p>Compliance by design</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="8.5" cy="7" r="4"/>
+            <line x1="20" y1="8" x2="20" y2="14"/>
+            <line x1="23" y1="11" x2="17" y2="11"/>
+          </svg>
+        </div>
+        <h3>Multi-factor Authentication</h3>
+        <p>Secure access with mandatory 2FA for all users and administrators</p>
+      </div>
+
+      <div class="security-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="security-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>Regular Security Audits</h3>
+        <p>Continuous monitoring and quarterly penetration testing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* SECURITY SECTION SPECIFIC STYLES */
+  .security-section {
+    background: rgba(30, 41, 59, 0.3);
+    padding: 100px 0;
+  }
+
+  .badge-wrapper {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .badge-center {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    color: var(--cyan-400);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .section-heading.centered {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+
+  .section-description.centered {
+    text-align: center;
+    font-size: 1.375rem;
+    color: var(--slate-400);
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 64px;
+  }
+
+  .security-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid var(--slate-700);
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.3s;
+    text-align: left;
+  }
+
+  .security-card:hover {
+    border-color: var(--blue-500);
+    transform: translateY(-4px);
+  }
+
+  .security-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan-400);
+    margin-bottom: 20px;
+  }
+
+  .security-card h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+  }
+
+  .security-card p {
+    color: var(--slate-400);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .security-section {
+      padding: 60px 0;
+    }
+    
+    .section-heading.centered {
+      font-size: 2.5rem;
+    }
+    
+    .section-description.centered {
+      font-size: 1.125rem;
+      margin-bottom: 60px;
+    }
+    
+    .badge-center {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+    
+    .security-grid {
+      gap: 24px;
+      margin-top: 48px;
+    }
+    
+    .security-card {
+      padding: 24px;
+    }
+    
+    .security-icon {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px;
+    }
+    
+    .security-card h3 {
+      font-size: 1.25rem;
+    }
+    
+    .security-card p {
+      font-size: 1rem;
+    }
+  }
+</style>

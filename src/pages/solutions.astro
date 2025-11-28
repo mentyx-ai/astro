@@ -1,0 +1,358 @@
+---
+import Layout from '../components/layouts/Layout.astro';
+
+const solutions = {
+  origination: [
+    {
+      title: 'Borrower Portal',
+      slug: 'borrower-portal',
+      description: 'Online & mobile applications',
+      icon: 'upload',
+      features: ['24/7 online applications', 'Mobile-friendly interface', 'Document upload & tracking']
+    },
+    {
+      title: 'Document Intelligence',
+      slug: 'document-intelligence',
+      description: 'AI extraction & validation',
+      icon: 'document',
+      features: ['OCR data extraction', 'Auto-populate fields', 'Flag missing information']
+    },
+    {
+      title: 'Application Management',
+      slug: 'application-management',
+      description: 'Pipeline & status tracking',
+      icon: 'pipeline',
+      features: ['Visual pipeline stages', 'Status notifications', 'Team collaboration']
+    }
+  ],
+  ai: [
+    {
+      title: 'AI Underwriting',
+      slug: 'ai-underwriting',
+      description: 'LTV, LTC, DSCR, ARV analysis',
+      icon: 'brain',
+      features: ['Risk scoring algorithms', 'LTV/LTC/ARV calculators', 'Experience assessment'],
+      highlight: true
+    },
+    {
+      title: 'Decision Engine',
+      slug: 'decision-engine',
+      description: 'Automated approve/decline',
+      icon: 'flow',
+      features: ['Custom rule builder', 'Automated decisions', 'Exception workflows'],
+      highlight: true
+    },
+    {
+      title: 'Explainable AI',
+      slug: 'explainable-ai',
+      description: 'Compliance & audit trails',
+      icon: 'shield',
+      features: ['Full decision reasoning', 'Audit logs', 'Regulatory compliance'],
+      highlight: true
+    }
+  ],
+  servicing: [
+    {
+      title: 'Loan Management',
+      slug: 'loan-management',
+      description: 'Registry & payment tracking',
+      icon: 'chart',
+      features: ['Loan registry', 'Payment schedules', 'Balance tracking']
+    },
+    {
+      title: 'Real Estate Valuator',
+      slug: 'real-estate-valuator',
+      description: 'Mobile property appraisals',
+      icon: 'home',
+      features: ['Photo-based appraisals', 'Comp sales lookup', 'ARV estimation']
+    },
+    {
+      title: 'Portfolio Reporting',
+      slug: 'portfolio-reporting',
+      description: 'Performance analytics',
+      icon: 'graph',
+      features: ['Portfolio dashboards', 'Risk metrics', 'Performance trends']
+    }
+  ],
+  oversight: [
+    {
+      title: 'Multi-Affiliate Dashboard',
+      slug: 'multi-affiliate-dashboard',
+      description: 'Cross-entity visibility',
+      icon: 'grid',
+      features: ['Consolidated view', 'Per-affiliate metrics', 'HQ oversight']
+    },
+    {
+      title: 'Consistency Metrics',
+      slug: 'consistency-metrics',
+      description: 'Standardized underwriting',
+      icon: 'target',
+      features: ['Approval rate tracking', 'Underwriter consistency', 'Policy adherence']
+    },
+    {
+      title: 'Integrations',
+      slug: 'integrations',
+      description: 'Credit bureaus, servicing, banks',
+      icon: 'plug',
+      features: ['Credit bureau APIs', 'Servicing platforms', 'Banking connections']
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Solutions - Loan Origination & Servicing | Mentyx.ai"
+  description="Comprehensive AI-powered solutions for loan origination, servicing, collections, and underwriting. Automate your entire lending lifecycle."
+  canonical="https://mentyx.ai/solutions"
+>
+  <main style="padding-top: 128px; padding-bottom: 96px;">
+    
+    <!-- Hero Section -->
+    <section style="margin-bottom: 80px;">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+        <div style="max-width: 896px; margin: 0 auto; text-align: center;" data-aos="fade-up">
+          <div style="display: inline-flex; padding: 10px 20px; border-radius: 9999px; background: rgba(30, 127, 229, 0.15); border: 1px solid rgba(30, 127, 229, 0.3); color: #00D4E6; font-size: 14px; font-weight: 500; margin-bottom: 24px;">
+            Complete Lending Solutions
+          </div>
+          <h1 style="font-size: 3.5rem; line-height: 1.1; font-weight: 900; margin-bottom: 24px; color: white;">
+            <span style="background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Private Real Estate</span> Lending Solutions
+          </h1>
+          <p style="font-size: 1.25rem; color: #d1d5db; line-height: 1.75; margin-bottom: 32px;">
+            Complete <span class="ai-text">AI</span>-powered platform for fix & flip, bridge, and DSCR loans
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Origination Solutions -->
+    <section style="margin-bottom: 96px;">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+        <div style="text-align: center; margin-bottom: 48px;" data-aos="fade-up">
+          <div style="display: inline-block; padding: 8px 16px; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 9999px; color: #06b6d4; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">Fix&Flip · Bridge · DSCR</div>
+          <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 16px; color: white;">Origination</h2>
+          <p style="font-size: 1.125rem; color: #64748b;">Borrower applications to underwriting decisions</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          {solutions.origination.map((solution, index) => (
+            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card">
+              <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #06b6d4;">
+                <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white;">{solution.title}</h3>
+              <p style="color: #94a3b8; margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">{solution.description}</p>
+              <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 8px;">
+                {solution.features.map(feature => (
+                  <li style="display: flex; align-items: center; gap: 8px; color: #cbd5e1; font-size: 0.875rem;">
+                    <svg style="width: 16px; height: 16px; color: #06b6d4; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div style="display: flex; align-items: center; gap: 8px; color: #06b6d4; font-weight: 600; font-size: 0.9375rem;" class="learn-more">
+                Learn more
+                <svg style="width: 16px; height: 16px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicing Solutions -->
+    <section style="margin-bottom: 96px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent); padding: 96px 0;">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+        <div style="text-align: center; margin-bottom: 48px;" data-aos="fade-up">
+          <div style="display: inline-block; padding: 8px 16px; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 9999px; color: #06b6d4; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">Single-Family RE</div>
+          <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 16px; color: white;">Servicing</h2>
+          <p style="font-size: 1.125rem; color: #64748b;">Basic loan management for neo-lenders</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          {solutions.servicing.map((solution, index) => (
+            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card">
+              <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #06b6d4;">
+                <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20 7h-9"/>
+                  <path d="M14 17H5"/>
+                  <circle cx="17" cy="17" r="3"/>
+                  <circle cx="7" cy="7" r="3"/>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white;">{solution.title}</h3>
+              <p style="color: #94a3b8; margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">{solution.description}</p>
+              <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 8px;">
+                {solution.features.map(feature => (
+                  <li style="display: flex; align-items: center; gap: 8px; color: #cbd5e1; font-size: 0.875rem;">
+                    <svg style="width: 16px; height: 16px; color: #06b6d4; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span set:html={feature.replace(/AI/g, '<span class="ai-text">AI</span>')} />
+                  </li>
+                ))}
+              </ul>
+              <div style="display: flex; align-items: center; gap: 8px; color: #06b6d4; font-weight: 600; font-size: 0.9375rem;" class="learn-more">
+                Learn more
+                <svg style="width: 16px; height: 16px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Oversight Solutions -->
+    <section style="margin-bottom: 96px;">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+        <div style="text-align: center; margin-bottom: 48px;" data-aos="fade-up">
+          <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 16px; color: white;">Oversight</h2>
+          <p style="font-size: 1.125rem; color: #64748b;">Multi-affiliate visibility and control</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          {solutions.oversight.map((solution, index) => (
+            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card">
+              <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #06b6d4;">
+                <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"/>
+                  <rect x="14" y="3" width="7" height="7"/>
+                  <rect x="14" y="14" width="7" height="7"/>
+                  <rect x="3" y="14" width="7" height="7"/>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white;">{solution.title}</h3>
+              <p style="color: #94a3b8; margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">{solution.description}</p>
+              <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 8px;">
+                {solution.features.map(feature => (
+                  <li style="display: flex; align-items: center; gap: 8px; color: #cbd5e1; font-size: 0.875rem;">
+                    <svg style="width: 16px; height: 16px; color: #06b6d4; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div style="display: flex; align-items: center; gap: 8px; color: #06b6d4; font-weight: 600; font-size: 0.9375rem;" class="learn-more">
+                Learn more
+                <svg style="width: 16px; height: 16px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Solutions (Highlighted) -->
+    <section style="margin-bottom: 96px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(167, 139, 250, 0.03) 100%); border: 1px solid rgba(139, 92, 246, 0.1); border-radius: 32px; padding: 80px 0; margin: 0 24px 96px;">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+        <div style="text-align: center; margin-bottom: 48px;" data-aos="fade-up">
+          <div style="display: inline-block; padding: 8px 16px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 9999px; color: #a78bfa; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">Asset-Based Lending</div>
+          <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 16px; color: white;"><span class="ai-text">AI</span> Underwriting</h2>
+          <p style="font-size: 1.125rem; color: #64748b;">Intelligent risk assessment for real estate loans</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          {solutions.ai.map((solution, index) => (
+            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(167, 139, 250, 0.05) 100%); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card-highlight">
+              <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.1) 100%); border: 1px solid rgba(139, 92, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #a78bfa;">
+                <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 1v6m0 6v6"/>
+                  <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/>
+                  <path d="M1 12h6m6 0h6"/>
+                  <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"/>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white;" set:html={solution.title.replace(/AI/g, '<span class="ai-text">AI</span>')} />
+              <p style="color: #94a3b8; margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">{solution.description}</p>
+              <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 8px;">
+                {solution.features.map(feature => (
+                  <li style="display: flex; align-items: center; gap: 8px; color: #cbd5e1; font-size: 0.875rem;">
+                    <svg style="width: 16px; height: 16px; color: #a78bfa; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div style="display: flex; align-items: center; gap: 8px; color: #a78bfa; font-weight: 600; font-size: 0.9375rem;" class="learn-more">
+                Learn more
+                <svg style="width: 16px; height: 16px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+        <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.08) 100%); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 24px; padding: 64px; text-align: center;" data-aos="fade-up">
+          <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 16px; color: white;">Ready to Transform Your Lending?</h2>
+          <p style="font-size: 1.25rem; color: #94a3b8; margin-bottom: 32px;">Schedule a demo to see our solutions in action</p>
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; padding: 16px 40px; background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); color: white; border-radius: 9999px; font-weight: 600; font-size: 1.125rem; text-decoration: none; box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35); transition: all 0.3s;">
+            Schedule a Demo
+            <svg style="width: 20px; height: 20px; margin-left: 8px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  .solution-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+  }
+  
+  .solution-card-highlight:hover {
+    transform: translateY(-8px);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+  }
+  
+  .solution-card:hover .learn-more svg,
+  .solution-card-highlight:hover .learn-more svg {
+    transform: translateX(4px);
+  }
+
+  /* Violet pulsing animation for AI text */
+  .ai-text {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: violetPulse 2s ease-in-out infinite;
+    font-weight: inherit;
+  }
+
+  @keyframes violetPulse {
+    0%, 100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.85;
+      filter: brightness(1.3);
+    }
+  }
+</style>

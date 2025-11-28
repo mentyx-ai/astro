@@ -1,0 +1,1772 @@
+---
+import Layout from '../../components/layouts/Layout.astro';
+import Button from '../../components/ui/Button.astro';
+import ContactModal from '../../components/ui/ContactModal.astro';
+---
+
+<Layout 
+  title="AI-Powered Loan Origination Blog | Mentyx.ai Insights & Research"
+  description="Comprehensive AI lending insights: 500+ case studies, loan origination automation guides, asset-based lending trends, document intelligence, and compliance best practices."
+  canonical="https://mentyx.ai/blog"
+>
+
+<main>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          <span>Intelligence Hub</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-gradient">Mentyx Insights</span>
+          <span class="title-white">& Resources</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Expert insights, case studies, and actionable strategies for modern loan origination. The definitive resource for AI-powered lending automation.
+        </p>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">500+</div>
+            <div class="stat-label">Lenders Analyzed</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">60%</div>
+            <div class="stat-label">Faster Decisions</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">90%</div>
+            <div class="stat-label">Error Reduction</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">$2B+</div>
+            <div class="stat-label">Deals Processed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filters -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-container">
+        <div class="search-box-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input 
+            type="text" 
+            id="searchBox" 
+            placeholder="Search 200+ articles on AI lending, loan origination, underwriting automation..." 
+            class="search-input"
+          />
+        </div>
+        
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="all">All Content</button>
+          <button class="filter-btn" data-category="case-study">Case Studies</button>
+          <button class="filter-btn" data-category="research">Research</button>
+          <button class="filter-btn" data-category="guide">Guides</button>
+          <button class="filter-btn" data-category="tools">Tools</button>
+          <button class="filter-btn" data-category="technology">Technology</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Article -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-header-inline">
+        <div>
+          <h2 class="section-title">Featured Insight</h2>
+          <p class="section-subtitle">Deep dive into the latest industry research</p>
+        </div>
+      </div>
+
+      <article class="featured-article" data-category="research">
+        <div class="featured-visual">
+          <div class="featured-icon-wrapper">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="featured-content">
+          <div class="featured-meta">
+            <span class="article-badge">INDUSTRY RESEARCH</span>
+            <span class="article-date">March 15, 2025</span>
+            <span class="article-read-time">12 min read</span>
+          </div>
+          
+          <h2 class="featured-title">
+            The State of Loan Origination 2025: How AI is Reshaping Asset-Based Lending
+          </h2>
+          
+          <p class="featured-description">
+            Comprehensive analysis of 500+ lenders reveals how AI automation cuts decision times by 60% and reduces document errors by 90%. Download the full research with actionable benchmarks.
+          </p>
+          
+          <div class="featured-footer">
+            <div class="author-info">
+              <div class="author-avatar">MT</div>
+              <div>
+                <div class="author-name">Mentyx Research Team</div>
+                <div class="author-title">Research & Analytics</div>
+              </div>
+            </div>
+            <!-- Updated button to use modal download -->
+            <button class="btn btn-primary download-btn" data-resource="State of Loan Origination 2025">
+              Download Report
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Interactive Tools -->
+  <section class="tools-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Interactive Tools</h2>
+        <p class="section-subtitle">Calculate ROI and plan your implementation</p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card" data-category="tools">
+          <div class="tool-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="tool-title">ROI Calculator</h3>
+          <p class="tool-description">
+            Input your current loan volume and processing time to calculate potential savings with AI automation. Get instant results with detailed breakdown.
+          </p>
+          <ul class="tool-features">
+            <li>Instant Results</li>
+            <li>Customizable Inputs</li>
+            <li>Detailed Breakdown</li>
+          </ul>
+          <a href="/roi-calculator" class="btn btn-secondary">
+            Access Calculator
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="tool-card" data-category="tools">
+          <div class="tool-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+            </svg>
+          </div>
+          <h3 class="tool-title">Implementation Checklist</h3>
+          <p class="tool-description">
+            45-point checklist covering data migration, team training, workflow mapping, and go-live preparation. Includes timeline estimates.
+          </p>
+          <ul class="tool-features">
+            <li>45-Point Checklist</li>
+            <li>Timeline Guide</li>
+            <li>Best Practices</li>
+          </ul>
+          <div class="tool-actions">
+            <a href="/blog/ai-implementation-checklist" class="btn btn-secondary">
+              View Checklist
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </a>
+            <button class="btn btn-secondary download-btn" data-resource="Implementation Checklist">
+              Download
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Articles Grid -->
+  <section class="articles-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Latest Articles</h2>
+        <p class="section-subtitle">Stay updated with the latest trends and best practices</p>
+      </div>
+
+      <div id="articlesGrid" class="articles-grid">
+        
+        <!-- Article 1: Case Study -->
+        <article class="article-card" data-category="case-study">
+          <div class="article-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge case-study">CASE STUDY</span>
+            <span class="article-date">March 10, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            How Regional Lender Cut Underwriting Time from 30 Days to 4 Hours
+          </h3>
+          
+          <p class="article-description">
+            Mid-Atlantic regional lender processes 150+ deals monthly with just 3 underwriters using Mentyx AI. See the complete transformation journey and ROI breakdown.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">8 min read</span>
+            <a href="/blog/regional-lender-case-study" class="article-link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2: Guide -->
+        <article class="article-card" data-category="guide">
+          <div class="article-icon guide">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge guide">GUIDE</span>
+            <span class="article-date">March 8, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            The Complete Guide to AI-Powered Document Intelligence in Lending
+          </h3>
+          
+          <p class="article-description">
+            Everything you need to know about extracting, validating, and analyzing loan documents automatically. Includes implementation checklist and cost-benefit analysis.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">15 min read</span>
+            <button class="article-link download-btn" data-resource="Document Intelligence Guide">
+              Download Guide
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 3: Technology -->
+        <article class="article-card" data-category="technology">
+          <div class="article-icon technology">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge technology">TECHNOLOGY</span>
+            <span class="article-date">March 5, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            GPT-4 vs Claude vs Gemini: Which AI Model Works Best for Loan Documents?
+          </h3>
+          
+          <p class="article-description">
+            We tested the top 3 AI models on 10,000 real loan documents. Here's what we learned about accuracy, speed, and cost-effectiveness for different document types.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">10 min read</span>
+            <a href="/blog/ai-models-comparison" class="article-link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 4: Research -->
+        <article class="article-card" data-category="research">
+          <div class="article-icon research">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge research">RESEARCH</span>
+            <span class="article-date">March 3, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            2025 Private Lending Benchmark Report: Automation Adoption & ROI
+          </h3>
+          
+          <p class="article-description">
+            Survey of 200+ private lenders shows 73% plan AI adoption in 2025. Average ROI is 340% in first year. Download full report with detailed breakdowns by deal size.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">14 min read</span>
+            <button class="article-link download-btn" data-resource="Private Lending Benchmark 2025">
+              Download Report
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 5: Case Study -->
+        <article class="article-card" data-category="case-study">
+          <div class="article-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge case-study">CASE STUDY</span>
+            <span class="article-date">February 28, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            $500M Fund Automates Portfolio Monitoring with AI Risk Scoring
+          </h3>
+          
+          <p class="article-description">
+            Real-time risk monitoring across 200+ positions reduced manual review time by 85% and improved early warning detection by 3x. Complete implementation timeline included.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">11 min read</span>
+            <a href="/blog/portfolio-monitoring-case-study" class="article-link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 6: Technology -->
+        <article class="article-card" data-category="technology">
+          <div class="article-icon technology">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge technology">TECHNOLOGY</span>
+            <span class="article-date">February 22, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            API-First Lending: Building Scalable Loan Origination Systems
+          </h3>
+          
+          <p class="article-description">
+            Technical deep dive into microservices architecture for lending platforms. Includes code samples, integration patterns, and performance benchmarks.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">18 min read</span>
+            <a href="/blog/api-first-lending" class="article-link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more-wrapper">
+        <button id="loadMore" class="btn btn-secondary">
+          Load More Articles
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h2 class="newsletter-title">Stay Ahead in Lending Innovation</h2>
+        <p class="newsletter-subtitle">
+          Get weekly insights on AI-powered lending, exclusive research, and industry benchmarks delivered to your inbox.
+        </p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn btn-primary">
+            Subscribe
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+        <p class="newsletter-disclaimer">No spam. Unsubscribe at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Transform Your Lending Operations?</h2>
+        <p class="cta-subtitle">
+          Schedule a personalized demo to see how Mentyx AI can automate your loan origination and reduce processing time by 60%.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary btn-lg" id="scheduleDemoBtn">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <a href="/platform" class="btn btn-secondary btn-lg">
+            Explore Platform
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Download Modal with Web3Forms Integration -->
+<div id="downloadModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModalBtn">&times;</button>
+    
+    <div id="downloadFormSection">
+      <div class="modal-icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h3 class="modal-title" id="modalResourceTitle">Download Resource</h3>
+      <p class="modal-subtitle">Enter your details to receive your free download</p>
+      
+      <!-- Web3Forms Integration -->
+      <form action="https://api.web3forms.com/submit" method="POST" id="downloadForm">
+        <input type="hidden" name="access_key" value="668cabdc-9057-4e2a-8995-2a2e8ec13aaf">
+        <input type="hidden" name="subject" id="formSubject" value="Blog Resource Download">
+        <input type="hidden" name="from_name" value="Mentyx.ai Blog">
+        <input type="hidden" name="resource_name" id="resourceName" value="">
+        
+        <div class="form-group">
+          <label for="download_name">Full Name *</label>
+          <input type="text" id="download_name" name="name" placeholder="John Smith" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="download_email">Work Email *</label>
+          <input type="email" id="download_email" name="email" placeholder="john@company.com" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="download_company">Company Name *</label>
+          <input type="text" id="download_company" name="company" placeholder="Your Lending Company" required />
+        </div>
+        
+        <div class="form-status" id="downloadFormStatus"></div>
+        
+        <button type="submit" class="btn btn-primary btn-block">
+          <span class="btn-text">Download Now</span>
+          <span class="btn-loader" style="display: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" opacity="0.25"/>
+              <path d="M12 2a10 10 0 0 1 10 10" opacity="0.75"/>
+            </svg>
+          </span>
+        </button>
+      </form>
+    </div>
+
+    <div id="downloadSuccessSection" class="success-message">
+      <div class="success-icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h3>Download Started!</h3>
+      <p class="success-text">
+        Your resource "<span id="confirmResourceName"></span>" has been sent to <span id="confirmDownloadEmail"></span>
+      </p>
+      <p class="success-note">Check your email for the download link and confirmation.</p>
+      <button id="closeSuccessBtn" class="btn btn-primary">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<ContactModal />
+
+<style>
+  /* Base Styles */
+  main {
+    background: #0f172a;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 9999px;
+    color: #06b6d4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .title-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-white {
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Search Section */
+  .search-section {
+    padding: 80px 0;
+    background: #0f172a;
+  }
+
+  .search-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .search-box-wrapper {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 16px 20px 16px 52px;
+    background: rgba(30, 127, 229, 0.06);
+    border: 1px solid rgba(30, 127, 229, 0.25);
+    border-radius: 12px;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    transition: all 0.3s;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+
+  .search-input::placeholder {
+    color: #64748b;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #94a3b8;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: rgba(30, 127, 229, 0.2);
+    border: 1px solid rgba(30, 127, 229, 0.4);
+    color: #00D4E6;
+  }
+
+  /* Section Headers */
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-header-inline {
+    margin-bottom: 48px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* Featured Section */
+  .featured-section {
+    padding: 0 0 120px 0;
+    background: #0f172a;
+  }
+
+  .featured-article {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    border-radius: 24px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 48px;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  .featured-article:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .featured-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .featured-icon-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: #06b6d4;
+  }
+
+  .featured-content {
+    flex: 1;
+  }
+
+  .featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .article-badge {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .article-badge {
+    background: rgba(30, 127, 229, 0.15);
+    border: 1px solid rgba(30, 127, 229, 0.3);
+    color: #00D4E6;
+  }
+
+  .article-badge.case-study {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+  }
+
+  .article-badge.guide {
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: #a855f7;
+  }
+
+  .article-badge.technology {
+    background: rgba(249, 115, 22, 0.15);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    color: #f97316;
+  }
+
+  .article-badge.research {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #3b82f6;
+  }
+
+  .article-date,
+  .article-read-time {
+    color: #6b7280;
+    font-size: 14px;
+  }
+
+  .featured-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+    line-height: 1.2;
+  }
+
+  .featured-description {
+    color: #cbd5e1;
+    line-height: 1.75;
+    margin: 0 0 32px 0;
+    font-size: 1.0625rem;
+  }
+
+  .featured-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .author-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .author-title {
+    font-size: 12px;
+    color: #6b7280;
+  }
+
+  /* Tools Section */
+  .tools-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+  }
+
+  .tool-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s;
+  }
+
+  .tool-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .tool-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+  }
+
+  .tool-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .tool-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+  }
+
+  .tool-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+  }
+
+  .tool-features li {
+    color: #cbd5e1;
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .tool-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  /* Tool Actions */
+  .tool-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .tool-actions .btn {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.9375rem;
+  }
+
+  .tool-actions .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s;
+  }
+
+  .tool-actions .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Articles Section */
+  .articles-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .article-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-card:hover {
+    border-color: rgba(59, 130, 246, 0.25);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .article-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    transition: all 0.3s;
+  }
+
+  .article-icon.guide {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.1) 100%);
+    border-color: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+  }
+
+  .article-icon.technology {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 179, 8, 0.1) 100%);
+    border-color: rgba(249, 115, 22, 0.2);
+    color: #f97316;
+  }
+
+  .article-icon.research {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border-color: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+  }
+
+  .article-card:hover .article-icon {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+  }
+
+  .article-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    flex: 1;
+  }
+
+  .article-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+  }
+
+  .read-time {
+    color: #6b7280;
+    font-size: 13px;
+  }
+
+  .article-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #00D4E6;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: gap 0.3s;
+    font-family: Inter, sans-serif;
+  }
+
+  .article-link:hover {
+    gap: 12px;
+  }
+
+  .load-more-wrapper {
+    text-align: center;
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(6, 182, 212, 0.03) 100%);
+  }
+
+  .newsletter-card {
+    background: rgba(30, 127, 229, 0.08);
+    border: 1px solid rgba(30, 127, 229, 0.3);
+    border-radius: 24px;
+    padding: 64px 48px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .newsletter-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #06b6d4;
+  }
+
+  .newsletter-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    margin: 0 0 16px 0;
+  }
+
+  .newsletter-subtitle {
+    font-size: 1.125rem;
+    color: #cbd5e1;
+    margin: 0 0 32px 0;
+    line-height: 1.75;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 16px;
+    max-width: 500px;
+    margin: 0 auto 16px;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 16px 20px;
+    background: rgba(30, 127, 229, 0.06);
+    border: 1px solid rgba(30, 127, 229, 0.25);
+    border-radius: 12px;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+  }
+
+  .newsletter-form input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+
+  .newsletter-disclaimer {
+    color: #6b7280;
+    font-size: 12px;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0 0 48px 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(59, 130, 246, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .btn-block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .modal.active {
+    display: flex;
+  }
+
+  .modal-content {
+    background: rgba(10, 22, 40, 0.98);
+    border: 1px solid rgba(30, 127, 229, 0.3);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+  }
+
+  .modal-close:hover {
+    color: #fff;
+  }
+
+  .modal-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: #06b6d4;
+  }
+
+  .modal-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .modal-subtitle {
+    color: #9ca3af;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(30, 127, 229, 0.06);
+    border: 1px solid rgba(30, 127, 229, 0.25);
+    border-radius: 12px;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+
+  .success-message {
+    display: none;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .success-message.active {
+    display: block;
+  }
+
+  .success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+  }
+
+  .success-message h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .success-text {
+    color: #cbd5e1;
+    margin-bottom: 8px;
+  }
+
+  .success-note {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+
+  /* Form Status Messages */
+  .form-status {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    display: none;
+  }
+
+  .form-status.success {
+    display: block;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+  }
+
+  .form-status.error {
+    display: block;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+  }
+
+  /* Button Loader */
+  .btn-loader svg {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .featured-article {
+      grid-template-columns: 1fr;
+      padding: 32px;
+    }
+
+    .tools-grid,
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tool-actions {
+      flex-direction: column;
+    }
+
+    .newsletter-form {
+      flex-direction: column;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .filter-buttons {
+      justify-content: flex-start;
+    }
+
+    .modal-content {
+      padding: 32px 24px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Elements
+    const modal = document.getElementById('downloadModal');
+    const downloadFormSection = document.getElementById('downloadFormSection');
+    const downloadSuccessSection = document.getElementById('downloadSuccessSection');
+    const downloadForm = document.getElementById('downloadForm');
+    const resourceNameInput = document.getElementById('resourceName');
+    const formSubjectInput = document.getElementById('formSubject');
+    const modalResourceTitle = document.getElementById('modalResourceTitle');
+    const confirmDownloadEmail = document.getElementById('confirmDownloadEmail');
+    const confirmResourceName = document.getElementById('confirmResourceName');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+    const downloadFormStatus = document.getElementById('downloadFormStatus');
+
+    let currentResource = '';
+
+    // Resource mapping for PDF downloads
+    const resourceMap = {
+      'State of Loan Origination 2025': {
+        url: '/downloads/state-of-loan-origination-2025.pdf',
+        filename: 'Mentyx-State-of-Loan-Origination-2025.pdf'
+      },
+      'Implementation Checklist': {
+        url: '/downloads/ai-implementation-checklist.pdf',
+        filename: 'Mentyx-AI-Implementation-Checklist.pdf'
+      },
+      'Document Intelligence Guide': {
+        url: '/downloads/document-intelligence-guide.pdf',
+        filename: 'Mentyx-Document-Intelligence-Guide.pdf'
+      },
+      'Private Lending Benchmark 2025': {
+        url: '/downloads/private-lending-benchmark-2025.pdf',
+        filename: 'Mentyx-Private-Lending-Benchmark-2025.pdf'
+      }
+    };
+
+    // Download button functionality
+    document.querySelectorAll('.download-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentResource = btn.dataset.resource || 'Resource';
+        
+        if (resourceNameInput) resourceNameInput.value = currentResource;
+        if (formSubjectInput) formSubjectInput.value = `Blog Resource Download: ${currentResource}`;
+        if (modalResourceTitle) modalResourceTitle.textContent = `Download ${currentResource}`;
+        
+        if (modal) {
+          modal.classList.add('active');
+          // Reset form and show form section
+          downloadFormSection.style.display = 'block';
+          downloadSuccessSection.classList.remove('active');
+          downloadForm?.reset();
+          downloadFormStatus.style.display = 'none';
+        }
+        
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close modal
+    function closeModal() {
+      if (modal) modal.classList.remove('active');
+      document.body.style.overflow = '';
+      downloadForm?.reset();
+      downloadFormStatus.style.display = 'none';
+    }
+
+    closeModalBtn?.addEventListener('click', closeModal);
+    closeSuccessBtn?.addEventListener('click', closeModal);
+
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Download form submission with Web3Forms
+    downloadForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = downloadForm.querySelector('button[type="submit"]');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoader = submitBtn.querySelector('.btn-loader');
+      
+      // Show loading state
+      btnText.style.display = 'none';
+      btnLoader.style.display = 'inline-block';
+      submitBtn.disabled = true;
+      downloadFormStatus.style.display = 'none';
+      
+      try {
+        // Submit to Web3Forms
+        const formData = new FormData(downloadForm);
+        const response = await fetch(downloadForm.action, {
+          method: 'POST',
+          body: formData,
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          // Trigger PDF download if resource exists in mapping
+          if (resourceMap[currentResource]) {
+            const resource = resourceMap[currentResource];
+            const link = document.createElement('a');
+            link.href = resource.url;
+            link.download = resource.filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }
+          
+          // Show success message
+          downloadFormSection.style.display = 'none';
+          downloadSuccessSection.classList.add('active');
+          confirmDownloadEmail.textContent = document.getElementById('download_email').value;
+          confirmResourceName.textContent = currentResource;
+          
+        } else {
+          throw new Error(result.message || 'Form submission failed');
+        }
+        
+      } catch (error) {
+        console.error('Download failed:', error);
+        
+        // Show error message but still allow download
+        downloadFormStatus.className = 'form-status error';
+        downloadFormStatus.textContent = 'Form submission failed, but your download is starting...';
+        downloadFormStatus.style.display = 'block';
+        
+        // Still trigger the download
+        if (resourceMap[currentResource]) {
+          const resource = resourceMap[currentResource];
+          const link = document.createElement('a');
+          link.href = resource.url;
+          link.download = resource.filename;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+        
+        // Show success message after a delay
+        setTimeout(() => {
+          downloadFormSection.style.display = 'none';
+          downloadSuccessSection.classList.add('active');
+          confirmDownloadEmail.textContent = document.getElementById('download_email').value;
+          confirmResourceName.textContent = currentResource;
+        }, 1000);
+      } finally {
+        // Reset button state
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const articles = document.querySelectorAll('.article-card, .featured-article');
+    const searchBox = document.getElementById('searchBox');
+    const loadMoreBtn = document.getElementById('loadMore');
+    const scheduleDemoBtn = document.getElementById('scheduleDemoBtn');
+    const newsletterForm = document.getElementById('newsletterForm');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.category;
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Filter articles
+        articles.forEach(article => {
+          if (category === 'all' || article.dataset.category === category) {
+            article.style.display = 'flex';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Search functionality
+    if (searchBox) {
+      searchBox.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        articles.forEach(article => {
+          const title = article.querySelector('h2, h3').textContent.toLowerCase();
+          const description = article.querySelector('p').textContent.toLowerCase();
+          
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            article.style.display = 'flex';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Schedule demo
+    scheduleDemoBtn?.addEventListener('click', () => {
+      window.open('https://calendly.com/contact-mentyx/30min', '_blank');
+    });
+
+    // Newsletter
+    newsletterForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for subscribing!');
+      newsletterForm.reset();
+    });
+
+    // Load more
+    let visibleCount = 6;
+    const allArticles = document.querySelectorAll('.article-card');
+
+    allArticles.forEach((article, index) => {
+      if (index >= visibleCount) article.style.display = 'none';
+    });
+
+    loadMoreBtn?.addEventListener('click', () => {
+      visibleCount += 3;
+      allArticles.forEach((article, index) => {
+        if (index < visibleCount) article.style.display = 'flex';
+      });
+      
+      if (visibleCount >= allArticles.length) {
+        loadMoreBtn.style.display = 'none';
+      }
+    });
+  });
+</script>
+</Layout>
