@@ -764,6 +764,10 @@
     background: none;
     border: none;
     cursor: pointer;
+    padding: 1rem 0;
+    color: white;
+    font-size: 1rem;
+    text-align: left;
   }
 
   .mobile-chevron {
@@ -823,12 +827,12 @@
     mobileMenu?.classList.toggle('active');
   });
 
-  // Close mobile menu when clicking a link
-
-  document.querySelectorAll('.mobile-link, .mobile-menu .btn').forEach(link => {
-
+  // Close mobile menu when clicking a link (but not the submenu toggle)
+  document.querySelectorAll('.mobile-link:not(.mobile-submenu-toggle), .mobile-menu .btn').forEach(link => {
     link.addEventListener('click', () => {
-
+      mobileMenu?.classList.remove('active');
+    });
+  });
 
   // Mobile Solutions submenu toggle
   const mobileSolutionsToggle = document.getElementById('mobileSolutionsToggle');
