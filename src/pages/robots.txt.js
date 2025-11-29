@@ -1,5 +1,5 @@
 // src/pages/robots.txt.js
-export async function get() {
+export async function GET() {
   const robotsTxt = `User-agent: *
 Allow: /
 Disallow: /api/
