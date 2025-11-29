@@ -1,5 +1,5 @@
 // src/pages/sitemap.xml.js
-export async function get() {
+export async function GET() {
   const baseUrl = 'https://mentyx.ai';
   const pages = [
     '',
@@ -22,10 +22,9 @@ export async function get() {
   `).join('')}
 </urlset>`;
 
-  return {
-    body: sitemap,
+  return new Response(sitemap, {
     headers: {
-      'Content-Type': 'application/xml'
+      'Content-Type': 'application/xml; charset=utf-8'
     }
-  };
+  });
 }
