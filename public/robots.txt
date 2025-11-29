@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://mentyx.ai/sitemap.xml

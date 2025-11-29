@@ -1,8 +1,7 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  output: 'static',
-  build: {
-    inlineStylesheets: 'auto'
-  }
+  site: 'https://mentyx.ai',
+  integrations: [sitemap()],
 });
