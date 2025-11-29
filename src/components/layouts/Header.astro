@@ -253,30 +253,65 @@
           </svg>
         </button>
         <div class="mobile-submenu" id="mobileSolutionsSubmenu">
-          <div class="mobile-submenu-section">
-            <div class="mobile-submenu-header">Origination</div>
-            <a href="/solutions/borrower-portal" class="mobile-sublink">Borrower Portal</a>
-            <a href="/solutions/document-intelligence" class="mobile-sublink">Document Intelligence</a>
-            <a href="/solutions/application-management" class="mobile-sublink">Application Management</a>
+          <!-- Origination Category -->
+          <div class="mobile-category">
+            <button class="mobile-category-toggle">
+              Origination
+              <svg class="category-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="mobile-category-content">
+              <a href="/solutions/borrower-portal" class="mobile-sublink">Borrower Portal</a>
+              <a href="/solutions/document-intelligence" class="mobile-sublink">Document Intelligence</a>
+              <a href="/solutions/application-management" class="mobile-sublink">Application Management</a>
+            </div>
           </div>
-          <div class="mobile-submenu-section">
-            <div class="mobile-submenu-header">AI Underwriting</div>
-            <a href="/solutions/ai-underwriting" class="mobile-sublink">AI Underwriting</a>
-            <a href="/solutions/risk-scoring" class="mobile-sublink">Risk Scoring</a>
-            <a href="/solutions/decision-engine" class="mobile-sublink">Decision Engine</a>
-            <a href="/solutions/explainable-ai" class="mobile-sublink">Explainable AI</a>
+
+          <!-- AI Underwriting Category -->
+          <div class="mobile-category">
+            <button class="mobile-category-toggle">
+              AI Underwriting
+              <svg class="category-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="mobile-category-content">
+              <a href="/solutions/ai-underwriting" class="mobile-sublink">AI Underwriting</a>
+              <a href="/solutions/risk-scoring" class="mobile-sublink">Risk Scoring</a>
+              <a href="/solutions/decision-engine" class="mobile-sublink">Decision Engine</a>
+              <a href="/solutions/explainable-ai" class="mobile-sublink">Explainable AI</a>
+            </div>
           </div>
-          <div class="mobile-submenu-section">
-            <div class="mobile-submenu-header">Servicing</div>
-            <a href="/solutions/loan-management" class="mobile-sublink">Loan Management</a>
-            <a href="/solutions/real-estate-valuator" class="mobile-sublink">Real Estate Valuator</a>
-            <a href="/solutions/portfolio-reporting" class="mobile-sublink">Portfolio Reporting</a>
+
+          <!-- Servicing Category -->
+          <div class="mobile-category">
+            <button class="mobile-category-toggle">
+              Servicing
+              <svg class="category-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="mobile-category-content">
+              <a href="/solutions/loan-management" class="mobile-sublink">Loan Management</a>
+              <a href="/solutions/real-estate-valuator" class="mobile-sublink">Real Estate Valuator</a>
+              <a href="/solutions/portfolio-reporting" class="mobile-sublink">Portfolio Reporting</a>
+            </div>
           </div>
-          <div class="mobile-submenu-section">
-            <div class="mobile-submenu-header">Oversight</div>
-            <a href="/solutions/multi-affiliate-dashboard" class="mobile-sublink">Multi-Affiliate Dashboard</a>
-            <a href="/solutions/consistency-metrics" class="mobile-sublink">Consistency Metrics</a>
-            <a href="/solutions/integrations" class="mobile-sublink">Integrations</a>
+
+          <!-- Oversight Category -->
+          <div class="mobile-category">
+            <button class="mobile-category-toggle">
+              Oversight
+              <svg class="category-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="mobile-category-content">
+              <a href="/solutions/multi-affiliate-dashboard" class="mobile-sublink">Multi-Affiliate Dashboard</a>
+              <a href="/solutions/consistency-metrics" class="mobile-sublink">Consistency Metrics</a>
+              <a href="/solutions/integrations" class="mobile-sublink">Integrations</a>
+            </div>
           </div>
         </div>
       </div>
@@ -425,7 +460,6 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Invisible bridge to keep menu open */
   .mega-menu::before {
     content: '';
     position: absolute;
@@ -479,7 +513,6 @@
     position: relative;
   }
 
-  /* Clickable Header Link */
   .mega-header-link {
     text-decoration: none;
     display: block;
@@ -545,7 +578,6 @@
     border: 1px solid rgba(139, 92, 246, 0.3);
   }
 
-  /* Violet pulsing effect for AI Solutions */
   .ai-title {
     background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
     -webkit-background-clip: text;
@@ -620,7 +652,6 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Invisible bridge for dropdown */
   .dropdown-menu::before {
     content: '';
     position: absolute;
@@ -717,7 +748,7 @@
   .mobile-menu {
     display: none;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
     padding: 24px;
     border-top: 1px solid rgba(59, 130, 246, 0.1);
   }
@@ -727,28 +758,17 @@
   }
 
   .mobile-link {
-    color: #cbd5e1;
+    color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 12px;
-    text-align: center;
+    padding: 12px 0;
     border-radius: 8px;
     transition: all 0.3s;
+    font-size: 1rem;
   }
 
   .mobile-link:hover {
-    background: rgba(59, 130, 246, 0.1);
-    color: white;
-  }
-
-  @media (max-width: 1024px) {
-    .nav-links {
-      display: none;
-    }
-
-    .mobile-menu-btn {
-      display: flex;
-    }
+    color: #06b6d4;
   }
 
   /* Mobile Submenu Styles */
@@ -761,17 +781,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 1rem 0;
-    color: white;
-    font-size: 1rem;
     text-align: left;
   }
 
   .mobile-chevron {
     transition: transform 0.3s ease;
+    flex-shrink: 0;
   }
 
   .mobile-submenu-toggle.active .mobile-chevron {
@@ -781,40 +796,84 @@
   .mobile-submenu {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.4s ease;
   }
 
   .mobile-submenu.active {
-    max-height: 800px;
+    max-height: 1000px;
   }
 
-  .mobile-submenu-section {
-    padding-left: 1rem;
-    margin-top: 0.5rem;
+  /* Mobile Category Styles */
+  .mobile-category {
+    margin: 4px 0;
   }
 
-  .mobile-submenu-header {
-    color: var(--blue-400);
-    font-size: 0.75rem;
+  .mobile-category-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    color: #06b6d4;
+    font-size: 0.875rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-    margin-top: 0.75rem;
+    text-align: left;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .mobile-category-toggle:hover {
+    background: rgba(59, 130, 246, 0.08);
+  }
+
+  .category-chevron {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .mobile-category-toggle.active .category-chevron {
+    transform: rotate(180deg);
+  }
+
+  .mobile-category-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 12px;
+  }
+
+  .mobile-category-content.active {
+    max-height: 500px;
   }
 
   .mobile-sublink {
     display: block;
-    padding: 0.5rem 0;
-    color: var(--slate-300);
+    padding: 8px 12px;
+    color: #cbd5e1;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    border-radius: 4px;
   }
 
   .mobile-sublink:hover {
-    color: var(--blue-400);
+    color: white;
+    background: rgba(59, 130, 246, 0.06);
+    padding-left: 16px;
+  }
 
+  @media (max-width: 1024px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+  }
 </style>
 
 <script>
@@ -826,8 +885,8 @@
     mobileMenu?.classList.toggle('active');
   });
 
-  // Close mobile menu when clicking a link (but not the submenu toggle)
-  document.querySelectorAll('.mobile-link:not(.mobile-submenu-toggle), .mobile-menu .btn').forEach(link => {
+  // Close mobile menu when clicking non-toggle links
+  document.querySelectorAll('.mobile-link:not(.mobile-submenu-toggle), .mobile-sublink, .mobile-menu .btn').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu?.classList.remove('active');
     });
@@ -841,5 +900,15 @@
     e.stopPropagation();
     mobileSolutionsToggle.classList.toggle('active');
     mobileSolutionsSubmenu?.classList.toggle('active');
+  });
+
+  // Mobile category toggles
+  document.querySelectorAll('.mobile-category-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const content = toggle.nextElementSibling;
+      toggle.classList.toggle('active');
+      content?.classList.toggle('active');
+    });
   });
 </script>
