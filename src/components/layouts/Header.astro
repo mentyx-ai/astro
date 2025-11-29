@@ -244,11 +244,47 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="/#solutions" class="mobile-link">Solutions</a>
+      <!-- Solutions Submenu -->
+      <div class="mobile-submenu-wrapper">
+        <button class="mobile-link mobile-submenu-toggle" id="mobileSolutionsToggle">
+          Solutions
+          <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="mobile-submenu" id="mobileSolutionsSubmenu">
+          <div class="mobile-submenu-section">
+            <div class="mobile-submenu-header">Origination</div>
+            <a href="/solutions/borrower-portal" class="mobile-sublink">Borrower Portal</a>
+            <a href="/solutions/document-intelligence" class="mobile-sublink">Document Intelligence</a>
+            <a href="/solutions/application-management" class="mobile-sublink">Application Management</a>
+          </div>
+          <div class="mobile-submenu-section">
+            <div class="mobile-submenu-header">AI Underwriting</div>
+            <a href="/solutions/ai-underwriting" class="mobile-sublink">AI Underwriting</a>
+            <a href="/solutions/risk-scoring" class="mobile-sublink">Risk Scoring</a>
+            <a href="/solutions/decision-engine" class="mobile-sublink">Decision Engine</a>
+            <a href="/solutions/explainable-ai" class="mobile-sublink">Explainable AI</a>
+          </div>
+          <div class="mobile-submenu-section">
+            <div class="mobile-submenu-header">Servicing</div>
+            <a href="/solutions/loan-management" class="mobile-sublink">Loan Management</a>
+            <a href="/solutions/real-estate-valuator" class="mobile-sublink">Real Estate Valuator</a>
+            <a href="/solutions/portfolio-reporting" class="mobile-sublink">Portfolio Reporting</a>
+          </div>
+          <div class="mobile-submenu-section">
+            <div class="mobile-submenu-header">Oversight</div>
+            <a href="/solutions/multi-affiliate-dashboard" class="mobile-sublink">Multi-Affiliate Dashboard</a>
+            <a href="/solutions/consistency-metrics" class="mobile-sublink">Consistency Metrics</a>
+            <a href="/solutions/integrations" class="mobile-sublink">Integrations</a>
+          </div>
+        </div>
+      </div>
+      
       <a href="/platform" class="mobile-link">Platform</a>
       <a href="/about/company" class="mobile-link">About Us</a>
       <a href="/blog" class="mobile-link">Blog</a>
-      <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary" style="width: 100%;">Schedule a Call</a>
+      <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary" style="width: 100%;">Schedule a Call</a>     
     </div>
   </nav>
 </header>
@@ -714,6 +750,68 @@
       display: flex;
     }
   }
+
+  /* Mobile Submenu Styles */
+  .mobile-submenu-wrapper {
+    width: 100%;
+  }
+
+  .mobile-submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-chevron {
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-submenu-toggle.active .mobile-chevron {
+    transform: rotate(180deg);
+  }
+
+  .mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-submenu.active {
+    max-height: 800px;
+  }
+
+  .mobile-submenu-section {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .mobile-submenu-header {
+    color: var(--blue-400);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .mobile-sublink {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--slate-300);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-sublink:hover {
+    color: var(--blue-400);
+  }
+
 </style>
 
 <script>
@@ -726,9 +824,24 @@
   });
 
   // Close mobile menu when clicking a link
+
   document.querySelectorAll('.mobile-link, .mobile-menu .btn').forEach(link => {
+
     link.addEventListener('click', () => {
+
+
+  // Mobile Solutions submenu toggle
+  const mobileSolutionsToggle = document.getElementById('mobileSolutionsToggle');
+  const mobileSolutionsSubmenu = document.getElementById('mobileSolutionsSubmenu');
+  
+  mobileSolutionsToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mobileSolutionsToggle.classList.toggle('active');
+    mobileSolutionsSubmenu?.classList.toggle('active');
+  });
       mobileMenu?.classList.remove('active');
+
     });
+
   });
 </script>
