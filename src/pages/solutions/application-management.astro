@@ -5,7 +5,8 @@ import Layout from '../../components/layouts/Layout.astro';
 
 <Layout 
   title="Application Management - Loan Pipeline Tracking | Mentyx.ai"
-  description="Visual pipeline management for fix & flip, bridge, and DSCR loan applications. Track status, prioritize deals, and never lose a borrower."
+  description="Visual pipeline management for fix & flip, bridge, and DSCR loan applications. Track status, prioritize high-LTV deals, and never lose a borrower across affiliates."
+  canonical="https://mentyx.ai/solutions/application-management"
 >
 
 <!-- Hero Section -->
@@ -17,7 +18,7 @@ import Layout from '../../components/layouts/Layout.astro';
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
           <polyline points="14 2 14 8 20 8"/>
         </svg>
-        <span>Origination</span>
+        <span>Origination · Asset-Based</span>
       </div>
       
       <h1 class="hero-title">
@@ -26,7 +27,7 @@ import Layout from '../../components/layouts/Layout.astro';
       </h1>
       
       <p class="hero-subtitle">
-        Visual pipeline tracking so you never lose a deal. See exactly where every application stands—from submission to funding.
+        Visual pipeline tracking for asset-based real estate lending. See exactly where every fix & flip, bridge, and DSCR loan stands—from submission to funding—across all affiliates and markets.
       </p>
 
       <div class="hero-buttons">
@@ -46,17 +47,17 @@ import Layout from '../../components/layouts/Layout.astro';
       <div class="hero-stats">
         <div class="stat-item">
           <div class="stat-value">Real-Time</div>
-          <div class="stat-label">Pipeline Updates</div>
+          <div class="stat-label">Loan Pipeline Updates</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <div class="stat-value">Visual</div>
-          <div class="stat-label">Kanban Board</div>
+          <div class="stat-value">360°</div>
+          <div class="stat-label">View Across Affiliates</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <div class="stat-value">Zero</div>
-          <div class="stat-label">Lost Applications</div>
+          <div class="stat-value">0</div>
+          <div class="stat-label">Lost or Forgotten Deals</div>
         </div>
       </div>
     </div>
@@ -68,7 +69,7 @@ import Layout from '../../components/layouts/Layout.astro';
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Never Lose Track of a Deal</h2>
-      <p class="section-subtitle">Complete visibility from application to funding</p>
+      <p class="section-subtitle">Complete visibility from application to funded loan</p>
     </div>
 
     <div class="features-grid">
@@ -84,13 +85,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Visual Kanban Pipeline</h3>
         <p class="feature-description">
-          Drag-and-drop interface shows all deals at a glance. Move applications through stages—Submitted, Document Review, Underwriting, Approved, Funded.
+          Drag-and-drop interface shows all fix & flip, bridge, and DSCR deals at a glance. Move applications through stages—from New to Funded—with one click.
         </p>
         <ul class="feature-list">
-          <li>Customizable pipeline stages</li>
-          <li>Drag & drop to move deals</li>
-          <li>Color-coded by status</li>
-          <li>Filter by loan type or affiliate</li>
+          <li>Customizable pipeline stages per product (Fix & Flip, Bridge, DSCR)</li>
+          <li>Drag & drop to move deals between stages</li>
+          <li>Color-coded by product, leverage, or risk band</li>
+          <li>Filter by affiliate, state, loan size, or lien position</li>
         </ul>
       </div>
 
@@ -103,13 +104,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Real-Time Status Updates</h3>
         <p class="feature-description">
-          Everyone sees the same information instantly. When underwriter approves a deal, status updates everywhere—no more "what's the status?" phone calls.
+          Everyone works off the same source of truth. Once underwriting updates LTV, ARV, or conditions, status and notes are visible instantly for loan officers, processors, and executives.
         </p>
         <ul class="feature-list">
-          <li>Auto-sync across all users</li>
-          <li>Email & SMS notifications</li>
-          <li>Activity timeline per application</li>
-          <li>Status change alerts</li>
+          <li>Auto-sync across underwriters, processors, and originators</li>
+          <li>Email & SMS notifications on key milestones</li>
+          <li>Activity timeline per application (LTV changes, DSCR updates, notes)</li>
+          <li>Status change alerts for hot and expiring deals</li>
         </ul>
       </div>
 
@@ -122,13 +123,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Missing Document Tracking</h3>
         <p class="feature-description">
-          See which applications are stalled waiting for documents. One click shows exactly what's missing and who needs to provide it.
+          Instantly see which deals are stuck because of missing docs—purchase contract, rehab budget, appraisal, rent roll, or bank statements—and who needs to act.
         </p>
         <ul class="feature-list">
-          <li>Document checklist per loan</li>
-          <li>Red flags for missing items</li>
-          <li>Auto-reminders to borrowers</li>
-          <li>Upload deadline tracking</li>
+          <li>Loan-specific checklist (Fix & Flip, Bridge, DSCR templates)</li>
+          <li>Red flags for missing or expired items</li>
+          <li>Auto-reminders to borrowers and brokers</li>
+          <li>Upload deadlines tied to closing dates</li>
         </ul>
       </div>
 
@@ -142,13 +143,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Priority & Urgency Flags</h3>
         <p class="feature-description">
-          Mark hot deals that need attention. Filter by priority to focus on time-sensitive applications first—perfect for competitive properties.
+          Surface time-sensitive deals first—competitive acquisitions, rate-lock expirations, or tight rehab timelines. Focus your team on the loans that move the needle.
         </p>
         <ul class="feature-list">
-          <li>High/Medium/Low priority tags</li>
-          <li>Days in stage counter</li>
-          <li>SLA breach warnings</li>
-          <li>Sort by urgency</li>
+          <li>High/Medium/Low priority tags per loan</li>
+          <li>Days-in-stage counter and SLA thresholds</li>
+          <li>Alerts for rate-lock or contract deadlines</li>
+          <li>Sort and filter by urgency and loan size</li>
         </ul>
       </div>
 
@@ -163,13 +164,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Team Assignment</h3>
         <p class="feature-description">
-          Assign applications to specific underwriters or loan officers. Everyone knows who owns what—no duplicate work, no confusion.
+          Route applications to the right underwriter or affiliate based on product, state, and complexity. Everyone knows who owns the next step.
         </p>
         <ul class="feature-list">
-          <li>Assign to team members</li>
-          <li>Workload balancing</li>
-          <li>Per-user dashboards</li>
-          <li>Performance tracking</li>
+          <li>Assign deals to underwriters, processors, or branches</li>
+          <li>Balance workload by loan count and volume</li>
+          <li>Per-user dashboards for daily focus</li>
+          <li>Performance tracking by product and risk band</li>
         </ul>
       </div>
 
@@ -182,13 +183,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Deal Value Overview</h3>
         <p class="feature-description">
-          See total pipeline value at each stage. Know how much volume is in underwriting vs. approved and ready to fund.
+          Understand pipeline value at a glance—by stage, by product, and by leverage. See how much LTC and LTV you’re committing before funding.
         </p>
         <ul class="feature-list">
-          <li>Total $ per pipeline stage</li>
-          <li>Loan count by stage</li>
-          <li>Expected funding dates</li>
-          <li>Revenue forecasting</li>
+          <li>Total $ volume per stage and per product type</li>
+          <li>Loan count by state, affiliate, and program</li>
+          <li>Expected funding dates and cash needs</li>
+          <li>Revenue and fee forecasting across the portfolio</li>
         </ul>
       </div>
 
@@ -200,13 +201,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Bottleneck Detection</h3>
         <p class="feature-description">
-          Automatically identifies where applications get stuck. See if Document Review is the slowest stage and allocate resources accordingly.
+          Automatically identifies where asset-based deals get stuck—title, appraisal, rehab budget, or underwriting—and shows you where to add capacity.
         </p>
         <ul class="feature-list">
-          <li>Average time per stage</li>
-          <li>Stuck application alerts</li>
-          <li>Stage velocity metrics</li>
-          <li>Process optimization insights</li>
+          <li>Average time per stage and per product</li>
+          <li>Alerts when loans exceed SLA thresholds</li>
+          <li>Stage velocity metrics by affiliate</li>
+          <li>Actionable recommendations for process changes</li>
         </ul>
       </div>
 
@@ -220,13 +221,13 @@ import Layout from '../../components/layouts/Layout.astro';
         </div>
         <h3 class="feature-title">Export & Reporting</h3>
         <p class="feature-description">
-          Export pipeline data to Excel for board meetings or investor reports. Historical snapshots show how pipeline evolved over time.
+          Export pipeline data for investors, warehouse lenders, or internal committees. Track how quickly you move high-LTV, high-ARV deals from submitted to funded.
         </p>
         <ul class="feature-list">
-          <li>CSV/Excel export</li>
-          <li>Custom date ranges</li>
-          <li>Pipeline snapshots</li>
-          <li>Conversion rate reports</li>
+          <li>CSV/Excel export for board and investor decks</li>
+          <li>Custom date ranges and product filters</li>
+          <li>Historical pipeline snapshots over time</li>
+          <li>Conversion rate reporting by channel and product</li>
         </ul>
       </div>
 
@@ -239,32 +240,32 @@ import Layout from '../../components/layouts/Layout.astro';
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Why Visual Pipeline Management Works</h2>
-      <p class="section-subtitle">From chaos to clarity in one screen</p>
+      <p class="section-subtitle">From scattered spreadsheets to one lending cockpit</p>
     </div>
 
     <div class="benefits-grid">
       <div class="benefit-card">
         <div class="benefit-number">01</div>
         <h3>No More Status Calls</h3>
-        <p>Borrowers and loan officers check status online. Underwriters update once, everyone sees it. Saves 10-15 hours per week of "what's the status?" interruptions.</p>
+        <p>Borrowers, brokers, and loan officers see status online. Underwriters update once, everyone sees it. Saves 10–15 hours per week in “what’s the status?” emails, texts, and phone calls.</p>
       </div>
 
       <div class="benefit-card">
         <div class="benefit-number">02</div>
         <h3>Faster Closings</h3>
-        <p>See exactly what's holding up each deal. Missing appraisal? Assign someone to follow up immediately. Average time-to-close drops by 30%.</p>
+        <p>See exactly what is holding up each deal—missing appraisal, title conditions, or updated rehab budget. Assign the next action instantly and reduce average time-to-close by 20–30%.</p>
       </div>
 
       <div class="benefit-card">
         <div class="benefit-number">03</div>
         <h3>Better Capacity Planning</h3>
-        <p>See pipeline volume coming down the funnel. If 50 deals are hitting underwriting next week, you know to allocate resources now.</p>
+        <p>Know how many loans (and how much volume) will hit underwriting or funding in the next 7–30 days. Plan staffing for fix & flip spikes, seasonal DSCR waves, or affiliate campaigns.</p>
       </div>
 
       <div class="benefit-card">
         <div class="benefit-number">04</div>
         <h3>Higher Conversion Rates</h3>
-        <p>Applications don't fall through the cracks. Auto-reminders keep deals moving. Close 15-20% more of your submitted applications.</p>
+        <p>Applications don’t fall through the cracks. Automated reminders, clear ownership, and SLA alerts keep deals moving—and help you close more of the loans you quote.</p>
       </div>
     </div>
   </div>
@@ -275,14 +276,14 @@ import Layout from '../../components/layouts/Layout.astro';
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Standard Pipeline Stages</h2>
-      <p class="section-subtitle">Customize to match your workflow</p>
+      <p class="section-subtitle">Built for asset-based lending, fully customizable</p>
     </div>
 
     <div class="pipeline-stages">
       <div class="pipeline-stage">
         <div class="stage-number">1</div>
         <h3>New Applications</h3>
-        <p>Just submitted, awaiting initial review</p>
+        <p>Lead captured, 1003 or custom app received, basic deal terms logged</p>
       </div>
       
       <div class="pipeline-arrow">→</div>
@@ -290,7 +291,7 @@ import Layout from '../../components/layouts/Layout.astro';
       <div class="pipeline-stage">
         <div class="stage-number">2</div>
         <h3>Document Review</h3>
-        <p>Checking completeness, requesting missing docs</p>
+        <p>Checking completeness: purchase contract, rehab budget, photos, rent roll</p>
       </div>
       
       <div class="pipeline-arrow">→</div>
@@ -298,7 +299,7 @@ import Layout from '../../components/layouts/Layout.astro';
       <div class="pipeline-stage">
         <div class="stage-number">3</div>
         <h3>Underwriting</h3>
-        <p>AI + human review, risk assessment</p>
+        <p>AI + human review: ARV, LTV/LTC, DSCR, borrower strength, exit strategy</p>
       </div>
       
       <div class="pipeline-arrow">→</div>
@@ -306,7 +307,7 @@ import Layout from '../../components/layouts/Layout.astro';
       <div class="pipeline-stage">
         <div class="stage-number">4</div>
         <h3>Approved</h3>
-        <p>Conditional or final approval issued</p>
+        <p>Term sheet or conditional approval issued, conditions tracked</p>
       </div>
       
       <div class="pipeline-arrow">→</div>
@@ -314,7 +315,7 @@ import Layout from '../../components/layouts/Layout.astro';
       <div class="pipeline-stage">
         <div class="stage-number">5</div>
         <h3>Clear to Close</h3>
-        <p>All conditions met, ready for funding</p>
+        <p>All conditions cleared, docs ready, funding scheduled</p>
       </div>
       
       <div class="pipeline-arrow">→</div>
@@ -322,7 +323,7 @@ import Layout from '../../components/layouts/Layout.astro';
       <div class="pipeline-stage">
         <div class="stage-number">6</div>
         <h3>Funded</h3>
-        <p>Money wired, loan active</p>
+        <p>Money wired, loan boarded to servicing or portfolio management</p>
       </div>
     </div>
 
@@ -332,7 +333,9 @@ import Layout from '../../components/layouts/Layout.astro';
         <line x1="12" y1="16" x2="12" y2="12"/>
         <line x1="12" y1="8" x2="12.01" y2="8"/>
       </svg>
-      <p>Add, remove, or rename stages to match your process. Some lenders use 4 stages, others use 8. Mentyx adapts to your workflow.</p>
+      <p>
+        Add, remove, or rename stages to match your process. Many lenders split by product (Fix & Flip, Bridge, DSCR) or by channel (retail vs. broker). Mentyx adapts to your origination model—not the other way around.
+      </p>
     </div>
   </div>
 </section>
@@ -341,8 +344,8 @@ import Layout from '../../components/layouts/Layout.astro';
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2 class="cta-title">Ready to See Your Pipeline?</h2>
-      <p class="cta-subtitle">Watch a 5-minute demo of the visual pipeline in action</p>
+      <h2 class="cta-title">Ready to See Your Pipeline in One Screen?</h2>
+      <p class="cta-subtitle">Get a 5-minute walkthrough of how Mentyx tracks every fix & flip, bridge, and DSCR loan from app to funding.</p>
       <div class="cta-buttons">
         <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
           Schedule Demo
