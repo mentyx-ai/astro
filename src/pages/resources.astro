@@ -3,9 +3,10 @@ import Layout from '../components/layouts/Layout.astro';
 ---
 
 <Layout 
-  title="Resources & Downloads - Whitepapers, Guides & Tools | Mentyx.ai"
-  description="Download free resources: ROI calculators, implementation guides, industry reports, and best practices for loan origination automation."
+  title="AI Lending Resources for Private Real Estate Lenders | Guides, Tools & Case Studies"
+  description="Download free AI lending resources for private real estate lenders: ROI calculators, implementation guides, industry benchmarks, and case studies for Fix & Flip, Bridge and DSCR loan origination."
   canonical="https://mentyx.ai/resources"
+  ogImage="/og-default.jpg"
 >
   <main style="padding-top: 8rem; padding-bottom: 6rem;">
     
@@ -14,13 +15,13 @@ import Layout from '../components/layouts/Layout.astro';
       <div class="container">
         <div style="max-width: 56rem; margin: 0 auto; text-align: center;" data-aos="fade-up">
           <div style="display: inline-flex; padding: 0.625rem 1.25rem; border-radius: 9999px; background: rgba(30,127,229,.15); border: 1px solid rgba(30,127,229,.3); color: #00D4E6; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">
-            Free Resources
+            Free Resources for Private Lenders
           </div>
           <h1 style="font-size: 3rem; font-weight: 900; margin-bottom: 1.5rem;">
             Resource <span class="gradient-text">Library</span>
           </h1>
           <p style="font-size: 1.25rem; color: #d1d5db; line-height: 1.75;">
-            Download guides, whitepapers, calculators, and reports to accelerate your lending transformation
+            Download guides, whitepapers, calculators, and reports to accelerate your AI-powered loan origination and underwriting.
           </p>
         </div>
       </div>
@@ -30,12 +31,12 @@ import Layout from '../components/layouts/Layout.astro';
     <section style="margin-bottom: 4rem;">
       <div class="container">
         <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem;">
-          <button class="category-btn active" data-category="all">All Resources</button>
-          <button class="category-btn" data-category="reports">Industry Reports</button>
-          <button class="category-btn" data-category="guides">Implementation Guides</button>
-          <button class="category-btn" data-category="tools">Interactive Tools</button>
-          <button class="category-btn" data-category="whitepapers">Whitepapers</button>
-          <button class="category-btn" data-category="case-studies">Case Studies</button>
+          <button class="category-btn active" data-category="all" type="button">All Resources</button>
+          <button class="category-btn" data-category="reports" type="button">Industry Reports</button>
+          <button class="category-btn" data-category="guides" type="button">Implementation Guides</button>
+          <button class="category-btn" data-category="tools" type="button">Interactive Tools</button>
+          <button class="category-btn" data-category="whitepapers" type="button">Whitepapers</button>
+          <button class="category-btn" data-category="case-studies" type="button">Case Studies</button>
         </div>
       </div>
     </section>
@@ -48,29 +49,29 @@ import Layout from '../components/layouts/Layout.astro';
             <span class="resource-tag featured-tag">Featured Report • 32 Pages</span>
             <h2 style="font-size: 2.25rem; font-weight: 900; margin-bottom: 1.5rem;">The State of Loan Origination 2025</h2>
             <p style="font-size: 1.125rem; color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.75;">
-              Comprehensive industry research analyzing 500+ lenders. Discover how AI automation is cutting decision times by 60% and reducing errors by 90%.
+              Comprehensive industry research analyzing 500+ lenders. Discover how AI automation is cutting decision times by 60% and reducing errors by 90% across Fix & Flip, Bridge and DSCR products.
             </p>
             <div class="resource-benefits">
               <div class="benefit-item">
                 <svg style="width: 1.25rem; height: 1.25rem; color: #00D4E6;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                Industry benchmarks & performance metrics
+                Industry benchmarks & performance metrics for private lenders
               </div>
               <div class="benefit-item">
                 <svg style="width: 1.25rem; height: 1.25rem; color: #00D4E6;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                ROI analysis & cost-benefit models
+                ROI analysis & cost-benefit models for AI loan origination
               </div>
               <div class="benefit-item">
                 <svg style="width: 1.25rem; height: 1.25rem; color: #00D4E6;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                Implementation roadmap & best practices
+                Implementation roadmap & best practices for underwriting automation
               </div>
             </div>
-            <button class="btn btn-primary download-btn" data-resource="State of Loan Origination 2025" data-category="reports">
+            <button class="btn btn-primary download-btn" data-resource="State of Loan Origination 2025" data-category="reports" type="button">
               Download Free Report
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -78,7 +79,7 @@ import Layout from '../components/layouts/Layout.astro';
             </button>
           </div>
           <div class="featured-resource-visual">
-            <div class="resource-preview">
+            <div class="resource-preview" aria-hidden="true">
               <div class="preview-page"></div>
               <div class="preview-page"></div>
               <div class="preview-page"></div>
@@ -110,7 +111,7 @@ import Layout from '../components/layouts/Layout.astro';
               <span class="meta-item">Instant Results</span>
               <span class="meta-item">Customizable</span>
             </div>
-            <button class="download-btn" data-resource="ROI Calculator" data-category="tools">
+            <button class="download-btn" data-resource="ROI Calculator" data-category="tools" type="button">
               Access Calculator
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -131,7 +132,7 @@ import Layout from '../components/layouts/Layout.astro';
               <span class="meta-item">45-Point Checklist</span>
               <span class="meta-item">Timeline Guide</span>
             </div>
-            <button class="download-btn" data-resource="Implementation Checklist" data-category="tools">
+            <button class="download-btn" data-resource="Implementation Checklist" data-category="tools" type="button">
               Download Checklist
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -147,7 +148,7 @@ import Layout from '../components/layouts/Layout.astro';
       <div class="container">
         <div class="section-header" data-aos="fade-up">
           <h2>Guides & Whitepapers</h2>
-          <p>In-depth resources for lending professionals</p>
+          <p>In-depth resources for private real estate lending teams</p>
         </div>
 
         <div class="resources-grid">
@@ -159,12 +160,12 @@ import Layout from '../components/layouts/Layout.astro';
             </div>
             <span class="resource-tag">Guide • 18 Pages</span>
             <h3>Complete Guide to Bridge Loan Automation</h3>
-            <p>Step-by-step implementation guide for automating bridge loan workflows with AI.</p>
+            <p>Step-by-step implementation guide for automating bridge loan workflows with AI – from intake to underwriting and decisioning.</p>
             <div class="resource-meta">
               <span class="meta-item">Step-by-Step</span>
               <span class="meta-item">Workflow Templates</span>
             </div>
-            <button class="download-btn" data-resource="Bridge Loan Guide" data-category="guides">
+            <button class="download-btn" data-resource="Bridge Loan Guide" data-category="guides" type="button">
               Download Guide
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3"/>
@@ -180,12 +181,12 @@ import Layout from '../components/layouts/Layout.astro';
             </div>
             <span class="resource-tag">Whitepaper • 24 Pages</span>
             <h3>Document Intelligence Best Practices</h3>
-            <p>How to maximize accuracy with AI-powered document extraction systems.</p>
+            <p>How to maximize accuracy with AI-powered document extraction across appraisals, credit reports and loan packages.</p>
             <div class="resource-meta">
               <span class="meta-item">AI Best Practices</span>
               <span class="meta-item">Accuracy Tips</span>
             </div>
-            <button class="download-btn" data-resource="Document Intelligence Whitepaper" data-category="whitepapers">
+            <button class="download-btn" data-resource="Document Intelligence Whitepaper" data-category="whitepapers" type="button">
               Download Paper
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3"/>
@@ -201,12 +202,12 @@ import Layout from '../components/layouts/Layout.astro';
             </div>
             <span class="resource-tag">Guide • 16 Pages</span>
             <h3>Compliance Checklist for Lenders</h3>
-            <p>Ensure regulatory compliance with automated workflows and audit trails.</p>
+            <p>Ensure regulatory compliance with automated workflows, audit trails and consistent underwriting decisions.</p>
             <div class="resource-meta">
               <span class="meta-item">Regulatory</span>
               <span class="meta-item">Audit Ready</span>
             </div>
-            <button class="download-btn" data-resource="Compliance Guide" data-category="guides">
+            <button class="download-btn" data-resource="Compliance Guide" data-category="guides" type="button">
               Download Checklist
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3"/>
@@ -222,12 +223,12 @@ import Layout from '../components/layouts/Layout.astro';
             </div>
             <span class="resource-tag">Report • 28 Pages</span>
             <h3>Private Lending Benchmarks 2025</h3>
-            <p>Industry data on decision times, error rates, and operational efficiency.</p>
+            <p>Industry data on decision times, error rates, and operational efficiency for private real estate lenders.</p>
             <div class="resource-meta">
               <span class="meta-item">Industry Data</span>
               <span class="meta-item">Benchmarks</span>
             </div>
-            <button class="download-btn" data-resource="Benchmarks Report" data-category="reports">
+            <button class="download-btn" data-resource="Benchmarks Report" data-category="reports" type="button">
               View Report
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3"/>
@@ -243,12 +244,12 @@ import Layout from '../components/layouts/Layout.astro';
             </div>
             <span class="resource-tag">eBook • 42 Pages</span>
             <h3>AI Underwriting Playbook</h3>
-            <p>Everything you need to implement AI-powered underwriting decisions.</p>
+            <p>Everything you need to implement AI-powered underwriting decisions across Fix & Flip, Bridge and DSCR products.</p>
             <div class="resource-meta">
               <span class="meta-item">Comprehensive</span>
               <span class="meta-item">Implementation</span>
             </div>
-            <button class="download-btn" data-resource="AI Underwriting Playbook" data-category="whitepapers">
+            <button class="download-btn" data-resource="AI Underwriting Playbook" data-category="whitepapers" type="button">
               Download eBook
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3"/>
@@ -264,12 +265,12 @@ import Layout from '../components/layouts/Layout.astro';
             </div>
             <span class="resource-tag">Case Study • 8 Pages</span>
             <h3>$50M Portfolio with 3-Person Team</h3>
-            <p>How Heritage Capital scaled operations 10x without proportional headcount.</p>
+            <p>How Heritage Capital scaled operations 10x without proportional headcount using Mentyx automation.</p>
             <div class="resource-meta">
               <span class="meta-item">10x Scaling</span>
               <span class="meta-item">Efficiency</span>
             </div>
-            <button class="download-btn" data-resource="Heritage Capital Case Study" data-category="case-studies">
+            <button class="download-btn" data-resource="Heritage Capital Case Study" data-category="case-studies" type="button">
               Read Case Study
               <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3"/>
@@ -290,7 +291,7 @@ import Layout from '../components/layouts/Layout.astro';
             </svg>
           </div>
           <h2>Stay Updated</h2>
-          <p>Get the latest resources, industry insights, and product updates delivered monthly</p>
+          <p>Get the latest resources, industry insights, and product updates for private lenders – delivered monthly.</p>
           <form id="newsletterForm">
             <div class="newsletter-input-group">
               <input type="email" id="newsletter_email" placeholder="your@email.com" required />
@@ -310,9 +311,9 @@ import Layout from '../components/layouts/Layout.astro';
   </main>
 
   <!-- Download Modal -->
-  <div id="downloadModal" class="modal">
+  <div id="downloadModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-content">
-      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <button class="modal-close" id="closeModalBtn" type="button" aria-label="Close download form">&times;</button>
       
       <div id="downloadFormSection">
         <h3 class="modal-title gradient-text" id="modalTitle">Download Resource</h3>
@@ -372,7 +373,7 @@ import Layout from '../components/layouts/Layout.astro';
           Your resource "<span class="highlight" id="confirmResourceName"></span>" has been sent to <span class="highlight" id="confirmDownloadEmail"></span>
         </p>
         <p class="success-subtext">Check your inbox (and spam folder) for the download link.</p>
-        <button id="closeSuccessBtn" class="close-success-btn">
+        <button id="closeSuccessBtn" class="close-success-btn" type="button">
           Close
         </button>
       </div>
@@ -1061,10 +1062,9 @@ import Layout from '../components/layouts/Layout.astro';
       
       if (!email) return;
       
-      // Here you would integrate with your newsletter service (Mailchimp, ConvertKit, etc.)
+      // here you can wire up MailerLite / Brevo etc.
       console.log('Newsletter signup:', { email });
       
-      // Show success message
       alert('Thanks for subscribing! Check your email for confirmation.');
       newsletterForm.reset();
     });
