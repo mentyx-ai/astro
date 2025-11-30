@@ -1,5 +1,7 @@
 ---
+// src/pages/contact.astro
 import Layout from '../components/layouts/Layout.astro';
+import FaqSection from '../components/FaqSection.astro';
 ---
 
 <Layout 
@@ -9,7 +11,7 @@ import Layout from '../components/layouts/Layout.astro';
 >
   <main style="padding-top: 128px; padding-bottom: 96px;">
     
-    <!-- Hero Section (unchanged) -->
+    <!-- Hero Section -->
     <section style="margin-bottom: 64px;">
       <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
         <div style="max-width: 896px; margin: 0 auto; text-align: center;" data-aos="fade-up">
@@ -26,7 +28,7 @@ import Layout from '../components/layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- Contact Methods (unchanged) -->
+    <!-- Contact Methods -->
     <section style="margin-bottom: 96px;">
       <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 64px;">
@@ -70,13 +72,13 @@ import Layout from '../components/layouts/Layout.astro';
 
         <div style="display: grid; grid-template-columns: 1fr; gap: 48px; max-width: 1152px; margin: 0 auto;">
           
-          <!-- Contact Form - UPDATED WITH YOUR FORM -->
+          <!-- Contact Form -->
           <div style="background: rgba(30, 127, 229, 0.08); border: 1px solid rgba(30, 127, 229, 0.3); border-radius: 16px; padding: 40px;" data-aos="fade-up" data-aos-delay="400">
             <div id="formSection">
               <h2 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 8px; color: white;">Schedule a Demo</h2>
               <p style="color: #9ca3af; margin-bottom: 32px;">Fill out the form and we'll reach out within 24 hours</p>
               
-              <!-- Your Web3Forms Integration -->
+              <!-- Web3Forms Integration -->
               <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
                 <input type="hidden" name="access_key" value="668cabdc-9057-4e2a-8995-2a2e8ec13aaf">
                 <input type="hidden" name="subject" value="New Contact Form Submission - Mentyx.ai">
@@ -163,10 +165,8 @@ import Layout from '../components/layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- FAQ Section (unchanged) -->
-    <section style="margin-bottom: 96px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent); padding: 96px 0;">
-      <!-- ... keep your existing FAQ section ... -->
-    </section>
+    <!-- FAQ Section -->
+    <FaqSection />
 
   </main>
 </Layout>
