@@ -1,9 +1,16 @@
 import type { APIRoute } from 'astro';
 
+type SitemapPage = {
+  url: string;
+  priority: number;
+  changefreq: string;
+  lastmod?: string; // optional – falls nicht gesetzt → fallback auf today
+};
+
 export const GET: APIRoute = async () => {
   const baseUrl = 'https://mentyx.ai';
 
-  const pages = [
+  const pages: SitemapPage[] = [
     // Home & Main
     { url: '/', priority: 1.0, changefreq: 'weekly' },
     { url: '/platform/', priority: 0.9, changefreq: 'monthly' },
@@ -44,20 +51,22 @@ export const GET: APIRoute = async () => {
     { url: '/terms-of-service/', priority: 0.3, changefreq: 'yearly' }
   ];
 
+  // Today’s date in YYYY-MM-DD format
   const today = new Date().toISOString().split('T')[0];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages
-  .map(
-    (page) => `
+  .map((page) => {
+    const lastmod = page.lastmod ?? today; // fallback to today if no lastmod
+    return `
   <url>
     <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`
-  )
+  </url>`;
+  })
   .join('')}
 </urlset>`;
 
