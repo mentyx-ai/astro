@@ -23,8 +23,8 @@ import CtaSection from '../components/sections/CtaSection.astro';
 ---
 
 <Layout 
-  title="AI Loan Origination for Private Real Estate Lenders | Built for Asset-Based Lending"
-  description="Mentyx is an AI-powered loan origination platform built for private real estate lenders. Automate asset-based lending workflows including Fix & Flip, Bridge and DSCR underwriting. Faster decisions, consistent underwriting, fewer manual tasks."
+  title="Mentyx.ai | AI Loan Origination for Private Real Estate Lenders"
+  description="Mentyx is an AI-powered loan origination platform built for private real estate lenders. Automate asset-based lending workflows across Fix & Flip, Bridge and DSCR loans with AI underwriting, document intelligence, and affiliate-wide consistency."
   canonical="https://mentyx.ai"
   ogImage="/og-default.jpg"
 >
@@ -45,302 +45,328 @@ import CtaSection from '../components/sections/CtaSection.astro';
   <ExitPopup />
   <ContactModal />
 
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {`{
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mentyx.ai",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "url": "https://mentyx.ai",
+      "description": "AI-powered loan origination and underwriting platform for private real estate lenders specializing in asset-based lending, including Fix & Flip, Bridge and DSCR loans.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Private real estate lenders, fix & flip lenders, bridge lenders, DSCR lenders"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mentyx.ai"
+      }
+    }`}
+  </script>
 
-<style>
-  /* ================================ */
-  /* CSS VARIABLES - FIXED */
-     /* ================================ */
-  :root {
-    /* Slate colors */
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-    --slate-400: #94a3b8;
-    --slate-500: #64748b;
-    --slate-600: #475569;
-    --slate-700: #334155;
-    --slate-800: #1e293b;
-    --slate-900: #0f172a;
-    
-    /* Blue colors */
-    --blue-300: #93c5fd;
-    --blue-400: #60a5fa;
-    --blue-500: #3b82f6;
-    --blue-600: #2563eb;
-    
-    /* Cyan colors */
-    --cyan-300: #67e8f9;
-    --cyan-400: #22d3ee;
-    --cyan-500: #06b6d4;
-    
-    /* Red colors */
-    --red-300: #fca5a5;
-    --rose-200: #fecaca;
-    
-    /* Purple colors */
-    --purple-500: #a855f7;
-    
-    /* Green colors */
-    --green-500: #22c55e;
-  }
-
-  /* ================================ */
-  /* GLOBAL STYLES */
-     /* ================================ */
-
-  /* Base styles */
-  body {
-    background-color: #0f172a;
-    color: white;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    overflow-x: hidden;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  /* Button styles */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-  }
-
-  .btn-lg {
-    padding: 16px 32px;
-    font-size: 1.125rem;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, var(--blue-500) 0%, var(--cyan-500) 100%);
-    color: white;
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
-  }
-
-  .btn-secondary {
-    background: rgba(30, 41, 59, 0.8);
-    border: 1px solid var(--slate-700);
-    color: var(--slate-300);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(30, 41, 59, 1);
-    border-color: var(--blue-500);
-    color: white;
-  }
-
-  .btn-block {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .section {
-    padding: 80px 0;
-  }
-
-  /* ================================ */
-  /* CLEAN WAVE BACKGROUND */
-     /* ================================ */
-
-  /* Main gentle wave layer */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -3;
-    background: 
-      radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
-    animation: smoothWave 18s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  @keyframes smoothWave {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    33% {
-      transform: translate(-2%, 3%);
-    }
-    66% {
-      transform: translate(2%, -2%);
-    }
-  }
-
-  /* Secondary wave layer */
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background: 
-      radial-gradient(ellipse at 50% 30%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
-    animation: smoothWave 24s ease-in-out infinite reverse;
-    pointer-events: none;
-    filter: blur(40px);
-  }
-
-  /* Subtle shimmer on gradient text */
-  @keyframes shimmer {
-    0% {
-      background-position: -200% center;
-    }
-    100% {
-      background-position: 200% center;
-    }
-  }
-
-  .gradient-text {
-    background: linear-gradient(
-      90deg,
-      var(--blue-400) 0%,
-      var(--cyan-400) 25%,
-      var(--blue-300) 50%,
-      var(--cyan-400) 75%,
-      var(--blue-400) 100%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 8s linear infinite;
-  }
-
-  /* Smooth hover effects on cards */
-  .stat-card,
-  .step-card,
-  .security-card,
-  .insight-card,
-  .lender-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .stat-card:hover,
-  .step-card:hover,
-  .security-card:hover,
-  .insight-card:hover,
-  .lender-card:hover {
-    transform: translateY(-4px);
-  }
-
-  /* Section heading styles */
-  .section-heading {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 900;
-    margin-bottom: 24px;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  .section-heading.centered {
-    text-align: center;
-  }
-
-  .text-red {
-    color: var(--red-300);
-  }
-
-  .section-lead {
-    font-size: 1.25rem;
-    text-align: center;
-    margin-bottom: 16px;
-    color: var(--slate-300);
-  }
-
-  .section-lead.centered {
-    text-align: center;
-  }
-
-  .section-description {
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 64px;
-    color: var(--slate-400);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section-description.centered {
-    text-align: center;
-  }
-
-  /* Badge Wrapper */
-  .badge-wrapper {
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .badge-center {
-    display: inline-block;
-    padding: 8px 20px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 50px;
-    color: var(--cyan-400);
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-
-  /* Rose highlight for emphasis text */
-  .rose-highlight {
-    color: var(--rose-200);
-    font-weight: 700;
-  }
-
-  /* Mobile optimization */
-  @media (max-width: 768px) {
-    .section {
-      padding: 60px 0;
+  <style>
+    /* ================================ */
+    /* CSS VARIABLES - FIXED */
+    /* ================================ */
+    :root {
+      /* Slate colors */
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-300: #cbd5e1;
+      --slate-400: #94a3b8;
+      --slate-500: #64748b;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+      
+      /* Blue colors */
+      --blue-300: #93c5fd;
+      --blue-400: #60a5fa;
+      --blue-500: #3b82f6;
+      --blue-600: #2563eb;
+      
+      /* Cyan colors */
+      --cyan-300: #67e8f9;
+      --cyan-400: #22d3ee;
+      --cyan-500: #06b6d4;
+      
+      /* Red colors */
+      --red-300: #fca5a5;
+      --rose-200: #fecaca;
+      
+      /* Purple colors */
+      --purple-500: #a855f7;
+      
+      /* Green colors */
+      --green-500: #22c55e;
     }
 
+    /* ================================ */
+    /* GLOBAL STYLES */
+    /* ================================ */
+
+    /* Base styles */
+    body {
+      background-color: #0f172a;
+      color: white;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Button styles */
     .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-lg {
+      padding: 16px 32px;
+      font-size: 1.125rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue-500) 0%, var(--cyan-500) 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-secondary {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--slate-700);
+      color: var(--slate-300);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(30, 41, 59, 1);
+      border-color: var(--blue-500);
+      color: white;
+    }
+
+    .btn-block {
       width: 100%;
-      max-width: 300px;
       justify-content: center;
     }
 
-    body::before,
-    body::after {
-      animation-duration: 25s;
+    .section {
+      padding: 80px 0;
     }
-  }
 
-  /* Reduce motion for accessibility */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+    /* ================================ */
+    /* CLEAN WAVE BACKGROUND */
+    /* ================================ */
+
+    /* Main gentle wave layer */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      background: 
+        radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+      animation: smoothWave 18s ease-in-out infinite;
+      pointer-events: none;
     }
-  }
-</style>
+
+    @keyframes smoothWave {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      33% {
+        transform: translate(-2%, 3%);
+      }
+      66% {
+        transform: translate(2%, -2%);
+      }
+    }
+
+    /* Secondary wave layer */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: 
+        radial-gradient(ellipse at 50% 30%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
+      animation: smoothWave 24s ease-in-out infinite reverse;
+      pointer-events: none;
+      filter: blur(40px);
+    }
+
+    /* Subtle shimmer on gradient text */
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        var(--blue-400) 0%,
+        var(--cyan-400) 25%,
+        var(--blue-300) 50%,
+        var(--cyan-400) 75%,
+        var(--blue-400) 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 8s linear infinite;
+    }
+
+    /* Smooth hover effects on cards */
+    .stat-card,
+    .step-card,
+    .security-card,
+    .insight-card,
+    .lender-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-card:hover,
+    .step-card:hover,
+    .security-card:hover,
+    .insight-card:hover,
+    .lender-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Section heading styles */
+    .section-heading {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 24px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .section-heading.centered {
+      text-align: center;
+    }
+
+    .text-red {
+      color: var(--red-300);
+    }
+
+    .section-lead {
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: 16px;
+      color: var(--slate-300);
+    }
+
+    .section-lead.centered {
+      text-align: center;
+    }
+
+    .section-description {
+      font-size: 1.125rem;
+      text-align: center;
+      margin-bottom: 64px;
+      color: var(--slate-400);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-description.centered {
+      text-align: center;
+    }
+
+    /* Badge Wrapper */
+    .badge-wrapper {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .badge-center {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 50px;
+      color: var(--cyan-400);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    /* Rose highlight for emphasis text */
+    .rose-highlight {
+      color: var(--rose-200);
+      font-weight: 700;
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+      .section {
+        padding: 60px 0;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+
+      body::before,
+      body::after {
+        animation-duration: 25s;
+      }
+    }
+
+    /* Reduce motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </Layout>
 
 <script>
