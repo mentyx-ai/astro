@@ -3,19 +3,27 @@
 import Layout from '../components/layouts/Layout.astro';
 ---
 
-<Layout title="Schedule a Demo – Mentyx.ai">
+<Layout 
+  title="Schedule a Demo | AI Loan Origination for Private Real Estate Lenders"
+  description="Book a live demo of Mentyx.ai – the AI-powered loan origination platform purpose-built for private real estate lenders across Fix & Flip, Bridge and DSCR loans. See how to cut decision times by up to 60% and reduce document errors by 90%."
+  canonical="https://mentyx.ai/demo"
+  ogImage="/og-default.jpg"
+>
   <!-- Hero Section -->
   <section class="demo-hero">
     <div class="container">
       <div class="hero-content" data-aos="fade-up">
         <div class="trust-badge">
-          Schedule Your Demo
+          Live Demo for Private Real Estate Lenders
         </div>
         <h1>
           See Mentyx in <span class="gradient-text">Action</span>
         </h1>
         <p class="hero-description">
-          Book a personalized 12-minute walkthrough and discover how AI can transform your loan origination process
+          Book a 20-minute walkthrough of the Mentyx platform and discover how AI can transform asset-based loan origination for Fix &amp; Flip, Bridge and DSCR products.
+        </p>
+        <p class="hero-mini">
+          Built for private real estate lenders – not generic banking software.
         </p>
       </div>
     </div>
@@ -25,17 +33,18 @@ import Layout from '../components/layouts/Layout.astro';
   <section class="section">
     <div class="container">
       <div class="demo-layout">
-        
+
         <!-- Form Section -->
         <div class="demo-form-container" data-aos="fade-up">
           <div class="form-card">
-            <h2>Tell us about yourself</h2>
-            
+            <h2>Tell us about your lending business</h2>
+
             <form id="demoForm" action="https://api.web3forms.com/submit" method="POST">
               <input type="hidden" name="access_key" value="668cabdc-9057-4e2a-8995-2a2e8ec13aaf">
               <input type="hidden" name="subject" value="New Demo Request - Mentyx.ai">
               <input type="hidden" name="from_name" value="Mentyx.ai Demo Page">
-              
+              <input type="hidden" name="page" value="Demo Page - https://mentyx.ai/demo">
+
               <!-- Name Row -->
               <div class="form-row">
                 <div class="form-group">
@@ -71,7 +80,7 @@ import Layout from '../components/layouts/Layout.astro';
                     id="email"
                     name="email" 
                     class="form-input" 
-                    placeholder="john@company.com" 
+                    placeholder="john@lendingcompany.com" 
                     required 
                   />
                 </div>
@@ -95,8 +104,20 @@ import Layout from '../components/layouts/Layout.astro';
                   id="company"
                   name="company" 
                   class="form-input" 
-                  placeholder="Acme Lending Corp" 
+                  placeholder="Heritage Capital" 
                   required 
+                />
+              </div>
+
+              <!-- Role -->
+              <div class="form-group">
+                <label for="role" class="form-label">Your Role</label>
+                <input 
+                  type="text" 
+                  id="role"
+                  name="role" 
+                  class="form-input" 
+                  placeholder="VP of Lending, COO, Founder…" 
                 />
               </div>
 
@@ -105,51 +126,76 @@ import Layout from '../components/layouts/Layout.astro';
                 <label for="companySize" class="form-label">Company Size *</label>
                 <select id="companySize" name="companySize" class="form-select" required>
                   <option value="">Select team size</option>
-                  <option value="1-10">1-10 employees</option>
-                  <option value="11-50">11-50 employees</option>
-                  <option value="51-200">51-200 employees</option>
-                  <option value="201-500">201-500 employees</option>
+                  <option value="1-10">1–10 employees</option>
+                  <option value="11-50">11–50 employees</option>
+                  <option value="51-200">51–200 employees</option>
+                  <option value="201-500">201–500 employees</option>
                   <option value="500+">500+ employees</option>
                 </select>
               </div>
 
-              <!-- Lending Focus -->
+              <!-- Lending Focus (optimized for private RE) -->
               <div class="form-group">
                 <label for="lendingType" class="form-label">Primary Lending Focus *</label>
                 <select id="lendingType" name="lendingType" class="form-select" required>
                   <option value="">Select lending type</option>
+                  <option value="fix-flip">Fix &amp; Flip</option>
                   <option value="bridge">Bridge Loans</option>
-                  <option value="commercial">Commercial Real Estate</option>
-                  <option value="corporate">Corporate Lending</option>
-                  <option value="hard-money">Hard Money</option>
-                  <option value="equipment">Equipment Finance</option>
-                  <option value="other">Other</option>
+                  <option value="dscr">DSCR / Rental Loans</option>
+                  <option value="new-construction">New Construction</option>
+                  <option value="mixed">Mixed Private Real Estate Lending</option>
+                  <option value="other">Other (tell us below)</option>
                 </select>
               </div>
 
-              <!-- Loan Volume -->
+              <!-- Loan Volume (monthly) -->
               <div class="form-group">
-                <label for="volume" class="form-label">Monthly Loan Volume</label>
+                <label for="volume" class="form-label">Monthly Loan Volume (USD)</label>
                 <select id="volume" name="volume" class="form-select">
                   <option value="">Select volume range</option>
                   <option value="<1M">Less than $1M</option>
-                  <option value="1-5M">$1M - $5M</option>
-                  <option value="5-10M">$5M - $10M</option>
-                  <option value="10-50M">$10M - $50M</option>
+                  <option value="1-5M">$1M – $5M</option>
+                  <option value="5-10M">$5M – $10M</option>
+                  <option value="10-25M">$10M – $25M</option>
+                  <option value="25-50M">$25M – $50M</option>
                   <option value="50M+">$50M+</option>
+                </select>
+              </div>
+
+              <!-- Affiliates / multi-entity -->
+              <div class="form-group">
+                <label for="affiliates" class="form-label">Do you operate with affiliates or multiple lending entities?</label>
+                <select id="affiliates" name="affiliates" class="form-select">
+                  <option value="">Select an option</option>
+                  <option value="no">No – single lending entity</option>
+                  <option value="yes-2-3">Yes – 2–3 affiliates</option>
+                  <option value="yes-4-7">Yes – 4–7 affiliates</option>
+                  <option value="yes-8-plus">Yes – 8+ affiliates / entities</option>
                 </select>
               </div>
 
               <!-- Challenge -->
               <div class="form-group">
-                <label for="challenge" class="form-label">What's your biggest challenge?</label>
+                <label for="challenge" class="form-label">What's your biggest challenge in loan origination right now?</label>
                 <textarea 
                   id="challenge"
                   name="challenge" 
                   class="form-textarea" 
                   rows="3" 
-                  placeholder="Tell us what you'd like to improve in your loan origination process..."
+                  placeholder="Example: too much manual data entry, inconsistent underwriting across affiliates, long decision times, poor visibility for HQ…"
                 ></textarea>
+              </div>
+
+              <!-- Timeline -->
+              <div class="form-group">
+                <label for="timeline" class="form-label">Ideal timeline for improvement</label>
+                <select id="timeline" name="timeline" class="form-select">
+                  <option value="">Select timeline</option>
+                  <option value="0-3">0–3 months</option>
+                  <option value="3-6">3–6 months</option>
+                  <option value="6-12">6–12 months</option>
+                  <option value="exploring">Just exploring options</option>
+                </select>
               </div>
 
               <!-- Consent -->
@@ -157,7 +203,7 @@ import Layout from '../components/layouts/Layout.astro';
                 <div class="checkbox-wrapper">
                   <input type="checkbox" id="consent" name="consent" required />
                   <label for="consent">
-                    I agree to receive product updates and marketing communications from Mentyx.ai
+                    I agree to receive product updates and lending automation insights from Mentyx.ai. I can unsubscribe at any time.
                   </label>
                 </div>
               </div>
@@ -176,7 +222,7 @@ import Layout from '../components/layouts/Layout.astro';
               <p class="form-footer">
                 By submitting this form, you agree to our 
                 <a href="/privacy-policy" class="form-link">Privacy Policy</a> and 
-                <a href="/terms-of-service" class="form-link">Terms of Service</a>
+                <a href="/terms-of-service" class="form-link">Terms of Service</a>.
               </p>
             </form>
 
@@ -184,9 +230,9 @@ import Layout from '../components/layouts/Layout.astro';
             <div id="successMessage" class="success-message">
               <div class="success-content">
                 <div class="success-icon">🎉</div>
-                <h3>Demo Scheduled!</h3>
-                <p>Thank you! We'll contact you within 24 hours to schedule your personalized demo.</p>
-                <p class="success-email">Check your email at <span id="userEmail"></span></p>
+                <h3>Demo Request Received</h3>
+                <p>Thank you! Our team will reach out within 24 hours to schedule your personalized demo.</p>
+                <p class="success-email">We’ll contact you at <span id="userEmail"></span></p>
               </div>
             </div>
           </div>
@@ -195,8 +241,8 @@ import Layout from '../components/layouts/Layout.astro';
         <!-- Benefits Section -->
         <div class="demo-sidebar" data-aos="fade-up" data-aos-delay="200">
           <div class="sidebar-card">
-            <h3>What to Expect</h3>
-            
+            <h3>What we'll cover in your demo</h3>
+
             <div class="benefits-list">
               <div class="benefit-item">
                 <div class="benefit-icon">
@@ -206,8 +252,8 @@ import Layout from '../components/layouts/Layout.astro';
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <div class="benefit-title">12-Minute Walkthrough</div>
-                  <div class="benefit-description">Personalized demo tailored to your lending focus</div>
+                  <div class="benefit-title">20-minute guided walkthrough</div>
+                  <div class="benefit-description">End-to-end flow from borrower application to underwriting decision for a Fix &amp; Flip or DSCR loan.</div>
                 </div>
               </div>
 
@@ -218,8 +264,8 @@ import Layout from '../components/layouts/Layout.astro';
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <div class="benefit-title">Live Q&A</div>
-                  <div class="benefit-description">Ask questions specific to your workflow</div>
+                  <div class="benefit-title">Live Q&A on your workflow</div>
+                  <div class="benefit-description">We’ll use your current process as the baseline and show where automation fits.</div>
                 </div>
               </div>
 
@@ -231,8 +277,8 @@ import Layout from '../components/layouts/Layout.astro';
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <div class="benefit-title">ROI Calculation</div>
-                  <div class="benefit-description">See potential time and cost savings</div>
+                  <div class="benefit-title">ROI &amp; capacity modeling</div>
+                  <div class="benefit-description">See how much time your team can save and how many more deals you could process with the same headcount.</div>
                 </div>
               </div>
 
@@ -243,36 +289,36 @@ import Layout from '../components/layouts/Layout.astro';
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <div class="benefit-title">No Commitment</div>
-                  <div class="benefit-description">Just a conversation to see if we're a fit</div>
+                  <div class="benefit-title">No commitment, no pressure</div>
+                  <div class="benefit-description">Just a practical conversation about whether Mentyx fits your lending strategy.</div>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="sidebar-card">
-            <h3>Join Leading Lenders</h3>
+            <h3>Why private lenders book a demo</h3>
             <p class="sidebar-text">
-              50+ forward-thinking lenders are already using Mentyx to close loans faster and smarter
+              Mentyx is built for private real estate lenders who want to scale without adding a large underwriting team.
             </p>
             <div class="stats-list">
               <div class="stat-item">
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span>60% faster decisions</span>
+                <span>Up to 60% faster loan decisions</span>
               </div>
               <div class="stat-item">
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span>90% fewer document errors</span>
+                <span>Up to 90% fewer document-related errors</span>
               </div>
               <div class="stat-item">
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span>$2B+ in loans processed</span>
+                <span>$2B+ in asset-based loans processed</span>
               </div>
             </div>
           </div>
@@ -291,7 +337,10 @@ import Layout from '../components/layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* Demo Page Specific Styles */
+  .section {
+    padding-bottom: 96px;
+  }
+
   .demo-hero {
     min-height: 60vh;
     display: flex;
@@ -301,11 +350,57 @@ import Layout from '../components/layouts/Layout.astro';
     text-align: center;
   }
 
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .trust-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    color: #e2e8f0;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: rgba(15, 23, 42, 0.7);
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    color: #94a3b8;
+    max-width: 640px;
+    margin: 0 auto 12px;
+  }
+
+  .hero-mini {
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
   .demo-layout {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 60px;
-    align-items: start;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -323,15 +418,15 @@ import Layout from '../components/layouts/Layout.astro';
   }
 
   .sidebar-card {
-    background: rgba(30, 41, 59, 0.6);
-    border: 1px solid var(--slate-700);
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(51, 65, 85, 0.9);
     border-radius: 20px;
     padding: 32px;
     transition: all 0.3s ease;
   }
 
   .sidebar-card:hover {
-    border-color: var(--blue-500);
+    border-color: #3b82f6;
     transform: translateY(-2px);
   }
 
@@ -343,7 +438,7 @@ import Layout from '../components/layouts/Layout.astro';
   }
 
   .sidebar-text {
-    color: var(--slate-400);
+    color: #94a3b8;
     font-size: 0.9375rem;
     line-height: 1.5;
     margin-bottom: 16px;
@@ -370,7 +465,7 @@ import Layout from '../components/layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cyan-400);
+    color: #22d3ee;
     flex-shrink: 0;
   }
 
@@ -386,7 +481,7 @@ import Layout from '../components/layouts/Layout.astro';
   }
 
   .benefit-description {
-    color: var(--slate-400);
+    color: #94a3b8;
     font-size: 0.875rem;
     line-height: 1.4;
   }
@@ -401,37 +496,37 @@ import Layout from '../components/layouts/Layout.astro';
     display: flex;
     align-items: center;
     gap: 12px;
-    color: var(--slate-300);
+    color: #e2e8f0;
     font-size: 0.875rem;
   }
 
   .stat-item svg {
-    color: var(--cyan-400);
+    color: #22d3ee;
     flex-shrink: 0;
   }
 
   .contact-email {
-    color: var(--cyan-400);
+    color: #22d3ee;
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s;
   }
 
   .contact-email:hover {
-    color: var(--cyan-300);
+    color: #67e8f9;
   }
 
   /* Form Styles */
   .form-card {
-    background: rgba(30, 41, 59, 0.6);
-    border: 1px solid var(--slate-700);
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(51, 65, 85, 0.9);
     border-radius: 20px;
     padding: 40px;
     transition: all 0.3s ease;
   }
 
   .form-card:hover {
-    border-color: var(--blue-500);
+    border-color: #3b82f6;
   }
 
   .form-card h2 {
@@ -456,7 +551,7 @@ import Layout from '../components/layouts/Layout.astro';
     display: block;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--slate-300);
+    color: #cbd5e1;
     font-size: 0.875rem;
   }
 
@@ -465,8 +560,8 @@ import Layout from '../components/layouts/Layout.astro';
   .form-textarea {
     width: 100%;
     padding: 14px 16px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid var(--slate-700);
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(51, 65, 85, 1);
     border-radius: 12px;
     color: white;
     font-size: 0.9375rem;
@@ -478,19 +573,19 @@ import Layout from '../components/layouts/Layout.astro';
   .form-select:focus,
   .form-textarea:focus {
     outline: none;
-    border-color: var(--blue-500);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
   }
 
   .form-input:hover,
   .form-select:hover,
   .form-textarea:hover {
-    border-color: var(--slate-600);
+    border-color: #475569;
   }
 
   .form-input::placeholder,
   .form-textarea::placeholder {
-    color: var(--slate-500);
+    color: #64748b;
   }
 
   .form-select {
@@ -504,7 +599,7 @@ import Layout from '../components/layouts/Layout.astro';
   }
 
   .form-select option {
-    background: #0f172a;
+    background: #020617;
     color: white;
   }
 
@@ -524,14 +619,43 @@ import Layout from '../components/layouts/Layout.astro';
     height: 18px;
     margin-top: 2px;
     cursor: pointer;
-    accent-color: var(--cyan-400);
+    accent-color: #22d3ee;
   }
 
   .checkbox-wrapper label {
     font-size: 0.8125rem;
-    color: var(--slate-400);
+    color: #94a3b8;
     line-height: 1.4;
     cursor: pointer;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.45);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.6);
+    transform: translateY(-1px);
+  }
+
+  .btn-lg {
+    padding: 18px 36px;
   }
 
   .btn-block {
@@ -541,13 +665,13 @@ import Layout from '../components/layouts/Layout.astro';
 
   .form-footer {
     text-align: center;
-    color: var(--slate-500);
+    color: #64748b;
     font-size: 0.75rem;
     margin-top: 16px;
   }
 
   .form-link {
-    color: var(--cyan-400);
+    color: #22d3ee;
     text-decoration: none;
   }
 
@@ -558,11 +682,12 @@ import Layout from '../components/layouts/Layout.astro';
   /* Success Message */
   .success-message {
     background: rgba(34, 197, 94, 0.1);
-    border: 1px solid rgba(34, 197, 94, 0.3);
+    border: 1px solid rgba(34, 197, 94, 0.35);
     border-radius: 16px;
     padding: 32px;
     text-align: center;
     display: none;
+    margin-top: 16px;
   }
 
   .success-content {
@@ -580,23 +705,23 @@ import Layout from '../components/layouts/Layout.astro';
   .success-content h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--cyan-400);
+    color: #4ade80;
     margin: 0;
   }
 
   .success-content p {
-    color: var(--slate-300);
+    color: #e5e7eb;
     margin: 0;
     line-height: 1.5;
   }
 
   .success-email {
-    color: var(--slate-400);
+    color: #a1a1aa;
     font-size: 0.875rem;
   }
 
   .success-email span {
-    color: var(--cyan-300);
+    color: #bbf7d0;
     font-weight: 600;
   }
 
@@ -611,7 +736,7 @@ import Layout from '../components/layouts/Layout.astro';
     to { transform: rotate(360deg); }
   }
 
-  /* Mobile Optimization */
+  /* Responsive */
   @media (max-width: 968px) {
     .demo-layout {
       grid-template-columns: 1fr;
@@ -646,14 +771,6 @@ import Layout from '../components/layouts/Layout.astro';
     .sidebar-card {
       padding: 24px;
     }
-
-    .hero-content h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-    }
-
-    .hero-description {
-      font-size: 1.125rem;
-    }
   }
 
   @media (max-width: 480px) {
@@ -681,49 +798,49 @@ import Layout from '../components/layouts/Layout.astro';
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('demoForm');
     const submitBtn = document.getElementById('submitBtn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnLoader = submitBtn.querySelector('.btn-loader');
+    const btnText = submitBtn?.querySelector('.btn-text');
+    const btnLoader = submitBtn?.querySelector('.btn-loader');
     const successMessage = document.getElementById('successMessage');
     const userEmail = document.getElementById('userEmail');
 
-    if (form) {
+    if (form && submitBtn && btnText && btnLoader && successMessage && userEmail) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
+
         // Show loading state
         btnText.textContent = 'Scheduling...';
         btnLoader.style.display = 'inline-block';
         submitBtn.disabled = true;
-        
+
         try {
           const formData = new FormData(form);
-          
+
           const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             // Show success message
             userEmail.textContent = formData.get('email');
             form.style.display = 'none';
             successMessage.style.display = 'block';
-            
-            // Redirect to Calendly after 2 seconds
+
+            // Open Calendly after short pause
             setTimeout(() => {
               window.open('https://calendly.com/contact-mentyx/30min', '_blank');
             }, 2000);
-            
+
           } else {
             throw new Error('Form submission failed');
           }
-          
+
         } catch (error) {
           console.error('Form error:', error);
           alert('Something went wrong. Please email us directly at contact@mentyx.ai');
-          
+
           // Reset button state
           btnText.textContent = 'Schedule My Demo';
           btnLoader.style.display = 'none';
