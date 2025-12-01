@@ -9,798 +9,940 @@ import Layout from '../../components/layouts/Layout.astro';
   canonical="https://mentyx.ai/solutions/borrower-portal"
 >
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-        </svg>
-        <span>Origination · Borrower Experience</span>
-      </div>
-      
-      <h1 class="hero-title">
-        <span class="title-gradient">Borrower Portal</span>
-        <span class="title-white">That Actually Works</span>
-      </h1>
-      
-      <p class="hero-subtitle">
-        Give your fix & flip, bridge, and DSCR investors a professional, mobile-friendly application experience. No more phone calls, email chains, or scattered documents across Dropbox and PDFs.
-      </p>
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Borrower Portal",
+      "item": "https://mentyx.ai/solutions/borrower-portal"
+    }
+  ]
+}
+  </script>
 
-      <div class="hero-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a borrower portal for private real estate lending?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A borrower portal is a secure, branded online workspace where real estate investors can start applications, upload documents, and track status for fix and flip, bridge, and DSCR loans. Instead of phone calls, email threads, and PDFs, borrowers work through a guided, mobile-friendly flow that feeds clean data directly into underwriting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Mentyx borrower portal improve completion rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Mentyx borrower portal is designed for busy investors: mobile-first layouts, auto-save and resume, clear progress bars, and program-specific checklists for documents. Borrowers can start on a phone at the property and finish on desktop later, which typically leads to significantly higher completion rates than PDF or email-based intake."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the portal be branded with our lending company\u2019s look and feel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Mentyx borrower portal is fully white-label ready. It runs under your domain, uses your logo and brand colors, and supports custom email and SMS templates, disclosures, and legal text so borrowers see your brand at every step of the process."
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
           </svg>
-        </a>
-        <a href="/platform" class="btn btn-secondary btn-lg">
-          View Platform
-        </a>
-      </div>
+          <span>Origination · Borrower Experience</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-gradient">Borrower Portal</span>
+          <span class="title-white">That Actually Works</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Give your fix & flip, bridge, and DSCR investors a professional, mobile-friendly application experience. No more phone calls, email chains, or scattered documents across Dropbox and PDFs.
+        </p>
 
-      <!-- Stats -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-value">24/7</div>
-          <div class="stat-label">Online Applications</div>
+        <div class="hero-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/platform" class="btn btn-secondary btn-lg">
+            View Platform
+          </a>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">Mobile</div>
-          <div class="stat-label">Apply From Any Property</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">10 min</div>
-          <div class="stat-label">Avg Application Time</div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">Online Applications</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">Mobile</div>
+            <div class="stat-label">Apply From Any Property</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">10 min</div>
+            <div class="stat-label">Avg Application Time</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Features Grid -->
-<section class="features-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Modern Application Experience</h2>
-      <p class="section-subtitle">Built for asset-based real estate investors who need to move fast</p>
-    </div>
+  <!-- Features Grid -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Modern Application Experience</h2>
+        <p class="section-subtitle">Built for asset-based real estate investors who need to move fast</p>
+      </div>
 
-    <div class="features-grid">
-      
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-            <line x1="8" y1="21" x2="16" y2="21"/>
-            <line x1="12" y1="17" x2="12" y2="21"/>
-          </svg>
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Desktop & Mobile Ready</h3>
+          <p class="feature-description">
+            Investors can start a fix & flip, bridge, or DSCR application at the property on their phone and finish on desktop later. Progress saves automatically across devices.
+          </p>
+          <ul class="feature-list">
+            <li>Responsive design for phone, tablet, and desktop</li>
+            <li>Auto-save & resume functionality for longer deals</li>
+            <li>Works offline, syncs when connection is back</li>
+            <li>App-like experience without forcing an app download</li>
+          </ul>
         </div>
-        <h3 class="feature-title">Desktop & Mobile Ready</h3>
-        <p class="feature-description">
-          Investors can start a fix & flip, bridge, or DSCR application at the property on their phone and finish on desktop later. Progress saves automatically across devices.
-        </p>
-        <ul class="feature-list">
-          <li>Responsive design for phone, tablet, and desktop</li>
-          <li>Auto-save & resume functionality for longer deals</li>
-          <li>Works offline, syncs when connection is back</li>
-          <li>App-like experience without forcing an app download</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-            <line x1="12" y1="22.08" x2="12" y2="12"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Loan Type Specific Forms</h3>
+          <p class="feature-description">
+            Smart forms adapt based on loan type—fix & flip captures rehab budget and ARV, DSCR focuses on net operating income and DSCR, bridge asks for exit strategy and payoff source.
+          </p>
+          <ul class="feature-list">
+            <li>Fix & flip fields: ARV, rehab budget, timeline</li>
+            <li>DSCR rental loan forms: rent roll, expenses, DSCR target</li>
+            <li>Bridge programs: payoff source, exit and take-out lender</li>
+            <li>Conditional logic to hide irrelevant questions</li>
+          </ul>
         </div>
-        <h3 class="feature-title">Loan Type Specific Forms</h3>
-        <p class="feature-description">
-          Smart forms adapt based on loan type—fix & flip captures rehab budget and ARV, DSCR focuses on net operating income and DSCR, bridge asks for exit strategy and payoff source.
-        </p>
-        <ul class="feature-list">
-          <li>Fix & flip fields: ARV, rehab budget, timeline</li>
-          <li>DSCR rental loan forms: rent roll, expenses, DSCR target</li>
-          <li>Bridge programs: payoff source, exit and take-out lender</li>
-          <li>Conditional logic to hide irrelevant questions</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4"/>
-            <polyline points="16 8 12 4 8 8"/>
-            <line x1="12" y1="4" x2="12" y2="16"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4"/>
+              <polyline points="16 8 12 4 8 8"/>
+              <line x1="12" y1="4" x2="12" y2="16"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Document Upload Made Easy</h3>
+          <p class="feature-description">
+            Clear checklist tailored to each program: purchase contract, rehab scope, appraisal/BPO, leases, bank statements, entity docs, and more. Borrowers see exactly what’s missing.
+          </p>
+          <ul class="feature-list">
+            <li>Drag & drop uploads from desktop and cloud storage</li>
+            <li>Mobile camera integration for on-the-go document capture</li>
+            <li>Per-document status (uploaded, pending, rejected)</li>
+            <li>File type, size, and quality validation</li>
+          </ul>
         </div>
-        <h3 class="feature-title">Document Upload Made Easy</h3>
-        <p class="feature-description">
-          Clear checklist tailored to each program: purchase contract, rehab scope, appraisal/BPO, leases, bank statements, entity docs, and more. Borrowers see exactly what’s missing.
-        </p>
-        <ul class="feature-list">
-          <li>Drag & drop uploads from desktop and cloud storage</li>
-          <li>Mobile camera integration for on-the-go document capture</li>
-          <li>Per-document status (uploaded, pending, rejected)</li>
-          <li>File type, size, and quality validation</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-Time Validation</h3>
+          <p class="feature-description">
+            Smart validation catches issues before submission. Borrowers see live LTV/LTC and DSCR estimates as they enter numbers—reducing surprises later in underwriting.
+          </p>
+          <ul class="feature-list">
+            <li>Instant field-level validation with clear guidance</li>
+            <li>Embedded LTV and LTC calculators for purchase & rehab</li>
+            <li>DSCR pre-checks for rental and portfolio loans</li>
+            <li>Pre-qualification feedback before “Submit”</li>
+          </ul>
         </div>
-        <h3 class="feature-title">Real-Time Validation</h3>
-        <p class="feature-description">
-          Smart validation catches issues before submission. Borrowers see live LTV/LTC and DSCR estimates as they enter numbers—reducing surprises later in underwriting.
-        </p>
-        <ul class="feature-list">
-          <li>Instant field-level validation with clear guidance</li>
-          <li>Embedded LTV and LTC calculators for purchase & rehab</li>
-          <li>DSCR pre-checks for rental and portfolio loans</li>
-          <li>Pre-qualification feedback before “Submit”</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Borrower Accounts</h3>
+          <p class="feature-description">
+            Returning borrowers get a single pane of glass for every loan: new applications, in-process deals, and funded loans—with status, conditions, and messages in one place.
+          </p>
+          <ul class="feature-list">
+            <li>Secure borrower login with multi-factor options</li>
+            <li>Application history across fix & flip, bridge, and DSCR loans</li>
+            <li>Real-time status tracking and conditions list</li>
+            <li>Message center for secure two-way communication</li>
+          </ul>
         </div>
-        <h3 class="feature-title">Borrower Accounts</h3>
-        <p class="feature-description">
-          Returning borrowers get a single pane of glass for every loan: new applications, in-process deals, and funded loans—with status, conditions, and messages in one place.
-        </p>
-        <ul class="feature-list">
-          <li>Secure borrower login with multi-factor options</li>
-          <li>Application history across fix & flip, bridge, and DSCR loans</li>
-          <li>Real-time status tracking and conditions list</li>
-          <li>Message center for secure two-way communication</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Bank-Grade Security</h3>
+          <p class="feature-description">
+            Asset-based lending requires serious security. Mentyx protects tax returns, bank statements, and ID documents with encryption at rest and in transit.
+          </p>
+          <ul class="feature-list">
+            <li>256-bit TLS/SSL encryption in transit</li>
+            <li>Encrypted storage and role-based access controls</li>
+            <li>Audit logs for document and data access</li>
+            <li>Supports GDPR, CCPA, and US privacy expectations</li>
+          </ul>
         </div>
-        <h3 class="feature-title">Bank-Grade Security</h3>
-        <p class="feature-description">
-          Asset-based lending requires serious security. Mentyx protects tax returns, bank statements, and ID documents with encryption at rest and in transit.
-        </p>
-        <ul class="feature-list">
-          <li>256-bit TLS/SSL encryption in transit</li>
-          <li>Encrypted storage and role-based access controls</li>
-          <li>Audit logs for document and data access</li>
-          <li>Supports GDPR, CCPA, and US privacy expectations</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Automated Notifications</h3>
+          <p class="feature-description">
+            Keep investors and brokers in the loop without manual follow-up. Notifications trigger when key events happen—from “App Received” to “Clear to Close”.
+          </p>
+          <ul class="feature-list">
+            <li>Email & SMS notifications for milestones and tasks</li>
+            <li>Status change alerts (submitted, in review, decision)</li>
+            <li>Missing document reminders with direct upload links</li>
+            <li>Customizable templates per loan program and brand</li>
+          </ul>
         </div>
-        <h3 class="feature-title">Automated Notifications</h3>
-        <p class="feature-description">
-          Keep investors and brokers in the loop without manual follow-up. Notifications trigger when key events happen—from “App Received” to “Clear to Close”.
-        </p>
-        <ul class="feature-list">
-          <li>Email & SMS notifications for milestones and tasks</li>
-          <li>Status change alerts (submitted, in review, decision)</li>
-          <li>Missing document reminders with direct upload links</li>
-          <li>Customizable templates per loan program and brand</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">White-Label Ready</h3>
+          <p class="feature-description">
+            Your borrowers should see your brand—not your vendor. The Mentyx borrower portal runs under your domain, with your logo, colors, and messaging.
+          </p>
+          <ul class="feature-list">
+            <li>Custom domain (e.g. portal.yourlendingbrand.com)</li>
+            <li>Your logo, brand colors, and typography</li>
+            <li>Custom email & SMS templates with your voice</li>
+            <li>Configurable disclosures and legal text</li>
+          </ul>
         </div>
-        <h3 class="feature-title">White-Label Ready</h3>
-        <p class="feature-description">
-          Your borrowers should see your brand—not your vendor. The Mentyx borrower portal runs under your domain, with your logo, colors, and messaging.
-        </p>
-        <ul class="feature-list">
-          <li>Custom domain (e.g. portal.yourlendingbrand.com)</li>
-          <li>Your logo, brand colors, and typography</li>
-          <li>Custom email & SMS templates with your voice</li>
-          <li>Configurable disclosures and legal text</li>
-        </ul>
-      </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="benefits-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Why Lenders Love This Portal</h2>
-      <p class="section-subtitle">Better experience = more applications = more funded loans</p>
-    </div>
-
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-number">01</div>
-        <h3>Reduce Phone Time</h3>
-        <p>Stop taking loan applications over the phone or in long email threads. Borrowers enter their own data—cleaner inputs for underwriting, less staff time, and fewer typos in LTV and DSCR calculations.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">02</div>
-        <h3>24/7 Applications</h3>
-        <p>Investors apply when the deal is hot—often evenings and weekends. You start Monday with complete fix & flip and DSCR applications in your pipeline instead of voicemails asking “what do you need from me?”</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">03</div>
-        <h3>Professional Image</h3>
-        <p>A modern, branded portal makes you look like a national lender—even if your team is lean. Compete with bigger shops on digital experience while keeping your underwriting model and credit box.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">04</div>
-        <h3>Higher Completion Rates</h3>
-        <p>Auto-save, progress bars, mobile-first design, and clear instructions mean borrowers actually finish the process. Lenders regularly see 30–40% higher completion vs. PDFs or email-based intake.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Use Cases Section -->
-<section class="use-cases-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Real-World Scenarios</h2>
-      <p class="section-subtitle">How investors actually use the portal day-to-day</p>
-    </div>
-
-    <div class="use-cases-grid">
-      <div class="use-case-card">
-        <div class="use-case-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-            <line x1="8" y1="21" x2="16" y2="21"/>
-            <line x1="12" y1="17" x2="12" y2="21"/>
-          </svg>
-        </div>
-        <h3>The Property Showing</h3>
-        <p>
-          An investor tours a fix & flip opportunity at 6pm. Sitting in the car afterward, they open your portal on their phone, enter address, purchase price, rehab budget, and upload a few photos. At home later, they refine the ARV and attach the contractor’s scope on desktop.
-          <strong>Application started within 15 minutes of seeing the deal.</strong>
-        </p>
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Lenders Love This Portal</h2>
+        <p class="section-subtitle">Better experience = more applications = more funded loans</p>
       </div>
 
-      <div class="use-case-card">
-        <div class="use-case-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <h3>Reduce Phone Time</h3>
+          <p>Stop taking loan applications over the phone or in long email threads. Borrowers enter their own data—cleaner inputs for underwriting, less staff time, and fewer typos in LTV and DSCR calculations.</p>
         </div>
-        <h3>The Weekend Warrior</h3>
-        <p>
-          An experienced investor locks up a small portfolio of rentals on Saturday morning. Your office is closed—but your DSCR application is open. They upload leases, rent rolls, and operating statements from their cloud drive. 
-          <strong>By Monday 9am, underwriting has everything needed to size the loan and check DSCR.</strong>
-        </p>
-      </div>
 
-      <div class="use-case-card">
-        <div class="use-case-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
+        <div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <h3>24/7 Applications</h3>
+          <p>Investors apply when the deal is hot—often evenings and weekends. You start Monday with complete fix & flip and DSCR applications in your pipeline instead of voicemails asking “what do you need from me?”</p>
         </div>
-        <h3>The Repeat Borrower</h3>
-        <p>
-          A repeat borrower logs in, clicks “New Application,” and sees their entity, contact, and experience data already pre-filled. They only update property details, loan amount, and exit strategy.
-          <strong>Total time to submit a new bridge loan: under 5 minutes.</strong>
-        </p>
+
+        <div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <h3>Professional Image</h3>
+          <p>A modern, branded portal makes you look like a national lender—even if your team is lean. Compete with bigger shops on digital experience while keeping your underwriting model and credit box.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <h3>Higher Completion Rates</h3>
+          <p>Auto-save, progress bars, mobile-first design, and clear instructions mean borrowers actually finish the process. Lenders regularly see 30–40% higher completion vs. PDFs or email-based intake.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2 class="cta-title">Ready to Go Digital?</h2>
-      <p class="cta-subtitle">See how the borrower portal fits into your end-to-end lending flow—from first click to funded loan.</p>
-      <div class="cta-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="/platform" class="btn btn-secondary btn-lg">
-          Explore Platform
-        </a>
-        <a href="/solutions" class="btn btn-tertiary btn-lg">
-          View All Solutions
-        </a>
+  <!-- Use Cases Section -->
+  <section class="use-cases-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Real-World Scenarios</h2>
+        <p class="section-subtitle">How investors actually use the portal day-to-day</p>
+      </div>
+
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>The Property Showing</h3>
+          <p>
+            An investor tours a fix & flip opportunity at 6pm. Sitting in the car afterward, they open your portal on their phone, enter address, purchase price, rehab budget, and upload a few photos. At home later, they refine the ARV and attach the contractor’s scope on desktop.
+            <strong>Application started within 15 minutes of seeing the deal.</strong>
+          </p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>The Weekend Warrior</h3>
+          <p>
+            An experienced investor locks up a small portfolio of rentals on Saturday morning. Your office is closed—but your DSCR application is open. They upload leases, rent rolls, and operating statements from their cloud drive. 
+            <strong>By Monday 9am, underwriting has everything needed to size the loan and check DSCR.</strong>
+          </p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>The Repeat Borrower</h3>
+          <p>
+            A repeat borrower logs in, clicks “New Application,” and sees their entity, contact, and experience data already pre-filled. They only update property details, loan amount, and exit strategy.
+            <strong>Total time to submit a new bridge loan: under 5 minutes.</strong>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-  /* Hero Section */
-  .hero-section {
-    padding: 160px 0 100px;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-    position: relative;
-    overflow: hidden;
-  }
+  <!-- FAQ Section (matches FAQPage schema above) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Borrower Portal – FAQ</h2>
+        <p class="section-subtitle">What borrowers and credit teams ask us most often</p>
+      </div>
 
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-  }
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is a borrower portal for private real estate lending?</h3>
+          <p class="faq-answer">
+            A borrower portal is a secure, online front door where your investors start applications, upload documents, and track loan status in one place. Instead of sending PDFs and email attachments, they move through a guided, mobile-friendly flow that captures clean data for fix &amp; flip, bridge, and DSCR loans.
+          </p>
+        </div>
 
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 32px;
-    position: relative;
-    z-index: 1;
-  }
+        <div class="faq-item">
+          <h3 class="faq-question">How does the Mentyx borrower portal improve completion rates?</h3>
+          <p class="faq-answer">
+            The portal is built around how investors really work: they can start on a phone at the property, auto-save progress, and finish later on desktop. Clear progress bars, checklists, and real-time validation remove friction, so more borrowers fully complete applications instead of dropping off halfway.
+          </p>
+        </div>
 
-  .hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
+        <div class="faq-item">
+          <h3 class="faq-question">Can the portal be branded with our lending company’s look and feel?</h3>
+          <p class="faq-answer">
+            Yes. Mentyx is fully white-label ready: custom domain, logo, brand colors, and messaging, plus configurable email and SMS templates and legal disclosures. Borrowers experience a seamless journey under your brand from the first click to “Clear to Close.”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 9999px;
-    color: #06b6d4;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 32px;
-  }
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Go Digital?</h2>
+        <p class="cta-subtitle">See how the borrower portal fits into your end-to-end lending flow—from first click to funded loan.</p>
+        <div class="cta-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/platform" class="btn btn-secondary btn-lg">
+            Explore Platform
+          </a>
+          <a href="/solutions" class="btn btn-tertiary btn-lg">
+            View All Solutions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  .hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin: 0 0 24px 0;
-  }
+  <style>
+    /* Hero Section */
+    .hero-section {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
 
-  .title-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
 
-  .title-white {
-    color: white;
-  }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .hero-subtitle {
-    font-size: 1.375rem;
-    line-height: 1.6;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 64px;
-  }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 9999px;
+      color: #06b6d4;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 16px 32px;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-lg {
-    padding: 18px 36px;
-    font-size: 1.0625rem;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    color: white;
-    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
-  }
-
-  .btn-primary:hover {
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    background: rgba(59, 130, 246, 0.1);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: rgba(59, 130, 246, 0.5);
-  }
-
-  .btn-tertiary {
-    background: rgba(15, 23, 42, 0.8);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-tertiary:hover {
-    background: rgba(15, 23, 42, 1);
-    border-color: rgba(6, 182, 212, 0.5);
-    color: #22d3ee;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    padding: 32px 48px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-value {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-  }
-
-  .stat-label {
-    color: #94a3b8;
-    font-size: 0.9375rem;
-    font-weight: 500;
-  }
-
-  .stat-divider {
-    width: 1px;
-    height: 60px;
-    background: rgba(59, 130, 246, 0.2);
-  }
-
-  /* Features Section */
-  .features-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-
-  .section-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .section-subtitle {
-    font-size: 1.25rem;
-    color: #64748b;
-    margin: 0;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 32px;
-  }
-
-  .feature-card {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 24px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .feature-icon {
-    width: 72px;
-    height: 72px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #06b6d4;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover .feature-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
-  }
-
-  .feature-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .feature-description {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0 0 24px 0;
-    font-size: 1rem;
-  }
-
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .feature-list li {
-    color: #cbd5e1;
-    padding: 10px 0;
-    padding-left: 28px;
-    position: relative;
-    font-size: 0.9375rem;
-  }
-
-  .feature-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #06b6d4;
-    font-weight: bold;
-  }
-
-  /* Benefits Section */
-  .benefits-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-  }
-
-  .benefit-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .benefit-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-4px);
-  }
-
-  .benefit-number {
-    font-size: 3rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-    opacity: 0.5;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .benefit-card p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  /* Use Cases Section */
-  .use-cases-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .use-cases-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
-  }
-
-  .use-case-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .use-case-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-4px);
-  }
-
-  .use-case-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #06b6d4;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-  }
-
-  .use-case-card:hover .use-case-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
-  }
-
-  .use-case-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .use-case-card p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  .use-case-card strong {
-    color: #06b6d4;
-    font-weight: 600;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-  }
-
-  .cta-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 24px 0;
-  }
-
-  .cta-subtitle {
-    font-size: 1.25rem;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px 0;
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title-white {
+      color: white;
     }
 
     .hero-subtitle {
-      font-size: 1.125rem;
+      font-size: 1.375rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-lg {
+      padding: 18px 36px;
+      font-size: 1.0625rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      color: white;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(59, 130, 246, 0.1);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    .btn-tertiary {
+      background: rgba(15, 23, 42, 0.8);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-tertiary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(6, 182, 212, 0.5);
+      color: #22d3ee;
     }
 
     .hero-stats {
-      flex-direction: column;
-      gap: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      padding: 32px 48px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: #94a3b8;
+      font-size: 0.9375rem;
+      font-weight: 500;
     }
 
     .stat-divider {
-      width: 60px;
-      height: 1px;
+      width: 1px;
+      height: 60px;
+      background: rgba(59, 130, 246, 0.2);
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      margin: 0;
     }
 
     .features-grid {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 24px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #06b6d4;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .feature-description {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0 0 24px 0;
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      color: #cbd5e1;
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 0.9375rem;
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #06b6d4;
+      font-weight: bold;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .benefit-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .benefit-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      opacity: 0.5;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .benefit-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Use Cases Section */
+    .use-cases-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .use-case-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .use-case-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .use-case-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #06b6d4;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .use-case-card:hover .use-case-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .use-case-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .use-case-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .use-case-card strong {
+      color: #06b6d4;
+      font-weight: 600;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin: 0 0 12px 0;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+    }
+
+    .cta-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .cta-title {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 24px 0;
     }
-  }
-</style>
+
+    .cta-subtitle {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .stat-divider {
+        width: 60px;
+        height: 1px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .use-cases-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
 
 </Layout>
