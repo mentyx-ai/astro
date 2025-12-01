@@ -9,843 +9,987 @@ import Layout from '../../components/layouts/Layout.astro';
   canonical="https://mentyx.ai/solutions/application-management"
 >
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Application Management",
+      "item": "https://mentyx.ai/solutions/application-management"
+    }
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is loan application management for private real estate lenders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Loan application management centralizes every fix and flip, bridge, and DSCR application in a single visual pipeline. Mentyx shows where each deal sits, who owns the next step, and which documents or conditions are blocking funding, so no application gets lost in email or spreadsheets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we customize pipeline stages to match our origination process?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Mentyx provides standard stages like New, Document Review, Underwriting, Approved, Clear to Close, and Funded, but you can add, remove, or rename stages per product or channel. Many lenders maintain separate pipelines for fix and flip, bridge, and DSCR programs or for retail versus broker flows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Mentyx help prevent lost or stalled deals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx tracks missing documents, SLA breaches, days in stage, and upcoming deadlines like rate locks and contract expirations. Automated reminders, priority flags, and bottleneck analytics surface stuck loans so your team can intervene before the borrower moves to a faster competitor."
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          <span>Origination · Asset-Based</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-gradient">Application</span>
+          <span class="title-white">Management</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Visual pipeline tracking for asset-based real estate lending. See exactly where every fix & flip, bridge, and DSCR loan stands—from submission to funding—across all affiliates and markets.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/platform" class="btn btn-secondary btn-lg">
+            View Platform
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">Real-Time</div>
+            <div class="stat-label">Loan Pipeline Updates</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">360°</div>
+            <div class="stat-label">View Across Affiliates</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Lost or Forgotten Deals</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Never Lose Track of a Deal</h2>
+        <p class="section-subtitle">Complete visibility from application to funded loan</p>
+      </div>
+
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Visual Kanban Pipeline</h3>
+          <p class="feature-description">
+            Drag-and-drop interface shows all fix & flip, bridge, and DSCR deals at a glance. Move applications through stages—from New to Funded—with one click.
+          </p>
+          <ul class="feature-list">
+            <li>Customizable pipeline stages per product (Fix & Flip, Bridge, DSCR)</li>
+            <li>Drag & drop to move deals between stages</li>
+            <li>Color-coded by product, leverage, or risk band</li>
+            <li>Filter by affiliate, state, loan size, or lien position</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-Time Status Updates</h3>
+          <p class="feature-description">
+            Everyone works off the same source of truth. Once underwriting updates LTV, ARV, or conditions, status and notes are visible instantly for loan officers, processors, and executives.
+          </p>
+          <ul class="feature-list">
+            <li>Auto-sync across underwriters, processors, and originators</li>
+            <li>Email & SMS notifications on key milestones</li>
+            <li>Activity timeline per application (LTV changes, DSCR updates, notes)</li>
+            <li>Status change alerts for hot and expiring deals</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Missing Document Tracking</h3>
+          <p class="feature-description">
+            Instantly see which deals are stuck because of missing docs—purchase contract, rehab budget, appraisal, rent roll, or bank statements—and who needs to act.
+          </p>
+          <ul class="feature-list">
+            <li>Loan-specific checklist (Fix & Flip, Bridge, DSCR templates)</li>
+            <li>Red flags for missing or expired items</li>
+            <li>Auto-reminders to borrowers and brokers</li>
+            <li>Upload deadlines tied to closing dates</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20V10"/>
+              <path d="M18 20V4"/>
+              <path d="M6 20v-4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Priority & Urgency Flags</h3>
+          <p class="feature-description">
+            Surface time-sensitive deals first—competitive acquisitions, rate-lock expirations, or tight rehab timelines. Focus your team on the loans that move the needle.
+          </p>
+          <ul class="feature-list">
+            <li>High/Medium/Low priority tags per loan</li>
+            <li>Days-in-stage counter and SLA thresholds</li>
+            <li>Alerts for rate-lock or contract deadlines</li>
+            <li>Sort and filter by urgency and loan size</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Team Assignment</h3>
+          <p class="feature-description">
+            Route applications to the right underwriter or affiliate based on product, state, and complexity. Everyone knows who owns the next step.
+          </p>
+          <ul class="feature-list">
+            <li>Assign deals to underwriters, processors, or branches</li>
+            <li>Balance workload by loan count and volume</li>
+            <li>Per-user dashboards for daily focus</li>
+            <li>Performance tracking by product and risk band</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Deal Value Overview</h3>
+          <p class="feature-description">
+            Understand pipeline value at a glance—by stage, by product, and by leverage. See how much LTC and LTV you’re committing before funding.
+          </p>
+          <ul class="feature-list">
+            <li>Total $ volume per stage and per product type</li>
+            <li>Loan count by state, affiliate, and program</li>
+            <li>Expected funding dates and cash needs</li>
+            <li>Revenue and fee forecasting across the portfolio</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Bottleneck Detection</h3>
+          <p class="feature-description">
+            Automatically identifies where asset-based deals get stuck—title, appraisal, rehab budget, or underwriting—and shows you where to add capacity.
+          </p>
+          <ul class="feature-list">
+            <li>Average time per stage and per product</li>
+            <li>Alerts when loans exceed SLA thresholds</li>
+            <li>Stage velocity metrics by affiliate</li>
+            <li>Actionable recommendations for process changes</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Export & Reporting</h3>
+          <p class="feature-description">
+            Export pipeline data for investors, warehouse lenders, or internal committees. Track how quickly you move high-LTV, high-ARV deals from submitted to funded.
+          </p>
+          <ul class="feature-list">
+            <li>CSV/Excel export for board and investor decks</li>
+            <li>Custom date ranges and product filters</li>
+            <li>Historical pipeline snapshots over time</li>
+            <li>Conversion rate reporting by channel and product</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Visual Pipeline Management Works</h2>
+        <p class="section-subtitle">From scattered spreadsheets to one lending cockpit</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <h3>No More Status Calls</h3>
+          <p>Borrowers, brokers, and loan officers see status online. Underwriters update once, everyone sees it. Saves 10–15 hours per week in “what’s the status?” emails, texts, and phone calls.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <h3>Faster Closings</h3>
+          <p>See exactly what is holding up each deal—missing appraisal, title conditions, or updated rehab budget. Assign the next action instantly and reduce average time-to-close by 20–30%.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <h3>Better Capacity Planning</h3>
+          <p>Know how many loans (and how much volume) will hit underwriting or funding in the next 7–30 days. Plan staffing for fix & flip spikes, seasonal DSCR waves, or affiliate campaigns.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <h3>Higher Conversion Rates</h3>
+          <p>Applications don’t fall through the cracks. Automated reminders, clear ownership, and SLA alerts keep deals moving—and help you close more of the loans you quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pipeline Stages Section -->
+  <section class="pipeline-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Standard Pipeline Stages</h2>
+        <p class="section-subtitle">Built for asset-based lending, fully customizable</p>
+      </div>
+
+      <div class="pipeline-stages">
+        <div class="pipeline-stage">
+          <div class="stage-number">1</div>
+          <h3>New Applications</h3>
+          <p>Lead captured, 1003 or custom app received, basic deal terms logged</p>
+        </div>
+        
+        <div class="pipeline-arrow">→</div>
+        
+        <div class="pipeline-stage">
+          <div class="stage-number">2</div>
+          <h3>Document Review</h3>
+          <p>Checking completeness: purchase contract, rehab budget, photos, rent roll</p>
+        </div>
+        
+        <div class="pipeline-arrow">→</div>
+        
+        <div class="pipeline-stage">
+          <div class="stage-number">3</div>
+          <h3>Underwriting</h3>
+          <p>AI + human review: ARV, LTV/LTC, DSCR, borrower strength, exit strategy</p>
+        </div>
+        
+        <div class="pipeline-arrow">→</div>
+        
+        <div class="pipeline-stage">
+          <div class="stage-number">4</div>
+          <h3>Approved</h3>
+          <p>Term sheet or conditional approval issued, conditions tracked</p>
+        </div>
+        
+        <div class="pipeline-arrow">→</div>
+        
+        <div class="pipeline-stage">
+          <div class="stage-number">5</div>
+          <h3>Clear to Close</h3>
+          <p>All conditions cleared, docs ready, funding scheduled</p>
+        </div>
+        
+        <div class="pipeline-arrow">→</div>
+        
+        <div class="pipeline-stage">
+          <div class="stage-number">6</div>
+          <h3>Funded</h3>
+          <p>Money wired, loan boarded to servicing or portfolio management</p>
+        </div>
+      </div>
+
+      <div class="pipeline-note">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <line x1="12" y1="8" x2="12.01" y2="8"/>
         </svg>
-        <span>Origination · Asset-Based</span>
-      </div>
-      
-      <h1 class="hero-title">
-        <span class="title-gradient">Application</span>
-        <span class="title-white">Management</span>
-      </h1>
-      
-      <p class="hero-subtitle">
-        Visual pipeline tracking for asset-based real estate lending. See exactly where every fix & flip, bridge, and DSCR loan stands—from submission to funding—across all affiliates and markets.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="/platform" class="btn btn-secondary btn-lg">
-          View Platform
-        </a>
-      </div>
-
-      <!-- Stats -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-value">Real-Time</div>
-          <div class="stat-label">Loan Pipeline Updates</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">360°</div>
-          <div class="stat-label">View Across Affiliates</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">0</div>
-          <div class="stat-label">Lost or Forgotten Deals</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Features Grid -->
-<section class="features-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Never Lose Track of a Deal</h2>
-      <p class="section-subtitle">Complete visibility from application to funded loan</p>
-    </div>
-
-    <div class="features-grid">
-      
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="7" height="7"/>
-            <rect x="14" y="3" width="7" height="7"/>
-            <rect x="14" y="14" width="7" height="7"/>
-            <rect x="3" y="14" width="7" height="7"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Visual Kanban Pipeline</h3>
-        <p class="feature-description">
-          Drag-and-drop interface shows all fix & flip, bridge, and DSCR deals at a glance. Move applications through stages—from New to Funded—with one click.
+        <p>
+          Add, remove, or rename stages to match your process. Many lenders split by product (Fix & Flip, Bridge, DSCR) or by channel (retail vs. broker). Mentyx adapts to your origination model—not the other way around.
         </p>
-        <ul class="feature-list">
-          <li>Customizable pipeline stages per product (Fix & Flip, Bridge, DSCR)</li>
-          <li>Drag & drop to move deals between stages</li>
-          <li>Color-coded by product, leverage, or risk band</li>
-          <li>Filter by affiliate, state, loan size, or lien position</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Real-Time Status Updates</h3>
-        <p class="feature-description">
-          Everyone works off the same source of truth. Once underwriting updates LTV, ARV, or conditions, status and notes are visible instantly for loan officers, processors, and executives.
-        </p>
-        <ul class="feature-list">
-          <li>Auto-sync across underwriters, processors, and originators</li>
-          <li>Email & SMS notifications on key milestones</li>
-          <li>Activity timeline per application (LTV changes, DSCR updates, notes)</li>
-          <li>Status change alerts for hot and expiring deals</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 11l3 3L22 4"/>
-            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Missing Document Tracking</h3>
-        <p class="feature-description">
-          Instantly see which deals are stuck because of missing docs—purchase contract, rehab budget, appraisal, rent roll, or bank statements—and who needs to act.
-        </p>
-        <ul class="feature-list">
-          <li>Loan-specific checklist (Fix & Flip, Bridge, DSCR templates)</li>
-          <li>Red flags for missing or expired items</li>
-          <li>Auto-reminders to borrowers and brokers</li>
-          <li>Upload deadlines tied to closing dates</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 20V10"/>
-            <path d="M18 20V4"/>
-            <path d="M6 20v-4"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Priority & Urgency Flags</h3>
-        <p class="feature-description">
-          Surface time-sensitive deals first—competitive acquisitions, rate-lock expirations, or tight rehab timelines. Focus your team on the loans that move the needle.
-        </p>
-        <ul class="feature-list">
-          <li>High/Medium/Low priority tags per loan</li>
-          <li>Days-in-stage counter and SLA thresholds</li>
-          <li>Alerts for rate-lock or contract deadlines</li>
-          <li>Sort and filter by urgency and loan size</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-            <path d="M16 3.13a4 4 0 010 7.75"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Team Assignment</h3>
-        <p class="feature-description">
-          Route applications to the right underwriter or affiliate based on product, state, and complexity. Everyone knows who owns the next step.
-        </p>
-        <ul class="feature-list">
-          <li>Assign deals to underwriters, processors, or branches</li>
-          <li>Balance workload by loan count and volume</li>
-          <li>Per-user dashboards for daily focus</li>
-          <li>Performance tracking by product and risk band</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="12" y1="1" x2="12" y2="23"/>
-            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Deal Value Overview</h3>
-        <p class="feature-description">
-          Understand pipeline value at a glance—by stage, by product, and by leverage. See how much LTC and LTV you’re committing before funding.
-        </p>
-        <ul class="feature-list">
-          <li>Total $ volume per stage and per product type</li>
-          <li>Loan count by state, affiliate, and program</li>
-          <li>Expected funding dates and cash needs</li>
-          <li>Revenue and fee forecasting across the portfolio</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Bottleneck Detection</h3>
-        <p class="feature-description">
-          Automatically identifies where asset-based deals get stuck—title, appraisal, rehab budget, or underwriting—and shows you where to add capacity.
-        </p>
-        <ul class="feature-list">
-          <li>Average time per stage and per product</li>
-          <li>Alerts when loans exceed SLA thresholds</li>
-          <li>Stage velocity metrics by affiliate</li>
-          <li>Actionable recommendations for process changes</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Export & Reporting</h3>
-        <p class="feature-description">
-          Export pipeline data for investors, warehouse lenders, or internal committees. Track how quickly you move high-LTV, high-ARV deals from submitted to funded.
-        </p>
-        <ul class="feature-list">
-          <li>CSV/Excel export for board and investor decks</li>
-          <li>Custom date ranges and product filters</li>
-          <li>Historical pipeline snapshots over time</li>
-          <li>Conversion rate reporting by channel and product</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="benefits-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Why Visual Pipeline Management Works</h2>
-      <p class="section-subtitle">From scattered spreadsheets to one lending cockpit</p>
-    </div>
-
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-number">01</div>
-        <h3>No More Status Calls</h3>
-        <p>Borrowers, brokers, and loan officers see status online. Underwriters update once, everyone sees it. Saves 10–15 hours per week in “what’s the status?” emails, texts, and phone calls.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">02</div>
-        <h3>Faster Closings</h3>
-        <p>See exactly what is holding up each deal—missing appraisal, title conditions, or updated rehab budget. Assign the next action instantly and reduce average time-to-close by 20–30%.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">03</div>
-        <h3>Better Capacity Planning</h3>
-        <p>Know how many loans (and how much volume) will hit underwriting or funding in the next 7–30 days. Plan staffing for fix & flip spikes, seasonal DSCR waves, or affiliate campaigns.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">04</div>
-        <h3>Higher Conversion Rates</h3>
-        <p>Applications don’t fall through the cracks. Automated reminders, clear ownership, and SLA alerts keep deals moving—and help you close more of the loans you quote.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Pipeline Stages Section -->
-<section class="pipeline-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Standard Pipeline Stages</h2>
-      <p class="section-subtitle">Built for asset-based lending, fully customizable</p>
-    </div>
+  <!-- FAQ Section (matches FAQPage schema above) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Application Management – FAQ</h2>
+        <p class="section-subtitle">Answers your ops and credit teams will ask first</p>
+      </div>
 
-    <div class="pipeline-stages">
-      <div class="pipeline-stage">
-        <div class="stage-number">1</div>
-        <h3>New Applications</h3>
-        <p>Lead captured, 1003 or custom app received, basic deal terms logged</p>
-      </div>
-      
-      <div class="pipeline-arrow">→</div>
-      
-      <div class="pipeline-stage">
-        <div class="stage-number">2</div>
-        <h3>Document Review</h3>
-        <p>Checking completeness: purchase contract, rehab budget, photos, rent roll</p>
-      </div>
-      
-      <div class="pipeline-arrow">→</div>
-      
-      <div class="pipeline-stage">
-        <div class="stage-number">3</div>
-        <h3>Underwriting</h3>
-        <p>AI + human review: ARV, LTV/LTC, DSCR, borrower strength, exit strategy</p>
-      </div>
-      
-      <div class="pipeline-arrow">→</div>
-      
-      <div class="pipeline-stage">
-        <div class="stage-number">4</div>
-        <h3>Approved</h3>
-        <p>Term sheet or conditional approval issued, conditions tracked</p>
-      </div>
-      
-      <div class="pipeline-arrow">→</div>
-      
-      <div class="pipeline-stage">
-        <div class="stage-number">5</div>
-        <h3>Clear to Close</h3>
-        <p>All conditions cleared, docs ready, funding scheduled</p>
-      </div>
-      
-      <div class="pipeline-arrow">→</div>
-      
-      <div class="pipeline-stage">
-        <div class="stage-number">6</div>
-        <h3>Funded</h3>
-        <p>Money wired, loan boarded to servicing or portfolio management</p>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is loan application management for private real estate lenders?</h3>
+          <p class="faq-answer">
+            Application management means every fix &amp; flip, bridge, and DSCR deal lives in one visual pipeline instead of
+            scattered spreadsheets and email threads. Mentyx shows status, ownership, missing items, and deadlines so your team
+            always knows what needs to happen next to move a loan to funding.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Can we customize pipeline stages to match our origination process?</h3>
+          <p class="faq-answer">
+            Yes. You can start with standard stages like New, Document Review, Underwriting, Approved, Clear to Close, and Funded,
+            then adapt per product or channel. Many lenders run separate pipelines for fix &amp; flip, bridge, and DSCR programs
+            or for retail versus broker flows.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How does Mentyx help prevent lost or stalled deals?</h3>
+          <p class="faq-answer">
+            Mentyx tracks missing documents, SLA breaches, time-in-stage, and critical dates such as rate locks and contract
+            expirations. Priority flags, automated reminders, and bottleneck analytics highlight stuck loans so your team can
+            intervene before the borrower chooses another lender.
+          </p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="pipeline-note">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="12" y1="16" x2="12" y2="12"/>
-        <line x1="12" y1="8" x2="12.01" y2="8"/>
-      </svg>
-      <p>
-        Add, remove, or rename stages to match your process. Many lenders split by product (Fix & Flip, Bridge, DSCR) or by channel (retail vs. broker). Mentyx adapts to your origination model—not the other way around.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2 class="cta-title">Ready to See Your Pipeline in One Screen?</h2>
-      <p class="cta-subtitle">Get a 5-minute walkthrough of how Mentyx tracks every fix & flip, bridge, and DSCR loan from app to funding.</p>
-      <div class="cta-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="/solutions/borrower-portal" class="btn btn-secondary btn-lg">
-          See Borrower Portal
-        </a>
-        <a href="/solutions" class="btn btn-tertiary btn-lg">
-          View All Solutions
-        </a>
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to See Your Pipeline in One Screen?</h2>
+        <p class="cta-subtitle">Get a 5-minute walkthrough of how Mentyx tracks every fix & flip, bridge, and DSCR loan from app to funding.</p>
+        <div class="cta-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/solutions/borrower-portal" class="btn btn-secondary btn-lg">
+            See Borrower Portal
+          </a>
+          <a href="/solutions" class="btn btn-tertiary btn-lg">
+            View All Solutions
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-  /* Hero Section */
-  .hero-section {
-    padding: 160px 0 100px;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-    position: relative;
-    overflow: hidden;
-  }
+  <style>
+    /* Hero Section */
+    .hero-section {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
 
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-  }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
 
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 32px;
-    position: relative;
-    z-index: 1;
-  }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 9999px;
-    color: #06b6d4;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 32px;
-  }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 9999px;
+      color: #06b6d4;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
 
-  .hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin: 0 0 24px 0;
-  }
-
-  .title-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .title-white {
-    color: white;
-  }
-
-  .hero-subtitle {
-    font-size: 1.375rem;
-    line-height: 1.6;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 64px;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 16px 32px;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-lg {
-    padding: 18px 36px;
-    font-size: 1.0625rem;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    color: white;
-    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
-  }
-
-  .btn-primary:hover {
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    background: rgba(59, 130, 246, 0.1);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: rgba(59, 130, 246, 0.5);
-  }
-
-  .btn-tertiary {
-    background: rgba(15, 23, 42, 0.8);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-tertiary:hover {
-    background: rgba(15, 23, 42, 1);
-    border-color: rgba(6, 182, 212, 0.5);
-    color: #22d3ee;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    padding: 32px 48px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-value {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-  }
-
-  .stat-label {
-    color: #94a3b8;
-    font-size: 0.9375rem;
-    font-weight: 500;
-  }
-
-  .stat-divider {
-    width: 1px;
-    height: 60px;
-    background: rgba(59, 130, 246, 0.2);
-  }
-
-  /* Features Section */
-  .features-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-
-  .section-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .section-subtitle {
-    font-size: 1.25rem;
-    color: #64748b;
-    margin: 0;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 32px;
-  }
-
-  .feature-card {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 24px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .feature-icon {
-    width: 72px;
-    height: 72px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #06b6d4;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover .feature-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
-  }
-
-  .feature-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .feature-description {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0 0 24px 0;
-    font-size: 1rem;
-  }
-
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .feature-list li {
-    color: #cbd5e1;
-    padding: 10px 0;
-    padding-left: 28px;
-    position: relative;
-    font-size: 0.9375rem;
-  }
-
-  .feature-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #06b6d4;
-    font-weight: bold;
-  }
-
-  /* Benefits Section */
-  .benefits-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-  }
-
-  .benefit-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .benefit-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-4px);
-  }
-
-  .benefit-number {
-    font-size: 3rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-    opacity: 0.5;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .benefit-card p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  /* Pipeline Stages Section */
-  .pipeline-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .pipeline-stages {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 60px;
-  }
-
-  .pipeline-stage {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 16px;
-    padding: 32px 24px;
-    text-align: center;
-    min-width: 180px;
-    transition: all 0.3s ease;
-  }
-
-  .pipeline-stage:hover {
-    border-color: rgba(59, 130, 246, 0.5);
-    transform: translateY(-4px);
-  }
-
-  .stage-number {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 auto 16px;
-  }
-
-  .pipeline-stage h3 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 8px 0;
-  }
-
-  .pipeline-stage p {
-    font-size: 0.875rem;
-    color: #94a3b8;
-    margin: 0;
-    line-height: 1.5;
-  }
-
-  .pipeline-arrow {
-    font-size: 2rem;
-    color: #06b6d4;
-    font-weight: 300;
-  }
-
-  .pipeline-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 24px 32px;
-    background: rgba(59, 130, 246, 0.05);
-    border: 1px solid rgba(59, 130, 246, 0.15);
-    border-radius: 16px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .pipeline-note svg {
-    color: #06b6d4;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .pipeline-note p {
-    color: #cbd5e1;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-  }
-
-  .cta-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 24px 0;
-  }
-
-  .cta-subtitle {
-    font-size: 1.25rem;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px 0;
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title-white {
+      color: white;
     }
 
     .hero-subtitle {
-      font-size: 1.125rem;
+      font-size: 1.375rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-lg {
+      padding: 18px 36px;
+      font-size: 1.0625rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      color: white;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(59, 130, 246, 0.1);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    .btn-tertiary {
+      background: rgba(15, 23, 42, 0.8);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-tertiary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(6, 182, 212, 0.5);
+      color: #22d3ee;
     }
 
     .hero-stats {
-      flex-direction: column;
-      gap: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      padding: 32px 48px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: #94a3b8;
+      font-size: 0.9375rem;
+      font-weight: 500;
     }
 
     .stat-divider {
-      width: 60px;
-      height: 1px;
+      width: 1px;
+      height: 60px;
+      background: rgba(59, 130, 246, 0.2);
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      margin: 0;
     }
 
     .features-grid {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 24px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #06b6d4;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .feature-description {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0 0 24px 0;
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      color: #cbd5e1;
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 0.9375rem;
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #06b6d4;
+      font-weight: bold;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .benefit-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .benefit-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      opacity: 0.5;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .benefit-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Pipeline Stages Section */
+    .pipeline-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .pipeline-stages {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .pipeline-stage {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      min-width: 180px;
+      transition: all 0.3s ease;
+    }
+
+    .pipeline-stage:hover {
+      border-color: rgba(59, 130, 246, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .stage-number {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 auto 16px;
+    }
+
+    .pipeline-stage h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 8px 0;
+    }
+
+    .pipeline-stage p {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin: 0;
+      line-height: 1.5;
     }
 
     .pipeline-arrow {
-      transform: rotate(90deg);
+      font-size: 2rem;
+      color: #06b6d4;
+      font-weight: 300;
+    }
+
+    .pipeline-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px 32px;
+      background: rgba(59, 130, 246, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      border-radius: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .pipeline-note svg {
+      color: #06b6d4;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pipeline-note p {
+      color: #cbd5e1;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin: 0 0 12px 0;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+    }
+
+    .cta-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .cta-title {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 24px 0;
     }
-  }
-</style>
+
+    .cta-subtitle {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .stat-divider {
+        width: 60px;
+        height: 1px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pipeline-arrow {
+        transform: rotate(90deg);
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
 
 </Layout>
