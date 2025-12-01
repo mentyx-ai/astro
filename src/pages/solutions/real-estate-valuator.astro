@@ -6,982 +6,1122 @@ import Layout from '../../components/layouts/Layout.astro';
 <Layout 
   title="Real Estate Valuator - Property Valuation & Comps | Mentyx.ai"
   description="AI-powered property valuation tool for fix & flip, bridge, and DSCR loans. Get instant ARV estimates, comp analysis, and valuation reports."
+  canonical="https://mentyx.ai/solutions/real-estate-valuator"
 >
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-        <span>Servicing</span>
-      </div>
-      
-      <h1 class="hero-title">
-        <span class="title-gradient">Real Estate</span>
-        <span class="title-white">Valuator</span>
-      </h1>
-      
-      <p class="hero-subtitle">
-        AI-powered property valuation for private lenders. Get instant ARV estimates, comp analysis, and automated valuation reports—right from your phone.
-      </p>
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Real Estate Valuator",
+      "item": "https://mentyx.ai/solutions/real-estate-valuator"
+    }
+  ]
+}
+  </script>
 
-      <div class="hero-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Mentyx Real Estate Valuator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Mentyx Real Estate Valuator is an AI-powered valuation engine built for private lenders. It calculates ARV, pulls comps, estimates rehab costs, and models rental income so fix and flip, bridge, and DSCR loans can be sized in seconds instead of days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are the valuations compared to appraisals and BPOs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most stabilized markets, lenders see that Mentyx valuations land within a tight range of formal appraisals and BPOs while being delivered in seconds instead of days. It is designed for fast screening, pricing, and term-sheet decisions, and can reduce the number of third-party valuations you need to order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Real Estate Valuator replace human appraisers and BPOs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Mentyx Real Estate Valuator is a powerful complement to human appraisers and BPO providers, not a full replacement. Lenders typically use it to pre-screen deals, validate borrower ARV claims, recheck values over time, and reserve formal appraisals for higher-risk, complex, or higher-balance loans."
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
-        </a>
-        <a href="/platform" class="btn btn-secondary btn-lg">
-          View Platform
-        </a>
-      </div>
-
-      <!-- Stats -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-value">30 sec</div>
-          <div class="stat-label">Valuation Time</div>
+          <span>Servicing</span>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">95%</div>
-          <div class="stat-label">Accuracy vs Appraisals</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">$0</div>
-          <div class="stat-label">Cost per Valuation</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Features Grid -->
-<section class="features-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Instant Property Intelligence</h2>
-      <p class="section-subtitle">Built for fix & flip lenders who need fast, accurate valuations</p>
-    </div>
-
-    <div class="features-grid">
-      
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-            <line x1="8" y1="21" x2="16" y2="21"/>
-            <line x1="12" y1="17" x2="12" y2="21"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Mobile Property Inspection</h3>
-        <p class="feature-description">
-          Inspect properties on-site with your phone. Take photos, record condition notes, and get instant ARV estimates while standing in the property.
+        
+        <h1 class="hero-title">
+          <span class="title-gradient">Real Estate</span>
+          <span class="title-white">Valuator</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          AI-powered property valuation for private lenders. Get instant ARV estimates, comp analysis, and automated valuation reports—right from your phone.
         </p>
-        <ul class="feature-list">
-          <li>Photo upload with geolocation</li>
-          <li>Condition assessment checklist</li>
-          <li>Room-by-room photo organization</li>
-          <li>Offline mode for site visits</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-            <line x1="12" y1="22.08" x2="12" y2="12"/>
-          </svg>
+        <div class="hero-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/platform" class="btn btn-secondary btn-lg">
+            View Platform
+          </a>
         </div>
-        <h3 class="feature-title">AI ARV Estimation</h3>
-        <p class="feature-description">
-          Get instant After-Repair Value estimates based on comps, neighborhood data, and property characteristics. AI adjusts for local market trends.
-        </p>
-        <ul class="feature-list">
-          <li>Instant ARV calculations</li>
-          <li>Market trend analysis</li>
-          <li>Neighborhood comparables</li>
-          <li>Confidence scoring</li>
-        </ul>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Comp Analysis</h3>
-        <p class="feature-description">
-          Automatically pull comparable sales from public records and MLS. See side-by-side comparisons with adjustments for size, condition, and features.
-        </p>
-        <ul class="feature-list">
-          <li>Automated comp selection</li>
-          <li>Adjustment calculations</li>
-          <li>Market trend overlays</li>
-          <li>Export to PDF reports</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Rehab Cost Estimation</h3>
-        <p class="feature-description">
-          AI estimates rehab costs based on property condition, local labor rates, and material costs. Build accurate budgets before contractor bids.
-        </p>
-        <ul class="feature-list">
-          <li>Line-item cost breakdown</li>
-          <li>Local labor rate database</li>
-          <li>Material cost estimation</li>
-          <li>Budget vs. actual tracking</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Rental Value Analysis</h3>
-        <p class="feature-description">
-          For DSCR loans, estimate market rent, vacancy rates, and operating expenses. Calculate accurate DSCR before underwriting.
-        </p>
-        <ul class="feature-list">
-          <li>Market rent estimation</li>
-          <li>Vacancy rate analysis</li>
-          <li>Operating expense modeling</li>
-          <li>DSCR pre-calculation</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Valuation Report Generation</h3>
-        <p class="feature-description">
-          Generate professional valuation reports with comps, photos, and analysis. Share with borrowers, investors, or use for internal underwriting.
-        </p>
-        <ul class="feature-list">
-          <li>One-click PDF reports</li>
-          <li>Branded templates</li>
-          <li>Photo integration</li>
-          <li>Share via link or email</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Market Trend Alerts</h3>
-        <p class="feature-description">
-          Get alerts when market conditions change in your lending areas. Price drops, inventory changes, or comp sales that affect your portfolio.
-        </p>
-        <ul class="feature-list">
-          <li>Neighborhood price alerts</li>
-          <li>Inventory level monitoring</li>
-          <li>Days-on-market trends</li>
-          <li>Custom alert thresholds</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Portfolio Valuation Tracking</h3>
-        <p class="feature-description">
-          Track property values across your entire portfolio. See appreciation/depreciation trends and monitor collateral value in real-time.
-        </p>
-        <ul class="feature-list">
-          <li>Portfolio-wide value tracking</li>
-          <li>Appreciation analytics</li>
-          <li>Collateral monitoring</li>
-          <li>Investor reporting</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="benefits-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Why Lenders Trust Our Valuations</h2>
-      <p class="section-subtitle">Built by lenders, for lenders</p>
-    </div>
-
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-number">01</div>
-        <h3>Save $450 Per Deal</h3>
-        <p>No more $450 BPOs for every deal. Get instant valuations for $0. Use formal appraisals only for complex or high-value properties.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">02</div>
-        <h3>Faster Deal Screening</h3>
-        <p>Screen 10 properties in the time it used to take to screen 1. Get instant ARV estimates before spending time on full underwriting.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">03</div>
-        <h3>Better Borrower Conversations</h3>
-        <p>Show borrowers comps and valuation data during property tours. Educated conversations lead to better deals and fewer unrealistic expectations.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">04</div>
-        <h3>Consistent Valuations</h3>
-        <p>Eliminate valuation differences between loan officers. Every team member uses the same AI model and data sources.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Workflow Section -->
-<section class="workflow-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">How It Works: 3-Minute Valuation</h2>
-      <p class="section-subtitle">From property address to professional valuation report</p>
-    </div>
-
-    <div class="workflow-steps">
-      <div class="workflow-step">
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h3>Enter Property Details</h3>
-          <p>Input address or use mobile app to scan property. Add photos, square footage, bedroom/bath count, and condition notes.</p>
-          <div class="step-features">
-            <span class="feature-tag">Address lookup</span>
-            <span class="feature-tag">Photo upload</span>
-            <span class="feature-tag">Condition assessment</span>
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">30 sec</div>
+            <div class="stat-label">Valuation Time</div>
           </div>
-        </div>
-      </div>
-
-      <div class="workflow-step">
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h3>AI Analysis & Comp Selection</h3>
-          <p>System automatically finds comparable sales, analyzes market trends, and calculates ARV based on property characteristics and local data.</p>
-          <div class="step-features">
-            <span class="feature-tag">Automated comps</span>
-            <span class="feature-tag">Market analysis</span>
-            <span class="feature-tag">ARV calculation</span>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">95%</div>
+            <div class="stat-label">Accuracy vs Appraisals</div>
           </div>
-        </div>
-      </div>
-
-      <div class="workflow-step">
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h3>Review & Generate Report</h3>
-          <p>Review AI's valuation, adjust comps if needed, and generate professional PDF report with photos, comps, and analysis.</p>
-          <div class="step-features">
-            <span class="feature-tag">PDF reports</span>
-            <span class="feature-tag">Branded templates</span>
-            <span class="feature-tag">One-click sharing</span>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">$0</div>
+            <div class="stat-label">Cost per Valuation</div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="accuracy-metrics">
-      <div class="accuracy-card">
-        <div class="accuracy-value">95%</div>
-        <div class="accuracy-label">Accuracy vs Formal Appraisals</div>
-        <div class="accuracy-description">Within 5% of formal appraisal values on average</div>
+  <!-- Features Grid -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Instant Property Intelligence</h2>
+        <p class="section-subtitle">Built for fix &amp; flip lenders who need fast, accurate valuations</p>
       </div>
-      <div class="accuracy-card">
-        <div class="accuracy-value">30 sec</div>
-        <div class="accuracy-label">Average Valuation Time</div>
-        <div class="accuracy-description">From input to completed valuation report</div>
-      </div>
-      <div class="accuracy-card">
-        <div class="accuracy-value">$0</div>
-        <div class="accuracy-label">Cost Per Valuation</div>
-        <div class="accuracy-description">Unlimited valuations included in platform</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Use Cases Section -->
-<section class="use-cases-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Real Valuation Scenarios</h2>
-      <p class="section-subtitle">How lenders use the valuator daily</p>
-    </div>
-
-    <div class="use-cases-grid">
-      <div class="use-case-card">
-        <div class="use-case-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-            <line x1="8" y1="21" x2="16" y2="21"/>
-            <line x1="12" y1="17" x2="12" y2="21"/>
-          </svg>
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Mobile Property Inspection</h3>
+          <p class="feature-description">
+            Inspect properties on-site with your phone. Take photos, record condition notes, and get instant ARV estimates while standing in the property.
+          </p>
+          <ul class="feature-list">
+            <li>Photo upload with geolocation</li>
+            <li>Condition assessment checklist</li>
+            <li>Room-by-room photo organization</li>
+            <li>Offline mode for site visits</li>
+          </ul>
         </div>
-        <h3>Property Tour Valuation</h3>
-        <p>Loan officer tours potential flip property with borrower. Uses mobile app to take photos, enter property details. Gets instant ARV estimate of $385K while standing in kitchen. Shows borrower comps on phone. <strong>Deal moves forward immediately instead of waiting 2 days for BPO.</strong></p>
-      </div>
 
-      <div class="use-case-card">
-        <div class="use-case-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI ARV Estimation</h3>
+          <p class="feature-description">
+            Get instant After-Repair Value estimates based on comps, neighborhood data, and property characteristics. AI adjusts for local market trends.
+          </p>
+          <ul class="feature-list">
+            <li>Instant ARV calculations</li>
+            <li>Market trend analysis</li>
+            <li>Neighborhood comparables</li>
+            <li>Confidence scoring</li>
+          </ul>
         </div>
-        <h3>Quick Deal Screening</h3>
-        <p>Underwriter receives 15 new applications Monday morning. Runs each through valuator in 30 seconds each. Immediately identifies 3 deals with unrealistic ARV claims (20%+ over market). <strong>Focuses underwriting time on the 12 viable deals.</strong></p>
-      </div>
 
-      <div class="use-case-card">
-        <div class="use-case-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Comp Analysis</h3>
+          <p class="feature-description">
+            Automatically pull comparable sales from public records and MLS. See side-by-side comparisons with adjustments for size, condition, and features.
+          </p>
+          <ul class="feature-list">
+            <li>Automated comp selection</li>
+            <li>Adjustment calculations</li>
+            <li>Market trend overlays</li>
+            <li>Export to PDF reports</li>
+          </ul>
         </div>
-        <h3>Portfolio Monitoring</h3>
-        <p>HQ team runs monthly portfolio valuation update. System automatically re-values all 200 collateral properties. Flags 3 properties with 10%+ value drops. <strong>Proactively addresses potential LTV issues before they become problems.</strong></p>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Rehab Cost Estimation</h3>
+          <p class="feature-description">
+            AI estimates rehab costs based on property condition, local labor rates, and material costs. Build accurate budgets before contractor bids.
+          </p>
+          <ul class="feature-list">
+            <li>Line-item cost breakdown</li>
+            <li>Local labor rate database</li>
+            <li>Material cost estimation</li>
+            <li>Budget vs. actual tracking</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Rental Value Analysis</h3>
+          <p class="feature-description">
+            For DSCR loans, estimate market rent, vacancy rates, and operating expenses. Calculate accurate DSCR before underwriting.
+          </p>
+          <ul class="feature-list">
+            <li>Market rent estimation</li>
+            <li>Vacancy rate analysis</li>
+            <li>Operating expense modeling</li>
+            <li>DSCR pre-calculation</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Valuation Report Generation</h3>
+          <p class="feature-description">
+            Generate professional valuation reports with comps, photos, and analysis. Share with borrowers, investors, or use for internal underwriting.
+          </p>
+          <ul class="feature-list">
+            <li>One-click PDF reports</li>
+            <li>Branded templates</li>
+            <li>Photo integration</li>
+            <li>Share via link or email</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Market Trend Alerts</h3>
+          <p class="feature-description">
+            Get alerts when market conditions change in your lending areas. Price drops, inventory changes, or comp sales that affect your portfolio.
+          </p>
+          <ul class="feature-list">
+            <li>Neighborhood price alerts</li>
+            <li>Inventory level monitoring</li>
+            <li>Days-on-market trends</li>
+            <li>Custom alert thresholds</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Portfolio Valuation Tracking</h3>
+          <p class="feature-description">
+            Track property values across your entire portfolio. See appreciation/depreciation trends and monitor collateral value in real-time.
+          </p>
+          <ul class="feature-list">
+            <li>Portfolio-wide value tracking</li>
+            <li>Appreciation analytics</li>
+            <li>Collateral monitoring</li>
+            <li>Investor reporting</li>
+          </ul>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2 class="cta-title">Start Valuing Properties in Seconds</h2>
-      <p class="cta-subtitle">See how our AI valuator works with your actual deal flow</p>
-      <div class="cta-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="/solutions/loan-management" class="btn btn-secondary btn-lg">
-          See Loan Management
-        </a>
-        <a href="/solutions" class="btn btn-tertiary btn-lg">
-          View All Solutions
-        </a>
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Lenders Trust Our Valuations</h2>
+        <p class="section-subtitle">Built by lenders, for lenders</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <h3>Save $450 Per Deal</h3>
+          <p>No more $450 BPOs for every deal. Get instant valuations for $0. Use formal appraisals only for complex or high-value properties.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <h3>Faster Deal Screening</h3>
+          <p>Screen 10 properties in the time it used to take to screen 1. Get instant ARV estimates before spending time on full underwriting.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <h3>Better Borrower Conversations</h3>
+          <p>Show borrowers comps and valuation data during property tours. Educated conversations lead to better deals and fewer unrealistic expectations.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <h3>Consistent Valuations</h3>
+          <p>Eliminate valuation differences between loan officers. Every team member uses the same AI model and data sources.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<style>
-  /* Hero Section */
-  .hero-section {
-    padding: 160px 0 100px;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 32px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 9999px;
-    color: #06b6d4;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 32px;
-  }
-
-  .hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin: 0 0 24px 0;
-  }
-
-  .title-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .title-white {
-    color: white;
-  }
-
-  .hero-subtitle {
-    font-size: 1.375rem;
-    line-height: 1.6;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 64px;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 16px 32px;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-lg {
-    padding: 18px 36px;
-    font-size: 1.0625rem;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    color: white;
-    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
-  }
-
-  .btn-primary:hover {
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    background: rgba(59, 130, 246, 0.1);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: rgba(59, 130, 246, 0.5);
-  }
-
-  .btn-tertiary {
-    background: rgba(15, 23, 42, 0.8);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-tertiary:hover {
-    background: rgba(15, 23, 42, 1);
-    border-color: rgba(6, 182, 212, 0.5);
-    color: #22d3ee;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    padding: 32px 48px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-value {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-  }
-
-  .stat-label {
-    color: #94a3b8;
-    font-size: 0.9375rem;
-    font-weight: 500;
-  }
-
-  .stat-divider {
-    width: 1px;
-    height: 60px;
-    background: rgba(59, 130, 246, 0.2);
-  }
-
-  /* Features Section */
-  .features-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-
-  .section-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .section-subtitle {
-    font-size: 1.25rem;
-    color: #64748b;
-    margin: 0;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 32px;
-  }
-
-  .feature-card {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 24px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .feature-icon {
-    width: 72px;
-    height: 72px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #06b6d4;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover .feature-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
-  }
-
-  .feature-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .feature-description {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0 0 24px 0;
-    font-size: 1rem;
-  }
-
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .feature-list li {
-    color: #cbd5e1;
-    padding: 10px 0;
-    padding-left: 28px;
-    position: relative;
-    font-size: 0.9375rem;
-  }
-
-  .feature-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #06b6d4;
-    font-weight: bold;
-  }
-
-  /* Benefits Section */
-  .benefits-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-  }
-
-  .benefit-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .benefit-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-4px);
-  }
-
-  .benefit-number {
-    font-size: 3rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-    opacity: 0.5;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .benefit-card p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  /* Workflow Section */
-  .workflow-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .workflow-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    margin-bottom: 80px;
-  }
-
-  .workflow-step {
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
-  }
-
-  .step-number {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
-    flex-shrink: 0;
-  }
-
-  .step-content {
-    flex: 1;
-  }
-
-  .step-content h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .step-content p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0 0 20px 0;
-  }
-
-  .step-features {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .feature-tag {
-    padding: 6px 12px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 9999px;
-    color: #06b6d4;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-
-  .accuracy-metrics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 32px;
-  }
-
-  .accuracy-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 16px;
-    padding: 32px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  .accuracy-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-4px);
-  }
-
-  .accuracy-value {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-  }
-
-  .accuracy-label {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 8px;
-  }
-
-  .accuracy-description {
-    color: #94a3b8;
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-
-  /* Use Cases Section */
-  .use-cases-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-  }
-
-  .use-cases-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
-  }
-
-  .use-case-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .use-case-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-4px);
-  }
-
-  .use-case-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #06b6d4;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-  }
-
-  .use-case-card:hover .use-case-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
-  }
-
-  .use-case-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .use-case-card p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  .use-case-card strong {
-    color: #06b6d4;
-    font-weight: 600;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-  }
-
-  .cta-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 24px 0;
-  }
-
-  .cta-subtitle {
-    font-size: 1.25rem;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2.5rem;
+  </section>
+
+  <!-- Workflow Section -->
+  <section class="workflow-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How It Works: 3-Minute Valuation</h2>
+        <p class="section-subtitle">From property address to professional valuation report</p>
+      </div>
+
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Enter Property Details</h3>
+            <p>Input address or use mobile app to scan property. Add photos, square footage, bedroom/bath count, and condition notes.</p>
+            <div class="step-features">
+              <span class="feature-tag">Address lookup</span>
+              <span class="feature-tag">Photo upload</span>
+              <span class="feature-tag">Condition assessment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>AI Analysis &amp; Comp Selection</h3>
+            <p>System automatically finds comparable sales, analyzes market trends, and calculates ARV based on property characteristics and local data.</p>
+            <div class="step-features">
+              <span class="feature-tag">Automated comps</span>
+              <span class="feature-tag">Market analysis</span>
+              <span class="feature-tag">ARV calculation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Review &amp; Generate Report</h3>
+            <p>Review AI's valuation, adjust comps if needed, and generate professional PDF report with photos, comps, and analysis.</p>
+            <div class="step-features">
+              <span class="feature-tag">PDF reports</span>
+              <span class="feature-tag">Branded templates</span>
+              <span class="feature-tag">One-click sharing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accuracy-metrics">
+        <div class="accuracy-card">
+          <div class="accuracy-value">95%</div>
+          <div class="accuracy-label">Accuracy vs Formal Appraisals</div>
+          <div class="accuracy-description">Within 5% of formal appraisal values on average</div>
+        </div>
+        <div class="accuracy-card">
+          <div class="accuracy-value">30 sec</div>
+          <div class="accuracy-label">Average Valuation Time</div>
+          <div class="accuracy-description">From input to completed valuation report</div>
+        </div>
+        <div class="accuracy-card">
+          <div class="accuracy-value">$0</div>
+          <div class="accuracy-label">Cost Per Valuation</div>
+          <div class="accuracy-description">Unlimited valuations included in platform</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="use-cases-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Real Valuation Scenarios</h2>
+        <p class="section-subtitle">How lenders use the valuator daily</p>
+      </div>
+
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>Property Tour Valuation</h3>
+          <p>Loan officer tours potential flip property with borrower. Uses mobile app to take photos, enter property details. Gets instant ARV estimate of $385K while standing in kitchen. Shows borrower comps on phone. <strong>Deal moves forward immediately instead of waiting 2 days for BPO.</strong></p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Quick Deal Screening</h3>
+          <p>Underwriter receives 15 new applications Monday morning. Runs each through valuator in 30 seconds each. Immediately identifies 3 deals with unrealistic ARV claims (20%+ over market). <strong>Focuses underwriting time on the 12 viable deals.</strong></p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Portfolio Monitoring</h3>
+          <p>HQ team runs monthly portfolio valuation update. System automatically re-values all 200 collateral properties. Flags 3 properties with 10%+ value drops. <strong>Proactively addresses potential LTV issues before they become problems.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (matches FAQPage schema above) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Real Estate Valuator – FAQ</h2>
+        <p class="section-subtitle">Questions credit teams and originators ask us most often</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is the Mentyx Real Estate Valuator?</h3>
+          <p class="faq-answer">
+            It is an AI-driven valuation engine that calculates ARV, pulls comps, estimates rehab costs, and models rental income for DSCR loans. Originators and underwriters use it to size loans and validate borrower assumptions in seconds instead of waiting days for third-party reports.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How accurate are the valuations compared to appraisals and BPOs?</h3>
+          <p class="faq-answer">
+            Across typical fix &amp; flip and DSCR deals, lenders see valuations clustering close to formal appraisals and BPOs, while being available instantly and at zero incremental cost. It is ideal for screening, pricing, and ongoing monitoring of collateral values across the portfolio.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Does this replace human appraisers and BPO providers?</h3>
+          <p class="faq-answer">
+            No. Most lenders use the Real Estate Valuator as a powerful first line of analysis: pre-screening deals, checking borrower ARV claims, and monitoring portfolio values. For complex, high-balance, or edge-case properties, they still order full appraisals or BPOs when required by credit policy or investors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Start Valuing Properties in Seconds</h2>
+        <p class="cta-subtitle">See how our AI valuator works with your actual deal flow</p>
+        <div class="cta-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/solutions/loan-management" class="btn btn-secondary btn-lg">
+            See Loan Management
+          </a>
+          <a href="/solutions" class="btn btn-tertiary btn-lg">
+            View All Solutions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Hero Section */
+    .hero-section {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-subtitle {
-      font-size: 1.125rem;
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+      pointer-events: none;
     }
 
-    .hero-stats {
-      flex-direction: column;
-      gap: 32px;
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
     }
 
-    .stat-divider {
-      width: 60px;
-      height: 1px;
-    }
-
-    .section-title {
-      font-size: 2rem;
-    }
-
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .workflow-step {
-      flex-direction: column;
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
       text-align: center;
     }
 
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 9999px;
+      color: #06b6d4;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px 0;
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title-white {
+      color: white;
+    }
+
+    .hero-subtitle {
+      font-size: 1.375rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-lg {
+      padding: 18px 36px;
+      font-size: 1.0625rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      color: white;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(59, 130, 246, 0.1);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    .btn-tertiary {
+      background: rgba(15, 23, 42, 0.8);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-tertiary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(6, 182, 212, 0.5);
+      color: #22d3ee;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      padding: 32px 48px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: #94a3b8;
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 60px;
+      background: rgba(59, 130, 246, 0.2);
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 24px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #06b6d4;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .feature-description {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0 0 24px 0;
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      color: #cbd5e1;
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 0.9375rem;
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #06b6d4;
+      font-weight: bold;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .benefit-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .benefit-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      opacity: 0.5;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .benefit-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Workflow Section */
+    .workflow-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .workflow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin-bottom: 80px;
+    }
+
+    .workflow-step {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
     .step-number {
-      align-self: center;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .step-content p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0 0 20px 0;
+    }
+
+    .step-features {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .feature-tag {
+      padding: 6px 12px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 9999px;
+      color: #06b6d4;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
 
     .accuracy-metrics {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+    }
+
+    .accuracy-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .accuracy-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .accuracy-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .accuracy-label {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .accuracy-description {
+      color: #94a3b8;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    /* Use Cases Section */
+    .use-cases-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    }
+
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .use-case-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .use-case-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .use-case-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #06b6d4;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .use-case-card:hover .use-case-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .use-case-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .use-case-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .use-case-card strong {
+      color: #06b6d4;
+      font-weight: 600;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin: 0 0 12px 0;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+    }
+
+    .cta-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .cta-title {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 24px 0;
     }
-  }
-</style>
+
+    .cta-subtitle {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .stat-divider {
+        width: 60px;
+        height: 1px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-step {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .step-number {
+        align-self: center;
+      }
+
+      .accuracy-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .use-cases-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
 
 </Layout>
