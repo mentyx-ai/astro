@@ -6,7 +6,87 @@ import Layout from '../../components/layouts/Layout.astro';
 <Layout 
   title="Multi-Affiliate Dashboard - Cross-Entity Oversight | Mentyx.ai"
   description="Centralized oversight for parent companies with multiple lending affiliates. Monitor performance, ensure consistency, and scale your lending operations."
+  canonical="https://mentyx.ai/solutions/multi-affiliate-dashboard"
+  ogImage="/og-default.jpg"
 >
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Multi-Affiliate Dashboard",
+      "item": "https://mentyx.ai/solutions/multi-affiliate-dashboard"
+    }
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Multi-Affiliate Dashboard in Mentyx?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Multi-Affiliate Dashboard is a centralized command center for parent companies that operate multiple private lending affiliates. It consolidates metrics like approval rates, decision times, yields, delinquency, and policy exceptions across entities so you can see performance gaps and revenue opportunities in one view."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is the Multi-Affiliate Dashboard built for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is designed for parent companies, holding structures, and capital partners that have several lending brands or affiliates under one umbrella. Typical users include executive leadership, heads of credit, and portfolio managers who need cross-entity visibility without losing local control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Mentyx handle data isolation between affiliates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each affiliate has its own isolated workspace with dedicated users, loans, and pipelines. The parent-level dashboard aggregates anonymized and permissioned metrics across entities, so executives can compare performance while respecting data boundaries and access controls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do all affiliates need to be on Mentyx to use the dashboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get the most value when all affiliates run their origination and servicing in Mentyx, but you can start with just a subset. The dashboard will surface cross-affiliate insights for any entities that are connected, and you can onboard additional affiliates over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of performance and revenue insights can the dashboard show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The dashboard highlights approval rate differences, decision time gaps, yield variations, delinquency trends, and policy exception patterns. It also quantifies revenue opportunities, such as how much additional volume or income you would generate if underperforming affiliates matched your top performers."
+      }
+    }
+  ]
+}
+  </script>
 
 <!-- Hero Section -->
 <section class="hero-section">
@@ -686,6 +766,53 @@ import Layout from '../../components/layouts/Layout.astro';
         <div class="benefit-number">04</div>
         <h3>Catch Problems Early</h3>
         <p>Real-time alerts mean you know about issues before they become disasters. Delinquency trending up? Approval rates dropping? You'll know immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section (matches FAQPage schema above) -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Multi-Affiliate Dashboard – FAQ</h2>
+      <p class="section-subtitle">How cross-entity oversight actually works in Mentyx</p>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3 class="faq-question">What is the Multi-Affiliate Dashboard?</h3>
+        <p class="faq-answer">
+          It is a parent-level control center that aggregates key metrics from all your lending affiliates into one view. You see approval rates, decision times, yields, delinquency and policy exceptions per entity, plus where you're leaving money on the table.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">Who typically uses this dashboard?</h3>
+        <p class="faq-answer">
+          Executive teams, heads of credit, portfolio managers and capital partners who need a clean, comparable view across multiple brands. Local affiliate teams still work in their own workspace — HQ gets the overview.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">How do you keep affiliate data separated?</h3>
+        <p class="faq-answer">
+          Each affiliate runs in its own tenant-like workspace with scoped users and permissions. The parent dashboard only reads metrics and aggregated data based on your access rules, so sensitive information stays where it belongs.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">Can we start with just one or two affiliates?</h3>
+        <p class="faq-answer">
+          Yes. Many groups start with their largest or most mature affiliates and add others over time. The dashboard will simply expand as more entities come onto Mentyx, without changing how you work day to day.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">What insights do we get beyond simple reports?</h3>
+        <p class="faq-answer">
+          Mentyx highlights performance gaps and quantifies revenue impact — for example, how much more you'd earn if slower affiliates matched your best decision time or approval rate. It also surfaces best practices worth sharing across entities.
+        </p>
       </div>
     </div>
   </div>
@@ -1829,6 +1956,46 @@ import Layout from '../../components/layouts/Layout.astro';
 
   .benefit-card p {
     color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .faq-item {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    border-radius: 20px;
+    padding: 28px 24px;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: rgba(59, 130, 246, 0.7);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.6);
+  }
+
+  .faq-question {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    margin: 0 0 12px 0;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    color: #9ca3af;
     line-height: 1.7;
     margin: 0;
   }
