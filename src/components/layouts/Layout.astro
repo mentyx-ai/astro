@@ -8,7 +8,11 @@ interface Props {
   canonical?: string;
 }
 
-const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform for Private Lenders. Automate manual underwriting and reduce 30-day loan processes to minutes with our intelligent lending platform.", canonical } = Astro.props;
+const {
+  title,
+  description = "Mentyx.ai - AI-Powered Loan Origination Platform for Private Lenders. Automate manual underwriting and reduce 30-day loan processes to minutes with our intelligent lending platform.",
+  canonical
+} = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -18,7 +22,7 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  
+
   <!-- Favicon Links -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -26,10 +30,10 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#3b82f6" />
-  
+
   <!-- Canonical URL -->
   {canonical && <link rel="canonical" href={canonical} />}
-  
+
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Mentyx.ai - AI-Powered Loan Origination Platform" />
   <meta property="og:description" content="Automate manual underwriting. Reduce 30-day loan processes to minutes with AI." />
@@ -44,7 +48,7 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
   <meta name="twitter:description" content="Automate manual underwriting in minutes with AI" />
   <meta name="twitter:image" content="https://mentyx.ai/images/twitter-image.jpg" />
 
-  <!-- Structured Data -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,23 +81,25 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
     src="https://umami-mentyx.vercel.app/script.js"
     data-website-id="3f78a151-168b-4b15-817c-be7f3bce1166">
   </script>
-  
+
   <!-- Optimized Font Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet"
-    media="print" 
+    media="print"
     onload="this.media='all'"
   />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
   </noscript>
-  
+
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  
+
   <style is:global>
     :root {
       --slate-50: #f8fafc;
@@ -106,17 +112,17 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       --slate-700: #334155;
       --slate-800: #1e293b;
       --slate-900: #0f172a;
-      
+
       --blue-400: #60a5fa;
       --blue-500: #3b82f6;
       --blue-600: #2563eb;
-      
+
       --cyan-400: #22d3ee;
       --cyan-500: #06b6d4;
       --cyan-600: #0891b2;
-      
+
       --red-300: #fca5a5;
-      
+
       --primary: var(--blue-500);
       --accent: var(--cyan-500);
       --bg: var(--slate-900);
@@ -246,9 +252,7 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       border-color: var(--slate-600);
     }
 
-    /* ==================== */
-    /* TRUST BADGES STYLES */
-    /* ==================== */
+    /* TRUST BADGES */
     .trust-badges {
       background: rgba(30, 41, 59, 0.3);
       border-radius: 12px;
@@ -292,13 +296,13 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       .trust-badges-grid {
         gap: 1.5rem;
       }
-      
+
       .trust-badge-item {
         flex: 0 0 calc(33.333% - 1rem);
       }
     }
 
-    /* Modal - UNIVERSAL COMPATIBILITY */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -311,7 +315,6 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       padding: 20px;
     }
 
-    /* Support BOTH display methods */
     .modal.active,
     .modal[style*="display: block"] {
       display: flex !important;
@@ -426,7 +429,6 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       color: #fca5a5;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .section {
         padding: 48px 0;
@@ -450,6 +452,7 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
   <Header />
 
   <slot />
+
   <Footer />
 
   <!-- Contact Modal -->
@@ -461,14 +464,18 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       </div>
       <div class="modal-body">
         <div class="form-message" id="formMessage"></div>
-        
+
         <!-- Web3Forms Contact Form -->
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <form
+          id="contactForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-form">
           <input type="hidden" name="access_key" value="668cabdc-9057-4e2a-8995-2a2e8ec13aaf" />
           <input type="hidden" name="subject" value="Contact Form Submission - Mentyx.ai" />
           <input type="hidden" name="from_name" value="Mentyx.ai Website Contact" />
           <input type="checkbox" name="botcheck" style="display: none;" />
-          
+
           <div class="form-group">
             <label for="name">Full Name <span class="required">*</span></label>
             <input type="text" id="name" name="name" required />
@@ -494,17 +501,14 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
             <textarea id="message" name="message" rows="4"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            Schedule Call
-          </button>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Schedule Call</button>
         </form>
       </div>
     </div>
   </div>
 
   <script is:inline>
-    // Make modal functions globally available
-    window.openModal = function() {
+    window.openModal = function () {
       const modal = document.getElementById('contactModal');
       if (modal) {
         modal.classList.add('active');
@@ -512,7 +516,7 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       }
     };
 
-    window.closeModal = function() {
+    window.closeModal = function () {
       const modal = document.getElementById('contactModal');
       if (modal) {
         modal.classList.remove('active');
@@ -520,28 +524,24 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       }
     };
 
-    // Performance monitoring
-    window.addEventListener('load', function() {
-      // Log Core Web Vitals
+    window.addEventListener('load', function () {
       if ('performance' in window) {
         const navTiming = performance.getEntriesByType('navigation')[0];
         console.log('Page load time:', navTiming.loadEventEnd - navTiming.navigationStart + 'ms');
       }
-      
-      // Lazy load AOS only when needed
+
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
               loadAOS();
               observer.unobserve(entry.target);
             }
           });
         });
-        
+
         observer.observe(document.documentElement);
       } else {
-        // Fallback for older browsers
         loadAOS();
       }
 
@@ -550,38 +550,34 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
       const form = document.getElementById('contactForm');
       const formMessage = document.getElementById('formMessage');
 
-      // Close handlers
       if (closeBtn) {
         closeBtn.addEventListener('click', window.closeModal);
       }
 
       if (modal) {
-        modal.addEventListener('click', function(e) {
+        modal.addEventListener('click', function (e) {
           if (e.target === modal) {
             window.closeModal();
           }
         });
       }
 
-      // Escape key to close
-      document.addEventListener('keydown', function(e) {
+      document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
           window.closeModal();
         }
       });
 
-      // Web3Forms Submission Handler
       if (form) {
-        form.addEventListener('submit', async function(e) {
+        form.addEventListener('submit', async function (e) {
           e.preventDefault();
-          
+
           const submitBtn = form.querySelector('button[type="submit"]');
           const originalText = submitBtn.textContent;
-          
-          // Show loading state
+
           submitBtn.textContent = 'Sending...';
           submitBtn.disabled = true;
-          
+
           if (formMessage) {
             formMessage.style.display = 'none';
           }
@@ -592,17 +588,17 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
               method: 'POST',
               body: formData
             });
-            
+
             const result = await response.json();
-            
+
             if (result.success) {
               if (formMessage) {
-                formMessage.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+                formMessage.textContent = "Thank you! We'll get back to you within 24 hours.";
                 formMessage.className = 'form-message success';
                 formMessage.style.display = 'block';
               }
               form.reset();
-              
+
               setTimeout(() => {
                 window.closeModal();
                 if (formMessage) {
@@ -616,7 +612,8 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
             }
           } catch (error) {
             if (formMessage) {
-              formMessage.textContent = 'Something went wrong. Please try again or email us directly at contact@mentyx.ai';
+              formMessage.textContent =
+                'Something went wrong. Please try again or email us directly at contact@mentyx.ai';
               formMessage.className = 'form-message error';
               formMessage.style.display = 'block';
             }
@@ -626,7 +623,7 @@ const { title, description = "Mentyx.ai - AI-Powered Loan Origination Platform f
         });
       }
 
-      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute('href'));
