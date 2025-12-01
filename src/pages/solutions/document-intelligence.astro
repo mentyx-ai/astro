@@ -9,6 +9,68 @@ import Layout from '../../components/layouts/Layout.astro';
   canonical="https://mentyx.ai/solutions/document-intelligence"
 >
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Document Intelligence",
+      "item": "https://mentyx.ai/solutions/document-intelligence"
+    }
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is document intelligence for private real estate lending?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Document intelligence is an AI layer that reads credit reports, appraisals, bank statements, tax returns, rent rolls, and other loan documents and converts them into structured data for underwriting. Instead of underwriters manually keying numbers into spreadsheets, the system extracts LTV inputs, income, liquidity, and collateral details automatically so loans can move from \"docs in\" to \"ready for decision\" in hours instead of days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which document types does the Mentyx document intelligence module support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx is built specifically for private real estate lenders, so it focuses on the documents that matter most for fix and flip, bridge, and DSCR loans: tri-merge credit reports, appraisals and BPOs, bank statements, personal and business tax returns, purchase and sale agreements, contractor bids and rehab budgets, rent rolls, and lease agreements. It can also detect missing items against a standard 9-document checklist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the document AI and how do underwriters stay in control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Mentyx document AI is calibrated for 95%+ field-level accuracy on the core data points lenders care about, with confidence scores on each extraction. Underwriters always see the original document side-by-side with the extracted values and can correct any field with one click. Every change is logged in an audit trail so you maintain full control and compliance with investors and regulators."
+      }
+    }
+  ]
+}
+  </script>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
@@ -315,6 +377,39 @@ import Layout from '../../components/layouts/Layout.astro';
           <div class="step-number">5</div>
           <h3>Underwriter Reviews</h3>
           <p>Opens pre-populated deal summary. All data extracted, organized, and ready for human review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (matches FAQPage schema above) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Document Intelligence – FAQ</h2>
+        <p class="section-subtitle">What operations and credit teams ask us most often</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is document intelligence for private real estate lending?</h3>
+          <p class="faq-answer">
+            Document intelligence is an AI engine that reads your loan files—credit reports, appraisals, bank statements, tax returns, rent rolls—and turns them into structured data your LOS and underwriters can actually use. Instead of re-keying numbers into spreadsheets, your team opens files with LTV, LTC, DSCR, income, and liquidity already pre-calculated.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Which document types does Mentyx support today?</h3>
+          <p class="faq-answer">
+            Mentyx focuses on the core stack for fix &amp; flip, bridge, and DSCR loans: tri-merge credit reports, appraisals and BPOs, 2–12 months of bank statements, 1040 and Schedule E tax returns, purchase and sale agreements, contractor bids and rehab budgets, rent rolls, and leases. The system also checks against your standard checklist and flags what’s still missing.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How accurate is the AI and how do underwriters stay in control?</h3>
+          <p class="faq-answer">
+            Core fields are extracted with 95%+ accuracy and every value comes with a confidence score. Underwriters see the original document side-by-side with the extracted data and can correct any field with a single click. All overrides are tracked in an audit log so investors and regulators can see exactly what changed and why.
+          </p>
         </div>
       </div>
     </div>
@@ -734,6 +829,46 @@ import Layout from '../../components/layouts/Layout.astro';
       font-weight: 300;
     }
 
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(59, 130, 246, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.6);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin: 0 0 12px 0;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
     /* CTA Section */
     .cta-section {
       padding: 120px 0;
@@ -799,6 +934,10 @@ import Layout from '../../components/layouts/Layout.astro';
 
       .cta-title {
         font-size: 2rem;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
