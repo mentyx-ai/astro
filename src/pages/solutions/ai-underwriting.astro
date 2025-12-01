@@ -9,6 +9,68 @@ import Layout from '../../components/layouts/Layout.astro';
   canonical="https://mentyx.ai/solutions/ai-underwriting"
 >
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Underwriting",
+      "item": "https://mentyx.ai/solutions/ai-underwriting"
+    }
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage (matches FAQ section below) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI underwriting for private real estate lenders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI underwriting uses machine learning to analyze fix & flip, bridge, and DSCR loan applications based on LTV, LTC, DSCR, ARV, borrower experience and market data. Mentyx automates data extraction, risk scoring and decision recommendations while keeping underwriters in full control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which loan types does Mentyx AI underwriting support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx AI underwriting is purpose-built for private real estate lenders and supports fix & flip, bridge and DSCR products. The models understand ARV-driven rehab projects, bridge stabilization exits and DSCR-based rental cash flows instead of generic mortgage logic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can underwriters override AI underwriting decisions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Mentyx AI prepares the analysis, risk score and recommendation, but human underwriters always have final authority. They can approve, decline or change conditions. Every override, rule and decision is logged for full auditability and compliance."
+      }
+    }
+  ]
+}
+  </script>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
@@ -316,6 +378,42 @@ import Layout from '../../components/layouts/Layout.astro';
           <div class="benefit-number">04</div>
           <h3>Full Compliance</h3>
           <p>Every decision documented, explainable, and auditable. ECOA/Fair Lending compliant with adverse action notices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (matches FAQPage schema) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">AI Underwriting – Frequently Asked Questions</h2>
+        <p class="section-subtitle">Short answers your credit committee will actually care about</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is AI underwriting for private real estate lenders?</h3>
+          <p class="faq-answer">
+            AI underwriting uses machine learning to analyze each deal based on LTV, LTC, DSCR, ARV, borrower experience and market data.
+            Mentyx automates data extraction, risk scoring and recommendations, while your underwriters stay in full control of approvals.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Which loan types does Mentyx AI underwriting support?</h3>
+          <p class="faq-answer">
+            Mentyx is built specifically for private real estate lenders and supports fix & flip, bridge and DSCR products. The models
+            understand ARV-driven rehab projects, bridge stabilization exits and DSCR-based rental cash flows instead of generic mortgage logic.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Can underwriters override AI decisions?</h3>
+          <p class="faq-answer">
+            Yes. AI prepares the analysis, risk score and recommendation, but humans always have final say. Underwriters can approve,
+            decline or add conditions. Every override and rule evaluation is logged for a complete audit trail.
+          </p>
         </div>
       </div>
     </div>
@@ -839,6 +937,45 @@ import Layout from '../../components/layouts/Layout.astro';
     margin: 0;
   }
 
+  /* FAQ Section */
+  .faq-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .faq-item {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 20px;
+    padding: 28px 24px;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: translateY(-4px);
+  }
+
+  .faq-question {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    margin: 0 0 12px 0;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    line-height: 1.7;
+    margin: 0;
+  }
+
   /* CTA Section */
   .cta-section {
     padding: 120px 0;
@@ -895,7 +1032,8 @@ import Layout from '../../components/layouts/Layout.astro';
     }
 
     .ai-solutions-grid,
-    .features-grid {
+    .features-grid,
+    .faq-grid {
       grid-template-columns: 1fr;
     }
 
