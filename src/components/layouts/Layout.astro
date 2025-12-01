@@ -48,28 +48,41 @@ const {
   <meta name="twitter:description" content="Automate manual underwriting in minutes with AI" />
   <meta name="twitter:image" content="https://mentyx.ai/images/twitter-image.jpg" />
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Structured Data: Organization + Website -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FinancialService",
+    "@type": "Organization",
     "name": "Mentyx.ai",
-    "description": "AI-Powered Loan Origination Platform for Private Lenders",
     "url": "https://mentyx.ai",
     "logo": "https://mentyx.ai/images/logo.png",
-    "areaServed": "United States",
-    "serviceType": "Loan Origination Software",
-    "offers": {
-      "@type": "Service",
-      "name": "AI Underwriting Automation",
-      "description": "Reduce 30-day loan processes to minutes with AI"
-    },
+    "description": "AI-powered loan origination and underwriting platform for private real estate lenders.",
     "sameAs": [
-      "https://linkedin.com/company/mentyx-ai",
+      "https://www.linkedin.com/company/mentyx-ai",
       "https://twitter.com/mentyx_ai"
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://mentyx.ai",
+    "name": "Mentyx.ai",
+    "description": "AI loan origination and underwriting automation for private real estate lenders.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mentyx.ai"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://mentyx.ai/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
 
   <!-- Additional SEO Meta -->
   <meta name="robots" content="index, follow" />
