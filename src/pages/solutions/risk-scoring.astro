@@ -6,917 +6,1058 @@ import Layout from '../../components/layouts/Layout.astro';
 <Layout 
   title="Risk Scoring - LTV, LTC, DSCR, ARV Analysis | Mentyx.ai"
   description="AI-powered risk scoring for fix & flip, bridge, and DSCR loans. Automatic LTV, LTC, ARV ratio, and DSCR calculations with ML-based risk prediction."
+  canonical="https://mentyx.ai/solutions/risk-scoring"
 >
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M12 1v6m0 6v6"/>
-          <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/>
-          <path d="M1 12h6m6 0h6"/>
-          <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"/>
-        </svg>
-        <span class="ai-badge">AI Underwriting</span>
-      </div>
-      
-      <h1 class="hero-title">
-        <span class="title-gradient">Risk Scoring</span>
-        <span class="title-white">for Real Estate Loans</span>
-      </h1>
-      
-      <p class="hero-subtitle">
-        Automated LTV, LTC, DSCR, and ARV analysis. AI calculates every metric your underwriters need and assigns risk scores based on your historical loan performance.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="/platform" class="btn btn-secondary btn-lg">
-          View Platform
-        </a>
-      </div>
-
-      <!-- Stats -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-value">Instant</div>
-          <div class="stat-label">LTV/LTC/ARV Calculation</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">15+ Factors</div>
-          <div class="stat-label">Risk Assessment</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-value">90%+</div>
-          <div class="stat-label">Prediction Accuracy</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Features Grid -->
-<section class="features-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Metrics That Matter</h2>
-      <p class="section-subtitle">Every calculation private lenders need, automated</p>
-    </div>
-
-    <div class="features-grid">
-      
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="12" y1="1" x2="12" y2="23"/>
-            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">LTV (Loan-to-Value)</h3>
-        <p class="feature-description">
-          Calculates loan amount as percentage of property value. Flags deals above 75% LTV as high risk for fix & flip loans.
-        </p>
-        <ul class="feature-list">
-          <li>Automatic calculation from appraisal</li>
-          <li>Risk thresholds: >75% high, >70% medium</li>
-          <li>Compares to your historical norms</li>
-          <li>ARV-based LTV for flips</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-            <rect x="7" y="7" width="3" height="9"/>
-            <rect x="14" y="7" width="3" height="5"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">LTC (Loan-to-Cost)</h3>
-        <p class="feature-description">
-          Measures loan amount against total project cost (purchase + rehab). Critical for fix & flip deals with renovation budgets.
-        </p>
-        <ul class="feature-list">
-          <li>Includes purchase + rehab costs</li>
-          <li>Validates contractor bids</li>
-          <li>Flags >90% LTC as risky</li>
-          <li>Tracks cost overruns</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">ARV Ratio Analysis</h3>
-        <p class="feature-description">
-          Compares After Repair Value to purchase price. Identifies if flip has sufficient profit margin to justify the risk.
-        </p>
-        <ul class="feature-list">
-          <li>ARV ÷ Purchase Price ratio</li>
-          <li>>200% = too optimistic flag</li>
-          <li>&lt;120% = minimal profit warning</li>
-          <li>Historical ARV accuracy tracking</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">DSCR (Debt Service Coverage)</h3>
-        <p class="feature-description">
-          For rental loans, calculates if monthly rent covers mortgage payment (PITI). DSCR &lt;1.0 = negative cash flow, auto-decline.
-        </p>
-        <ul class="feature-list">
-          <li>Monthly rent ÷ PITI calculation</li>
-          <li>&lt;1.0 = decline (negative cash flow)</li>
-          <li>1.0-1.25 = conditional approval</li>
-          <li>>1.4 = strong cash flow</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-            <path d="M16 3.13a4 4 0 010 7.75"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Borrower Experience Score</h3>
-        <p class="feature-description">
-          Weighs years in real estate investing, number of past flips completed, and credit score to assess borrower capability.
-        </p>
-        <ul class="feature-list">
-          <li>Years of investing experience</li>
-          <li>Number of completed projects</li>
-          <li>Credit score factor</li>
-          <li>0-100 experience rating</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-            <line x1="1" y1="10" x2="23" y2="10"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Liquidity Assessment</h3>
-        <p class="feature-description">
-          Reviews bank balances to verify borrower has reserves for unexpected costs. Flags insufficient liquidity as major risk.
-        </p>
-        <ul class="feature-list">
-          <li>Liquid assets vs loan size</li>
-          <li>&lt;10% of loan = high risk</li>
-          <li>&lt;15% = medium risk flag</li>
-          <li>>25% = strong reserves</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-            <line x1="12" y1="22.08" x2="12" y2="12"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Property Market Risk</h3>
-        <p class="feature-description">
-          Analyzes location factors: days on market in area, comparable sales velocity, neighborhood appreciation trends.
-        </p>
-        <ul class="feature-list">
-          <li>Average days on market</li>
-          <li>Price trend analysis</li>
-          <li>Comp sales velocity</li>
-          <li>Neighborhood risk score</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 20V10"/>
-            <path d="M18 20V4"/>
-            <path d="M6 20v-4"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Composite Risk Score</h3>
-        <p class="feature-description">
-          Combines all factors into single 0-100 risk score. Machine learning weighs each metric based on your historical loan outcomes.
-        </p>
-        <ul class="feature-list">
-          <li>0-30 = Low risk (auto-approve)</li>
-          <li>31-70 = Medium risk (review)</li>
-          <li>71-100 = High risk (decline)</li>
-          <li>Trained on your loan history</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Risk Logic Section -->
-<section class="logic-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Risk Assessment Logic</h2>
-      <p class="section-subtitle">How AI decides approve, conditional, or decline</p>
-    </div>
-
-    <div class="logic-grid">
-      <div class="logic-card logic-decline">
-        <div class="logic-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="15" y1="9" x2="9" y2="15"/>
-            <line x1="9" y1="9" x2="15" y2="15"/>
-          </svg>
-        </div>
-        <h3>Auto-Decline</h3>
-        <p><strong>Any ONE of these triggers immediate decline:</strong></p>
-        <ul>
-          <li>LTV >75%</li>
-          <li>LTC >95%</li>
-          <li>DSCR &lt;1.0 (negative cash flow)</li>
-          <li>Credit score &lt;580</li>
-          <li>Liquidity &lt;10% of loan amount</li>
-          <li>ARV ratio >200% (too optimistic)</li>
-        </ul>
-      </div>
-
-      <div class="logic-card logic-conditional">
-        <div class="logic-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="16" x2="12" y2="12"/>
-            <line x1="12" y1="8" x2="12.01" y2="8"/>
-          </svg>
-        </div>
-        <h3>Conditional Approval</h3>
-        <p><strong>Two or more medium-risk flags:</strong></p>
-        <ul>
-          <li>LTV 70-75%</li>
-          <li>LTC 90-95%</li>
-          <li>DSCR 1.0-1.25</li>
-          <li>Experience score &lt;50</li>
-          <li>Liquidity 10-15%</li>
-          <li>First-time flipper</li>
-        </ul>
-        <p class="logic-note">Requires manual underwriter review with additional conditions (higher rate, more reserves, personal guarantee, etc.)</p>
-      </div>
-
-      <div class="logic-card logic-approve">
-        <div class="logic-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="9 12 11 14 15 10"/>
-          </svg>
-        </div>
-        <h3>Auto-Approve</h3>
-        <p><strong>All of these must be true:</strong></p>
-        <ul>
-          <li>LTV ≤70%</li>
-          <li>LTC ≤90%</li>
-          <li>DSCR ≥1.25 (for rentals)</li>
-          <li>Credit score ≥650</li>
-          <li>Experience score ≥60</li>
-          <li>Liquidity ≥15%</li>
-        </ul>
-        <p class="logic-note">Straight to closing, no underwriter review needed</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="benefits-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Why Risk Scoring Matters</h2>
-      <p class="section-subtitle">Better decisions, faster approvals, lower defaults</p>
-    </div>
-
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-number">01</div>
-        <h3>Consistent Decisions</h3>
-        <p>Every loan judged by same criteria. No more "John approves looser than Sarah." Same LTV gets same risk score every time, regardless of who underwrites.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">02</div>
-        <h3>Spot Red Flags Instantly</h3>
-        <p>AI highlights problems underwriters might miss—borrower has liquidity but DSCR is negative, ARV seems inflated compared to comps, LTC budget doesn't include permit costs.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">03</div>
-        <h3>Learn From History</h3>
-        <p>ML models train on your past loans. If deals with >72% LTV historically defaulted more, AI weighs that factor heavier. Gets smarter with every funded loan.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">04</div>
-        <h3>Justify Pricing</h3>
-        <p>Risk scores tie directly to pricing tiers. Show borrowers: "70% LTV = 9.5% rate. Your deal is 73% LTV = 10.5% rate." Data-driven, defensible pricing.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2 class="cta-title">See Risk Scoring in Action</h2>
-      <p class="cta-subtitle">Watch AI calculate LTV, LTC, DSCR, and assign risk scores in real-time</p>
-      <div class="cta-buttons">
-        <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
-          Schedule Demo
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="/solutions/decision-engine" class="btn btn-secondary btn-lg">
-          See Decision Engine
-        </a>
-        <a href="/solutions" class="btn btn-tertiary btn-lg">
-          View All Solutions
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* AI Badge Animation */
-  .ai-badge {
-    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: violetPulse 2s ease-in-out infinite;
-  }
-
-  @keyframes violetPulse {
-    0%, 100% {
-      opacity: 1;
-      filter: brightness(1);
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Risk Scoring",
+      "item": "https://mentyx.ai/solutions/risk-scoring"
     }
-    50% {
-      opacity: 0.85;
-      filter: brightness(1.3);
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Mentyx Risk Scoring for real estate loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx Risk Scoring is an AI underwriting engine that calculates key metrics like LTV, LTC, DSCR, ARV ratios, borrower experience, liquidity, and market risk, then combines them into a single composite risk score. Lenders use it to drive consistent approve, conditional, or decline decisions for fix and flip, bridge, and DSCR loans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we customize the LTV, LTC, DSCR and other thresholds in the risk engine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All thresholds and rules are configurable to match your credit policy. You can define your own LTV and LTC cutoffs, DSCR minimums, liquidity requirements, and borrower experience rules, while the machine learning layer learns from your historical loan performance to fine-tune the composite risk score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mentyx Risk Scoring replace our underwriters or support them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx Risk Scoring is designed to support your underwriting team, not replace it. The system handles all calculations instantly, flags red and amber risks, and proposes an approve, conditional, or decline recommendation. Your underwriters stay in control and can override recommendations with a documented reason, which then feeds back into the learning loop."
+      }
     }
-  }
-
-  /* Hero Section */
-  .hero-section {
-    padding: 160px 0 100px;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 50%, rgba(167, 139, 250, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 32px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 9999px;
-    color: #a78bfa;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 32px;
-  }
-
-  .hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin: 0 0 24px 0;
-  }
-
-  .title-gradient {
-    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .title-white {
-    color: white;
-  }
-
-  .hero-subtitle {
-    font-size: 1.375rem;
-    line-height: 1.6;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 64px;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 16px 32px;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-lg {
-    padding: 18px 36px;
-    font-size: 1.0625rem;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-    color: white;
-    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
-  }
-
-  .btn-primary:hover {
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    background: rgba(59, 130, 246, 0.1);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: rgba(59, 130, 246, 0.5);
-  }
-
-  .btn-tertiary {
-    background: rgba(15, 23, 42, 0.8);
-    color: #06b6d4;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .btn-tertiary:hover {
-    background: rgba(15, 23, 42, 1);
-    border-color: rgba(6, 182, 212, 0.5);
-    color: #22d3ee;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    padding: 32px 48px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-value {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-  }
-
-  .stat-label {
-    color: #94a3b8;
-    font-size: 0.9375rem;
-    font-weight: 500;
-  }
-
-  .stat-divider {
-    width: 1px;
-    height: 60px;
-    background: rgba(139, 92, 246, 0.2);
-  }
-
-  /* Features Section */
-  .features-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-
-  .section-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .section-subtitle {
-    font-size: 1.25rem;
-    color: #64748b;
-    margin: 0;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 32px;
-  }
-
-  .feature-card {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
-    border: 1px solid rgba(139, 92, 246, 0.15);
-    border-radius: 24px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover {
-    border-color: rgba(139, 92, 246, 0.4);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
-  }
-
-  .feature-icon {
-    width: 72px;
-    height: 72px;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.1) 100%);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #a78bfa;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-card:hover .feature-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
-  }
-
-  .feature-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .feature-description {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0 0 24px 0;
-    font-size: 1rem;
-  }
-
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .feature-list li {
-    color: #cbd5e1;
-    padding: 10px 0;
-    padding-left: 28px;
-    position: relative;
-    font-size: 0.9375rem;
-  }
-
-  .feature-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #a78bfa;
-    font-weight: bold;
-  }
-
-  /* Risk Logic Section */
-  .logic-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
-  }
-
-  .logic-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
-  }
-
-  .logic-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 2px solid;
-    border-radius: 24px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .logic-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .logic-decline {
-    border-color: rgba(239, 68, 68, 0.3);
-  }
-
-  .logic-decline:hover {
-    border-color: rgba(239, 68, 68, 0.6);
-    box-shadow: 0 12px 32px rgba(239, 68, 68, 0.2);
-  }
-
-  .logic-conditional {
-    border-color: rgba(251, 191, 36, 0.3);
-  }
-
-  .logic-conditional:hover {
-    border-color: rgba(251, 191, 36, 0.6);
-    box-shadow: 0 12px 32px rgba(251, 191, 36, 0.2);
-  }
-
-  .logic-approve {
-    border-color: rgba(34, 197, 94, 0.3);
-  }
-
-  .logic-approve:hover {
-    border-color: rgba(34, 197, 94, 0.6);
-    box-shadow: 0 12px 32px rgba(34, 197, 94, 0.2);
-  }
-
-  .logic-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-  }
-
-  .logic-decline .logic-icon {
-    background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
-  }
-
-  .logic-conditional .logic-icon {
-    background: rgba(251, 191, 36, 0.1);
-    color: #fbbf24;
-  }
-
-  .logic-approve .logic-icon {
-    background: rgba(34, 197, 94, 0.1);
-    color: #22c55e;
-  }
-
-  .logic-card h3 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .logic-card p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0 0 20px 0;
-  }
-
-  .logic-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-  }
-
-  .logic-card li {
-    color: #cbd5e1;
-    padding: 8px 0;
-    padding-left: 24px;
-    position: relative;
-    font-size: 0.9375rem;
-  }
-
-  .logic-decline li::before {
-    content: '×';
-    position: absolute;
-    left: 0;
-    color: #ef4444;
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-
-  .logic-conditional li::before {
-    content: '!';
-    position: absolute;
-    left: 0;
-    color: #fbbf24;
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-
-  .logic-approve li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #22c55e;
-    font-weight: bold;
-  }
-
-  .logic-note {
-    font-size: 0.875rem;
-    font-style: italic;
-    padding: 16px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    margin: 20px 0 0;
-  }
-
-  /* Benefits Section */
-  .benefits-section {
-    padding: 120px 0;
-    background: #0f172a;
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-  }
-
-  .benefit-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(139, 92, 246, 0.15);
-    border-radius: 20px;
-    padding: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .benefit-card:hover {
-    border-color: rgba(139, 92, 246, 0.3);
-    transform: translateY(-4px);
-  }
-
-  .benefit-number {
-    font-size: 3rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-    opacity: 0.5;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 0 16px 0;
-  }
-
-  .benefit-card p {
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.05) 100%);
-  }
-
-  .cta-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 24px 0;
-  }
-
-  .cta-subtitle {
-    font-size: 1.25rem;
-    color: #94a3b8;
-    margin: 0 0 48px 0;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
+  ]
+}
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v6m0 6v6"/>
+            <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/>
+            <path d="M1 12h6m6 0h6"/>
+            <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"/>
+          </svg>
+          <span class="ai-badge">AI Underwriting</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-gradient">Risk Scoring</span>
+          <span class="title-white">for Real Estate Loans</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Automated LTV, LTC, DSCR, and ARV analysis. AI calculates every metric your underwriters need and assigns risk scores based on your historical loan performance.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/platform" class="btn btn-secondary btn-lg">
+            View Platform
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">Instant</div>
+            <div class="stat-label">LTV/LTC/ARV Calculation</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">15+ Factors</div>
+            <div class="stat-label">Risk Assessment</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-value">90%+</div>
+            <div class="stat-label">Prediction Accuracy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Metrics That Matter</h2>
+        <p class="section-subtitle">Every calculation private lenders need, automated</p>
+      </div>
+
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">LTV (Loan-to-Value)</h3>
+          <p class="feature-description">
+            Calculates loan amount as percentage of property value. Flags deals above 75% LTV as high risk for fix &amp; flip loans.
+          </p>
+          <ul class="feature-list">
+            <li>Automatic calculation from appraisal</li>
+            <li>Risk thresholds: &gt;75% high, &gt;70% medium</li>
+            <li>Compares to your historical norms</li>
+            <li>ARV-based LTV for flips</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <rect x="7" y="7" width="3" height="9"/>
+              <rect x="14" y="7" width="3" height="5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">LTC (Loan-to-Cost)</h3>
+          <p class="feature-description">
+            Measures loan amount against total project cost (purchase + rehab). Critical for fix &amp; flip deals with renovation budgets.
+          </p>
+          <ul class="feature-list">
+            <li>Includes purchase + rehab costs</li>
+            <li>Validates contractor bids</li>
+            <li>Flags &gt;90% LTC as risky</li>
+            <li>Tracks cost overruns</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">ARV Ratio Analysis</h3>
+          <p class="feature-description">
+            Compares After Repair Value to purchase price. Identifies if flip has sufficient profit margin to justify the risk.
+          </p>
+          <ul class="feature-list">
+            <li>ARV ÷ Purchase Price ratio</li>
+            <li>&gt;200% = too optimistic flag</li>
+            <li>&lt;120% = minimal profit warning</li>
+            <li>Historical ARV accuracy tracking</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">DSCR (Debt Service Coverage)</h3>
+          <p class="feature-description">
+            For rental loans, calculates if monthly rent covers mortgage payment (PITI). DSCR &lt;1.0 = negative cash flow, auto-decline.
+          </p>
+          <ul class="feature-list">
+            <li>Monthly rent ÷ PITI calculation</li>
+            <li>&lt;1.0 = decline (negative cash flow)</li>
+            <li>1.0-1.25 = conditional approval</li>
+            <li>&gt;1.4 = strong cash flow</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Borrower Experience Score</h3>
+          <p class="feature-description">
+            Weighs years in real estate investing, number of past flips completed, and credit score to assess borrower capability.
+          </p>
+          <ul class="feature-list">
+            <li>Years of investing experience</li>
+            <li>Number of completed projects</li>
+            <li>Credit score factor</li>
+            <li>0-100 experience rating</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Liquidity Assessment</h3>
+          <p class="feature-description">
+            Reviews bank balances to verify borrower has reserves for unexpected costs. Flags insufficient liquidity as major risk.
+          </p>
+          <ul class="feature-list">
+            <li>Liquid assets vs loan size</li>
+            <li>&lt;10% of loan = high risk</li>
+            <li>&lt;15% = medium risk flag</li>
+            <li>&gt;25% = strong reserves</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Property Market Risk</h3>
+          <p class="feature-description">
+            Analyzes location factors: days on market in area, comparable sales velocity, neighborhood appreciation trends.
+          </p>
+          <ul class="feature-list">
+            <li>Average days on market</li>
+            <li>Price trend analysis</li>
+            <li>Comp sales velocity</li>
+            <li>Neighborhood risk score</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20V10"/>
+              <path d="M18 20V4"/>
+              <path d="M6 20v-4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Composite Risk Score</h3>
+          <p class="feature-description">
+            Combines all factors into single 0-100 risk score. Machine learning weighs each metric based on your historical loan outcomes.
+          </p>
+          <ul class="feature-list">
+            <li>0-30 = Low risk (auto-approve)</li>
+            <li>31-70 = Medium risk (review)</li>
+            <li>71-100 = High risk (decline)</li>
+            <li>Trained on your loan history</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Risk Logic Section -->
+  <section class="logic-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Risk Assessment Logic</h2>
+        <p class="section-subtitle">How AI decides approve, conditional, or decline</p>
+      </div>
+
+      <div class="logic-grid">
+        <div class="logic-card logic-decline">
+          <div class="logic-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+          </div>
+          <h3>Auto-Decline</h3>
+          <p><strong>Any ONE of these triggers immediate decline:</strong></p>
+          <ul>
+            <li>LTV &gt;75%</li>
+            <li>LTC &gt;95%</li>
+            <li>DSCR &lt;1.0 (negative cash flow)</li>
+            <li>Credit score &lt;580</li>
+            <li>Liquidity &lt;10% of loan amount</li>
+            <li>ARV ratio &gt;200% (too optimistic)</li>
+          </ul>
+        </div>
+
+        <div class="logic-card logic-conditional">
+          <div class="logic-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+          </div>
+          <h3>Conditional Approval</h3>
+          <p><strong>Two or more medium-risk flags:</strong></p>
+          <ul>
+            <li>LTV 70-75%</li>
+            <li>LTC 90-95%</li>
+            <li>DSCR 1.0-1.25</li>
+            <li>Experience score &lt;50</li>
+            <li>Liquidity 10-15%</li>
+            <li>First-time flipper</li>
+          </ul>
+          <p class="logic-note">Requires manual underwriter review with additional conditions (higher rate, more reserves, personal guarantee, etc.)</p>
+        </div>
+
+        <div class="logic-card logic-approve">
+          <div class="logic-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <h3>Auto-Approve</h3>
+          <p><strong>All of these must be true:</strong></p>
+          <ul>
+            <li>LTV ≤70%</li>
+            <li>LTC ≤90%</li>
+            <li>DSCR ≥1.25 (for rentals)</li>
+            <li>Credit score ≥650</li>
+            <li>Experience score ≥60</li>
+            <li>Liquidity ≥15%</li>
+          </ul>
+          <p class="logic-note">Straight to closing, no underwriter review needed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Risk Scoring Matters</h2>
+        <p class="section-subtitle">Better decisions, faster approvals, lower defaults</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <h3>Consistent Decisions</h3>
+          <p>Every loan judged by same criteria. No more "John approves looser than Sarah." Same LTV gets same risk score every time, regardless of who underwrites.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <h3>Spot Red Flags Instantly</h3>
+          <p>AI highlights problems underwriters might miss—borrower has liquidity but DSCR is negative, ARV seems inflated compared to comps, LTC budget doesn't include permit costs.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <h3>Learn From History</h3>
+          <p>ML models train on your past loans. If deals with &gt;72% LTV historically defaulted more, AI weighs that factor heavier. Gets smarter with every funded loan.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <h3>Justify Pricing</h3>
+          <p>Risk scores tie directly to pricing tiers. Show borrowers: "70% LTV = 9.5% rate. Your deal is 73% LTV = 10.5% rate." Data-driven, defensible pricing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (matches FAQPage schema above) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Risk Scoring – FAQ</h2>
+        <p class="section-subtitle">How credit teams use the risk engine day to day</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is Mentyx Risk Scoring for real estate loans?</h3>
+          <p class="faq-answer">
+            It is an AI underwriting layer that calculates all key metrics your team cares about—LTV, LTC, DSCR, ARV ratios, borrower experience, liquidity, and market risk—and rolls them into a single composite risk score. The engine then proposes approve, conditional, or decline recommendations based on your credit policy.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Can we customize the thresholds and override decisions?</h3>
+          <p class="faq-answer">
+            Yes. All rules are configurable: you define your own LTV, LTC, DSCR, liquidity, and experience cutoffs. Underwriters can always override an AI recommendation with a reason code, and those overrides feed back into the model so it aligns more and more with how your team actually makes decisions.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Does this replace underwriters or support them?</h3>
+          <p class="faq-answer">
+            It supports them. Mentyx Risk Scoring takes care of the calculations, flags, and consistency, while your underwriters focus on edge cases, structure, and borrower relationships. The result: fewer missed red flags, faster clear approvals, and a clear audit trail of how every decision was made.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">See Risk Scoring in Action</h2>
+        <p class="cta-subtitle">Watch AI calculate LTV, LTC, DSCR, and assign risk scores in real-time</p>
+        <div class="cta-buttons">
+          <a href="https://calendly.com/contact-mentyx/30min" target="_blank" class="btn btn-primary btn-lg">
+            Schedule Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/solutions/decision-engine" class="btn btn-secondary btn-lg">
+            See Decision Engine
+          </a>
+          <a href="/solutions" class="btn btn-tertiary btn-lg">
+            View All Solutions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* AI Badge Animation */
+    .ai-badge {
+      background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: violetPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes violetPulse {
+      0%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+      }
+      50% {
+        opacity: 0.85;
+        filter: brightness(1.3);
+      }
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(167, 139, 250, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 9999px;
+      color: #a78bfa;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px 0;
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title-white {
+      color: white;
     }
 
     .hero-subtitle {
-      font-size: 1.125rem;
+      font-size: 1.375rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-lg {
+      padding: 18px 36px;
+      font-size: 1.0625rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      color: white;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(59, 130, 246, 0.1);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    .btn-tertiary {
+      background: rgba(15, 23, 42, 0.8);
+      color: #06b6d4;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-tertiary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(6, 182, 212, 0.5);
+      color: #22d3ee;
     }
 
     .hero-stats {
-      flex-direction: column;
-      gap: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      padding: 32px 48px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: #94a3b8;
+      font-size: 0.9375rem;
+      font-weight: 500;
     }
 
     .stat-divider {
-      width: 60px;
-      height: 1px;
+      width: 1px;
+      height: 60px;
+      background: rgba(139, 92, 246, 0.2);
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 16px 0;
     }
 
-    .features-grid, .logic-grid {
-      grid-template-columns: 1fr;
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.15);
+      border-radius: 24px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(139, 92, 246, 0.4);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+    }
+
+    .feature-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.1) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a78bfa;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .feature-description {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0 0 24px 0;
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      color: #cbd5e1;
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 0.9375rem;
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #a78bfa;
+      font-weight: bold;
+    }
+
+    /* Risk Logic Section */
+    .logic-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #0a101c 0%, #0f172a 100%);
+    }
+
+    .logic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .logic-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 2px solid;
+      border-radius: 24px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .logic-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .logic-decline {
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .logic-decline:hover {
+      border-color: rgba(239, 68, 68, 0.6);
+      box-shadow: 0 12px 32px rgba(239, 68, 68, 0.2);
+    }
+
+    .logic-conditional {
+      border-color: rgba(251, 191, 36, 0.3);
+    }
+
+    .logic-conditional:hover {
+      border-color: rgba(251, 191, 36, 0.6);
+      box-shadow: 0 12px 32px rgba(251, 191, 36, 0.2);
+    }
+
+    .logic-approve {
+      border-color: rgba(34, 197, 94, 0.3);
+    }
+
+    .logic-approve:hover {
+      border-color: rgba(34, 197, 94, 0.6);
+      box-shadow: 0 12px 32px rgba(34, 197, 94, 0.2);
+    }
+
+    .logic-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .logic-decline .logic-icon {
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+    }
+
+    .logic-conditional .logic-icon {
+      background: rgba(251, 191, 36, 0.1);
+      color: #fbbf24;
+    }
+
+    .logic-approve .logic-icon {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+    }
+
+    .logic-card h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .logic-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0 0 20px 0;
+    }
+
+    .logic-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .logic-card li {
+      color: #cbd5e1;
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+      font-size: 0.9375rem;
+    }
+
+    .logic-decline li::before {
+      content: '×';
+      position: absolute;
+      left: 0;
+      color: #ef4444;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .logic-conditional li::before {
+      content: '!';
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .logic-approve li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .logic-note {
+      font-size: 0.875rem;
+      font-style: italic;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      margin: 20px 0 0;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .benefit-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(139, 92, 246, 0.15);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      border-color: rgba(139, 92, 246, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .benefit-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      opacity: 0.5;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 16px 0;
+    }
+
+    .benefit-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(139, 92, 246, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(139, 92, 246, 0.2);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin: 0 0 12px 0;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.05) 100%);
+    }
+
+    .cta-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .cta-title {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 0 24px 0;
     }
-  }
-</style>
+
+    .cta-subtitle {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      margin: 0 0 48px 0;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .stat-divider {
+        width: 60px;
+        height: 1px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .features-grid,
+      .logic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
 
 </Layout>
