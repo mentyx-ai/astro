@@ -10,39 +10,117 @@ import Layout from '../components/layouts/Layout.astro';
   ogImage="/og-default.jpg"
 >
 
-  <!-- Structured Data for SEO -->
+  <!-- Structured Data: SoftwareApplication (Platform Page) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Mentyx.ai Platform",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Any",
-  "url": "https://mentyx.ai/platform",
-  "description": "AI-powered loan origination and underwriting platform for private real estate lenders. Mentyx unifies borrower onboarding, document intelligence, asset-based underwriting and multi-affiliate oversight across Fix & Flip, Bridge and DSCR products.",
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Private real estate lenders, fix & flip lenders, bridge lenders, DSCR lenders"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/PreOrder"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Mentyx.ai"
-  },
-  "featureList": [
-    "Borrower application & onboarding",
-    "Document intelligence & OCR",
-    "AI underwriting and risk scoring",
-    "Multi-affiliate HQ dashboard",
-    "Private real estate lending workflows for Fix & Flip, Bridge & DSCR"
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Mentyx.ai Platform",
+    "applicationCategory": "LoanOriginationSoftware",
+    "operatingSystem": "Any",
+    "url": "https://mentyx.ai/platform",
+    "description": "AI-powered loan origination and underwriting platform for private real estate lenders. Mentyx unifies borrower onboarding, document intelligence, asset-based underwriting, and multi-affiliate portfolio oversight across Fix & Flip, Bridge, and DSCR loan products.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mentyx.ai",
+      "url": "https://mentyx.ai"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": [
+        "Private real estate lenders",
+        "Fix & Flip lenders",
+        "Bridge lenders",
+        "DSCR lenders"
+      ]
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/OnlineOnly"
+    },
+    "featureList": [
+      "Borrower application and onboarding automation",
+      "Document intelligence and OCR scanning",
+      "AI underwriting and risk scoring",
+      "Portfolio analytics and affiliate oversight",
+      "Fix & Flip, Bridge, and DSCR loan automation workflows"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://mentyx.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Platform",
+        "item": "https://mentyx.ai/platform"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage (Platform) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Mentyx.ai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mentyx.ai is an AI-powered loan origination and underwriting platform built for private real estate lenders. It automates borrower onboarding, document review, and asset-based underwriting for Fix & Flip, Bridge, and DSCR loans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is Mentyx.ai built for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mentyx.ai is designed for private real estate lenders, including Fix & Flip lenders, Bridge lenders, and DSCR lenders, especially those operating through multiple local affiliates or markets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What manual work does Mentyx.ai automate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mentyx.ai automates borrower application intake, document collection, document intelligence and OCR, data extraction from third-party reports, and asset-based underwriting calculations so teams can focus on decisions instead of manual data entry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Mentyx.ai support multi-affiliate lending groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mentyx.ai was designed for lending groups that operate through multiple local affiliates. Headquarters gets a consolidated overview while each affiliate works in its own pipeline and workflow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can lenders start using Mentyx.ai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mentyx.ai is delivered as a cloud-based SaaS platform. After an initial setup of products, eligibility rules, and workflows, private lenders can start running applications through the system within a short onboarding window."
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- Hero Section -->
   <section class="hero-section" id="top">
