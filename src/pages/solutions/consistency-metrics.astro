@@ -9,6 +9,68 @@ import Layout from '../../components/layouts/Layout.astro';
   canonical="https://mentyx.ai/solutions/consistency-metrics"
 >
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Consistency Metrics",
+      "item": "https://mentyx.ai/solutions/consistency-metrics"
+    }
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are consistency metrics for private real estate lenders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consistency metrics are underwriting and portfolio KPIs that show whether affiliates and branches are applying the same credit box. They track items like approval rates, decision times, LTV and DSCR ranges, exception rates, and risk distribution so asset-based loans are underwritten the same way across the platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Mentyx help standardize underwriting across affiliates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx centralizes underwriting rules and captures loan data in a structured way for every fix and flip, bridge, and DSCR loan. It then calculates key metrics by affiliate, underwriter, and program, highlighting where behavior drifts from policy. HQ can see LTV, DSCR, approval, and exception patterns in real time and intervene early."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we use these metrics for investor and warehouse reporting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Consistency metrics in Mentyx can be exported and summarized into oversight packs for investors, warehouse lenders, and credit committees. You can show how standardized underwriting, policy compliance, and portfolio performance align, which helps build confidence and support scalable funding."
+      }
+    }
+  ]
+}
+  </script>
+
 <!-- Hero Section -->
 <section class="hero-section">
   <div class="container">
@@ -548,6 +610,39 @@ import Layout from '../../components/layouts/Layout.astro';
         <div class="benefit-number">04</div>
         <h3>Scalable Growth</h3>
         <p>Add new branches and affiliates with confidence. Mentyx gives HQ the metrics and guardrails to scale volume without loosening underwriting discipline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section (matches FAQPage schema above) -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Consistency Metrics – FAQ</h2>
+      <p class="section-subtitle">How HQ, affiliates, and investors use these metrics day to day</p>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3 class="faq-question">What are consistency metrics for private real estate lenders?</h3>
+        <p class="faq-answer">
+          Consistency metrics are underwriting and portfolio KPIs that reveal whether affiliates are applying the same credit box. They cover approval rates, decision times, LTV/LTC bands, DSCR ranges, exception rates, and risk distribution so you can see, in one view, how closely each affiliate is aligned with policy.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">How does Mentyx help standardize underwriting across affiliates?</h3>
+        <p class="faq-answer">
+          Mentyx captures every loan decision in a structured, rule-aware workflow. The platform then aggregates metrics by affiliate, underwriter, program, and property type, highlighting drifts from target LTV, DSCR, or risk scores. HQ gets early warning instead of finding out months later from portfolio performance.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">Can we use these metrics for investor and warehouse reporting?</h3>
+        <p class="faq-answer">
+          Yes. Consistency metrics can be exported into clean dashboards and summary packs for investors, warehouse lenders, and credit committees. You can demonstrate not just performance, but also process discipline—how your affiliates follow the same underwriting standards for every asset-based loan.
+        </p>
       </div>
     </div>
   </div>
@@ -1373,6 +1468,45 @@ import Layout from '../../components/layouts/Layout.astro';
     margin: 0;
   }
 
+  /* FAQ Section */
+  .faq-section {
+    padding: 120px 0;
+    background: #0f172a;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .faq-item {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    padding: 28px 24px;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-4px);
+  }
+
+  .faq-question {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    margin: 0 0 12px 0;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    line-height: 1.7;
+    margin: 0;
+  }
+
   /* CTA Section */
   .cta-section {
     padding: 120px 0;
@@ -1496,6 +1630,10 @@ import Layout from '../../components/layouts/Layout.astro';
       padding: 12px 0;
       border-bottom: 1px solid rgba(59, 130, 246, 0.1);
       margin-bottom: 8px;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
     }
 
     .cta-title {
