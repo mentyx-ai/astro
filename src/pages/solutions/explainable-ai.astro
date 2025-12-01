@@ -9,6 +9,68 @@ import Layout from '../../components/layouts/Layout.astro';
   canonical="https://mentyx.ai/solutions/explainable-ai"
 >
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Explainable AI",
+      "item": "https://mentyx.ai/solutions/explainable-ai"
+    }
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is explainable AI in private real estate lending?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Explainable AI in private real estate lending means that every automated recommendation can be traced back to concrete, non-discriminatory factors such as LTV, DSCR, collateral quality, borrower experience, and liquidity. Instead of a black box score, lenders see why a loan was approved, declined, or sent to manual review based on transparent rules and model logic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Mentyx make AI underwriting decisions transparent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx provides a full decision breakdown for each loan: plain-English explanations, rule-by-rule pass or fail, factor importance rankings, confidence scores, and data source attribution back to the original documents. Underwriters see exactly which metrics drove the outcome and can override decisions with a documented reason, creating a complete audit trail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does explainable AI help with regulators and investors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Explainable AI gives compliance teams one-click access to regulator-ready reports that show which factors were used, how thresholds were applied, and why borrowers were approved or declined. This supports fair lending, reduces discrimination risk, and gives warehouse lenders and capital providers confidence that your credit policy is applied consistently across all channels."
+      }
+    }
+  ]
+}
+  </script>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
@@ -362,6 +424,39 @@ import Layout from '../../components/layouts/Layout.astro';
           <div class="benefit-number">04</div>
           <h3>Model Improvement</h3>
           <p>When you see AI's reasoning, you can spot where it's wrong and provide feedback. "AI weighted this factor too heavily" helps retrain models for better accuracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (matches FAQPage schema above) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Explainable AI – FAQ</h2>
+        <p class="section-subtitle">How lenders, compliance, and investors use it</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is explainable AI in private real estate lending?</h3>
+          <p class="faq-answer">
+            Explainable AI means every automated decision can be traced back to clear, numeric factors like LTV, DSCR, collateral quality, borrower experience, and liquidity. Instead of a black box score, you see exactly which rules fired, which thresholds were applied, and why a loan was approved, declined, or routed to manual review.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How does Mentyx make AI underwriting transparent for my team?</h3>
+          <p class="faq-answer">
+            Each loan file includes a decision breakdown: plain-English summary, pass/fail view of key metrics, factor importance ranking, confidence scores, and links back to the original documents. Underwriters can override any decision with a required reason code, and the override becomes part of the permanent audit trail.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Does explainable AI help with regulators and investors?</h3>
+          <p class="faq-answer">
+            Yes. Compliance teams can export regulator-friendly reports that show which factors were used, how policies were applied, and how adverse action reasons were determined. This supports fair lending, reduces discrimination risk, and gives capital providers confidence that your AI is aligned with your credit policy.
+          </p>
         </div>
       </div>
     </div>
@@ -894,6 +989,46 @@ import Layout from '../../components/layouts/Layout.astro';
       margin: 0;
     }
 
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(139, 92, 246, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.6);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin: 0 0 12px 0;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
     /* CTA Section */
     .cta-section {
       padding: 120px 0;
@@ -961,6 +1096,10 @@ import Layout from '../../components/layouts/Layout.astro';
 
       .cta-title {
         font-size: 2rem;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
