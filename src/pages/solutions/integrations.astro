@@ -9,6 +9,76 @@ import Layout from '../../components/layouts/Layout.astro';
   canonical="https://mentyx.ai/solutions/integrations"
 >
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mentyx.ai",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Integrations",
+      "item": "https://mentyx.ai/solutions/integrations"
+    }
+  ]
+}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which systems can Mentyx integrate with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx can integrate with your full lending stack, including credit bureaus, identity and bank-data providers, loan servicing systems, payment processors, CRMs, document and e-signature tools, as well as banking and treasury systems. We support both modern cloud tools and many of the legacy platforms that private lenders already use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to set up integrations with Mentyx?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most lenders are fully connected in days, not months. Common systems use pre-built connectors that can be configured within 1–3 days. More complex, custom integrations typically take one to two weeks, depending on your internal processes and vendor access."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need our own developers to integrate Mentyx?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do not need a large internal engineering team. For standard connectors, our team handles most of the configuration with light IT involvement from your side. For advanced use cases, your developers can use our REST API, webhooks, and SDKs, while we support them with technical documentation and solution architecture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Mentyx work with legacy or on-premise systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many private lenders run a mix of legacy LOS, servicing, and accounting systems. Mentyx supports batch file exchanges, secure SFTP, and middleware approaches alongside modern APIs, so you can modernize the borrower and underwriting experience without ripping out existing core systems on day one."
+      }
+    }
+  ]
+}
+  </script>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
@@ -165,20 +235,20 @@ import Layout from '../../components/layouts/Layout.astro';
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
-          </svg>
-        </div>
-        <h3>Document & eSignature</h3>
-        <p>Automate document generation, e-signatures, and digital closings.</p>
-        <div class="integration-logos">
-          <div class="logo-item">DocuSign</div>
-          <div class="logo-item">Adobe Sign</div>
-          <div class="logo-item">Dropbox</div>
-          <div class="logo-item">Google Drive</div>
+            </svg>
+          </div>
+          <h3>Document & eSignature</h3>
+          <p>Automate document generation, e-signatures, and digital closings.</p>
+          <div class="integration-logos">
+            <div class="logo-item">DocuSign</div>
+            <div class="logo-item">Adobe Sign</div>
+            <div class="logo-item">Dropbox</div>
+            <div class="logo-item">Google Drive</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Features Grid -->
   <section class="features-section">
@@ -439,6 +509,46 @@ Content-Type: application/json
             <h3>Go-Live & Support</h3>
             <p>Activate integrations and provide ongoing support. Most customers go live within one week.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (matches FAQPage schema above) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Integrations – FAQ</h2>
+        <p class="section-subtitle">How Mentyx connects to your existing stack</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">Which systems can Mentyx integrate with?</h3>
+          <p class="faq-answer">
+            Mentyx connects to the full lending stack: credit bureaus, identity and bank-data providers, loan servicing systems, payment processors, CRMs, document and e-signature tools, as well as banking and treasury platforms. If you already have a system in place, we usually connect to it rather than replace it on day one.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How long does a typical integration project take?</h3>
+          <p class="faq-answer">
+            Standard connectors can be configured in a few days. Many lenders see live data flowing within the first week. More complex, custom integrations—especially when multiple legacy systems are involved—usually run over one to two weeks, depending on internal access and vendor responsiveness.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Do we need internal developers to integrate Mentyx?</h3>
+          <p class="faq-answer">
+            For common systems, you mainly need an internal IT contact to help with credentials and approvals. Our team handles most of the heavy lifting. If you want to build deeper automation, your developers can use our REST API, webhooks, and SDKs, with architecture support from our solution engineers.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Can Mentyx work with legacy or on-premise software?</h3>
+          <p class="faq-answer">
+            Yes. Many private lenders run legacy LOS, servicing, or accounting platforms. We can integrate via secure file exchanges, SFTP, middleware, or vendor APIs where available. The goal is to modernize your borrower and underwriting experience without forcing a risky core-system replacement project.
+          </p>
         </div>
       </div>
     </div>
@@ -962,6 +1072,46 @@ Content-Type: application/json
       margin: 0;
     }
 
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: #0f172a;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(59, 130, 246, 0.7);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.6);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin: 0 0 12px 0;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
     /* CTA Section */
     .cta-section {
       padding: 120px 0;
@@ -1021,7 +1171,8 @@ Content-Type: application/json
       .features-grid,
       .api-examples,
       .api-features,
-      .implementation-steps {
+      .implementation-steps,
+      .faq-grid {
         grid-template-columns: 1fr;
       }
 
