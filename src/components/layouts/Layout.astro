@@ -118,8 +118,8 @@ const {
       rel="stylesheet" />
   </noscript>
 
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- WICHTIG: Kein AOS-CSS mehr als render-blocking im Head -->
+  <!-- AOS CSS wird jetzt zusammen mit dem Script lazy nachgeladen (siehe loadAOS()) -->
 
   <style is:global>
     :root {
@@ -801,24 +801,58 @@ const {
       }
     };
 
+    function loadAOS() {
+      if (document.documentElement.dataset.aosLoaded === 'true') return;
+      document.documentElement.dataset.aosLoaded = 'true';
+
+      // AOS CSS lazy nachladen
+      const aosCss = document.createElement('link');
+      aosCss.rel = 'stylesheet';
+      aosCss.href = 'https://unpkg.com/aos@2.3.1/dist/aos.css';
+      document.head.appendChild(aosCss);
+
+      // AOS Script lazy nachladen
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+      script.onload = () => {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100
+          });
+        }
+      };
+      document.head.appendChild(script);
+    }
+
     window.addEventListener('load', function () {
       if ('performance' in window) {
         const navTiming = performance.getEntriesByType('navigation')[0];
-        console.log('Page load time:', navTiming.loadEventEnd - navTiming.navigationStart + 'ms');
+        if (navTiming) {
+          console.log('Page load time:', navTiming.loadEventEnd - navTiming.navigationStart + 'ms');
+        }
       }
 
+      // AOS nur laden, wenn ein Element mit data-aos in Sicht kommt
       if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              loadAOS();
-              observer.unobserve(entry.target);
+        const targets = document.querySelectorAll('[data-aos]');
+        if (targets.length > 0) {
+          const observer = new IntersectionObserver((entries, obs) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                loadAOS();
+                obs.disconnect();
+                break;
+              }
             }
           });
-        });
 
-        observer.observe(document.documentElement);
+          observer.observe(targets[0]);
+        }
       } else {
+        // Fallback, wenn IntersectionObserver nicht verfügbar ist
         loadAOS();
       }
 
@@ -902,9 +936,12 @@ const {
 
       document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+          const href = this.getAttribute('href');
+          if (!href || href === '#') return;
+
+          const target = document.querySelector(href);
           if (target) {
+            e.preventDefault();
             target.scrollIntoView({
               behavior: 'smooth',
               block: 'start'
@@ -913,22 +950,6 @@ const {
         });
       });
     });
-
-    function loadAOS() {
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
-      script.onload = () => {
-        if (typeof AOS !== 'undefined') {
-          AOS.init({
-            duration: 800,
-            easing: 'ease-out',
-            once: true,
-            offset: 100
-          });
-        }
-      };
-      document.head.appendChild(script);
-    }
   </script>
 </body>
 </html>
