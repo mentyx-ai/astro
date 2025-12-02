@@ -1,4 +1,5 @@
 ---
+// src/components/layouts/Layout.astro
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 
@@ -83,16 +84,23 @@ const {
   }
   </script>
 
-
   <!-- Additional SEO Meta -->
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="AI loan origination, private lending, underwriting automation, loan processing software, mortgage technology" />
 
-  <!-- Umami Analytics -->
+  <!-- Umami Analytics (läuft immer) -->
   <script
     defer
     src="https://umami-mentyx.vercel.app/script.js"
     data-website-id="3f78a151-168b-4b15-817c-be7f3bce1166">
+  </script>
+
+  <!-- Google Analytics 4 (nur nach Consent aktiv) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFN2CS305Z"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    // config-Aufruf kommt erst nach "Allow analytics"
   </script>
 
   <!-- Optimized Font Loading -->
@@ -456,6 +464,149 @@ const {
         padding: 24px;
       }
     }
+
+    /* COOKIE BANNER (fixed bottom, Mentyx-style) */
+    .cookie-banner {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+      max-width: 640px;
+      width: calc(100% - 32px);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.18), transparent 55%),
+        rgba(15, 23, 42, 0.98);
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+      padding: 18px 20px;
+      display: none; /* wird per JS gezeigt */
+      z-index: 9998;
+      backdrop-filter: blur(18px);
+    }
+
+    .cookie-inner {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .cookie-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(94, 234, 212, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #67e8f9;
+      margin-top: 2px;
+    }
+
+    .cookie-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cookie-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #e2e8f0;
+      margin-bottom: 4px;
+    }
+
+    .cookie-text {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    .cookie-text a {
+      color: var(--cyan-400);
+      text-decoration: underline;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    .cookie-btn-primary {
+      background: linear-gradient(135deg, var(--blue-500) 0%, var(--cyan-500) 100%);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.6);
+    }
+
+    .cookie-btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.7);
+    }
+
+    .cookie-btn-secondary {
+      background: rgba(15, 23, 42, 0.8);
+      color: #e2e8f0;
+      border-color: rgba(148, 163, 184, 0.7);
+    }
+
+    .cookie-btn-secondary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 1);
+    }
+
+    .cookie-btn-ghost {
+      background: transparent;
+      color: #94a3b8;
+      border-color: rgba(148, 163, 184, 0.4);
+    }
+
+    .cookie-btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.9);
+      color: #e2e8f0;
+      border-color: rgba(148, 163, 184, 0.8);
+    }
+
+    @media (max-width: 640px) {
+      .cookie-banner {
+        bottom: 16px;
+        padding: 14px 14px;
+      }
+
+      .cookie-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .cookie-buttons {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .cookie-btn {
+        flex: 1;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -520,6 +671,119 @@ const {
     </div>
   </div>
 
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner" aria-live="polite">
+    <div class="cookie-inner">
+      <div class="cookie-icon">✔</div>
+      <div class="cookie-content">
+        <div id="cookie-title" class="cookie-title">We respect your privacy</div>
+        <p class="cookie-text">
+          We use essential cookies and privacy-friendly analytics to understand how visitors use
+          Mentyx.ai and to improve the experience. Google Analytics cookies will only be set if you
+          choose “Allow analytics”. You can change your choice at any time in your browser settings.
+          See our
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+        </p>
+
+        <div class="cookie-buttons">
+          <button
+            id="cookie-deny"
+            type="button"
+            class="cookie-btn cookie-btn-ghost"
+          >
+            Deny
+          </button>
+          <button
+            id="cookie-reject"
+            type="button"
+            class="cookie-btn cookie-btn-secondary"
+          >
+            Only essential
+          </button>
+          <button
+            id="cookie-accept"
+            type="button"
+            class="cookie-btn cookie-btn-primary"
+          >
+            Allow analytics
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Banner + Analytics Logic -->
+  <script is:inline>
+    (function () {
+      const STORAGE_KEY = 'mentyx_cookie_consent';
+      const banner = document.getElementById('cookie-banner');
+      const btnAccept = document.getElementById('cookie-accept');
+      const btnReject = document.getElementById('cookie-reject');
+      const btnDeny = document.getElementById('cookie-deny');
+
+      function showBanner() {
+        if (banner) {
+          banner.style.display = 'flex';
+        }
+      }
+
+      function hideBanner() {
+        if (banner) {
+          banner.style.display = 'none';
+        }
+      }
+
+      function enableAnalytics() {
+        try {
+          if (typeof gtag === 'function') {
+            gtag('js', new Date());
+            gtag('config', 'G-EFN2CS305Z');
+          }
+        } catch (e) {
+          console.error('GA4 init error', e);
+        }
+      }
+
+      function handleExistingConsent() {
+        const consent = window.localStorage.getItem(STORAGE_KEY);
+
+        if (consent === 'analytics') {
+          enableAnalytics();
+          hideBanner();
+        } else if (consent === 'essential' || consent === 'deny') {
+          hideBanner();
+        } else {
+          showBanner();
+        }
+      }
+
+      if (btnAccept) {
+        btnAccept.addEventListener('click', function () {
+          window.localStorage.setItem(STORAGE_KEY, 'analytics');
+          enableAnalytics();
+          hideBanner();
+        });
+      }
+
+      if (btnReject) {
+        btnReject.addEventListener('click', function () {
+          window.localStorage.setItem(STORAGE_KEY, 'essential');
+          hideBanner();
+        });
+      }
+
+      if (btnDeny) {
+        btnDeny.addEventListener('click', function () {
+          window.localStorage.setItem(STORAGE_KEY, 'deny');
+          hideBanner();
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', handleExistingConsent);
+    })();
+  </script>
+
+  <!-- Modal / AOS / Smooth Scroll -->
   <script is:inline>
     window.openModal = function () {
       const modal = document.getElementById('contactModal');
