@@ -129,7 +129,6 @@ import ContactModal from '../../components/ui/ContactModal.astro';
                 <div class="author-title">Research & Analytics</div>
               </div>
             </div>
-            <!-- Updated button to use modal download -->
             <button class="btn btn-primary download-btn" data-resource="State of Loan Origination 2025">
               Download Report
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -221,6 +220,106 @@ import ContactModal from '../../components/ui/ContactModal.astro';
 
       <div id="articlesGrid" class="articles-grid">
         
+        <!-- NEW: Article - Fix & Flip Loan Automation -->
+        <article class="article-card" data-category="guide">
+          <div class="article-icon guide">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge guide">GUIDE</span>
+            <span class="article-date">December 16, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            Fix & Flip Loan Automation: Complete Guide to AI-Powered Underwriting
+          </h3>
+          
+          <p class="article-description">
+            Transform your fix-and-flip lending operation with AI automation. Reduce ARV analysis time from 4 hours to 8 minutes while improving accuracy and scaling deal volume.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">14 min read</span>
+            <a href="/blog/fix-and-flip-loan-automation" class="article-link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- NEW: Article - Bridge Loan Automation (Coming Soon) -->
+        <article class="article-card" data-category="guide">
+          <div class="article-icon guide">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+              <path d="M10 14l2 2 4-4"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge guide">GUIDE</span>
+            <span class="article-date">December 9, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            Bridge Loan Processing Automation: The Complete Guide to Faster Closings
+          </h3>
+          
+          <p class="article-description">
+            How AI automation streamlines bridge loan origination from application to funding. Cut processing time by 65% while maintaining compliance and accuracy.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">16 min read</span>
+            <a href="/blog/bridge-loan-automation" class="article-link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- NEW: Article - DSCR Loan Automation (Coming Soon) -->
+        <article class="article-card" data-category="guide">
+          <div class="article-icon guide">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          
+          <div class="article-meta">
+            <span class="article-badge guide">GUIDE</span>
+            <span class="article-date">December 4, 2025</span>
+          </div>
+          
+          <h3 class="article-title">
+            DSCR Loan Underwriting Automation: AI-Powered Rental Analysis Guide
+          </h3>
+          
+          <p class="article-description">
+            Master automated DSCR loan origination with AI-powered rental income verification, cash flow analysis, and instant debt service coverage calculations.
+          </p>
+          
+          <div class="article-footer">
+            <span class="read-time">15 min read</span>
+            <a href="/blog/dscr-loan-automation" class="article-link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
         <!-- Article 1: Case Study -->
         <article class="article-card" data-category="case-study">
           <div class="article-icon">
@@ -1586,7 +1685,6 @@ import ContactModal from '../../components/ui/ContactModal.astro';
         
         if (modal) {
           modal.classList.add('active');
-          // Reset form and show form section
           downloadFormSection.style.display = 'block';
           downloadSuccessSection.classList.remove('active');
           downloadForm?.reset();
@@ -1620,14 +1718,12 @@ import ContactModal from '../../components/ui/ContactModal.astro';
       const btnText = submitBtn.querySelector('.btn-text');
       const btnLoader = submitBtn.querySelector('.btn-loader');
       
-      // Show loading state
       btnText.style.display = 'none';
       btnLoader.style.display = 'inline-block';
       submitBtn.disabled = true;
       downloadFormStatus.style.display = 'none';
       
       try {
-        // Submit to Web3Forms
         const formData = new FormData(downloadForm);
         const response = await fetch(downloadForm.action, {
           method: 'POST',
@@ -1637,7 +1733,6 @@ import ContactModal from '../../components/ui/ContactModal.astro';
         const result = await response.json();
         
         if (result.success) {
-          // Trigger PDF download if resource exists in mapping
           if (resourceMap[currentResource]) {
             const resource = resourceMap[currentResource];
             const link = document.createElement('a');
@@ -1648,7 +1743,6 @@ import ContactModal from '../../components/ui/ContactModal.astro';
             document.body.removeChild(link);
           }
           
-          // Show success message
           downloadFormSection.style.display = 'none';
           downloadSuccessSection.classList.add('active');
           confirmDownloadEmail.textContent = document.getElementById('download_email').value;
@@ -1661,12 +1755,10 @@ import ContactModal from '../../components/ui/ContactModal.astro';
       } catch (error) {
         console.error('Download failed:', error);
         
-        // Show error message but still allow download
         downloadFormStatus.className = 'form-status error';
         downloadFormStatus.textContent = 'Form submission failed, but your download is starting...';
         downloadFormStatus.style.display = 'block';
         
-        // Still trigger the download
         if (resourceMap[currentResource]) {
           const resource = resourceMap[currentResource];
           const link = document.createElement('a');
@@ -1677,7 +1769,6 @@ import ContactModal from '../../components/ui/ContactModal.astro';
           document.body.removeChild(link);
         }
         
-        // Show success message after a delay
         setTimeout(() => {
           downloadFormSection.style.display = 'none';
           downloadSuccessSection.classList.add('active');
@@ -1685,7 +1776,6 @@ import ContactModal from '../../components/ui/ContactModal.astro';
           confirmResourceName.textContent = currentResource;
         }, 1000);
       } finally {
-        // Reset button state
         btnText.style.display = 'inline';
         btnLoader.style.display = 'none';
         submitBtn.disabled = false;
@@ -1704,11 +1794,9 @@ import ContactModal from '../../components/ui/ContactModal.astro';
       button.addEventListener('click', () => {
         const category = button.dataset.category;
         
-        // Update active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
-        // Filter articles
         articles.forEach(article => {
           if (category === 'all' || article.dataset.category === category) {
             article.style.display = 'flex';
