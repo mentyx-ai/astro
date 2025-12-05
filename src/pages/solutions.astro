@@ -102,7 +102,7 @@ const solutions = {
 
 <Layout 
   title="Private Real Estate Lending Solutions | Mentyx.ai"
-  description="End-to-end AI-powered solutions for private real estate lenders across loan origination, servicing, underwriting and multi-affiliate oversight."
+  description="End-to-end AI-powered solutions for private real estate lenders across loan origination, AI underwriting, servicing, and multi-affiliate oversight for Fix & Flip, Bridge, and DSCR loans."
   canonical="https://mentyx.ai/solutions"
 >
   <main style="padding-top: 128px; padding-bottom: 96px;">
@@ -135,7 +135,13 @@ const solutions = {
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
           {solutions.origination.map((solution, index) => (
-            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card">
+            <a 
+              href={`/solutions/${solution.slug}`} 
+              style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" 
+              data-aos="fade-up" 
+              data-aos-delay={index * 100} 
+              class="solution-card"
+            >
               <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #06b6d4;">
                 <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -177,7 +183,13 @@ const solutions = {
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
           {solutions.servicing.map((solution, index) => (
-            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card">
+            <a 
+              href={`/solutions/${solution.slug}`} 
+              style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" 
+              data-aos="fade-up" 
+              data-aos-delay={index * 100} 
+              class="solution-card"
+            >
               <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #06b6d4;">
                 <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M20 7h-9"/>
@@ -194,7 +206,7 @@ const solutions = {
                     <svg style="width: 16px; height: 16px; color: #06b6d4; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                     </svg>
-                    <span set:html={feature.replace(/AI/g, '<span class="ai-text">AI</span>')} />
+                    {feature}
                   </li>
                 ))}
               </ul>
@@ -220,7 +232,13 @@ const solutions = {
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
           {solutions.oversight.map((solution, index) => (
-            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card">
+            <a 
+              href={`/solutions/${solution.slug}`} 
+              style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" 
+              data-aos="fade-up" 
+              data-aos-delay={index * 100} 
+              class="solution-card"
+            >
               <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #06b6d4;">
                 <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                   <rect x="3" y="3" width="7" height="7"/>
@@ -264,7 +282,13 @@ const solutions = {
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
           {solutions.ai.map((solution, index) => (
-            <a href={`/solutions/${solution.slug}`} style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(167, 139, 250, 0.05) 100%); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" data-aos="fade-up" data-aos-delay={index * 100} class="solution-card-highlight">
+            <a 
+              href={`/solutions/${solution.slug}`} 
+              style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(167, 139, 250, 0.05) 100%); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 24px; padding: 40px; text-decoration: none; transition: all 0.3s;" 
+              data-aos="fade-up" 
+              data-aos-delay={index * 100} 
+              class="solution-card-highlight"
+            >
               <div style="width: 64px; height: 64px; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.1) 100%); border: 1px solid rgba(139, 92, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #a78bfa;">
                 <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                   <circle cx="12" cy="12" r="3"/>
@@ -274,7 +298,10 @@ const solutions = {
                   <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"/>
                 </svg>
               </div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white;" set:html={solution.title.replace(/AI/g, '<span class="ai-text">AI</span>')} />
+              <h3 
+                style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white;" 
+                set:html={solution.title.replace(/AI/g, '<span class="ai-text">AI</span>')} 
+              />
               <p style="color: #94a3b8; margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">{solution.description}</p>
               <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 8px;">
                 {solution.features.map(feature => (
@@ -313,6 +340,157 @@ const solutions = {
         </div>
       </div>
     </section>
+
+    <!-- ================================ -->
+    <!-- STRUCTURED DATA                  -->
+    <!-- ================================ -->
+
+    <!-- Breadcrumb -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mentyx.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://mentyx.ai/solutions"
+    }
+  ]
+}
+</script>
+
+    <!-- CollectionPage with solutions overview -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Private Real Estate Lending Solutions | Mentyx.ai",
+  "url": "https://mentyx.ai/solutions",
+  "description": "Overview of AI-powered lending solutions for private real estate lenders, including borrower portals, document intelligence, AI underwriting, servicing, and multi-affiliate oversight.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Mentyx.ai",
+    "url": "https://mentyx.ai"
+  },
+  "about": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Borrower Portal",
+      "url": "https://mentyx.ai/solutions/borrower-portal"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Document Intelligence",
+      "url": "https://mentyx.ai/solutions/document-intelligence"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Application Management",
+      "url": "https://mentyx.ai/solutions/application-management"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "AI Underwriting",
+      "url": "https://mentyx.ai/solutions/ai-underwriting"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Decision Engine",
+      "url": "https://mentyx.ai/solutions/decision-engine"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Explainable AI",
+      "url": "https://mentyx.ai/solutions/explainable-ai"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Loan Management",
+      "url": "https://mentyx.ai/solutions/loan-management"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Real Estate Valuator",
+      "url": "https://mentyx.ai/solutions/real-estate-valuator"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Portfolio Reporting",
+      "url": "https://mentyx.ai/solutions/portfolio-reporting"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Multi-Affiliate Dashboard",
+      "url": "https://mentyx.ai/solutions/multi-affiliate-dashboard"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Consistency Metrics",
+      "url": "https://mentyx.ai/solutions/consistency-metrics"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Integrations",
+      "url": "https://mentyx.ai/solutions/integrations"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mentyx.ai",
+    "url": "https://mentyx.ai"
+  }
+}
+</script>
+
+    <!-- FAQ Schema for Solutions Page -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of loans does Mentyx support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx is built specifically for private real estate lenders and supports Fix & Flip, Bridge and DSCR loans end-to-end, from borrower application to underwriting and servicing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to use every solution module?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You can start with the modules that solve your biggest bottleneck—for example AI underwriting, borrower portal or document intelligence—and add additional capabilities over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Mentyx use AI in loan origination?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mentyx uses AI to extract data from documents, calculate key asset-based lending metrics like LTV, LTC, DSCR and ARV, and surface risk drivers for underwriters while keeping humans in full control of credit decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Mentyx suitable for multi-affiliate lending platforms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Mentyx includes a multi-affiliate dashboard and consistency metrics so parent companies can monitor pipeline, performance and underwriting standards across multiple lending entities."
+      }
+    }
+  ]
+}
+</script>
 
   </main>
 </Layout>
