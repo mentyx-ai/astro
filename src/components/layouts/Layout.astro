@@ -36,17 +36,19 @@ const {
   {canonical && <link rel="canonical" href={canonical} />}
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Mentyx.ai - AI-Powered Loan Origination Platform" />
-  <meta property="og:description" content="Automate manual underwriting. Reduce 30-day loan processes to minutes with AI." />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:image" content="https://mentyx.ai/images/og-image.jpg" />
-  <meta property="og:url" content="https://mentyx.ai" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content={canonical || `https://mentyx.ai${Astro.url.pathname}`} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mentyx.ai" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mentyx.ai - AI Loan Origination Platform" />
-  <meta name="twitter:description" content="Automate manual underwriting in minutes with AI" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content="https://mentyx.ai/images/twitter-image.jpg" />
 
   <!-- Structured Data: Organization + Website -->
@@ -56,7 +58,7 @@ const {
     "@type": "Organization",
     "name": "Mentyx.ai",
     "url": "https://mentyx.ai",
-    "logo": "https://mentyx.ai/images/logo.png",
+    "logo": "https://mentyx.ai/images/og-image.jpg",
     "description": "AI-powered loan origination and underwriting platform for private real estate lenders.",
     "sameAs": [
       "https://www.linkedin.com/company/mentyx-ai",
@@ -680,7 +682,7 @@ const {
         <p class="cookie-text">
           We use essential cookies and privacy-friendly analytics to understand how visitors use
           Mentyx.ai and to improve the experience. Google Analytics cookies will only be set if you
-          choose “Allow analytics”. You can change your choice at any time in your browser settings.
+          choose "Allow analytics". You can change your choice at any time in your browser settings.
           See our
           <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
         </p>
