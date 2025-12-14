@@ -1,11 +1,12 @@
 // src/pages/robots.txt.ts
-import type { APIRoute } from 'astro';
+import type { APIRoute } from "astro";
 
 export const GET: APIRoute = ({ site }) => {
-  const baseUrl = site?.toString() || 'https://mentyx.ai';
+  const baseUrl = (site?.toString() || "https://mentyx.ai").replace(/\/+$/, "");
 
-  const robotsTxt = `# Mentyx.ai - AI Loan Origination Platform
-# Last updated: ${new Date().toISOString().split('T')[0]}
+  const body = `# Mentyx.ai — AI Loan Origination Platform
+# Robots.txt — SEO optimized
+# Last updated: ${new Date().toISOString().split("T")[0]}
 
 User-agent: *
 Allow: /
@@ -14,73 +15,59 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /dashboard/
 
-# Allow assets explicitly
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.webp$
-Allow: /*.svg$
-
-Crawl-delay: 1
-
-# Googlebot – allowed more aggressively
+# Explicitly allow major search & preview bots
 User-agent: Googlebot
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.webp$
-Allow: /*.svg$
-Crawl-delay: 0.2
+Allow: /
 
-# Bingbot
 User-agent: Bingbot
-Allow: /*.css$
-Allow: /*.js$
-Crawl-delay: 0.5
+Allow: /
 
-# Block AI data scrapers
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block AI training / scraping bots
 User-agent: GPTBot
 Disallow: /
+
 User-agent: ChatGPT-User
 Disallow: /
-User-agent: CCBot
-Disallow: /
+
 User-agent: Claude-Web
 Disallow: /
+
 User-agent: Anthropic-AI
 Disallow: /
-User-agent: FacebookBot
-Disallow: /
-User-agent: Applebot
+
+User-agent: CCBot
 Disallow: /
 
-# Block aggressive scrapers
-User-agent: MJ12bot
-Disallow: /
+# Block aggressive SEO scrapers
 User-agent: AhrefsBot
 Disallow: /
+
 User-agent: SemrushBot
 Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
 User-agent: DotBot
 Disallow: /
 
-# Sitemaps
-Sitemap: ${new URL('sitemap.xml', baseUrl).href}
-
-# Host (optional)
-# Host: mentyx.ai
+Sitemap: ${baseUrl}/sitemap.xml
 `;
 
-  return new Response(robotsTxt, {
+  return new Response(body, {
     status: 200,
     headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=3600',
-      'X-Robots-Tag': 'all',
-    }
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=0, s-maxage=3600",
+    },
   });
 };
