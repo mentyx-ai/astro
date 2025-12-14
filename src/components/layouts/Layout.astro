@@ -6,29 +6,23 @@ import Footer from './Footer.astro';
 interface Props {
   title: string;
   description?: string;
-  canonical?: string;
 }
 
 const {
   title,
-  description = "Mentyx.ai - AI-Powered Loan Origination Platform for Private Lenders. Automate manual underwriting and reduce 30-day loan processes to minutes with our intelligent lending platform.",
-  canonical
+  description = "Mentyx.ai - AI-Powered Loan Origination Platform for Private Lenders. Automate manual underwriting and reduce 30-day loan processes to minutes with our intelligent lending platform."
 } = Astro.props as Props;
 
-// ✅ NEW: enforce "no trailing slash" (except homepage)
-const base = 'https://mentyx.ai';
+// ✅ Canonical URL (no trailing slash, except homepage)
+const BASE_URL = 'https://mentyx.ai';
 
 const stripTrailingSlash = (url: string) => {
-  if (url === base || url === `${base}/`) return base;
+  if (url === BASE_URL || url === `${BASE_URL}/`) return BASE_URL;
   return url.replace(/\/+$/, '');
 };
 
-// If a page passes canonical explicitly → use it (cleaned).
-// Otherwise build from pathname (cleaned).
 const canonicalUrl = stripTrailingSlash(
-  canonical
-    ? canonical
-    : `${base}${Astro.url.pathname === '/' ? '' : Astro.url.pathname}`
+  `${BASE_URL}${Astro.url.pathname === '/' ? '' : Astro.url.pathname}`
 );
 ---
 
