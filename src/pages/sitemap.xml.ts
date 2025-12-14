@@ -39,6 +39,13 @@ export const GET: APIRoute = async () => {
 
     // Blog
     { url: '/blog/', priority: 0.8, changefreq: 'weekly' },
+    
+    // Blog Posts - NEW GUIDES (December 2025)
+    { url: '/blog/fix-and-flip-loan-automation/', priority: 0.8, changefreq: 'monthly', lastmod: '2025-12-16' },
+    { url: '/blog/bridge-loan-automation/', priority: 0.8, changefreq: 'monthly', lastmod: '2025-12-09' },
+    { url: '/blog/dscr-loan-automation/', priority: 0.8, changefreq: 'monthly', lastmod: '2025-12-04' },
+    
+    // Blog Posts - Existing
     { url: '/blog/ai-implementation-checklist/', priority: 0.7, changefreq: 'monthly' },
     { url: '/blog/ai-models-comparison/', priority: 0.7, changefreq: 'monthly' },
     { url: '/blog/api-first-lending/', priority: 0.7, changefreq: 'monthly' },
@@ -51,7 +58,7 @@ export const GET: APIRoute = async () => {
     { url: '/terms-of-service/', priority: 0.3, changefreq: 'yearly' }
   ];
 
-  // Today’s date in YYYY-MM-DD format
+  // Today's date in YYYY-MM-DD format
   const today = new Date().toISOString().split('T')[0];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
