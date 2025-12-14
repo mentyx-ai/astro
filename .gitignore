@@ -5,3 +5,7 @@ dist/
 *.log
 .astro/
 .astro/
+
+# temp backups
+*.bak
+*.bak2
