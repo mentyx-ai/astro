@@ -5,17 +5,18 @@ export const GET: APIRoute = ({ site }) => {
   const baseUrl = (site?.toString() || "https://mentyx.ai").replace(/\/+$/, "");
 
   const body = `# Mentyx.ai — AI Loan Origination Platform
-# Robots.txt — SEO optimized
+# Robots.txt — SEO optimized (full indexing)
 # Last updated: ${new Date().toISOString().split("T")[0]}
 
+# ==============================
+# Default: allow everything
+# ==============================
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-Disallow: /dashboard/
 
-# Explicitly allow major search & preview bots
+# ==============================
+# Explicitly allow major search engines
+# ==============================
 User-agent: Googlebot
 Allow: /
 
@@ -25,13 +26,21 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
+# ==============================
+# Social / link preview bots
+# ==============================
 User-agent: FacebookBot
 Allow: /
 
 User-agent: LinkedInBot
 Allow: /
 
+User-agent: Twitterbot
+Allow: /
+
+# ==============================
 # Block AI training / scraping bots
+# ==============================
 User-agent: GPTBot
 Disallow: /
 
@@ -47,7 +56,9 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
+# ==============================
 # Block aggressive SEO scrapers
+# ==============================
 User-agent: AhrefsBot
 Disallow: /
 
@@ -60,6 +71,9 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
+# ==============================
+# Sitemap (no trailing slash)
+# ==============================
 Sitemap: ${baseUrl}/sitemap.xml
 `;
 
